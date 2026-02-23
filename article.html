@@ -29,6 +29,7 @@
     .themeBtn{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px;cursor:pointer}
 
     .layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
+    .layout.no-toc{grid-template-columns:minmax(0,1fr)}
     .paper{width:100%;background:linear-gradient(180deg,rgba(0,255,65,.04),transparent 120px),var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 16px;box-shadow:0 20px 50px -10px rgba(0,0,0,.35);overflow:hidden}
     .side{position:sticky;top:14px;height:calc(100vh - 28px)
 
@@ -72,7 +73,7 @@
 
     <section class="layout">
       <article class="paper content" id="content">加载中…</article>
-      <aside class="side">
+      <aside id="sideToc" class="side">
         <div class="tocCard">
           <span class="tocTitle">目录</span>
           <div id="tocLinks" class="tocList"></div>
@@ -88,6 +89,8 @@
     const file = p.get('file');
     const el = document.getElementById('content');
     const raw = document.getElementById('raw');
+    const sideToc=document.getElementById('sideToc');
+    const layout=document.querySelector('.layout');
     const themeToggle=document.getElementById('themeToggle');
 
     function syncThemeBtn(){
@@ -132,6 +135,13 @@
       const hs=[...container.querySelectorAll('h2,h3')];
       const desktop=document.getElementById('tocLinks');
       desktop.innerHTML='';
+      if(!hs.length){
+        if(sideToc) sideToc.style.display='none';
+        if(layout) layout.classList.add('no-toc');
+        return [];
+      }
+      if(sideToc) sideToc.style.display='block';
+      if(layout) layout.classList.remove('no-toc');
       hs.forEach((h,i)=>{
         if(!h.id) h.id='sec-'+i;
         const t=(h.tagName==='H3'?'↳ ':'')+h.textContent;

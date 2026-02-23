@@ -21,7 +21,7 @@
 
 从现状到方案，从学术到工程。
 
-一、残酷的现状——你的 Agent 只有金鱼记忆
+## 一、残酷的现状——你的 Agent 只有金鱼记忆
 
 先说一个数字：45 小时。
 
@@ -59,7 +59,7 @@ SOUL.md 定义人格。检索用向量嵌入 + BM25 混合搜索。
 
 社区的推文说得最直白："Everyone complains their OpenClaw has amnesia."
 
-二、OpenClaw 官方在做什么——QMD 后端与混合搜索
+## 二、OpenClaw 官方在做什么——QMD 后端与混合搜索
 
 官方不是没有动作。
 
@@ -91,11 +91,11 @@ CPU-only 系统上查询耗时约 3 分 40 秒，超过 12 秒超时（Issue #87
 
 一个都没解决。
 
-三、社区在怎么自救——土法炼钢的五种方案
+## 三、社区在怎么自救——土法炼钢的五种方案
 
 社区没有坐等官方。至少 7 个第三方记忆项目在 2026 年 1-2 月集中出现。
 
-1⃣Mem0：最知名的记忆层 SDK。
+- 1⃣Mem0：最知名的记忆层 SDK。
 
 Auto-Recall 每次响应前搜索相关记忆注入上下文，Auto-Capture 响应后提取事实存储。
 
@@ -103,13 +103,13 @@ Session + User 双层记忆。
 
 声称 91% 低延迟提升，90% token 节省。
 
-2⃣Hindsight：本地长期记忆。
+- 2⃣Hindsight：本地长期记忆。
 
 核心洞察：传统系统给 agent 一个 search_memory 工具，但模型不一定会用。Auto-Recall 自动注入解决了这个问题。
 
 完全本地，PostgreSQL 后端，支持多实例共享。
 
-3⃣MoltBrain（365 Stars）：
+- 3⃣MoltBrain（365 Stars）：
 
 SQLite + ChromaDB 语义搜索，
 
@@ -117,7 +117,7 @@ SQLite + ChromaDB 语义搜索，
 
 Web UI 查看时间线。
 
-4⃣NOVA Memory System：
+- 4⃣NOVA Memory System：
 
 PostgreSQL 结构化记忆，
 
@@ -125,19 +125,19 @@ Claude API 将自然语言解析为 JSON，
 
 8 张数据库表（实体、关系、地点、项目、事件、教训、偏好）。
 
-5⃣Penfield Skill：混合搜索 BM25 + 向量 + 图——社区已经有人在做三路混合搜索了。
+- 5⃣Penfield Skill：混合搜索 BM25 + 向量 + 图——社区已经有人在做三路混合搜索了。
 
-6⃣还有 Memory Template（Git-backed）、SuperMemory（极早期）、MemoryPlugin（Chrome 扩展跨平台同步）。
+- 6⃣还有 Memory Template（Git-backed）、SuperMemory（极早期）、MemoryPlugin（Chrome 扩展跨平台同步）。
 
 社区的"最佳实践"验证了什么方向？
 
-1. Daily Log → MEMORY.md 晋升模式
+- 1. Daily Log → MEMORY.md 晋升模式
 
-2. Heartbeat 心跳复用为记忆整合触发器
+- 2. Heartbeat 心跳复用为记忆整合触发器
 
-3. 70/30 混合搜索权重（向量 70% + 关键词 30%）
+- 3. 70/30 混合搜索权重（向量 70% + 关键词 30%）
 
-4. Session Transcript 索引
+- 4. Session Transcript 索引
 
 但社区完全触及的六个盲区：
 
@@ -147,7 +147,7 @@ Claude API 将自然语言解析为 JSON，
 
 方向对了，但全部停留在手工操作层面。
 
-四、学术界爆发——2026 年 2 月的 10+ 篇论文
+## 四、学术界爆发——2026 年 2 月的 10+ 篇论文
 
 2026 年 2 月，agent memory 突然成了学术界的主战场。仅一个月就有 10+ 篇 agent memory 论文发表在 arXiv 上，包括 ICML 2026 收录的 xMemory [1]、NeurIPS 2025 的 A-MEM [2]。一份 59 位作者的综述论文 [3] 系统梳理了整个领域。
 
@@ -179,13 +179,13 @@ BudgetMem [8]：运行时记忆框架，将记忆处理按三个预算层级结�
 
 还有两个来自工业界的关键警告：
 
-1⃣Serial Collapse（串行崩溃）[9]，来自月之暗面 Kimi K2.5：Agent 退化为不使用记忆。即使记忆系统存在，Agent 可能逐渐"忘记"去查询它。
+- 1⃣Serial Collapse（串行崩溃）[9]，来自月之暗面 Kimi K2.5：Agent 退化为不使用记忆。即使记忆系统存在，Agent 可能逐渐"忘记"去查询它。
 
-2⃣Memory Misevolution（记忆错误进化）[5]，来自 TAME：在正常迭代中积累有毒捷径。
+- 2⃣Memory Misevolution（记忆错误进化）[5]，来自 TAME：在正常迭代中积累有毒捷径。
 
 这两个风险提醒我们：记忆系统的难点不在构建，在于持续的质量监控。
 
-五、开源记忆生态——6 个项目的全景扫描
+## 五、开源记忆生态——6 个项目的全景扫描
 
 学术界定义方向，开源社区验证落地。
 
@@ -193,11 +193,11 @@ BudgetMem [8]：运行时记忆框架，将记忆处理按三个预算层级结�
 
 一个关键发现：这 6 个项目代表了三种完全不同的记忆哲学。
 
-1⃣状态层优先——mem0、Memori：记忆 = 状态管理。快速给 agent 加"ChatGPT Memory"式体验。
+- 1⃣状态层优先——mem0、Memori：记忆 = 状态管理。快速给 agent 加"ChatGPT Memory"式体验。
 
-2⃣知识层优先——cognee、MemOS：记忆 = 结构化知识。把数据做成图谱和多知识库。
+- 2⃣知识层优先——cognee、MemOS：记忆 = 结构化知识。把数据做成图谱和多知识库。
 
-3⃣学习层优先——Hindsight：记忆 = 学习过程。retain/recall/reflect 三操作闭环。
+- 3⃣学习层优先——Hindsight：记忆 = 学习过程。retain/recall/reflect 三操作闭环。
 
 你选哪种，决定了你把系统复杂度放在哪一层：
 
@@ -205,7 +205,7 @@ BudgetMem [8]：运行时记忆框架，将记忆处理按三个预算层级结�
 
 但没有任何一个项目同时覆盖三层。
 
-六、200+ Issues 的教训——别人踩过的坑
+## 六、200+ Issues 的教训——别人踩过的坑
 
 因此，
 
@@ -215,29 +215,29 @@ BudgetMem [8]：运行时记忆框架，将记忆处理按三个预算层级结�
 
 跨项目的五大共性问题：
 
-1⃣问题 1：静默失败（6/6 项目都有）
+- 1⃣问题 1：静默失败（6/6 项目都有）
 
 这是最普遍的问题。用户最大的抱怨不是"功能不行"，而是"它不行但不告诉我"。
 
 mem0 #2443：有效信息未存储，AI 过滤太激进，但没有任何提示。Memori #238：Auto-capture 日志显示成功，但数据库为空。cognee #2038：配置验证异常被实例化但没有 raise，无效配置被静默忽略。
 
-2⃣问题 2：记忆去重是所有项目的痛点
+- 2⃣问题 2：记忆去重是所有项目的痛点
 
 mem0 #1674：重复记忆触发 DELETE 而不是 NOOP。LLM 把重复内容判断为"矛盾"，导致错误删除。cognee #1831："First Write Wins"，新属性直接丢弃。MemOS #929："我喜欢X"同时存入事实库和偏好库。
 
-3⃣问题 3：LLM 判断不可靠
+- 3⃣问题 3：LLM 判断不可靠
 
 MemOS #931："我叫王牧晨"经过 LLM 重述后丢失了第一人称指代。MemOS #934：LLM 输出 JSON 格式不稳定，间歇性解析失败。Hindsight #181：prompt 中提到"日语""中文"作为示例，输出就偏向这些语言。
 
-4⃣问题 4：数据库连接/迁移问题
+- 4⃣问题 4：数据库连接/迁移问题
 
 Memori #189：SQLite 连接从不关闭，导致 "database is locked" 和文件描述符泄漏。cognee #2022：Docker 部署 Alembic 迁移失败。mem0 #3376：PostHog 遥测导致内存/线程泄漏。
 
-5⃣问题 5：搜索排序失真
+- 5⃣问题 5：搜索排序失真
 
 cognee #2030：跨集合 min-max 归一化导致排序失真——distance 0.1 和 0.5 都被归一化为 0。MemOS #939：检索只靠语义相似度，完全没有时间维度
 
-七、游戏 AI 给了什么启发——矮人要塞、模拟人生、Nemesis System
+## 七、游戏 AI 给了什么启发——矮人要塞、模拟人生、Nemesis System
 
 最被低估的参考系不是学术论文，而是游戏 AI。
 
@@ -279,7 +279,7 @@ Nemesis System 的事件驱动进化：
 
 事件驱动 → 记忆触发行为修改。
 
-八、两种记忆——User Memory vs Agent Memory
+## 八、两种记忆——User Memory vs Agent Memory
 
 一个容易被忽略的区分：
 
@@ -305,7 +305,7 @@ L2 全文用于完整内容
 
 同时义了合并策略：档案总是合并（只有一份），偏好/实体/模式支持合并，事件/案例不可合并（合并即丢失信息）。
 
-九、从个人到整个 AI 生态——记忆为什么是核心基础设施
+## 九、从个人到整个 AI 生态——记忆为什么是核心基础设施
 
 回到最开始的判断：
 
@@ -333,7 +333,7 @@ Context window 本质上是"短期记忆"：溢出则截断，重启则归零。
 
 这不是未来的问题。这是现在正在被解决的问题。
 
-十、我们在建什么——memX 与 ePro 的技术路线
+## 十、我们在建什么——memX 与 ePro 的技术路线
 
 基于以上所有调研，
 
@@ -341,7 +341,7 @@ Context window 本质上是"短期记忆"：溢出则截断，重启则归零。
 
 已上线，不断迭代中，期待你的反馈！
 
-References
+## References
 
 [1] Hu et al., "xMemory: Beyond RAG for Agent Memory," ICML 2026. arXiv:2602.02007
 
