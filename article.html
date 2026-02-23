@@ -26,7 +26,9 @@
     html,body{width:100%;max-width:100%;overflow-x:hidden !important}
     body{margin:0;background:var(--bg);color:var(--text);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
     .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
-    .wrap{width:min(980px,100%);margin:0 auto;padding:18px 12px 46px;overflow-x:hidden}
+    .wrap{width:min(1200px,100%);margin:0 auto;padding:18px 12px 46px;overflow-x:hidden}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:16px;align-items:start}
+    .side{position:sticky;top:14px}
     .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
     .top a{color:var(--accent2);text-decoration:none;font-size:14px}
     .themeBtn{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px;cursor:pointer}
@@ -43,9 +45,14 @@
     .content a{display:inline-block;max-width:100%;overflow-wrap:anywhere;word-break:break-all;white-space:normal;vertical-align:bottom;color:var(--accent2)}
     .content li,.content p,.content h1,.content h2,.content h3{overflow-wrap:anywhere;word-break:break-word}
     .content ul,.content ol{padding-left:1.2em}
-    .toc{margin:0 0 14px;padding:10px 12px;border:1px dashed rgba(0,255,65,.35);border-radius:10px;background:rgba(0,255,65,.05);overflow:hidden}
+    .toc{margin:0;padding:10px 12px;border:1px dashed rgba(0,255,65,.35);border-radius:10px;background:rgba(0,255,65,.05);overflow:hidden}
+    .toc .toc-link{display:block;padding:4px 0;border-left:2px solid transparent;padding-left:8px}
+    .toc .toc-link.active{border-left-color:var(--accent);color:var(--accent)}
+    .progressWrap{margin-top:10px;border:1px solid var(--line);border-radius:999px;height:8px;overflow:hidden;background:rgba(148,163,184,.2)}
+    .progressBar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
     .toc b{display:block;margin-bottom:6px;color:var(--accent)}
     .toc a{color:var(--accent2);text-decoration:none;font-size:14px;display:block;margin:4px 0}
+    @media (max-width:980px){.layout{grid-template-columns:1fr}.side{position:static;order:-1}}
     @media (max-width:640px){.content h1{font-size:24px}.content h2{font-size:20px}.content h3{font-size:18px}.content p,.content li{font-size:16px}}
   </style>
 </head>
@@ -58,7 +65,12 @@
         <a id="raw" href="#" target="_blank" rel="noopener" class="mono">查看原始 Markdown</a>
       </div>
     </div>
-    <article class="paper content" id="content">加载中…</article>
+    <section class="layout">
+      <article class="paper content" id="content">加载中…</article>
+      <aside class="side">
+        <div class="toc" id="tocSide"><b>目录</b><div id="tocLinks"></div><div class="progressWrap"><div id="progressBar" class="progressBar"></div></div></div>
+      </aside>
+    </section>
   </main>
 
   <script>
@@ -85,18 +97,35 @@
 
     function addToc(container){
       const hs=[...container.querySelectorAll('h2,h3')];
-      if(!hs.length) return;
-      const toc=document.createElement('div');
-      toc.className='toc';
-      toc.innerHTML='<b>目录</b>';
+      const wrap=document.getElementById('tocLinks');
+      if(!hs.length || !wrap) return [];
+      wrap.innerHTML='';
       hs.forEach((h,i)=>{
         if(!h.id) h.id='sec-'+i;
         const a=document.createElement('a');
         a.href='#'+h.id;
-        a.textContent=(h.tagName==='H3'?'　↳ ':'')+h.textContent;
-        toc.appendChild(a);
+        a.className='toc-link';
+        a.textContent=(h.tagName==='H3'?'↳ ':'')+h.textContent;
+        wrap.appendChild(a);
       });
-      container.prepend(toc);
+      return hs;
+    }
+
+    function bindScrollSpy(headings){
+      const links=[...document.querySelectorAll('.toc-link')];
+      const bar=document.getElementById('progressBar');
+      const onScroll=()=>{
+        const doc=document.documentElement;
+        const max=doc.scrollHeight-doc.clientHeight;
+        const p=max>0?Math.min(100,Math.max(0,(window.scrollY/max)*100)):0;
+        if(bar) bar.style.width=p.toFixed(1)+'%';
+
+        let active=0;
+        headings.forEach((h,i)=>{ if(h.getBoundingClientRect().top<=120) active=i; });
+        links.forEach((l,i)=>l.classList.toggle('active',i===active));
+      };
+      window.addEventListener('scroll',onScroll,{passive:true});
+      onScroll();
     }
 
     function hardenOverflow(container){
@@ -142,7 +171,8 @@
       .then(md=>{
         el.innerHTML = marked.parse(md);
         compactLongLinks(el);
-        addToc(el);
+        const hs=addToc(el);
+        bindScrollSpy(hs);
         hardenOverflow(el);
         document.title = (md.match(/^#\s+(.+)/m)?.[1]||'文章阅读') + ' - Halo Notes';
         raw.textContent='查看原始 Markdown · '+buildTag;
