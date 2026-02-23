@@ -131,13 +131,11 @@
     function buildToc(container){
       const hs=[...container.querySelectorAll('h2,h3')];
       const desktop=document.getElementById('tocLinks');
-      const mobile=document.getElementById('tocLinksMobile');
-      desktop.innerHTML=''; mobile.innerHTML='';
+      desktop.innerHTML='';
       hs.forEach((h,i)=>{
         if(!h.id) h.id='sec-'+i;
         const t=(h.tagName==='H3'?'↳ ':'')+h.textContent;
         const a=document.createElement('a'); a.href='#'+h.id; a.className='toc-link'; a.textContent=t; desktop.appendChild(a);
-        const b=document.createElement('a'); b.href='#'+h.id; b.className='toc-link'; b.textContent=t; mobile.appendChild(b);
       });
       return hs;
     }
@@ -145,9 +143,7 @@
     function bindReadingSync(headings){
       if(!headings || !headings.length) return;
       const links=[...document.querySelectorAll('#tocLinks .toc-link')];
-      const linksM=[...document.querySelectorAll('#tocLinksMobile .toc-link')];
       const list=document.getElementById('tocLinks');
-      const listM=document.getElementById('tocLinksMobile');
       const bar=document.getElementById('progressBar');
       const barM=document.getElementById('progressBarMobile');
 
@@ -161,10 +157,7 @@
         let active=0;
         headings.forEach((h,i)=>{ if(h.getBoundingClientRect().top<=140) active=i; });
         links.forEach((l,i)=>l.classList.toggle('active',i===active));
-        linksM.forEach((l,i)=>l.classList.toggle('active',i===active));
-
         ensureVisible(list, links[active]);
-        ensureVisible(listM, linksM[active]);
       };
 
       window.addEventListener('scroll', onScroll, {passive:true});
