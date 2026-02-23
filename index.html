@@ -8,14 +8,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    (function(){
+      const saved=localStorage.getItem('halo_theme');
+      let theme=saved;
+      if(!theme){
+        const h=new Date().getHours();
+        theme=(h>=7 && h<19)?'light':'dark';
+      }
+      document.documentElement.setAttribute('data-theme',theme);
+    })();
+  </script>
   <style>
-    :root{--bg:#0b0d10;--panel:#12161c;--panel2:#171c24;--text:#f3f5f8;--muted:#98a2b3;--line:#293241;--a:#7dd3fc;--g:#22c55e}
+    :root{--bg:#0b0d10;--panel:#12161c;--panel2:#171c24;--text:#f3f5f8;--muted:#98a2b3;--line:#293241;--a:#7dd3fc;--g:#22c55e;--heroGlow:#1f293733}
+    [data-theme="light"]{--bg:#f5f7fb;--panel:#ffffff;--panel2:#f8fafc;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--a:#0369a1;--g:#16a34a;--heroGlow:#bae6fd66}
     *{box-sizing:border-box}
-    html,body{margin:0;background:radial-gradient(1000px 500px at 20% -10%,#1f293733,transparent 55%),var(--bg);color:var(--text);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
+    html,body{margin:0;background:radial-gradient(1000px 500px at 20% -10%,var(--heroGlow),transparent 55%),var(--bg);color:var(--text);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
     .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
     .wrap{max-width:1060px;margin:0 auto;padding:26px 14px 58px}
-    .hero{background:linear-gradient(180deg,#1f293733,transparent 60%),var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 16px}
+    .hero{background:linear-gradient(180deg,var(--heroGlow),transparent 60%),var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 16px}
+    .heroTop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
     .k{display:inline-flex;padding:3px 9px;border:1px solid #22c55e66;color:#86efac;border-radius:999px;font-size:12px}
+    .themeBtn{border:1px solid var(--line);background:var(--panel2);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px;cursor:pointer}
     h1{margin:10px 0 4px;font-size:30px;letter-spacing:-.02em}
     .sub{margin:0;color:var(--muted)}
     .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
@@ -51,7 +65,10 @@
 <body>
   <main class="wrap">
     <section class="hero">
-      <span class="k mono">HALO NOTES / CARD v2</span>
+      <div class="heroTop">
+        <span class="k mono">HALO NOTES / CARD v2</span>
+        <button id="themeToggle" class="themeBtn mono" type="button">🌙 夜间</button>
+      </div>
       <h1>结构化文章归档</h1>
       <p class="sub">参考 Paragraph 的卡片节奏：封面 → 标题 → 摘要 → 元信息</p>
       <div class="toolbar">
@@ -74,6 +91,20 @@
     const empty=document.getElementById('empty');
     const qInput=document.getElementById('q');
     const filters=document.getElementById('filters');
+    const themeToggle=document.getElementById('themeToggle');
+
+    function syncThemeBtn(){
+      const t=document.documentElement.getAttribute('data-theme')||'dark';
+      themeToggle.textContent = t==='light' ? '☀️ 日间' : '🌙 夜间';
+    }
+    themeToggle.addEventListener('click',()=>{
+      const now=document.documentElement.getAttribute('data-theme')||'dark';
+      const next= now==='light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme',next);
+      localStorage.setItem('halo_theme',next);
+      syncThemeBtn();
+    });
+    syncThemeBtn();
 
     list.innerHTML='<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>';
 
