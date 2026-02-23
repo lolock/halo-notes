@@ -9,37 +9,43 @@
 
 文科生学AI系列教程1：如何从0-1在全新Mac mini上的安装OpenClawde ？
 
-1、拿到Mac mini，首先是连接上鼠标和键盘
+### 拿到Mac mini，首先是连接上鼠标和键盘
 
 最好是用苹果的妙控鼠标，然后用数据连接一下，自动就识别绑定了。
 
 键盘的话，你可以在设置里用蓝牙连接。
 
-2、配置基础环境
+### 配置基础环境
 
 先安装homebrew
 
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 再安装nodejs
 
+```bash
 brew install nodejs
 
 安装好之后检查安装版本是否最新
 
+```bash
 node -v
 
+```bash
 npm -v
 
-3、安装OpenClaw最新版本
+### 安装OpenClaw最新版本
 
+```bash
 npm i -g openclaw
 
-4、开始OpenClaw基础配置
+### 开始OpenClaw基础配置
 
+```bash
 openclaw onboard
 
-5、选择大模型
+### 选择大模型
 
 首次大模型推荐选择OpenAI
 
@@ -49,7 +55,7 @@ openclaw onboard
 
 选择OpenAI之后会跳转到浏览器，登录账号授权登录即可
 
-6、配置telegram bot教程
+### 配置telegram bot教程
 
 要接报警消息，您需要配置 Telegram Bot：
 
@@ -67,7 +73,7 @@ openclaw onboard
 
 在OpenClaw的界面填入token，进入下一步
 
-7、配置好一些常用skills
+### 配置好一些常用skills
 
 我这里选择的是这些，建议照做，后期还可以改。
 
@@ -77,6 +83,7 @@ apple-notes
 
 apple-reminders
 
+```bash
 github
 
 imsg
@@ -95,10 +102,11 @@ command-logger
 
 session-memory
 
-8、然后你就可以开始测试把玩了
+### 然后你就可以开始测试把玩了
 
 接下来你可以在终端里对话一下，稍微体验一下
 
+```bash
 openclaw tui
 
 晚些时候我们再进行详细的配置让它能够为你更好地工作
