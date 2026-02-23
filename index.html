@@ -53,7 +53,7 @@
     .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
     .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.18s ease}
     .card:hover{transform:translateY(-1px);background:var(--panel2);border-color:#7dd3fc55}
-    .cover{position:relative;display:block;aspect-ratio:2/1;background:linear-gradient(120deg,#0ea5e933,#22c55e33),linear-gradient(180deg,#1f2937,#111827);transition:transform .25s ease, filter .25s ease}
+    .cover{position:relative;display:block;aspect-ratio:2/1;background:linear-gradient(120deg,#0ea5e933,#22c55e33),linear-gradient(180deg,#1f2937,#111827);background-size:cover;background-position:center;transition:transform .25s ease, filter .25s ease}
     .card:hover .cover{transform:scale(1.02);filter:saturate(1.08)}
     .cover.cat-openclaw{background:linear-gradient(120deg,#0ea5e944,#22c55e44),linear-gradient(180deg,#123040,#0f172a)}
     .cover.cat-tools{background:linear-gradient(120deg,#2563eb44,#06b6d444),linear-gradient(180deg,#1e293b,#111827)}
@@ -167,8 +167,10 @@
         const qv=it.quality||'A';
         const el=document.createElement('article');
         el.className='card';
+        const coverClass=((it.category||'').includes('OpenClaw')?'cat-openclaw':((it.category||'').includes('工具')?'cat-tools':((it.category||'').includes('工作流')?'cat-workflow':'cat-default')));
+        const coverStyle=it.cover?`style="background-image:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.35)),url('${it.cover}')"`:'';
         el.innerHTML=`
-          <a class="cover ${((it.category||'').includes('OpenClaw')?'cat-openclaw':((it.category||'').includes('工具')?'cat-tools':((it.category||'').includes('工作流')?'cat-workflow':'cat-default')))}" href="${href}">
+          <a class="cover ${coverClass}" ${coverStyle} href="${href}">
             <div class="metaTop">
               <span class="chip">${it.category||'未分类'}</span>
               <span class="chip q-${qv}">${qv}</span>
