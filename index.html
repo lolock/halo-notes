@@ -6,51 +6,33 @@
   <title>Halo Notes</title>
   <meta name="description" content="Halo Notes - 结构化文章归档" />
   <style>
-    :root{
-      --bg:#f5f7fb;--panel:#ffffff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;
-      --pri:#2563eb;--pri-soft:#dbeafe;--shadow:0 10px 30px rgba(31,41,55,.08)
-    }
-    @media (prefers-color-scheme: dark){
-      :root{--bg:#0b1220;--panel:#111827;--text:#e5e7eb;--muted:#94a3b8;--line:#243041;--pri:#60a5fa;--pri-soft:#1e3a8a;--shadow:none}
-    }
+    :root{--bg:#f5f7fb;--panel:#fff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;--pri:#2563eb;--pri-soft:#dbeafe;--shadow:0 10px 30px rgba(31,41,55,.08)}
+    @media (prefers-color-scheme: dark){:root{--bg:#0b1220;--panel:#111827;--text:#e5e7eb;--muted:#94a3b8;--line:#243041;--pri:#60a5fa;--pri-soft:#1e3a8a;--shadow:none}}
     *{box-sizing:border-box}
     body{margin:0;background:radial-gradient(circle at 20% -10%,var(--pri-soft),transparent 40%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
     .wrap{max-width:980px;margin:0 auto;padding:28px 16px 60px}
     .hero{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px 20px;box-shadow:var(--shadow)}
-    .title{margin:0;font-size:30px}
-    .sub{margin:8px 0 0;color:var(--muted)}
+    .title{margin:0;font-size:30px}.sub{margin:8px 0 0;color:var(--muted)}
     .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
     .search{flex:1;min-width:220px;padding:11px 12px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--text)}
     .pill{padding:8px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .filter{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:transparent;color:var(--muted);font-size:12px;cursor:pointer}
+    .filter.active{border-color:var(--pri);color:var(--pri)}
     .section-title{margin:22px 2px 10px;font-size:18px}
     .list{display:grid;gap:12px}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;transition:.2s ease;box-shadow:var(--shadow)}
-    .card:hover{transform:translateY(-1px);border-color:var(--pri)}
-    .card a.tt{font-size:19px;font-weight:700;color:var(--text);text-decoration:none}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+    .card a.tt{font-size:18px;font-weight:700;color:var(--text);text-decoration:none}
     .meta{font-size:13px;color:var(--muted);margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
     .meta a{color:var(--pri);text-decoration:none}
+    .summary{margin-top:8px;color:var(--muted);font-size:14px;line-height:1.6}
     .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
     .tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted)}
+    .qtag{font-size:12px;border-radius:999px;padding:2px 8px}
+    .q-S{background:#d1fae5;color:#065f46}.q-A{background:#dbeafe;color:#1e40af}.q-B{background:#fee2e2;color:#991b1b}
     .empty{padding:30px 0;text-align:center;color:var(--muted)}
     footer{margin-top:22px;color:var(--muted);font-size:12px}
-
-    /* Mobile optimization */
-    @media (max-width: 640px){
-      .wrap{padding:14px 12px 40px}
-      .hero{border-radius:14px;padding:16px 14px}
-      .title{font-size:24px;line-height:1.2}
-      .sub{font-size:14px;line-height:1.5}
-      .toolbar{gap:8px}
-      .search{min-width:0;width:100%;font-size:16px;padding:12px 12px} /* avoid iOS zoom */
-      .pill{width:100%;text-align:center;padding:10px 12px}
-      .section-title{margin:16px 2px 8px;font-size:16px}
-      .card{padding:12px;border-radius:12px}
-      .card a.tt{font-size:17px;line-height:1.4;display:block}
-      .meta{font-size:12px;gap:6px}
-      .tags{gap:6px}
-      .tag{font-size:11px;padding:3px 8px}
-      .empty{padding:20px 0;font-size:14px}
-    }
+    @media (max-width:640px){.wrap{padding:14px 12px 40px}.hero{border-radius:14px;padding:16px 14px}.title{font-size:24px}.sub{font-size:14px}.search{min-width:0;width:100%;font-size:16px}.pill{width:100%;text-align:center}}
   </style>
 </head>
 <body>
@@ -62,6 +44,7 @@
         <input id="q" class="search" placeholder="搜索标题/标签（例如：Agent、OpenClaw）" />
         <span id="count" class="pill">0 篇</span>
       </div>
+      <div id="filters" class="filters"></div>
     </section>
 
     <h2 class="section-title">文章列表</h2>
@@ -72,23 +55,38 @@
   </main>
 
   <script>
-    const state={items:[],q:''};
+    const state={items:[],q:'',category:'全部'};
     const list=document.getElementById('list');
     const countEl=document.getElementById('count');
     const empty=document.getElementById('empty');
     const qInput=document.getElementById('q');
+    const filters=document.getElementById('filters');
+
+    function renderFilters(){
+      const cats=['全部',...new Set(state.items.map(i=>i.category||'未分类'))];
+      filters.innerHTML='';
+      cats.forEach(c=>{
+        const b=document.createElement('button');
+        b.className='filter'+(state.category===c?' active':'');
+        b.textContent=c;
+        b.onclick=()=>{state.category=c;render();renderFilters();};
+        filters.appendChild(b);
+      });
+    }
 
     function render(){
       const q=state.q.trim().toLowerCase();
       const filtered=state.items.filter(it=>{
+        if(state.category!=='全部' && (it.category||'未分类')!==state.category) return false;
         if(!q) return true;
-        const hay=[it.title||'',...(it.tags||[])].join(' ').toLowerCase();
+        const hay=[it.title||'',it.summary||'',it.category||'',...(it.tags||[])].join(' ').toLowerCase();
         return hay.includes(q);
       });
 
       list.innerHTML='';
       filtered.forEach(it=>{
-        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260222b';
+        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260223a';
+        const q=it.quality||'A';
         const el=document.createElement('article');
         el.className='card';
         el.innerHTML=`
@@ -96,10 +94,13 @@
           <div class="meta">
             <span>${it.date||''}</span>
             <span>·</span>
+            <span>${it.category||'未分类'}</span>
+            <span class="qtag q-${q}">${q}</span>
+            <span>·</span>
             <a href="${it.source||'#'}" target="_blank" rel="noopener">原始链接</a>
           </div>
-          <div class="tags">${(it.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-        `;
+          ${it.summary?`<div class="summary">${it.summary}</div>`:''}
+          <div class="tags">${(it.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
         list.appendChild(el);
       });
 
@@ -109,10 +110,11 @@
 
     qInput.addEventListener('input',e=>{state.q=e.target.value;render();});
 
-    fetch('./articles.json')
-      .then(r=>r.json())
-      .then(items=>{state.items=items.sort((a,b)=>(b.date||'').localeCompare(a.date||''));render();})
-      .catch(()=>{countEl.textContent='加载失败';});
+    fetch('./articles.json').then(r=>r.json()).then(items=>{
+      state.items=items.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+      renderFilters();
+      render();
+    }).catch(()=>{countEl.textContent='加载失败';});
   </script>
 </body>
 </html>

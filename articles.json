@@ -4,32 +4,29 @@
     "file": "为什么你的OpenClaw一定要安装NotebookLMSkill.md",
     "date": "2026-02-23",
     "source": "https://x.com/onenewbite/status/2024819940327379286",
-    "tags": [
-      "OpenClaw",
-      "NotebookLM",
-      "X Article"
-    ]
+    "tags": ["OpenClaw", "NotebookLM", "X Article"],
+    "category": "OpenClaw实战",
+    "quality": "S",
+    "summary": "通过 OpenClaw + NotebookLM 组合，实现 source 导入、清洗、审计与知识生产自动化。"
   },
   {
     "title": "如何从0-1在全新Mac mini上的安装OpenClawde？｜文科生学AI系列教程1",
     "file": "如何从0-1在全新Mac mini上的安装OpenClawde_文科生学AI系列教程1.md",
     "date": "2026-02-22",
     "source": "https://x.com/wangdefou/status/2024801707218329982?s=46&t=o6nmInNQm8GsCZeHlQaxjQ",
-    "tags": [
-      "OpenClaw",
-      "Mac mini",
-      "教程"
-    ]
+    "tags": ["OpenClaw", "Mac mini", "教程"],
+    "category": "工具与配置",
+    "quality": "S",
+    "summary": "从零开始在 Mac mini 安装 OpenClaw 的完整步骤与关键注意事项。"
   },
   {
     "title": "年薪150万的工作，我用500美金的AI完成：个人业务Agent升级指南",
     "file": "年薪150万的工作_我用500美金的AI完成_个人业务Agent升级指南.md",
     "date": "2026-02-22",
     "source": "https://x.com/xingpt/status/2025219080421277813?s=20",
-    "tags": [
-      "AI",
-      "Agent",
-      "效率"
-    ]
+    "tags": ["AI", "Agent", "效率"],
+    "category": "AI工作流",
+    "quality": "A",
+    "summary": "从时间杠杆转向算法杠杆：知识库、技能框架和自动化执行的个人业务升级路径。"
   }
 ]
