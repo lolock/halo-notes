@@ -44,12 +44,17 @@
     .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(285px,1fr))}
     .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.18s ease}
     .card:hover{transform:translateY(-1px);background:var(--panel2);border-color:#7dd3fc55}
-    .cover{position:relative;display:block;aspect-ratio:2/1;background:linear-gradient(120deg,#0ea5e933,#22c55e33),linear-gradient(180deg,#1f2937,#111827)}
+    .cover{position:relative;display:block;aspect-ratio:2/1;background:linear-gradient(120deg,#0ea5e933,#22c55e33),linear-gradient(180deg,#1f2937,#111827);transition:transform .25s ease, filter .25s ease}
+    .card:hover .cover{transform:scale(1.02);filter:saturate(1.08)}
+    .cover.cat-openclaw{background:linear-gradient(120deg,#0ea5e944,#22c55e44),linear-gradient(180deg,#123040,#0f172a)}
+    .cover.cat-tools{background:linear-gradient(120deg,#2563eb44,#06b6d444),linear-gradient(180deg,#1e293b,#111827)}
+    .cover.cat-workflow{background:linear-gradient(120deg,#7c3aed44,#0ea5e944),linear-gradient(180deg,#1f2240,#0f172a)}
+    .cover.cat-default{background:linear-gradient(120deg,#33415555,#0ea5e933),linear-gradient(180deg,#1f2937,#111827)}
     .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.35));}
     .metaTop{position:absolute;left:8px;top:8px;display:flex;gap:6px;z-index:2}
     .chip{font-size:11px;padding:2px 8px;border-radius:999px;background:#0b0d10cc;border:1px solid #ffffff22;color:#cbd5e1}
     .q-S{color:#86efac;border-color:#22c55e66}.q-A{color:#bae6fd;border-color:#38bdf866}.q-B{color:#fda4af;border-color:#fb718566}
-    .body{padding:12px}
+    .body{padding:13px 13px 12px}
     .tt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:18px;line-height:1.35;font-weight:700;color:var(--text);text-decoration:none;min-height:48px}
     .sm{margin-top:8px;color:#9fb0c4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:64px;font-size:14px;line-height:1.55}
     .m2{margin-top:10px;color:var(--muted);font-size:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
@@ -59,6 +64,7 @@
     .skeleton{height:252px;border-radius:14px;background:linear-gradient(90deg,#141922 25%,#1a2230 37%,#141922 63%);background-size:400% 100%;animation:sh 1.4s ease infinite;border:1px solid var(--line)}
     @keyframes sh{0%{background-position:100% 50%}100%{background-position:0 50%}}
     .empty{padding:24px 0;text-align:center;color:var(--muted)}
+    .emptyBtn{margin-top:8px;border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:8px 12px;border-radius:999px;cursor:pointer;font-size:12px}
     footer{margin-top:18px;color:#64748b;font-size:12px}
     @media (max-width:640px){.wrap{padding:12px 10px 34px}h1{font-size:24px}.search{font-size:16px}.pill{width:100%;text-align:center}}
   </style>
@@ -81,7 +87,7 @@
 
     <p class="st mono">ARTICLES</p>
     <section id="list" class="grid"></section>
-    <div id="empty" class="empty" style="display:none">没有匹配结果，换个关键词试试。</div>
+    <div id="empty" class="empty" style="display:none">没有匹配结果，换个关键词试试。<div><button id="clearBtn" class="emptyBtn">清空筛选</button></div></div>
     <footer class="mono">Powered by GitHub Pages · Managed by Halo</footer>
   </main>
 
@@ -93,6 +99,7 @@
     const qInput=document.getElementById('q');
     const filters=document.getElementById('filters');
     const themeToggle=document.getElementById('themeToggle');
+    const clearBtn=document.getElementById('clearBtn');
 
     function syncThemeBtn(){
       const t=document.documentElement.getAttribute('data-theme')||'dark';
@@ -131,12 +138,12 @@
       });
       list.innerHTML='';
       filtered.forEach(it=>{
-        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260223d';
+        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260223e';
         const qv=it.quality||'A';
         const el=document.createElement('article');
         el.className='card';
         el.innerHTML=`
-          <a class="cover" href="${href}">
+          <a class="cover ${((it.category||'').includes('OpenClaw')?'cat-openclaw':((it.category||'').includes('工具')?'cat-tools':((it.category||'').includes('工作流')?'cat-workflow':'cat-default')))}" href="${href}">
             <div class="metaTop">
               <span class="chip">${it.category||'未分类'}</span>
               <span class="chip q-${qv}">${qv}</span>
@@ -155,6 +162,7 @@
     }
 
     qInput.addEventListener('input',e=>{state.q=e.target.value;render();});
+    clearBtn.addEventListener('click',()=>{state.q='';state.category='全部';qInput.value='';renderFilters();render();});
 
     fetch('./articles.json').then(r=>r.json()).then(items=>{
       state.items=items.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
