@@ -75,7 +75,7 @@
     </section>
     <button id="tocFab" class="tocFab mono" type="button">目录</button>
   <aside id="tocDrawer" class="tocDrawer">
-    <div class="toc"><b>目录</b><div id="tocLinksMobile"></div><div class="progressWrap"><div id="progressBarMobile" class="progressBar"></div></div></div>
+    <div class="toc"><b>目录</b><div id="tocLinksMobile" style="max-height:44vh;overflow:auto"></div><div class="progressWrap"><div id="progressBarMobile" class="progressBar"></div></div></div>
   </aside>
 </main>
 
@@ -142,9 +142,25 @@
         linksM.forEach((l,i)=>l.classList.toggle('active',i===active));
 
         const al=links[active];
-        if(al){ al.scrollIntoView({block:'nearest'}); }
+        if(al){
+          const parent=document.getElementById('tocLinks');
+          if(parent){
+            const top=al.offsetTop, bottom=top+al.offsetHeight;
+            const viewTop=parent.scrollTop, viewBottom=viewTop+parent.clientHeight;
+            if(top<viewTop) parent.scrollTop=top-12;
+            else if(bottom>viewBottom) parent.scrollTop=bottom-parent.clientHeight+12;
+          }
+        }
         const alm=linksM[active];
-        if(alm && tocDrawer && tocDrawer.classList.contains('show')){ alm.scrollIntoView({block:'nearest'}); }
+        if(alm && tocDrawer && tocDrawer.classList.contains('show')){
+          const parent=document.getElementById('tocLinksMobile');
+          if(parent){
+            const top=alm.offsetTop, bottom=top+alm.offsetHeight;
+            const viewTop=parent.scrollTop, viewBottom=viewTop+parent.clientHeight;
+            if(top<viewTop) parent.scrollTop=top-12;
+            else if(bottom>viewBottom) parent.scrollTop=bottom-parent.clientHeight+12;
+          }
+        }
       };
       window.addEventListener('scroll',onScroll,{passive:true});
       onScroll();
