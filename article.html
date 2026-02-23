@@ -51,17 +51,12 @@
     .content blockquote{border-left:3px solid rgba(0,255,65,.45);padding-left:12px;color:var(--muted);margin-left:0}
     .content a{display:inline-block;max-width:100%;overflow-wrap:anywhere;word-break:break-all;white-space:normal;vertical-align:bottom;color:var(--accent2)}
     .content ul,.content ol{padding-left:1.2em}
-
-    .tocFab{display:none!important;position:fixed;right:14px;bottom:18px;z-index:60;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:10px 12px;border-radius:999px;font-size:13px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
-    .tocDrawer{display:none!important;position:fixed;right:10px;bottom:64px;z-index:61;width:min(86vw,320px);max-height:62vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
     .tocListM{max-height:44vh;overflow:auto}
 
     @media (max-width:980px){
       .layout{grid-template-columns:1fr}
       .side{display:none}
-      .tocFab{display:block!important}
-      .tocDrawer.show{display:block!important}
-    }
+                }
     @media (max-width:640px){.content h1{font-size:24px}.content h2{font-size:20px}.content h3{font-size:18px}.content p,.content li{font-size:16px}}
   </style>
 </head>
@@ -85,15 +80,6 @@
         </div>
       </aside>
     </section>
-
-    <button id="tocFab" class="tocFab mono" type="button">目录</button>
-    <aside id="tocDrawer" class="tocDrawer">
-      <div class="tocCard">
-        <span class="tocTitle">目录</span>
-        <div id="tocLinksMobile" class="tocListM"></div>
-        <div class="progressWrap"><div id="progressBarMobile" class="progressBar"></div></div>
-      </div>
-    </aside>
   </main>
 
   <script>
@@ -103,8 +89,6 @@
     const el = document.getElementById('content');
     const raw = document.getElementById('raw');
     const themeToggle=document.getElementById('themeToggle');
-    const tocFab=document.getElementById('tocFab');
-    const tocDrawer=document.getElementById('tocDrawer');
 
     function syncThemeBtn(){
       const t=document.documentElement.getAttribute('data-theme')||'dark';
@@ -119,8 +103,6 @@
     });
     syncThemeBtn();
 
-    if(tocFab){tocFab.addEventListener('click',()=>tocDrawer.classList.toggle('show'));}
-    document.addEventListener('click',(e)=>{ if(!tocDrawer||!tocFab) return; if(!tocDrawer.contains(e.target)&&!tocFab.contains(e.target)) tocDrawer.classList.remove('show'); });
 
     function compactLongLinks(container){
       const links=[...container.querySelectorAll('a[href]')];
@@ -182,7 +164,7 @@
         linksM.forEach((l,i)=>l.classList.toggle('active',i===active));
 
         ensureVisible(list, links[active]);
-        if(tocDrawer.classList.contains('show')) ensureVisible(listM, linksM[active]);
+        ensureVisible(listM, linksM[active]);
       };
 
       window.addEventListener('scroll', onScroll, {passive:true});
