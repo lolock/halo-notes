@@ -55,15 +55,15 @@
     .tocListM{max-height:44vh;overflow:auto}
 
     
-    @media (min-width:981px){
+    @media (min-width:769px){
       html,body{height:100%;overflow:hidden}
       .wrap{height:100vh;padding-bottom:12px}
-      .layout{height:calc(100vh - 74px)}
+      .layout{height:calc(100vh - 74px);grid-template-columns:minmax(0,1fr) 300px}
       .paper{height:100%;overflow-y:auto}
       .side{height:100%}
       .tocList{height:calc(100vh - 170px)}
     }
-    @media (max-width:980px){
+    @media (max-width:768px){
       .layout{grid-template-columns:1fr}
       .side{display:none}
                 }
