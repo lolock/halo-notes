@@ -126,6 +126,8 @@
     function bindScrollSpy(headings){
       const links=[...document.querySelectorAll('#tocLinks .toc-link')];
       const linksM=[...document.querySelectorAll('#tocLinksMobile .toc-link')];
+      const tocSide=document.getElementById('tocSide');
+      const tocDrawer=document.getElementById('tocDrawer');
       const bar=document.getElementById('progressBar');
       const barM=document.getElementById('progressBarMobile');
       const onScroll=()=>{
@@ -138,6 +140,11 @@
         headings.forEach((h,i)=>{ if(h.getBoundingClientRect().top<=120) active=i; });
         links.forEach((l,i)=>l.classList.toggle('active',i===active));
         linksM.forEach((l,i)=>l.classList.toggle('active',i===active));
+
+        const al=links[active];
+        if(al){ al.scrollIntoView({block:'nearest'}); }
+        const alm=linksM[active];
+        if(alm && tocDrawer && tocDrawer.classList.contains('show')){ alm.scrollIntoView({block:'nearest'}); }
       };
       window.addEventListener('scroll',onScroll,{passive:true});
       onScroll();
