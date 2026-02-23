@@ -145,14 +145,12 @@
       const links=[...document.querySelectorAll('#tocLinks .toc-link')];
       const list=document.getElementById('tocLinks');
       const bar=document.getElementById('progressBar');
-      const barM=document.getElementById('progressBarMobile');
 
       const onScroll=()=>{
         const d=document.documentElement;
         const max=d.scrollHeight-d.clientHeight;
         const pct=max>0?Math.max(0,Math.min(100,(window.scrollY/max)*100)):0;
         bar.style.width=pct.toFixed(1)+'%';
-        barM.style.width=pct.toFixed(1)+'%';
 
         let active=0;
         headings.forEach((h,i)=>{ if(h.getBoundingClientRect().top<=140) active=i; });
