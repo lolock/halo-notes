@@ -9,13 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script>
     (function(){
-      const saved=localStorage.getItem('halo_theme');
-      let theme=saved;
-      if(!theme){
-        const h=new Date().getHours();
-        theme=(h>=7 && h<19)?'light':'dark';
-      }
-      document.documentElement.setAttribute('data-theme',theme);
+      const saved = localStorage.getItem('halo_theme');
+      let theme = saved;
+      if(!theme){ const h=new Date().getHours(); theme=(h>=7&&h<19)?'light':'dark'; }
+      document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -23,18 +20,26 @@
     :root{--bg:#0a0a0a;--panel:#141414;--text:#f1f5f9;--muted:#94a3b8;--line:#262626;--accent:#00ff41;--accent2:#00ffff;--code:#070b16;--codeText:#d7e1ff}
     [data-theme="light"]{--bg:#f8fafc;--panel:#ffffff;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--accent:#16a34a;--accent2:#0369a1;--code:#eef2ff;--codeText:#1e293b}
     *{box-sizing:border-box}
-    html,body{width:100%;max-width:100%;overflow-x:hidden !important}
+    html,body{width:100%;max-width:100%;overflow-x:hidden!important}
     body{margin:0;background:var(--bg);color:var(--text);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
     .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
-    .wrap{width:min(1200px,100%);margin:0 auto;padding:18px 12px 46px;overflow-x:hidden}
-    .layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:16px;align-items:start}
-    .side{position:sticky;top:14px}
-    .tocFab{display:none;position:fixed;right:14px;bottom:18px;z-index:60;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:10px 12px;border-radius:999px;font-size:13px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
-    .tocDrawer{display:none;position:fixed;right:10px;bottom:64px;z-index:61;width:min(86vw,320px);max-height:62vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
+    .wrap{width:min(1200px,100%);margin:0 auto;padding:18px 12px 46px}
     .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
     .top a{color:var(--accent2);text-decoration:none;font-size:14px}
     .themeBtn{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px;cursor:pointer}
-    .paper{width:100%;background:linear-gradient(180deg,rgba(0,255,65,.04),transparent 120px),var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 16px;box-shadow:0 20px 50px -10px rgba(0,0,0,.45);overflow:hidden}
+
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
+    .paper{width:100%;background:linear-gradient(180deg,rgba(0,255,65,.04),transparent 120px),var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 16px;box-shadow:0 20px 50px -10px rgba(0,0,0,.35);overflow:hidden}
+    .side{position:sticky;top:14px}
+
+    .tocCard{border:1px dashed rgba(0,255,65,.35);border-radius:10px;background:rgba(0,255,65,.05);padding:10px}
+    .tocTitle{display:block;color:var(--accent);margin-bottom:8px;font-weight:600}
+    .tocList{max-height:calc(100vh - 210px);overflow:auto;padding-right:4px}
+    .toc-link{display:block;padding:4px 0 4px 8px;border-left:2px solid transparent;color:var(--accent2);text-decoration:none;font-size:14px;line-height:1.4}
+    .toc-link.active{border-left-color:var(--accent);color:var(--accent)}
+    .progressWrap{margin-top:10px;border:1px solid var(--line);border-radius:999px;height:8px;overflow:hidden;background:rgba(148,163,184,.2)}
+    .progressBar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+
     .content{max-width:100%;overflow:hidden;overflow-wrap:anywhere;word-break:break-word}
     .content *{max-width:100%}
     .content h1,.content h2,.content h3{line-height:1.35;margin-top:1.2em}
@@ -45,17 +50,18 @@
     .content code{font-family:"JetBrains Mono",ui-monospace,monospace}
     .content blockquote{border-left:3px solid rgba(0,255,65,.45);padding-left:12px;color:var(--muted);margin-left:0}
     .content a{display:inline-block;max-width:100%;overflow-wrap:anywhere;word-break:break-all;white-space:normal;vertical-align:bottom;color:var(--accent2)}
-    .content li,.content p,.content h1,.content h2,.content h3{overflow-wrap:anywhere;word-break:break-word}
     .content ul,.content ol{padding-left:1.2em}
-    .toc{margin:0;padding:10px 12px;border:1px dashed rgba(0,255,65,.35);border-radius:10px;background:rgba(0,255,65,.05);overflow:hidden}
-    .toc .toc-link{display:block;padding:4px 0;border-left:2px solid transparent;padding-left:8px}
-    .toc .toc-link.active{border-left-color:var(--accent);color:var(--accent)}
-    .progressWrap{margin-top:10px;border:1px solid var(--line);border-radius:999px;height:8px;overflow:hidden;background:rgba(148,163,184,.2)}
-    .progressBar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-    .toc b{display:block;margin-bottom:6px;color:var(--accent)}
-    .toc a{color:var(--accent2);text-decoration:none;font-size:14px;display:block;margin:4px 0}
-    #tocLinks{max-height:calc(100vh - 180px);overflow:auto;scroll-behavior:smooth;padding-right:4px}
-    @media (max-width:980px){.layout{grid-template-columns:1fr}.side{display:none}.tocFab{display:block}.tocDrawer.show{display:block}}
+
+    .tocFab{display:none;position:fixed;right:14px;bottom:18px;z-index:60;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:10px 12px;border-radius:999px;font-size:13px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+    .tocDrawer{display:none;position:fixed;right:10px;bottom:64px;z-index:61;width:min(86vw,320px);max-height:62vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
+    .tocDrawer.show{display:block}
+    .tocListM{max-height:44vh;overflow:auto}
+
+    @media (max-width:980px){
+      .layout{grid-template-columns:1fr}
+      .side{display:none}
+      .tocFab{display:block}
+    }
     @media (max-width:640px){.content h1{font-size:24px}.content h2{font-size:20px}.content h3{font-size:18px}.content p,.content li{font-size:16px}}
   </style>
 </head>
@@ -68,17 +74,27 @@
         <a id="raw" href="#" target="_blank" rel="noopener" class="mono">查看原始 Markdown</a>
       </div>
     </div>
+
     <section class="layout">
       <article class="paper content" id="content">加载中…</article>
       <aside class="side">
-        <div class="toc" id="tocSide"><b>目录</b><div id="tocLinks"></div><div class="progressWrap"><div id="progressBar" class="progressBar"></div></div></div>
+        <div class="tocCard">
+          <span class="tocTitle">目录</span>
+          <div id="tocLinks" class="tocList"></div>
+          <div class="progressWrap"><div id="progressBar" class="progressBar"></div></div>
+        </div>
       </aside>
     </section>
+
     <button id="tocFab" class="tocFab mono" type="button">目录</button>
-  <aside id="tocDrawer" class="tocDrawer">
-    <div class="toc"><b>目录</b><div id="tocLinksMobile" style="max-height:44vh;overflow:auto"></div><div class="progressWrap"><div id="progressBarMobile" class="progressBar"></div></div></div>
-  </aside>
-</main>
+    <aside id="tocDrawer" class="tocDrawer">
+      <div class="tocCard">
+        <span class="tocTitle">目录</span>
+        <div id="tocLinksMobile" class="tocListM"></div>
+        <div class="progressWrap"><div id="progressBarMobile" class="progressBar"></div></div>
+      </div>
+    </aside>
+  </main>
 
   <script>
     marked.setOptions({breaks:true,gfm:true});
@@ -87,11 +103,8 @@
     const el = document.getElementById('content');
     const raw = document.getElementById('raw');
     const themeToggle=document.getElementById('themeToggle');
-    const buildTag='v-elite2';
     const tocFab=document.getElementById('tocFab');
     const tocDrawer=document.getElementById('tocDrawer');
-    if(tocFab){tocFab.addEventListener('click',()=>tocDrawer.classList.toggle('show'));}
-    document.addEventListener('click',(e)=>{if(!tocDrawer||!tocFab) return; if(!tocDrawer.contains(e.target)&&!tocFab.contains(e.target)) tocDrawer.classList.remove('show');});
 
     function syncThemeBtn(){
       const t=document.documentElement.getAttribute('data-theme')||'dark';
@@ -106,117 +119,89 @@
     });
     syncThemeBtn();
 
-    function addToc(container){
-      const hs=[...container.querySelectorAll('h2,h3')];
-      const wrap=document.getElementById('tocLinks');
-      const wrapM=document.getElementById('tocLinksMobile');
-      if(!hs.length || !wrap) return [];
-      wrap.innerHTML=''; if(wrapM) wrapM.innerHTML='';
-      hs.forEach((h,i)=>{
-        if(!h.id) h.id='sec-'+i;
-        const a=document.createElement('a');
-        a.href='#'+h.id;
-        a.className='toc-link';
-        a.textContent=(h.tagName==='H3'?'↳ ':'')+h.textContent;
-        wrap.appendChild(a);
-        if(wrapM){const b=a.cloneNode(true); b.classList.remove('active'); wrapM.appendChild(b);}
-      });
-      return hs;
-    }
-
-    function bindScrollSpy(headings){
-      const links=[...document.querySelectorAll('#tocLinks .toc-link')];
-      const linksM=[...document.querySelectorAll('#tocLinksMobile .toc-link')];
-      const tocSide=document.getElementById('tocSide');
-      const tocDrawer=document.getElementById('tocDrawer');
-      const bar=document.getElementById('progressBar');
-      const barM=document.getElementById('progressBarMobile');
-      const onScroll=()=>{
-        const doc=document.documentElement;
-        const max=doc.scrollHeight-doc.clientHeight;
-        const p=max>0?Math.min(100,Math.max(0,(window.scrollY/max)*100)):0;
-        if(bar) bar.style.width=p.toFixed(1)+'%'; if(barM) barM.style.width=p.toFixed(1)+'%';
-
-        let active=0;
-        headings.forEach((h,i)=>{ if(h.getBoundingClientRect().top<=120) active=i; });
-        links.forEach((l,i)=>l.classList.toggle('active',i===active));
-        linksM.forEach((l,i)=>l.classList.toggle('active',i===active));
-
-        const al=links[active];
-        if(al){
-          const parent=document.getElementById('tocLinks');
-          if(parent){
-            const top=al.offsetTop, bottom=top+al.offsetHeight;
-            const viewTop=parent.scrollTop, viewBottom=viewTop+parent.clientHeight;
-            if(top<viewTop) parent.scrollTop=top-12;
-            else if(bottom>viewBottom) parent.scrollTop=bottom-parent.clientHeight+12;
-          }
-        }
-        const alm=linksM[active];
-        if(alm && tocDrawer && tocDrawer.classList.contains('show')){
-          const parent=document.getElementById('tocLinksMobile');
-          if(parent){
-            const top=alm.offsetTop, bottom=top+alm.offsetHeight;
-            const viewTop=parent.scrollTop, viewBottom=viewTop+parent.clientHeight;
-            if(top<viewTop) parent.scrollTop=top-12;
-            else if(bottom>viewBottom) parent.scrollTop=bottom-parent.clientHeight+12;
-          }
-        }
-      };
-      window.addEventListener('scroll',onScroll,{passive:true});
-      onScroll();
-    }
-
-    function hardenOverflow(container){
-      const nodes=[container,...container.querySelectorAll('*')];
-      nodes.forEach(el=>{
-        try{
-          if(el.scrollWidth > el.clientWidth + 1){
-            el.style.maxWidth='100%';
-            el.style.overflowWrap='anywhere';
-            el.style.wordBreak='break-word';
-            if(el.tagName==='A') el.style.wordBreak='break-all';
-            el.style.whiteSpace='normal';
-          }
-        }catch{}
-      });
-    }
+    if(tocFab){tocFab.addEventListener('click',()=>tocDrawer.classList.toggle('show'));}
+    document.addEventListener('click',(e)=>{ if(!tocDrawer||!tocFab) return; if(!tocDrawer.contains(e.target)&&!tocFab.contains(e.target)) tocDrawer.classList.remove('show'); });
 
     function compactLongLinks(container){
       const links=[...container.querySelectorAll('a[href]')];
       links.forEach(a=>{
         const href=a.getAttribute('href')||'';
         const txt=(a.textContent||'').trim();
-        const looksLong=(txt.length>48 || href.length>72);
-        a.style.whiteSpace='normal';a.style.wordBreak='break-all';a.style.overflowWrap='anywhere';
-        if(!looksLong) return;
-        try{
-          const u=new URL(href, location.origin);
-          const shortPath=u.pathname.length>16 ? u.pathname.slice(0,16)+'…' : u.pathname;
-          a.textContent=`${u.host}${shortPath}`;
-          a.title=href;
-        }catch{
-          a.textContent=txt.slice(0,28)+'…';
-          a.title=href || txt;
-        }
+        if(!(txt.length>48 || href.length>72)) return;
+        try{ const u=new URL(href, location.origin); const short=u.pathname.length>16?u.pathname.slice(0,16)+'…':u.pathname; a.textContent=`${u.host}${short}`; a.title=href; }
+        catch{ a.textContent=txt.slice(0,28)+'…'; a.title=href||txt; }
       });
+    }
+
+    function hardenOverflow(container){
+      const nodes=[container,...container.querySelectorAll('*')];
+      nodes.forEach(n=>{ try{ if(n.scrollWidth>n.clientWidth+1){ n.style.maxWidth='100%'; n.style.overflowWrap='anywhere'; n.style.wordBreak=n.tagName==='A'?'break-all':'break-word'; n.style.whiteSpace='normal'; } }catch{} });
+    }
+
+    function ensureVisible(container, item){
+      if(!container || !item) return;
+      const top=item.offsetTop, bottom=top+item.offsetHeight;
+      const viewTop=container.scrollTop, viewBottom=viewTop+container.clientHeight;
+      if(top<viewTop) container.scrollTop=top-12;
+      else if(bottom>viewBottom) container.scrollTop=bottom-container.clientHeight+12;
+    }
+
+    function buildToc(container){
+      const hs=[...container.querySelectorAll('h2,h3')];
+      const desktop=document.getElementById('tocLinks');
+      const mobile=document.getElementById('tocLinksMobile');
+      desktop.innerHTML=''; mobile.innerHTML='';
+      hs.forEach((h,i)=>{
+        if(!h.id) h.id='sec-'+i;
+        const t=(h.tagName==='H3'?'↳ ':'')+h.textContent;
+        const a=document.createElement('a'); a.href='#'+h.id; a.className='toc-link'; a.textContent=t; desktop.appendChild(a);
+        const b=document.createElement('a'); b.href='#'+h.id; b.className='toc-link'; b.textContent=t; mobile.appendChild(b);
+      });
+      return hs;
+    }
+
+    function bindReadingSync(headings){
+      const links=[...document.querySelectorAll('#tocLinks .toc-link')];
+      const linksM=[...document.querySelectorAll('#tocLinksMobile .toc-link')];
+      const list=document.getElementById('tocLinks');
+      const listM=document.getElementById('tocLinksMobile');
+      const bar=document.getElementById('progressBar');
+      const barM=document.getElementById('progressBarMobile');
+
+      const onScroll=()=>{
+        const d=document.documentElement;
+        const max=d.scrollHeight-d.clientHeight;
+        const pct=max>0?Math.max(0,Math.min(100,(window.scrollY/max)*100)):0;
+        bar.style.width=pct.toFixed(1)+'%';
+        barM.style.width=pct.toFixed(1)+'%';
+
+        let active=0;
+        headings.forEach((h,i)=>{ if(h.getBoundingClientRect().top<=140) active=i; });
+        links.forEach((l,i)=>l.classList.toggle('active',i===active));
+        linksM.forEach((l,i)=>l.classList.toggle('active',i===active));
+
+        ensureVisible(list, links[active]);
+        if(tocDrawer.classList.contains('show')) ensureVisible(listM, linksM[active]);
+      };
+
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
     }
 
     if(!file){ el.textContent='缺少 file 参数'; }
     else {
       raw.href='./articles/'+encodeURIComponent(file);
       fetch('./articles/'+encodeURIComponent(file))
-      .then(r=>{ if(!r.ok) throw new Error('读取失败'); return r.text(); })
-      .then(md=>{
-        el.innerHTML = marked.parse(md);
-        compactLongLinks(el);
-        const hs=addToc(el);
-        bindScrollSpy(hs);
-        hardenOverflow(el);
-        document.title = (md.match(/^#\s+(.+)/m)?.[1]||'文章阅读') + ' - Halo Notes';
-        raw.textContent='查看原始 Markdown · '+buildTag;
-      })
-      .catch(e=>{ el.textContent='加载失败：'+e.message; });
+        .then(r=>{ if(!r.ok) throw new Error('读取失败'); return r.text(); })
+        .then(md=>{
+          el.innerHTML = marked.parse(md);
+          compactLongLinks(el);
+          hardenOverflow(el);
+          const hs=buildToc(el);
+          bindReadingSync(hs);
+          document.title=(md.match(/^#\s+(.+)/m)?.[1]||'文章阅读')+' - Halo Notes';
+        })
+        .catch(e=>{ el.textContent='加载失败：'+e.message; });
     }
   </script>
 </body>
