@@ -600,3 +600,23 @@ Agent 化提供了第四条路径：卖算法能力。
 - Agent 大爆发的时代，我们应该如何应对 AI 焦虑（这篇文章探讨了一个更深层的问题：当 AI 越来越强大，人类的价值在哪里？我的观点是，AI 负责工具理性（效率），人类负责价值理性（意义）。这是 Agent 化的哲学基础。）
 
 免责声明：本文提供的信息不是交易建议。BlockWeeks.com不对根据本文提供的信息所做的任何投资承担责任。我们强烈建议在做出任何投资决策之前进行独立研究或咨询合格的专业人士。
+
+
+## 文内配图
+
+![图1](https://pbs.twimg.com/media/HBsFX7hbgAAK85M.jpg)
+
+![图2](https://pbs.twimg.com/media/HBsAzcqbEAA9yKA.jpg)
+
+![图3](https://pbs.twimg.com/media/HBr58O1bgAAWj_5.jpg)
+
+![图4](https://pbs.twimg.com/media/HBr_l5FbgAUJo29.jpg)
+
+![图5](https://pbs.twimg.com/media/HBr_3zJaMAAX347.jpg)
+
+![图6](https://pbs.twimg.com/media/HBsEcxKbgAEpcaE.jpg)
+
+![图7](https://pbs.twimg.com/media/HBr5NMyagAAZW2w.jpg)
+
+![图8](https://pbs.twimg.com/media/HBr_yh3bgAISTHU.jpg)
+

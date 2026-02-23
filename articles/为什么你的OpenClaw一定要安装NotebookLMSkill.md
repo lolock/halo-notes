@@ -410,3 +410,20 @@ NotebookLM 作为 OpenClaw 的第二大脑
 给 NotebookLM 超能力，然后让 NotebookLM 反过来给你的 OpenClaw 超能力。
 
 这个 skill，就是连接两边的那座桥。
+
+## 文内配图
+
+![图1](https://pbs.twimg.com/media/HBmaCcvaUAAykAg.jpg)
+
+![图2](https://pbs.twimg.com/media/HBmahXXboAAxoOp.jpg)
+
+![图3](https://pbs.twimg.com/media/HBmaU0dbkAA88xC.jpg)
+
+![图4](https://pbs.twimg.com/media/HBmao_iawAAQJ3d.jpg)
+
+![图5](https://pbs.twimg.com/media/HBmalQwbgAAsMaq.jpg)
+
+![图6](https://pbs.twimg.com/media/HBmacmYaEAE80dU.jpg)
+
+![图7](https://pbs.twimg.com/media/HBmaM4ebsAApWUr.jpg)
+

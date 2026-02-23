@@ -374,3 +374,20 @@ OpenClaw 版本数据基于 v2026.1.12-v2026.2.2 官方 Changelog 和 GitHub Iss
 本人由李韭二和Claude Max、Manus还有Google Gemini 共同创作
 
 这一次主要贡献者李韭二。
+
+## 文内配图
+
+![图1](https://pbs.twimg.com/media/HByZYd7bgAALaBi.jpg)
+
+![图2](https://pbs.twimg.com/media/HByizziakAEpA97.png)
+
+![图3](https://pbs.twimg.com/media/HBygP2jbYAA1nUe.png)
+
+![图4](https://pbs.twimg.com/media/HByjslFbIAACrMK.png)
+
+![图5](https://pbs.twimg.com/media/HBykpLmbEAE_Qxc.png)
+
+![图6](https://pbs.twimg.com/media/HBykW2Rb0AAIPH0.png)
+
+![图7](https://pbs.twimg.com/media/HByh7rxbkAAVL07.png)
+
