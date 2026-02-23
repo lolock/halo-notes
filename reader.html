@@ -4,54 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>文章阅读 - Halo Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
-    :root{--bg:#f5f7fb;--panel:#fff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;--pri:#2563eb;--code:#0b1020}
-    @media (prefers-color-scheme: dark){:root{--bg:#0b1220;--panel:#111827;--text:#e5e7eb;--muted:#94a3b8;--line:#243041;--pri:#60a5fa;--code:#070b16}}
+    :root{--bg:#0a0a0a;--panel:#141414;--text:#f1f5f9;--muted:#94a3b8;--line:#262626;--accent:#00ff41;--accent2:#00ffff;--code:#070b16}
     *{box-sizing:border-box}
     html,body{width:100%;max-width:100%;overflow-x:hidden !important}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
-    .wrap{width:min(980px,100%);margin:0 auto;padding:20px 16px 60px;overflow-x:hidden}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
+    .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+    .wrap{width:min(980px,100%);margin:0 auto;padding:18px 12px 46px;overflow-x:hidden}
     .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
-    .top a{color:var(--pri);text-decoration:none}
-    .paper{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 10px 30px rgba(31,41,55,.08);overflow:hidden}
+    .top a{color:var(--accent2);text-decoration:none;font-size:14px}
+    .paper{width:100%;background:linear-gradient(180deg,rgba(0,255,65,.04),transparent 120px),var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 16px;box-shadow:0 20px 50px -10px rgba(0,0,0,.45);overflow:hidden}
     .content{max-width:100%;overflow:hidden;overflow-wrap:anywhere;word-break:break-word}
     .content *{max-width:100%}
     .content h1,.content h2,.content h3{line-height:1.35;margin-top:1.2em}
+    .content h1{font-size:30px;letter-spacing:-.02em}
     .content p,.content li{line-height:1.9}
     .content img{max-width:100%;height:auto;border-radius:10px}
-    .content pre{overflow:auto;background:var(--code);color:#d7e1ff;padding:12px;border-radius:10px}
-    .content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-    .content blockquote{border-left:3px solid var(--line);padding-left:12px;color:var(--muted);margin-left:0}
-    .content a{display:inline-block;max-width:100%;overflow-wrap:anywhere;word-break:break-all;white-space:normal;vertical-align:bottom}
+    .content pre{overflow:auto;background:var(--code);color:#d7e1ff;padding:12px;border-radius:10px;border:1px solid rgba(0,255,65,.2)}
+    .content code{font-family:"JetBrains Mono",ui-monospace,monospace}
+    .content blockquote{border-left:3px solid rgba(0,255,65,.45);padding-left:12px;color:var(--muted);margin-left:0}
+    .content a{display:inline-block;max-width:100%;overflow-wrap:anywhere;word-break:break-all;white-space:normal;vertical-align:bottom;color:var(--accent2)}
     .content li,.content p,.content h1,.content h2,.content h3{overflow-wrap:anywhere;word-break:break-word}
     .content ul,.content ol{padding-left:1.2em}
-    .toc{margin:0 0 14px;padding:10px 12px;border:1px dashed var(--line);border-radius:10px;background:transparent;overflow:hidden}
-    .toc b{display:block;margin-bottom:6px}
-    .toc a{color:var(--pri);text-decoration:none;font-size:14px;display:block;margin:4px 0}
-
-    /* Mobile optimization */
-    @media (max-width: 640px){
-      .wrap{padding:12px 10px 32px}
-      .top{margin-bottom:10px}
-      .top a{font-size:14px;padding:6px 0}
-      .paper{padding:14px 12px;border-radius:12px}
-      .content h1{font-size:24px}
-      .content h2{font-size:20px}
-      .content h3{font-size:18px}
-      .content p,.content li{line-height:1.8;font-size:16px}
-      .content pre{padding:10px;border-radius:8px;font-size:13px}
-      .content table{display:block;overflow:auto;-webkit-overflow-scrolling:touch}
-      .toc{padding:8px 10px}
-      .toc a{font-size:13px;line-height:1.5}
-    }
+    .toc{margin:0 0 14px;padding:10px 12px;border:1px dashed rgba(0,255,65,.35);border-radius:10px;background:rgba(0,255,65,.05);overflow:hidden}
+    .toc b{display:block;margin-bottom:6px;color:var(--accent)}
+    .toc a{color:var(--accent2);text-decoration:none;font-size:14px;display:block;margin:4px 0}
+    @media (max-width:640px){.content h1{font-size:24px}.content h2{font-size:20px}.content h3{font-size:18px}.content p,.content li{font-size:16px}}
   </style>
 </head>
 <body>
   <main class="wrap">
     <div class="top">
       <a href="./index.html">← 返回目录</a>
-      <a id="raw" href="#" target="_blank" rel="noopener">查看原始 Markdown</a>
+      <a id="raw" href="#" target="_blank" rel="noopener" class="mono">查看原始 Markdown</a>
     </div>
     <article class="paper content" id="content">加载中…</article>
   </main>
@@ -62,7 +51,7 @@
     const file = p.get('file');
     const el = document.getElementById('content');
     const raw = document.getElementById('raw');
-    const buildTag='v-force4';
+    const buildTag='v-elite1';
 
     function addToc(container){
       const hs=[...container.querySelectorAll('h2,h3')];
@@ -81,15 +70,15 @@
     }
 
     function hardenOverflow(container){
-      const nodes=[container,...container.querySelectorAll("*")];
+      const nodes=[container,...container.querySelectorAll('*')];
       nodes.forEach(el=>{
         try{
           if(el.scrollWidth > el.clientWidth + 1){
-            el.style.maxWidth = "100%";
-            el.style.overflowWrap = "anywhere";
-            el.style.wordBreak = "break-word";
-            if(el.tagName === "A") el.style.wordBreak = "break-all";
-            el.style.whiteSpace = "normal";
+            el.style.maxWidth='100%';
+            el.style.overflowWrap='anywhere';
+            el.style.wordBreak='break-word';
+            if(el.tagName==='A') el.style.wordBreak='break-all';
+            el.style.whiteSpace='normal';
           }
         }catch{}
       });
@@ -101,18 +90,12 @@
         const href=a.getAttribute('href')||'';
         const txt=(a.textContent||'').trim();
         const looksLong=(txt.length>48 || href.length>72);
-
-        // always harden link wrapping on mobile
-        a.style.whiteSpace='normal';
-        a.style.wordBreak='break-all';
-        a.style.overflowWrap='anywhere';
-
+        a.style.whiteSpace='normal';a.style.wordBreak='break-all';a.style.overflowWrap='anywhere';
         if(!looksLong) return;
         try{
           const u=new URL(href, location.origin);
           const shortPath=u.pathname.length>16 ? u.pathname.slice(0,16)+'…' : u.pathname;
-          const label=`${u.host}${shortPath}`;
-          a.textContent=label;
+          a.textContent=`${u.host}${shortPath}`;
           a.title=href;
         }catch{
           a.textContent=txt.slice(0,28)+'…';
