@@ -9,58 +9,51 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --bg:#0a0a0a;--panel:#141414;--panel-hover:#1a1a1a;--text:#f1f5f9;--muted:#94a3b8;
-      --line:#262626;--accent:#00ff41;--accent2:#00ffff;--shadow:0 20px 50px -10px rgba(0,0,0,.45);
-    }
+    :root{--bg:#0b0d10;--panel:#12161c;--panel2:#171c24;--text:#f3f5f8;--muted:#98a2b3;--line:#293241;--a:#7dd3fc;--g:#22c55e}
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
+    html,body{margin:0;background:radial-gradient(1000px 500px at 20% -10%,#1f293733,transparent 55%),var(--bg);color:var(--text);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
     .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
-    .wrap{max-width:980px;margin:0 auto;padding:26px 14px 54px}
-    .hero{background:linear-gradient(180deg,rgba(0,255,65,.06),transparent 45%),var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 16px;box-shadow:var(--shadow)}
-    .kicker{display:inline-block;font-size:12px;border:1px solid rgba(0,255,65,.35);color:var(--accent);padding:2px 8px;border-radius:999px}
-    .title{margin:10px 0 4px;font-size:30px;letter-spacing:-.02em}
+    .wrap{max-width:1060px;margin:0 auto;padding:26px 14px 58px}
+    .hero{background:linear-gradient(180deg,#1f293733,transparent 60%),var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 16px}
+    .k{display:inline-flex;padding:3px 9px;border:1px solid #22c55e66;color:#86efac;border-radius:999px;font-size:12px}
+    h1{margin:10px 0 4px;font-size:30px;letter-spacing:-.02em}
     .sub{margin:0;color:var(--muted)}
     .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-    .search{flex:1;min-width:220px;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:#0f0f0f;color:var(--text)}
-    .search:focus{outline:none;border-color:rgba(0,255,65,.5)}
-    .pill{padding:10px 12px;border:1px solid var(--line);border-radius:10px;color:var(--muted);font-size:13px;background:#101010}
+    .search{flex:1;min-width:220px;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:#0f1318;color:var(--text)}
+    .search:focus{outline:none;border-color:#7dd3fc66}
+    .pill{padding:10px 12px;border:1px solid var(--line);border-radius:10px;color:var(--muted);font-size:13px;background:#0f1318}
     .filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-    .filter{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#121212;color:var(--muted);font-size:12px;cursor:pointer}
-    .filter.active{border-color:rgba(0,255,65,.5);color:var(--accent)}
-    .section-title{margin:20px 2px 10px;font-size:16px;color:var(--muted)}
-    .list{display:grid;gap:12px}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:var(--shadow);transition:.18s ease}
-    .card:hover{background:var(--panel-hover);border-color:rgba(0,255,65,.35)}
-    .tt{font-size:18px;font-weight:700;color:var(--text);text-decoration:none;line-height:1.35}
-    .meta{font-size:12px;color:var(--muted);margin-top:7px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-    .meta a{color:var(--accent2);text-decoration:none}
-    .summary{margin-top:8px;color:#cbd5e1;font-size:14px;line-height:1.6}
-    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .filter{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#141922;color:var(--muted);font-size:12px;cursor:pointer}
+    .filter.active{border-color:#7dd3fc66;color:#bae6fd}
+    .st{margin:18px 2px 10px;color:var(--muted);font-size:14px}
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(285px,1fr))}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.18s ease}
+    .card:hover{transform:translateY(-1px);background:var(--panel2);border-color:#7dd3fc55}
+    .cover{position:relative;display:block;aspect-ratio:2/1;background:linear-gradient(120deg,#0ea5e933,#22c55e33),linear-gradient(180deg,#1f2937,#111827)}
+    .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.35));}
+    .metaTop{position:absolute;left:8px;top:8px;display:flex;gap:6px;z-index:2}
+    .chip{font-size:11px;padding:2px 8px;border-radius:999px;background:#0b0d10cc;border:1px solid #ffffff22;color:#cbd5e1}
+    .q-S{color:#86efac;border-color:#22c55e66}.q-A{color:#bae6fd;border-color:#38bdf866}.q-B{color:#fda4af;border-color:#fb718566}
+    .body{padding:12px}
+    .tt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:18px;line-height:1.35;font-weight:700;color:var(--text);text-decoration:none;min-height:48px}
+    .sm{margin-top:8px;color:#cbd5e1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:64px;font-size:14px;line-height:1.55}
+    .m2{margin-top:8px;color:var(--muted);font-size:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+    .m2 a{color:var(--a);text-decoration:none}
+    .tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
     .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--muted)}
-    .qtag{font-size:11px;border-radius:999px;padding:2px 8px}
-    .q-S{background:rgba(0,255,65,.16);color:var(--accent)}
-    .q-A{background:rgba(0,255,255,.14);color:var(--accent2)}
-    .q-B{background:rgba(255,107,107,.18);color:#ff6b6b}
+    .skeleton{height:252px;border-radius:14px;background:linear-gradient(90deg,#141922 25%,#1a2230 37%,#141922 63%);background-size:400% 100%;animation:sh 1.4s ease infinite;border:1px solid var(--line)}
+    @keyframes sh{0%{background-position:100% 50%}100%{background-position:0 50%}}
     .empty{padding:24px 0;text-align:center;color:var(--muted)}
     footer{margin-top:18px;color:#64748b;font-size:12px}
-    @media (max-width:640px){
-      .wrap{padding:12px 10px 34px}
-      .hero{padding:14px 12px;border-radius:12px}
-      .title{font-size:23px}
-      .search{min-width:0;width:100%;font-size:16px}
-      .pill{width:100%;text-align:center}
-      .tt{font-size:17px}
-    }
+    @media (max-width:640px){.wrap{padding:12px 10px 34px}h1{font-size:24px}.search{font-size:16px}.pill{width:100%;text-align:center}}
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="hero">
-      <span class="kicker mono">HALO NOTES</span>
-      <h1 class="title">结构化文章归档</h1>
-      <p class="sub">高价值内容沉淀 · 快速检索 · 持续复盘</p>
-
+      <span class="k mono">HALO NOTES / CARD v2</span>
+      <h1>结构化文章归档</h1>
+      <p class="sub">参考 Paragraph 的卡片节奏：封面 → 标题 → 摘要 → 元信息</p>
       <div class="toolbar">
         <input id="q" class="search" placeholder="搜索标题/摘要/标签（例如：OpenClaw、Agent）" />
         <span id="count" class="pill mono">0 / 0</span>
@@ -68,10 +61,9 @@
       <div id="filters" class="filters"></div>
     </section>
 
-    <h2 class="section-title">文章列表</h2>
-    <section id="list" class="list"></section>
+    <p class="st mono">ARTICLES</p>
+    <section id="list" class="grid"></section>
     <div id="empty" class="empty" style="display:none">没有匹配结果，换个关键词试试。</div>
-
     <footer class="mono">Powered by GitHub Pages · Managed by Halo</footer>
   </main>
 
@@ -82,6 +74,8 @@
     const empty=document.getElementById('empty');
     const qInput=document.getElementById('q');
     const filters=document.getElementById('filters');
+
+    list.innerHTML='<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>';
 
     function renderFilters(){
       const cats=['全部',...new Set(state.items.map(i=>i.category||'未分类'))];
@@ -103,28 +97,27 @@
         const hay=[it.title||'',it.summary||'',it.category||'',...(it.tags||[])].join(' ').toLowerCase();
         return hay.includes(q);
       });
-
       list.innerHTML='';
       filtered.forEach(it=>{
-        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260223b';
+        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260223c';
         const qv=it.quality||'A';
         const el=document.createElement('article');
         el.className='card';
         el.innerHTML=`
-          <a class="tt" href="${href}">${it.title}</a>
-          <div class="meta">
-            <span>${it.date||''}</span>
-            <span>·</span>
-            <span>${it.category||'未分类'}</span>
-            <span class="qtag q-${qv}">${qv}</span>
-            <span>·</span>
-            <a href="${it.source||'#'}" target="_blank" rel="noopener">原始链接</a>
-          </div>
-          ${it.summary?`<div class="summary">${it.summary}</div>`:''}
-          <div class="tags">${(it.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
+          <a class="cover" href="${href}">
+            <div class="metaTop">
+              <span class="chip">${it.category||'未分类'}</span>
+              <span class="chip q-${qv}">${qv}</span>
+            </div>
+          </a>
+          <div class="body">
+            <a class="tt" href="${href}">${it.title}</a>
+            <p class="sm">${it.summary||''}</p>
+            <div class="m2"><span>${it.date||''}</span><span>·</span><a href="${it.source||'#'}" target="_blank" rel="noopener">原始链接</a></div>
+            <div class="tags">${(it.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+          </div>`;
         list.appendChild(el);
       });
-
       countEl.textContent=`${filtered.length} / ${state.items.length}`;
       empty.style.display=filtered.length? 'none':'block';
     }
@@ -135,7 +128,7 @@
       state.items=items.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
       renderFilters();
       render();
-    }).catch(()=>{countEl.textContent='加载失败';});
+    }).catch(()=>{countEl.textContent='加载失败';list.innerHTML='';});
   </script>
 </body>
 </html>
