@@ -22,7 +22,7 @@
     .content pre{overflow:auto;background:var(--code);color:#d7e1ff;padding:12px;border-radius:10px}
     .content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
     .content blockquote{border-left:3px solid var(--line);padding-left:12px;color:var(--muted);margin-left:0}
-    .content a{overflow-wrap:anywhere;word-break:break-all}
+    .content a{overflow-wrap:anywhere;word-break:break-all;white-space:normal}
     .content li,.content p,.content h1,.content h2,.content h3{overflow-wrap:anywhere;word-break:break-word}
     .content ul,.content ol{padding-left:1.2em}
     .toc{margin:0 0 14px;padding:10px 12px;border:1px dashed var(--line);border-radius:10px;background:transparent;overflow:hidden}
@@ -78,6 +78,26 @@
       container.prepend(toc);
     }
 
+    function compactLongLinks(container){
+      const links=[...container.querySelectorAll('a[href]')];
+      links.forEach(a=>{
+        const href=a.getAttribute('href')||'';
+        const txt=(a.textContent||'').trim();
+        const looksLong=(txt.length>55 || href.length>80);
+        if(!looksLong) return;
+        try{
+          const u=new URL(href, location.origin);
+          const shortPath=u.pathname.length>22 ? u.pathname.slice(0,22)+'…' : u.pathname;
+          const label=`${u.host}${shortPath}`;
+          a.textContent=label;
+          a.title=href;
+        }catch{
+          a.textContent=txt.slice(0,40)+'…';
+          a.title=href || txt;
+        }
+      });
+    }
+
     if(!file){ el.textContent='缺少 file 参数'; }
     else {
       raw.href='./articles/'+encodeURIComponent(file);
@@ -85,6 +105,7 @@
       .then(r=>{ if(!r.ok) throw new Error('读取失败'); return r.text(); })
       .then(md=>{
         el.innerHTML = marked.parse(md);
+        compactLongLinks(el);
         addToc(el);
         document.title = (md.match(/^#\s+(.+)/m)?.[1]||'文章阅读') + ' - Halo Notes';
       })
