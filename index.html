@@ -41,7 +41,7 @@
     .filter{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#141922;color:var(--muted);font-size:12px;cursor:pointer}
     .filter.active{border-color:#7dd3fc66;color:#bae6fd}
     .st{margin:18px 2px 10px;color:var(--muted);font-size:14px}
-    .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(285px,1fr))}
+    .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
     .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.18s ease}
     .card:hover{transform:translateY(-1px);background:var(--panel2);border-color:#7dd3fc55}
     .cover{position:relative;display:block;aspect-ratio:2/1;background:linear-gradient(120deg,#0ea5e933,#22c55e33),linear-gradient(180deg,#1f2937,#111827);transition:transform .25s ease, filter .25s ease}
@@ -55,12 +55,12 @@
     .chip{font-size:11px;padding:2px 8px;border-radius:999px;background:#0b0d10cc;border:1px solid #ffffff22;color:#cbd5e1}
     .q-S{color:#86efac;border-color:#22c55e66}.q-A{color:#bae6fd;border-color:#38bdf866}.q-B{color:#fda4af;border-color:#fb718566}
     .body{padding:13px 13px 12px}
-    .tt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:18px;line-height:1.35;font-weight:700;color:var(--text);text-decoration:none;min-height:48px}
-    .sm{margin-top:8px;color:#9fb0c4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:64px;font-size:14px;line-height:1.55}
-    .m2{margin-top:10px;color:var(--muted);font-size:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+    .tt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:19px;line-height:1.34;font-weight:700;color:var(--text);text-decoration:none;min-height:52px}
+    .sm{margin-top:8px;color:#9fb0c4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:66px;font-size:14px;line-height:1.58}
+    .m2{margin-top:11px;color:var(--muted);font-size:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding-top:8px;border-top:1px dashed var(--line)}
     .m2 a{color:var(--a);text-decoration:none}
     .tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
-    .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--muted)}
+    .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--muted);background:rgba(148,163,184,.06)}
     .skeleton{height:252px;border-radius:14px;background:linear-gradient(90deg,#141922 25%,#1a2230 37%,#141922 63%);background-size:400% 100%;animation:sh 1.4s ease infinite;border:1px solid var(--line)}
     @keyframes sh{0%{background-position:100% 50%}100%{background-position:0 50%}}
     .empty{padding:24px 0;text-align:center;color:var(--muted)}
@@ -85,7 +85,7 @@
       <div id="filters" class="filters"></div>
     </section>
 
-    <p class="st mono">ARTICLES</p>
+    <p class="st mono">ARTICLES · 已按时间倒序排列</p>
     <section id="list" class="grid"></section>
     <div id="empty" class="empty" style="display:none">没有匹配结果，换个关键词试试。<div><button id="clearBtn" class="emptyBtn">清空筛选</button></div></div>
     <footer class="mono">Powered by GitHub Pages · Managed by Halo</footer>
@@ -138,7 +138,7 @@
       });
       list.innerHTML='';
       filtered.forEach(it=>{
-        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260223e';
+        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260223f';
         const qv=it.quality||'A';
         const el=document.createElement('article');
         el.className='card';
@@ -152,7 +152,7 @@
           <div class="body">
             <a class="tt" href="${href}" title="${it.title}">${it.title}</a>
             <p class="sm">${it.summary||''}</p>
-            <div class="m2"><span>${it.date||''}</span><span>·</span><a href="${it.source||'#'}" target="_blank" rel="noopener">原始链接</a></div>
+            <div class="m2"><span class="mono">${it.date||''}</span><span>·</span><a href="${it.source||'#'}" target="_blank" rel="noopener">↗ 原始链接</a></div>
             <div class="tags">${(() => { const tags=(it.tags||[]); const head=tags.slice(0,2).map(t=>`<span class="tag">${t}</span>`).join(''); const more=tags.length>2?`<span class="tag">+${tags.length-2}</span>`:''; return head+more; })()}</div>
           </div>`;
         list.appendChild(el);
