@@ -4,38 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Halo Notes</title>
+  <meta name="description" content="Halo Notes - 结构化文章归档" />
   <style>
-    :root{--bg:#f7f8fb;--card:#fff;--text:#111;--sub:#666;--line:#e8e8ef;--pri:#0b57d0}
-    @media (prefers-color-scheme: dark){:root{--bg:#0f1115;--card:#151922;--text:#e8ecf1;--sub:#a6b0bd;--line:#2a3040;--pri:#7fb0ff}}
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
-    .wrap{max-width:920px;margin:0 auto;padding:28px 16px 60px}
-    h1{margin:0 0 6px} .sub{margin:0 0 20px;color:var(--sub)}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
-    .title{font-size:18px;font-weight:700;color:var(--text);text-decoration:none}
-    .meta{font-size:13px;color:var(--sub);margin-top:6px}
-    .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--sub)}
+    :root{
+      --bg:#f5f7fb;--panel:#ffffff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;
+      --pri:#2563eb;--pri-soft:#dbeafe;--shadow:0 10px 30px rgba(31,41,55,.08)
+    }
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0b1220;--panel:#111827;--text:#e5e7eb;--muted:#94a3b8;--line:#243041;--pri:#60a5fa;--pri-soft:#1e3a8a;--shadow:none}
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 20% -10%,var(--pri-soft),transparent 40%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 16px 60px}
+    .hero{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px 20px;box-shadow:var(--shadow)}
+    .title{margin:0;font-size:30px}
+    .sub{margin:8px 0 0;color:var(--muted)}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .search{flex:1;min-width:220px;padding:11px 12px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--text)}
+    .pill{padding:8px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px}
+    .section-title{margin:22px 2px 10px;font-size:18px}
+    .list{display:grid;gap:12px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;transition:.2s ease;box-shadow:var(--shadow)}
+    .card:hover{transform:translateY(-1px);border-color:var(--pri)}
+    .card a.tt{font-size:19px;font-weight:700;color:var(--text);text-decoration:none}
+    .meta{font-size:13px;color:var(--muted);margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .meta a{color:var(--pri);text-decoration:none}
+    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted)}
+    .empty{padding:30px 0;text-align:center;color:var(--muted)}
+    footer{margin-top:22px;color:var(--muted);font-size:12px}
   </style>
 </head>
 <body>
   <main class="wrap">
-    <h1>Halo Notes</h1>
-    <p class="sub">整理后的文章归档（静态站）</p>
-    <section id="list"></section>
+    <section class="hero">
+      <h1 class="title">Halo Notes</h1>
+      <p class="sub">结构化文章归档 · 快速检索 · 一键阅读</p>
+      <div class="toolbar">
+        <input id="q" class="search" placeholder="搜索标题/标签（例如：Agent、OpenClaw）" />
+        <span id="count" class="pill">0 篇</span>
+      </div>
+    </section>
+
+    <h2 class="section-title">文章列表</h2>
+    <section id="list" class="list"></section>
+    <div id="empty" class="empty" style="display:none">没有匹配结果，换个关键词试试。</div>
+
+    <footer>Powered by GitHub Pages · Managed by Halo</footer>
   </main>
 
   <script>
-    fetch('./articles.json').then(r=>r.json()).then(items=>{
-      const box=document.getElementById('list');
-      items.forEach(it=>{
-        const card=document.createElement('article');card.className='card';
+    const state={items:[],q:''};
+    const list=document.getElementById('list');
+    const countEl=document.getElementById('count');
+    const empty=document.getElementById('empty');
+    const qInput=document.getElementById('q');
+
+    function render(){
+      const q=state.q.trim().toLowerCase();
+      const filtered=state.items.filter(it=>{
+        if(!q) return true;
+        const hay=[it.title||'',...(it.tags||[])].join(' ').toLowerCase();
+        return hay.includes(q);
+      });
+
+      list.innerHTML='';
+      filtered.forEach(it=>{
         const href='./article.html?file='+encodeURIComponent(it.file);
-        card.innerHTML=`<a class="title" href="${href}">${it.title}</a>
-          <div class="meta">${it.date} · <a href="${it.source}" target="_blank" rel="noopener">原始链接</a></div>
-          <div class="tags">${(it.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
-        box.appendChild(card);
-      })
-    })
+        const el=document.createElement('article');
+        el.className='card';
+        el.innerHTML=`
+          <a class="tt" href="${href}">${it.title}</a>
+          <div class="meta">
+            <span>${it.date||''}</span>
+            <span>·</span>
+            <a href="${it.source||'#'}" target="_blank" rel="noopener">原始链接</a>
+          </div>
+          <div class="tags">${(it.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        `;
+        list.appendChild(el);
+      });
+
+      countEl.textContent=`${filtered.length} / ${state.items.length} 篇`;
+      empty.style.display=filtered.length? 'none':'block';
+    }
+
+    qInput.addEventListener('input',e=>{state.q=e.target.value;render();});
+
+    fetch('./articles.json')
+      .then(r=>r.json())
+      .then(items=>{state.items=items.sort((a,b)=>(b.date||'').localeCompare(a.date||''));render();})
+      .catch(()=>{countEl.textContent='加载失败';});
   </script>
 </body>
 </html>
