@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN" style="max-width:100%;overflow-x:hidden;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>文章阅读 - Halo Notes</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root{--bg:#f5f7fb;--panel:#fff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;--pri:#2563eb;--code:#0b1020}
+    @media (prefers-color-scheme: dark){:root{--bg:#0b1220;--panel:#111827;--text:#e5e7eb;--muted:#94a3b8;--line:#243041;--pri:#60a5fa;--code:#070b16}}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif;max-width:100%;overflow-x:hidden}
+    .wrap{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+    .top a{color:var(--pri);text-decoration:none}
+    .paper{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 10px 30px rgba(31,41,55,.08);overflow:hidden}
+    .content{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+    .content *{max-width:100%}
+    .content h1,.content h2,.content h3{line-height:1.35;margin-top:1.2em}
+    .content p,.content li{line-height:1.9}
+    .content img{max-width:100%;height:auto;border-radius:10px}
+    .content pre{overflow:auto;background:var(--code);color:#d7e1ff;padding:12px;border-radius:10px}
+    .content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    .content blockquote{border-left:3px solid var(--line);padding-left:12px;color:var(--muted);margin-left:0}
+    .content a{display:inline;max-width:100%;overflow-wrap:anywhere;word-break:break-all;white-space:normal}
+    .content li,.content p,.content h1,.content h2,.content h3{overflow-wrap:anywhere;word-break:break-word}
+    .content ul,.content ol{padding-left:1.2em}
+    .toc{margin:0 0 14px;padding:10px 12px;border:1px dashed var(--line);border-radius:10px;background:transparent;overflow:hidden}
+    .toc b{display:block;margin-bottom:6px}
+    .toc a{color:var(--pri);text-decoration:none;font-size:14px;display:block;margin:4px 0}
+
+    /* Mobile optimization */
+    @media (max-width: 640px){
+      .wrap{padding:12px 10px 32px}
+      .top{margin-bottom:10px}
+      .top a{font-size:14px;padding:6px 0}
+      .paper{padding:14px 12px;border-radius:12px}
+      .content h1{font-size:24px}
+      .content h2{font-size:20px}
+      .content h3{font-size:18px}
+      .content p,.content li{line-height:1.8;font-size:16px}
+      .content pre{padding:10px;border-radius:8px;font-size:13px}
+      .content table{display:block;overflow:auto;-webkit-overflow-scrolling:touch}
+      .toc{padding:8px 10px}
+      .toc a{font-size:13px;line-height:1.5}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <a href="./index.html">← 返回目录</a>
+      <a id="raw" href="#" target="_blank" rel="noopener">查看原始 Markdown</a>
+    </div>
+    <article class="paper content" id="content">加载中…</article>
+  </main>
+
+  <script>
+    marked.setOptions({breaks:true,gfm:true});
+    const p = new URLSearchParams(location.search);
+    const file = p.get('file');
+    const el = document.getElementById('content');
+    const raw = document.getElementById('raw');
+
+    function addToc(container){
+      const hs=[...container.querySelectorAll('h2,h3')];
+      if(!hs.length) return;
+      const toc=document.createElement('div');
+      toc.className='toc';
+      toc.innerHTML='<b>目录</b>';
+      hs.forEach((h,i)=>{
+        if(!h.id) h.id='sec-'+i;
+        const a=document.createElement('a');
+        a.href='#'+h.id;
+        a.textContent=(h.tagName==='H3'?'　↳ ':'')+h.textContent;
+        toc.appendChild(a);
+      });
+      container.prepend(toc);
+    }
+
+    function compactLongLinks(container){
+      const links=[...container.querySelectorAll('a[href]')];
+      links.forEach(a=>{
+        const href=a.getAttribute('href')||'';
+        const txt=(a.textContent||'').trim();
+        const looksLong=(txt.length>48 || href.length>72);
+
+        // always harden link wrapping on mobile
+        a.style.whiteSpace='normal';
+        a.style.wordBreak='break-all';
+        a.style.overflowWrap='anywhere';
+
+        if(!looksLong) return;
+        try{
+          const u=new URL(href, location.origin);
+          const shortPath=u.pathname.length>16 ? u.pathname.slice(0,16)+'…' : u.pathname;
+          const label=`${u.host}${shortPath}`;
+          a.textContent=label;
+          a.title=href;
+        }catch{
+          a.textContent=txt.slice(0,28)+'…';
+          a.title=href || txt;
+        }
+      });
+    }
+
+    if(!file){ el.textContent='缺少 file 参数'; }
+    else {
+      raw.href='./articles/'+encodeURIComponent(file);
+      fetch('./articles/'+encodeURIComponent(file))
+      .then(r=>{ if(!r.ok) throw new Error('读取失败'); return r.text(); })
+      .then(md=>{
+        el.innerHTML = marked.parse(md);
+        compactLongLinks(el);
+        addToc(el);
+        document.title = (md.match(/^#\s+(.+)/m)?.[1]||'文章阅读') + ' - Halo Notes';
+      })
+      .catch(e=>{ el.textContent='加载失败：'+e.message; });
+    }
+  </script>
+</body>
+</html>
