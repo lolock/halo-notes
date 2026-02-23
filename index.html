@@ -33,6 +33,24 @@
     .tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted)}
     .empty{padding:30px 0;text-align:center;color:var(--muted)}
     footer{margin-top:22px;color:var(--muted);font-size:12px}
+
+    /* Mobile optimization */
+    @media (max-width: 640px){
+      .wrap{padding:14px 12px 40px}
+      .hero{border-radius:14px;padding:16px 14px}
+      .title{font-size:24px;line-height:1.2}
+      .sub{font-size:14px;line-height:1.5}
+      .toolbar{gap:8px}
+      .search{min-width:0;width:100%;font-size:16px;padding:12px 12px} /* avoid iOS zoom */
+      .pill{width:100%;text-align:center;padding:10px 12px}
+      .section-title{margin:16px 2px 8px;font-size:16px}
+      .card{padding:12px;border-radius:12px}
+      .card a.tt{font-size:17px;line-height:1.4;display:block}
+      .meta{font-size:12px;gap:6px}
+      .tags{gap:6px}
+      .tag{font-size:11px;padding:3px 8px}
+      .empty{padding:20px 0;font-size:14px}
+    }
   </style>
 </head>
 <body>
