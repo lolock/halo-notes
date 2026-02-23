@@ -104,7 +104,3 @@ openclaw tui
 我是得否，一个文科生，正在搭建「文科生学AI」社群。  
 如果你也是文科生，想学AI、想用AI做事，可以进来看看。
 
-## 文内配图
-
-![图1](https://pbs.twimg.com/media/HBmGMFLbgAAlKez.jpg)
-

@@ -168,7 +168,7 @@
         const el=document.createElement('article');
         el.className='card';
         const coverClass=((it.category||'').includes('OpenClaw')?'cat-openclaw':((it.category||'').includes('工具')?'cat-tools':((it.category||'').includes('工作流')?'cat-workflow':'cat-default')));
-        const coverStyle=it.cover?`style="background-image:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.35)),url('${it.cover}')"`:'';
+        const coverStyle='';
         el.innerHTML=`
           <a class="cover ${coverClass}" ${coverStyle} href="${href}">
             <div class="metaTop">
