@@ -1,10 +1,28 @@
 [
   {
+    "title": "OpenClaw Memory终极指南",
+    "file": "OpenClaw Memory终极指南.md",
+    "date": "2026-02-23",
+    "source": "https://x.com/lijiuer92/status/2025678747509391664?s=20",
+    "tags": [
+      "OpenClaw",
+      "Memory",
+      "Agent"
+    ],
+    "category": "OpenClaw实战",
+    "quality": "S",
+    "summary": "系统拆解 OpenClaw 记忆架构现状、官方路线、社区方案与学术进展，并给出工程化方向。"
+  },
+  {
     "title": "为什么你的 OpenClaw 一定要安装 NotebookLM Skill",
     "file": "为什么你的OpenClaw一定要安装NotebookLMSkill.md",
     "date": "2026-02-23",
     "source": "https://x.com/onenewbite/status/2024819940327379286",
-    "tags": ["OpenClaw", "NotebookLM", "X Article"],
+    "tags": [
+      "OpenClaw",
+      "NotebookLM",
+      "X Article"
+    ],
     "category": "OpenClaw实战",
     "quality": "S",
     "summary": "通过 OpenClaw + NotebookLM 组合，实现 source 导入、清洗、审计与知识生产自动化。"
@@ -14,7 +32,11 @@
     "file": "如何从0-1在全新Mac mini上的安装OpenClawde_文科生学AI系列教程1.md",
     "date": "2026-02-22",
     "source": "https://x.com/wangdefou/status/2024801707218329982?s=46&t=o6nmInNQm8GsCZeHlQaxjQ",
-    "tags": ["OpenClaw", "Mac mini", "教程"],
+    "tags": [
+      "OpenClaw",
+      "Mac mini",
+      "教程"
+    ],
     "category": "工具与配置",
     "quality": "S",
     "summary": "从零开始在 Mac mini 安装 OpenClaw 的完整步骤与关键注意事项。"
@@ -24,7 +46,11 @@
     "file": "年薪150万的工作_我用500美金的AI完成_个人业务Agent升级指南.md",
     "date": "2026-02-22",
     "source": "https://x.com/xingpt/status/2025219080421277813?s=20",
-    "tags": ["AI", "Agent", "效率"],
+    "tags": [
+      "AI",
+      "Agent",
+      "效率"
+    ],
     "category": "AI工作流",
     "quality": "A",
     "summary": "从时间杠杆转向算法杠杆：知识库、技能框架和自动化执行的个人业务升级路径。"
