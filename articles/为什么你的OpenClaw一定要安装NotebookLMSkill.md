@@ -71,7 +71,7 @@ NotebookLM 是 Google AI 团队的明星产品，底层用的是 Gemini。它的
 
 可能性非常多。NotebookLM 的能力完全可以覆盖学习、教学、客服、研究、内容生产等各种场景。
 
-但是，想���做到这些，有一个绕不开的前提。
+但是，想做到这些，有一个绕不开的前提。
 
 第二章：全部能力的天花板，取决于一件事
 
@@ -117,7 +117,7 @@ NotebookLM 有一个很好的功能：你可以选中特定的几个 source 来�
 
 文档在更新、新内容在发布、旧内容可能过时了。你的 notebook 如果不跟着更新，过几个月里面就是过期情报。
 
-但 NotebookLM 没有"自动追踪更新"的机制。你得自己���住哪些 source 需要更新，手动去加新的、删旧的。
+但 NotebookLM 没有"自动追踪更新"的机制。你得自己住哪些 source 需要更新，手动去加新的、删旧的。
 
 总结一下
 
@@ -153,7 +153,7 @@ OpenClaw 是一个 AI Agent，它可以执行任务、调用工具、写脚本�
 
 定时更新、审计完整性、编排产出
 
-OpenClaw 接管了所有手工环节。它去抓 URL、批量导入、做清洗、跑审计、定时��新。NotebookLM 继续做它最擅长的事：基于 source 做深度理解和内容生成。
+OpenClaw 接管了所有手工环节。它去抓 URL、批量导入、做清洗、跑审计、定时新。NotebookLM 继续做它最擅长的事：基于 source 做深度理解和内容生成。
 
 你从"操作员"变成了"指挥官"。你只需要说"帮我把这个文档站的资料全部导入、清洗干净、每周更新"。剩下的事，两个 AI 自己搞定。
 
@@ -193,7 +193,7 @@ OpenClaw 接管了所有手工环节。它去抓 URL、批量导入、做清洗�
 
 OpenClaw 自动抓取 sitemap → 批量导入 → 发现重复 source
 
-完成清洗 → 审计结果：��部归零
+完成清洗 → 审计结果：部归零
 
 最终结果：
 
@@ -279,7 +279,7 @@ Studio 中的笔记和产出 ｜ 自动生成的视频教程 ｜ 教程对应的
 
 精准问答：基于 269 篇官方文档的 source-grounded 回答
 
-播客：选中一组 source，自动生成��人对话式播客
+播客：选中一组 source，自动生成人对话式播客
 
 视频教程：带旁白和 AI 配图的幻灯片视频
 
@@ -363,7 +363,7 @@ https://github.com/teng-lin/notebooklm-py.git
 
 你不知道你不知道什么。先全量导入、清洗完毕之后再提问，你的问题质量会高一个层级。因为这时候 NotebookLM 可以从全局视角定位"你应该先关注什么"。你也可以让 OpenClaw 建议你应该问什么。
 
-2. 干净比数���更重要
+2. 干净比数更重要
 
 把所有东西都塞进去不是好主意。翻译重复会让 NotebookLM 混淆权重，URL 重复会让同一个信息被过度引用。清洗成本很低，但被脏 source 误导的成本很高。
 
@@ -381,7 +381,7 @@ NotebookLM + OpenClaw 的组合可以是一个很酷的玩具，也可以是一�
 
 找到那个点，把 NotebookLM 真正 unlock 成你的核心工具，而不是试一次就吃灰的 demo。
 
-最后：��说一个方向
+最后：说一个方向
 
 整篇文章我们说的都是一个方向：用 OpenClaw 给 NotebookLM 超能力——解决它的 source 管理痛点，释放它的全部能力。
 
@@ -403,7 +403,7 @@ NotebookLM 作为 OpenClaw 的第二大脑
 
 把行业动态、新闻 feed 定期导入 notebook，让 OpenClaw 随时可以查阅最新行业情报
 
-这个方向的核心思路是：NotebookLM 的 source-grounded 能力，可以成为 OpenClaw 的能力扩展。不只是你用 NotebookLM，��你的 OpenClaw 也用 NotebookLM。
+这个方向的核心思路是：NotebookLM 的 source-grounded 能力，可以成为 OpenClaw 的能力扩展。不只是你用 NotebookLM，你的 OpenClaw 也用 NotebookLM。
 
 这也是我下一步想探索的方向。也期待看到大家能做出什么。
 

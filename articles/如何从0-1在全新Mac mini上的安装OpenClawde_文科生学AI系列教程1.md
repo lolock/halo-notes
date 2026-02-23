@@ -51,7 +51,7 @@ openclaw onboard
 
 6、配置telegram bot教程
 
-要接���报警消息，您需要配置 Telegram Bot：
+要接报警消息，您需要配置 Telegram Bot：
 
 在 Telegram 中搜索 @BotFather，发送 /newbot 创建新机器人，
 
