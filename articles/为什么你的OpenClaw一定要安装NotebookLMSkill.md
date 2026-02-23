@@ -81,7 +81,7 @@ Source 是 NotebookLM 的燃料。source 的质量、完整性、组织方式，
 
 而这，恰恰是它最大的 friction。
 
-痛点 1：Source 的收集和导入没法自动化
+### 痛点 1：Source 的收集和导入没法自动化
 
 公平地说，NotebookLM 的 GUI 是支持批量操作的。你可以一次粘贴多个 URL，可以从 Google Drive 批量选文件，支持的格式也很多（PDF、.docx、图片、音频、YouTube 链接等等）。
 
@@ -93,7 +93,7 @@ Source 是 NotebookLM 的燃料。source 的质量、完整性、组织方式，
 
 而今天我们要讲的这个 NotebookLM skill，通过非官方的方式实现了 programmatic 操作，让 OpenClaw 可以用命令行直接控制 NotebookLM。这就打通了自动化的关键环节。
 
-痛点 2：Source 的清洗没法自动化
+### 痛点 2：Source 的清洗没法自动化
 
 把一堆 URL 导进去之后，你会遇到各种脏数据：
 
@@ -105,7 +105,7 @@ Source 是 NotebookLM 的燃料。source 的质量、完整性、组织方式，
 
 NotebookLM 不会帮你做这些。它只管存，不管洗。
 
-痛点 3：Source 的选择和组合需要手动 handpick
+### 痛点 3：Source 的选择和组合需要手动 handpick
 
 NotebookLM 有一个很好的功能：你可以选中特定的几个 source 来回答问题，而不是每次都用全量。
 
@@ -113,13 +113,13 @@ NotebookLM 有一个很好的功能：你可以选中特定的几个 source 来�
 
 但是，按章节拆分、导入、然后每次手动选择相关 source？这个过程完全是人工操作。
 
-痛点 4：Source 的更新和维护是持续负担
+### 痛点 4：Source 的更新和维护是持续负担
 
 文档在更新、新内容在发布、旧内容可能过时了。你的 notebook 如果不跟着更新，过几个月里面就是过期情报。
 
 但 NotebookLM 没有"自动追踪更新"的机制。你得自己住哪些 source 需要更新，手动去加新的、删旧的。
 
-总结一下
+### 总结一下
 
 NotebookLM 是一个能力极强的 AI 知识引擎，但它的"进料口"是纯手工的。你手动导入、手动清洗、手动选择、手动更新。一旦 source 数量上规模（几十上百个），这件事就从"顺手"变成了"负担"。
 
@@ -133,7 +133,7 @@ OpenClaw 是一个 AI Agent，它可以执行任务、调用工具、写脚本�
 
 这不是简单的"多了一个功能"。这是架构层面的升级。
 
-没有 OpenClaw 的时候
+### 没有 OpenClaw 的时候
 
 你（人工） → NotebookLM（AI 引擎）→ 知识产出
 
@@ -143,7 +143,7 @@ OpenClaw 是一个 AI Agent，它可以执行任务、调用工具、写脚本�
 
 你是 NotebookLM 的"人肉管道"。你负责喂料、清理、维护。NotebookLM 负责思考和产出。中间的人工环节就是瓶颈。
 
-有了 OpenClaw 之后
+### 有了 OpenClaw 之后
 
 你（指挥） → OpenClaw（自动化层） → NotebookLM（认知层）→ 知识产出
 

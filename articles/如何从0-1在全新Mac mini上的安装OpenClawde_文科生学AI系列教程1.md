@@ -1,4 +1,4 @@
-# 如何从0-1在全新Mac mini上的安装OpenClawde ？| 文科生学AI系列教程1
+# 如何从0-1在全新 Mac mini 上安装 OpenClawde？｜文科生学AI系列教程1
 
 - 原始链接：<https://x.com/wangdefou/status/2024801707218329982>
 - 作者：得否（@wangdefou）
@@ -7,110 +7,99 @@
 
 ---
 
-文科生学AI系列教程1：如何从0-1在全新Mac mini上的安装OpenClawde ？
+文科生学AI系列教程1：如何从0-1在全新 Mac mini 上安装 OpenClawde？
 
-### 拿到Mac mini，首先是连接上鼠标和键盘
+## 1. 连接鼠标和键盘
 
-最好是用苹果的妙控鼠标，然后用数据连接一下，自动就识别绑定了。
+最好先用苹果妙控鼠标，通过有线连接一次，系统会自动识别绑定。  
+键盘可在系统设置中通过蓝牙连接。
 
-键盘的话，你可以在设置里用蓝牙连接。
+## 2. 配置基础环境
 
-### 配置基础环境
-
-先安装homebrew
+### 2.1 安装 Homebrew
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-再安装nodejs
+### 2.2 安装 Node.js
 
 ```bash
 brew install nodejs
+```
 
-安装好之后检查安装版本是否最新
+### 2.3 检查版本
 
 ```bash
 node -v
-
-```bash
 npm -v
+```
 
-### 安装OpenClaw最新版本
+## 3. 安装 OpenClaw
 
 ```bash
 npm i -g openclaw
+```
 
-### 开始OpenClaw基础配置
+## 4. 开始 OpenClaw 基础配置
 
 ```bash
 openclaw onboard
+```
 
-### 选择大模型
+### 4.1 选择大模型
 
-首次大模型推荐选择OpenAI
+首次推荐选择 OpenAI。  
+（原文说明：由于 anthropic 风控原因，之前配置经验可能已过时）
 
-（由于anthropic风控的原因，我配置的经验已经过时）
+建议提前准备 ChatGPT Plus 会员。  
+选择 OpenAI 后会跳转浏览器，登录并授权即可。
 
-建议在安装之前，你可以先购买一个ChatGPT 的plus会员
+## 5. 配置 Telegram Bot（报警消息）
 
-选择OpenAI之后会跳转到浏览器，登录账号授权登录即可
+在 Telegram 搜索 `@BotFather`，发送 `/newbot` 创建机器人。
 
-### 配置telegram bot教程
+步骤：
+- 设置机器人名称（例如：`xiaodebot`）
+- 设置机器人用户名（例如：`xiaodezi_bot`）
+- BotFather 会返回 Token（形如 `0123456789:xxxxxxxxxxxx`）
+- 在 OpenClaw 界面填入 Token，进入下一步
 
-要接报警消息，您需要配置 Telegram Bot：
+## 6. 配置常用 Skills
 
-在 Telegram 中搜索 @BotFather，发送 /newbot 创建新机器人，
+原文推荐先选这些：
 
-首先设置机器人名字，比如我的机器人叫「xiaodebot」
+- apple-notes
+- apple-reminders
+- github
+- imsg
+- model-usage
+- obsidian
+- summarize
 
-然后再设置一个机器人ID，参考格式：「xiaodezi_bot」
+操作提示：
+- 空格键：选择
+- 上下键：移动
+- 回车键：确认
 
-全部配置已完成之后，@BotFather会把你的机器人信息发给你。
+其余步骤可按默认继续。  
+`Enable hooks` 建议勾选：
 
-那一长串就是你的机器人 Token，保存好一会儿要用。
+- command-logger
+- session-memory
 
-0123456789:后面一串儿英文字母
+## 7. 开始使用
 
-在OpenClaw的界面填入token，进入下一步
-
-### 配置好一些常用skills
-
-我这里选择的是这些，建议照做，后期还可以改。
-
-空格键表示选择，上下键选择对应skills，选好了按回车键。
-
-apple-notes
-
-apple-reminders
-
-```bash
-github
-
-imsg
-
-model-usage
-
-obsidian
-
-summarize
-
-等待安装就可以了，其他的一路回车就可以
-
-Enable hooks 这里选择这两个
-
-command-logger
-
-session-memory
-
-### 然后你就可以开始测试把玩了
-
-接下来你可以在终端里对话一下，稍微体验一下
+可以先在终端里简单体验：
 
 ```bash
 openclaw tui
+```
 
-晚些时候我们再进行详细的配置让它能够为你更好地工作
+后续再做更细的配置优化，让它更贴合自己的工作流。
 
-我是得否，一个文科生，正在搭建「文科生学AI」社群
+---
 
-如果你也是文科生，想学AI，想用AI搞点事情，可以进来看看
+作者备注（原文）：
+我是得否，一个文科生，正在搭建「文科生学AI」社群。  
+如果你也是文科生，想学AI、想用AI做事，可以进来看看。
