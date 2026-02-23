@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" style="max-width:100%;overflow-x:hidden;">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -9,7 +9,7 @@
     :root{--bg:#f5f7fb;--panel:#fff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;--pri:#2563eb;--code:#0b1020}
     @media (prefers-color-scheme: dark){:root{--bg:#0b1220;--panel:#111827;--text:#e5e7eb;--muted:#94a3b8;--line:#243041;--pri:#60a5fa;--code:#070b16}}
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif;overflow-x:hidden}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif;max-width:100%;overflow-x:hidden}
     .wrap{max-width:980px;margin:0 auto;padding:20px 16px 60px}
     .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
     .top a{color:var(--pri);text-decoration:none}
@@ -22,7 +22,7 @@
     .content pre{overflow:auto;background:var(--code);color:#d7e1ff;padding:12px;border-radius:10px}
     .content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
     .content blockquote{border-left:3px solid var(--line);padding-left:12px;color:var(--muted);margin-left:0}
-    .content a{overflow-wrap:anywhere;word-break:break-all;white-space:normal}
+    .content a{display:inline;max-width:100%;overflow-wrap:anywhere;word-break:break-all;white-space:normal}
     .content li,.content p,.content h1,.content h2,.content h3{overflow-wrap:anywhere;word-break:break-word}
     .content ul,.content ol{padding-left:1.2em}
     .toc{margin:0 0 14px;padding:10px 12px;border:1px dashed var(--line);border-radius:10px;background:transparent;overflow:hidden}
@@ -83,16 +83,22 @@
       links.forEach(a=>{
         const href=a.getAttribute('href')||'';
         const txt=(a.textContent||'').trim();
-        const looksLong=(txt.length>55 || href.length>80);
+        const looksLong=(txt.length>48 || href.length>72);
+
+        // always harden link wrapping on mobile
+        a.style.whiteSpace='normal';
+        a.style.wordBreak='break-all';
+        a.style.overflowWrap='anywhere';
+
         if(!looksLong) return;
         try{
           const u=new URL(href, location.origin);
-          const shortPath=u.pathname.length>22 ? u.pathname.slice(0,22)+'…' : u.pathname;
+          const shortPath=u.pathname.length>16 ? u.pathname.slice(0,16)+'…' : u.pathname;
           const label=`${u.host}${shortPath}`;
           a.textContent=label;
           a.title=href;
         }catch{
-          a.textContent=txt.slice(0,40)+'…';
+          a.textContent=txt.slice(0,28)+'…';
           a.title=href || txt;
         }
       });
