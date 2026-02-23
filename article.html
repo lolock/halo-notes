@@ -13,15 +13,18 @@
     .wrap{max-width:980px;margin:0 auto;padding:20px 16px 60px}
     .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
     .top a{color:var(--pri);text-decoration:none}
-    .paper{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 10px 30px rgba(31,41,55,.08)}
+    .paper{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 10px 30px rgba(31,41,55,.08);overflow:hidden}
+    .content{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+    .content *{max-width:100%}
     .content h1,.content h2,.content h3{line-height:1.35;margin-top:1.2em}
     .content p,.content li{line-height:1.9}
     .content img{max-width:100%;height:auto;border-radius:10px}
     .content pre{overflow:auto;background:var(--code);color:#d7e1ff;padding:12px;border-radius:10px}
     .content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
     .content blockquote{border-left:3px solid var(--line);padding-left:12px;color:var(--muted);margin-left:0}
-    .content a{overflow-wrap:anywhere;word-break:break-word}
+    .content a{overflow-wrap:anywhere;word-break:break-all}
     .content li,.content p,.content h1,.content h2,.content h3{overflow-wrap:anywhere;word-break:break-word}
+    .content ul,.content ol{padding-left:1.2em}
     .toc{margin:0 0 14px;padding:10px 12px;border:1px dashed var(--line);border-radius:10px;background:transparent;overflow:hidden}
     .toc b{display:block;margin-bottom:6px}
     .toc a{color:var(--pri);text-decoration:none;font-size:14px;display:block;margin:4px 0}
