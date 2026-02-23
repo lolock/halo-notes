@@ -31,11 +31,11 @@
     .layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
     .layout.no-toc{grid-template-columns:minmax(0,1fr)}
     .paper{width:100%;background:linear-gradient(180deg,rgba(0,255,65,.04),transparent 120px),var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 16px;box-shadow:0 20px 50px -10px rgba(0,0,0,.35);overflow:hidden}
-    .side{position:sticky;top:14px;height:calc(100vh - 28px)
+     .side{position:sticky;top:14px;align-self:start}
 
     .tocCard{border:1px dashed rgba(0,255,65,.35);border-radius:10px;background:rgba(0,255,65,.05);padding:10px}
     .tocTitle{display:block;color:var(--accent);margin-bottom:8px;font-weight:600}
-    .tocList{height:calc(100vh - 170px);overflow:auto;padding-right:4px}
+    .tocList{max-height:calc(100vh - 170px);overflow:auto;padding-right:4px}
     .toc-link{display:block;padding:4px 0 4px 8px;border-left:2px solid transparent;color:var(--accent2);text-decoration:none;font-size:14px;line-height:1.4}
     .toc-link.active{border-left-color:var(--accent);color:var(--accent);background:rgba(34,197,94,.10);border-radius:6px}
     .progressWrap{margin-top:10px;border:1px solid var(--line);border-radius:999px;height:8px;overflow:hidden;background:rgba(148,163,184,.2)}
