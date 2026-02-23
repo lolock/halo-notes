@@ -34,8 +34,9 @@
     .sub{margin:0;color:var(--muted)}
     .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
     .search{flex:1;min-width:220px;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:#0f1318;color:var(--text)}
+    .search::placeholder{color:#7b8797}
     .search:focus{outline:none;border-color:#7dd3fc66}
-    .pill{padding:10px 12px;border:1px solid var(--line);border-radius:10px;color:var(--muted);font-size:13px;background:#0f1318}
+    .pill{padding:10px 12px;border:1px solid #3b4b62;border-radius:10px;color:var(--text);font-size:13px;background:#0f1318;font-weight:600}
     .filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
     .filter{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#141922;color:var(--muted);font-size:12px;cursor:pointer}
     .filter.active{border-color:#7dd3fc66;color:#bae6fd}
@@ -50,8 +51,8 @@
     .q-S{color:#86efac;border-color:#22c55e66}.q-A{color:#bae6fd;border-color:#38bdf866}.q-B{color:#fda4af;border-color:#fb718566}
     .body{padding:12px}
     .tt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:18px;line-height:1.35;font-weight:700;color:var(--text);text-decoration:none;min-height:48px}
-    .sm{margin-top:8px;color:#cbd5e1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:64px;font-size:14px;line-height:1.55}
-    .m2{margin-top:8px;color:var(--muted);font-size:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+    .sm{margin-top:8px;color:#9fb0c4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:64px;font-size:14px;line-height:1.55}
+    .m2{margin-top:10px;color:var(--muted);font-size:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
     .m2 a{color:var(--a);text-decoration:none}
     .tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
     .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--muted)}
@@ -130,7 +131,7 @@
       });
       list.innerHTML='';
       filtered.forEach(it=>{
-        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260223c';
+        const href='./reader.html?file='+encodeURIComponent(it.file)+'&v=20260223d';
         const qv=it.quality||'A';
         const el=document.createElement('article');
         el.className='card';
@@ -142,10 +143,10 @@
             </div>
           </a>
           <div class="body">
-            <a class="tt" href="${href}">${it.title}</a>
+            <a class="tt" href="${href}" title="${it.title}">${it.title}</a>
             <p class="sm">${it.summary||''}</p>
             <div class="m2"><span>${it.date||''}</span><span>·</span><a href="${it.source||'#'}" target="_blank" rel="noopener">原始链接</a></div>
-            <div class="tags">${(it.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+            <div class="tags">${(() => { const tags=(it.tags||[]); const head=tags.slice(0,2).map(t=>`<span class="tag">${t}</span>`).join(''); const more=tags.length>2?`<span class="tag">+${tags.length-2}</span>`:''; return head+more; })()}</div>
           </div>`;
         list.appendChild(el);
       });
