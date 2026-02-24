@@ -1,5 +1,20 @@
 [
   {
+    "title": "从想法到实现：OpenClaw 远程调度 Mac 运行 OpenCode 全流程复盘",
+    "file": "从想法到实现_OpenClaw远程调度Mac_OpenCode全流程复盘.md",
+    "date": "2026-02-24",
+    "source": "原创",
+    "tags": [
+      "OpenClaw",
+      "OpenCode",
+      "自动化"
+    ],
+    "category": "OpenClaw实战",
+    "quality": "A",
+    "summary": "复盘从自然语言指令到远程执行闭环的落地过程，重点讨论过程可观测与人机协作规划。",
+    "cover": ""
+  },
+  {
     "title": "OpenClaw Memory终极指南",
     "file": "OpenClaw Memory终极指南.md",
     "date": "2026-02-23",
