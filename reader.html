@@ -144,7 +144,8 @@
       const hs=[...container.querySelectorAll('h2,h3')];
       const desktop=document.getElementById('tocLinks');
       desktop.innerHTML='';
-      if(!hs.length){
+      const isMobile = window.matchMedia('(max-width:768px)').matches;
+      if(!hs.length || isMobile){
         if(sideToc) sideToc.style.display='none';
         if(layout) layout.classList.add('no-toc');
         return [];
