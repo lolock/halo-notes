@@ -15,7 +15,7 @@
 总77Kstar的6个开源社区Github项目，
 为你拆解你的openclaw记忆痛点的每一层
 从现状到方案，从学术到工程。
-一、残酷的现状——你的 Agent 只有金鱼记忆
+## 一、残酷的现状——你的 Agent 只有金鱼记忆
 先说一个数字：45 小时。
 GitHub Issue #5429 的报告者 EmpireCreator 丢失了 45 小时的 agent 积累上下文：技能配置、集成参数、任务优先级。原因是一次静默压缩（compaction）清除了所有对话历史，没有警告，没有恢复选项。
 这不是个案。
@@ -36,7 +36,7 @@ SOUL.md 定义人格。检索用向量嵌入 + BM25 混合搜索。
 社区的推文说得最直白："Everyone complains their OpenClaw has amnesia."
 ![](https://pbs.twimg.com/media/HByizziakAEpA97.png)
 
-二、OpenClaw 官方在做什么——QMD 后端与混合搜索
+## 二、OpenClaw 官方在做什么——QMD 后端与混合搜索
 官方不是没有动作。
 2026 年 1-2 月的版本发布时间线：
 v2026.1.12（1月13日）：向量搜索基础设施上线，包括 SQLite 索引 + 分块 + 懒同步 + 文件监听，支持本地和远程嵌入。这是整个记忆搜索系统的基石。
@@ -53,7 +53,7 @@ CPU-only 系统上查询耗时约 3 分 40 秒，超过 12 秒超时（Issue #87
 但记忆架构的六个根本缺失：
 遗忘、重要性、图谱、反思、时序、晋升
 一个都没解决。
-三、社区在怎么自救——土法炼钢的五种方案
+## 三、社区在怎么自救——土法炼钢的五种方案
 社区没有坐等官方。至少 7 个第三方记忆项目在 2026 年 1-2 月集中出现。
 1⃣Mem0：最知名的记忆层 SDK。
 Auto-Recall 每次响应前搜索相关记忆注入上下文，Auto-Capture 响应后提取事实存储。
@@ -83,7 +83,7 @@ Claude API 将自然语言解析为 JSON，
 方向对了，但全部停留在手工操作层面。
 ![](https://pbs.twimg.com/media/HBygP2jbYAA1nUe.png)
 
-四、学术界爆发——2026 年 2 月的 10+ 篇论文
+## 四、学术界爆发——2026 年 2 月的 10+ 篇论文
 2026 年 2 月，agent memory 突然成了学术界的主战场。仅一个月就有 10+ 篇 agent memory 论文发表在 arXiv 上，包括 ICML 2026 收录的 xMemory [1]、NeurIPS 2025 的 A-MEM [2]。一份 59 位作者的综述论文 [3] 系统梳理了整个领域。
 这些论文给我们什么启发？
 xMemory [1]（ICML 2026，伦敦国王学院）：将记忆解耦为语义组件，组织成层次结构。用 Sparsity-Semantics 目标指导记忆分裂和合并。启发了"主题聚类层"的设计，在记忆之上建立主题层，支持自顶向下检索
@@ -105,7 +105,7 @@ BudgetMem [8]：运行时记忆框架，将记忆处理按三个预算层级结�
 这两个风险提醒我们：记忆系统的难点不在构建，在于持续的质量监控。
 ![](https://pbs.twimg.com/media/HByjslFbIAACrMK.png)
 
-五、开源记忆生态——6 个项目的全景扫描
+## 五、开源记忆生态——6 个项目的全景扫描
 学术界定义方向，开源社区验证落地。
 我们深入分析了 6 个 agent memory 开源项目，合计 77K+ Stars。
  
@@ -116,7 +116,7 @@ BudgetMem [8]：运行时记忆框架，将记忆处理按三个预算层级结�
 你选哪种，决定了你把系统复杂度放在哪一层：
 数据库与 schema（Memori）、SDK/产品层mem0）、图谱与流水线（cognee）、系统与调度（MemOS）、还是学习与检索融合（Hindsight）。
 但没有任何一个项目同时覆盖三层。
-六、200+ Issues 的教训——别人踩过的坑
+## 六、200+ Issues 的教训——别人踩过的坑
 因此，
 我们分析了这 6 个项目的 200+ Issues，
 提取出对构建记忆系统最有价值的避坑清单。
@@ -135,7 +135,7 @@ cognee #2030：跨集合 min-max 归一化导致排序失真——distance 0.1 �
  
 ![](https://pbs.twimg.com/media/HBykpLmbEAE_Qxc.png)
 
-七、游戏 AI 给了什么启发——矮人要塞、模拟人生、Nemesis System
+## 七、游戏 AI 给了什么启发——矮人要塞、模拟人生、Nemesis System
 最被低估的参考系不是学术论文，而是游戏 AI。
 游戏开发者花了几十年解决同一个问题：如何让虚拟角色拥有连贯的记忆、稳定的人格和可信的进化。
 矮人要塞的三层记忆架构：
@@ -159,7 +159,7 @@ Nemesis System 的事件驱动进化：
 事件驱动 → 记忆触发行为修改。
 ![](https://pbs.twimg.com/media/HBykW2Rb0AAIPH0.png)
 
-八、两种记忆——User Memory vs Agent Memory
+## 八、两种记忆——User Memory vs Agent Memory
 一个容易被忽略的区分：
 用户的记忆和 Agent 自己的记忆是两个完全不同的问题。
  
@@ -173,7 +173,7 @@ L2 全文用于完整内容
 先用 L0 快速筛选，
 再按需展开 L1/L2，大幅降低 token 消耗。
 同时定义了合并策略：档案总是合并（只有一份），偏好/实体/模式支持合并，事件/案例不可合并（合并即丢失信息）。
-九、从个人到整个 AI 生态——记忆为什么是核心基础设施
+## 九、从个人到整个 AI 生态——记忆为什么是核心基础设施
 回到最开始的判断：
 谁先解决记忆问题，谁就赢得 24/7 Agent 的战争。
 OpenClaw 的核心价值不是"AI 更聪明"，是"AI 终于有手有脚了"。
@@ -191,11 +191,11 @@ Context window 本质上是"短期记忆"：溢出则截断，重启则归零。
 这不是未来的问题。这是现在正在被解决的问题。
 ![](https://pbs.twimg.com/media/HByh7rxbkAAVL07.png)
 
-十、我们在建什么——memX 与 ePro 的技术路线
+## 十、我们在建什么——memX 与 ePro 的技术路线
 基于以上所有调研，
 我们构建了两个系统：memX（User Memory）和 ePro（Agent Memory）
 已上线，不断迭代中，期待你的反馈！
-References
+## References
 [1] Hu et al., "xMemory: Beyond RAG for Agent Memory," ICML 2026. arXiv:2602.02007
 [2] Xu et al., "A-MEM: Agentic Memory for LLM Agents," NeurIPS 2025. arXiv:2502.12110
 [3] Huang et al., "Rethinking Memory Mechanisms of Foundation Agents," 2026. arXiv:2602.06052 (59 authors)
