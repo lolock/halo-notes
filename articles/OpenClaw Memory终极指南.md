@@ -6,6 +6,8 @@
 
 ---
 
+![](https://pbs.twimg.com/media/HByZYd7bgAALaBi.jpg)
+
 你的OpenClaw小龙虾每次失忆，不仅烧了你的钱，还要了你的命。
 你甚至不敢重启。
 韭二哥，
@@ -32,6 +34,8 @@ SOUL.md 定义人格。检索用向量嵌入 + BM25 混合搜索。
 检索只看语义相似度，不评估重要性，无法表达"A 是 B 的朋友"这样的关系。
 数据永远是数据，不会变成认知。
 社区的推文说得最直白："Everyone complains their OpenClaw has amnesia."
+![](https://pbs.twimg.com/media/HByizziakAEpA97.png)
+
 二、OpenClaw 官方在做什么——QMD 后端与混合搜索
 官方不是没有动作。
 2026 年 1-2 月的版本发布时间线：
@@ -77,6 +81,8 @@ Claude API 将自然语言解析为 JSON，
 遗忘/衰减机制、重要性评分、知识图谱、自动反思/整合、时序推理、记忆晋升。
 一句话总结：社区在用手动操作弥补架构缺陷。
 方向对了，但全部停留在手工操作层面。
+![](https://pbs.twimg.com/media/HBygP2jbYAA1nUe.png)
+
 四、学术界爆发——2026 年 2 月的 10+ 篇论文
 2026 年 2 月，agent memory 突然成了学术界的主战场。仅一个月就有 10+ 篇 agent memory 论文发表在 arXiv 上，包括 ICML 2026 收录的 xMemory [1]、NeurIPS 2025 的 A-MEM [2]。一份 59 位作者的综述论文 [3] 系统梳理了整个领域。
 这些论文给我们什么启发？
@@ -97,6 +103,8 @@ BudgetMem [8]：运行时记忆框架，将记忆处理按三个预算层级结�
 1⃣Serial Collapse（串行崩溃）[9]，来自月之暗面 Kimi K2.5：Agent 退化为不使用记忆。即使记忆系统存在，Agent 可能逐渐"忘记"去查询它。
 2⃣Memory Misevolution（记忆错误进化）[5]，来自 TAME：在正常迭代中积累有毒捷径。
 这两个风险提醒我们：记忆系统的难点不在构建，在于持续的质量监控。
+![](https://pbs.twimg.com/media/HByjslFbIAACrMK.png)
+
 五、开源记忆生态——6 个项目的全景扫描
 学术界定义方向，开源社区验证落地。
 我们深入分析了 6 个 agent memory 开源项目，合计 77K+ Stars。
@@ -125,6 +133,8 @@ Memori #189：SQLite 连接从不关闭，导致 "database is locked" 和文件�
 5⃣问题 5：搜索排序失真
 cognee #2030：跨集合 min-max 归一化导致排序失真——distance 0.1 和 0.5 都被归一化为 0。MemOS #939：检索只靠语义相似度，完全没有时间维度。
  
+![](https://pbs.twimg.com/media/HBykpLmbEAE_Qxc.png)
+
 七、游戏 AI 给了什么启发——矮人要塞、模拟人生、Nemesis System
 最被低估的参考系不是学术论文，而是游戏 AI。
 游戏开发者花了几十年解决同一个问题：如何让虚拟角色拥有连贯的记忆、稳定的人格和可信的进化。
@@ -147,6 +157,8 @@ Nemesis System 的事件驱动进化：
 情感强度 → 重要性评分，
 记忆晋升 → 从琐碎事实到人格特质，
 事件驱动 → 记忆触发行为修改。
+![](https://pbs.twimg.com/media/HBykW2Rb0AAIPH0.png)
+
 八、两种记忆——User Memory vs Agent Memory
 一个容易被忽略的区分：
 用户的记忆和 Agent 自己的记忆是两个完全不同的问题。
@@ -177,6 +189,8 @@ Context window 本质上是"短期记忆"：溢出则截断，重启则归零。
 学术论文密度、开源项目爆发、官方架构升级
 同指向一个信号：AI 记忆正在从"nice to have"变成核心基础设施。
 这不是未来的问题。这是现在正在被解决的问题。
+![](https://pbs.twimg.com/media/HByh7rxbkAAVL07.png)
+
 十、我们在建什么——memX 与 ePro 的技术路线
 基于以上所有调研，
 我们构建了两个系统：memX（User Memory）和 ePro（Agent Memory）
@@ -200,34 +214,3 @@ OpenClaw 版本数据基于 v2026.1.12-v2026.2.2 官方 Changelog 和 GitHub Iss
 本报告基于 2026 年 2 月 23 日数据快照。
 本人由李韭二和Claude Max、Manus还有Google Gemini 共同创作
 这一次主要贡献者是李韭二。
-
-## 插图（原帖附图）
-
-### 图1
-
-![]( https://pbs.twimg.com/media/HByZYd7bgAALaBi.jpg )
-
-### 图2
-
-![]( https://pbs.twimg.com/media/HByizziakAEpA97.png )
-
-### 图3
-
-![]( https://pbs.twimg.com/media/HBygP2jbYAA1nUe.png )
-
-### 图4
-
-![]( https://pbs.twimg.com/media/HByjslFbIAACrMK.png )
-
-### 图5
-
-![]( https://pbs.twimg.com/media/HBykpLmbEAE_Qxc.png )
-
-### 图6
-
-![]( https://pbs.twimg.com/media/HBykW2Rb0AAIPH0.png )
-
-### 图7
-
-![]( https://pbs.twimg.com/media/HByh7rxbkAAVL07.png )
-
