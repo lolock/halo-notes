@@ -1,5 +1,20 @@
 [
   {
+    "title": "OpenClaw 从中级到高级完整教程",
+    "file": "OpenClaw_从中级到高级完整教程.md",
+    "date": "2026-02-26",
+    "source": "https://x.com/onehopea9/status/2026905651088339408",
+    "tags": [
+      "OpenClaw",
+      "教程",
+      "进阶"
+    ],
+    "category": "OpenClaw实战",
+    "quality": "S",
+    "summary": "从 AGENTS.md 工作规范到记忆优化、子 Agent、Cron 定时任务、Skill 开发、多渠道部署与性能调优的完整进阶指南。",
+    "cover": "https://pbs.twimg.com/media/HCED2lXaMAMuax7.jpg"
+  },
+  {
     "title": "从想法到实现：OpenClaw 远程调度 Mac 运行 OpenCode 全流程复盘",
     "file": "从想法到实现_OpenClaw远程调度Mac_OpenCode全流程复盘.md",
     "date": "2026-02-24",
