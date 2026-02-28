@@ -88,5 +88,22 @@
     "quality": "A",
     "summary": "从时间杠杆转向算法杠杆：知识库、技能框架和自动化执行的个人业务升级路径。",
     "cover": "https://pbs.twimg.com/media/HBsFX7hbgAAK85M.jpg"
+  },
+  {
+    "title": "VPS 被入侵挖矿的完整复盘：从发现到清理",
+    "file": "VPS_被入侵挖矿的完整复盘_从发现到清理.md",
+    "date": "2026-02-28",
+    "source": "内部复盘",
+    "tags": [
+      "安全",
+      "VPS",
+      "Docker",
+      "挖矿木马",
+      "事件响应"
+    ],
+    "category": "安全运维",
+    "quality": "A",
+    "summary": "从VPS挖矿入侵事件发现、取证到完全清理的完整实录，包含入侵溯源、恶意样本分析和加固方案。",
+    "cover": ""
   }
 ]
