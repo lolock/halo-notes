@@ -90,10 +90,10 @@
     "cover": "https://pbs.twimg.com/media/HBsFX7hbgAAK85M.jpg"
   },
   {
-    "title": "VPS 被入侵挖矿的完整复盘：从发现到清理",
+    "title": "我的 VPS 被入侵挖矿的完整复盘：从 10 负载到清零",
     "file": "VPS_被入侵挖矿的完整复盘_从发现到清理.md",
     "date": "2026-02-28",
-    "source": "内部复盘",
+    "source": "内部复盘（twitter-post-vps-hack.md）",
     "tags": [
       "安全",
       "VPS",
