@@ -1,5 +1,22 @@
 [
   {
+    "title": "Claude 原生律所：2026 年 AI 法律实践指南",
+    "file": "Claude原生律所_AI法律实践指南.md",
+    "date": "2026-03-01",
+    "source": "https://x.com/zackbshapiro/status/2027389987444957625",
+    "tags": [
+      "AI",
+      "法律",
+      "Claude",
+      "Anthropic",
+      "法律科技"
+    ],
+    "category": "AI应用",
+    "quality": "S",
+    "summary": "Zack Shapiro 完整分享他如何用 Claude 经营一家两人律所，涵盖合同评审、修订标注、法律检索、客户沟通等实战工作流。",
+    "cover": "https://pbs.twimg.com/media/HCK8-0cWkAErWGw.jpg"
+  },
+  {
     "title": "我只是想试试 OpenClaw 管 VPS，结果顺手抓到一场挖矿入侵",
     "file": "新手小白也能打赢VPS入侵战_OpenClaw实战复盘.md",
     "date": "2026-02-28",
