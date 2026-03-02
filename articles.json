@@ -1,5 +1,22 @@
 [
   {
+    "title": "如何像量化台一样模拟：完整预测市场模拟指南",
+    "file": "如何像量化台一样模拟_完整预测市场模拟指南.md",
+    "date": "2026-03-02",
+    "source": "https://x.com/gemchange_ltd/status/2027744530124951831",
+    "tags": [
+      "量化",
+      "预测市场",
+      "蒙特卡洛",
+      "AI",
+      "Python"
+    ],
+    "category": "量化交易",
+    "quality": "S",
+    "summary": "从蒙特卡洛基础到重要性抽样、粒子滤波、Copula 建模和基于代理的模拟，完整预测市场量化建模指南（含可运行代码）。",
+    "cover": "https://pbs.twimg.com/media/HCP-EHtbYAACOLP.jpg"
+  },
+  {
     "title": "构建 Claude Code 的教训：像 Agent 一样思考",
     "file": "构建ClaudeCode的教训_像Agent一样思考.md",
     "date": "2026-03-02",
