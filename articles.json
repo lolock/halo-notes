@@ -1,5 +1,22 @@
 [
   {
+    "title": "构建 Claude Code 的教训：像 Agent 一样思考",
+    "file": "构建ClaudeCode的教训_像Agent一样思考.md",
+    "date": "2026-03-02",
+    "source": "https://x.com/trq212/status/2027463795355095314",
+    "tags": [
+      "Claude",
+      "Agent",
+      "AI工程",
+      "工具设计",
+      "Anthropic"
+    ],
+    "category": "AI工程",
+    "quality": "S",
+    "summary": "Thariq 分享 Anthropic 团队构建 Claude Code 过程中收获的工具设计教训：如何像 Agent 一样思考，从 elicitation 到渐进式披露的艺术。",
+    "cover": "https://pbs.twimg.com/media/HCLxeR3acAAf2R9.jpg"
+  },
+  {
     "title": "Claude 原生律所：2026 年 AI 法律实践指南",
     "file": "Claude原生律所_AI法律实践指南.md",
     "date": "2026-03-01",
