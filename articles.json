@@ -1,5 +1,24 @@
 [
   {
+    "title": "Claude Native Designer: From Design to Ship (中英双语 / Bilingual)",
+    "file": "The_Claude_Native_Designer_Bilingual.md",
+    "date": "2026-03-05",
+    "source": "https://x.com/felixleezd/status/2029236285005860903",
+    "tags": [
+      "Claude",
+      "AI",
+      "Design",
+      "Figma",
+      "MCP",
+      "Vibe Coding",
+      "中英双语"
+    ],
+    "category": "AI设计",
+    "quality": "S",
+    "summary": "Felix Lee 分享如何用 Claude Code 和 Figma MCP 从设计到构建完整产品的工作流，中英双语对照。",
+    "cover": "https://pbs.twimg.com/media/HCc2NRFb0AEUTsL.jpg"
+  },
+  {
     "title": "Claude Cowork：终极设置指南（中英双语 / Bilingual）",
     "file": "Claude_Cowork_终极设置指南_中英双语.md",
     "date": "2026-03-02",
