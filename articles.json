@@ -1,5 +1,150 @@
 [
   {
+    "title": "GPT2 又一套轻盈安静的提示词 x 适配各种用途",
+    "file": "GPT2 又一套轻盈安静的提示词 x 适配各种用途.md",
+    "date": "2026-05-19",
+    "source": "https://x.com/xiaoxiaodong01/status/2056615926724976911",
+    "tags": [
+      "提示词"
+    ],
+    "category": "提示词与创作",
+    "quality": "A",
+    "summary": "其实这个提示词还是适用，比如说海报、信息图，或者自媒体封面，甚至是朋友圈或者邀请函，还有各式各样的场景都可适合。",
+    "cover": "https://pbs.twimg.com/media/HIqPPIra0AEA3LK?format=jpg&name=large"
+  },
+  {
+    "title": "企业级 Agent 构建指南",
+    "file": "企业级 Agent 构建指南.md",
+    "date": "2026-05-19",
+    "source": "https://x.com/ma_zhenyuan/status/2056633189687586958",
+    "tags": [
+      "Agent",
+      "企业级"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "上个月给一个客户定制了一套 Deep Research 系统，本质就是多 Agent，客户的报价 12W。",
+    "cover": "https://pbs.twimg.com/media/HIqgTikbYAAvxvs?format=jpg&name=large"
+  },
+  {
+    "title": "你不知道的 AI Coding：非技术人的上手、场景与实战",
+    "file": "你不知道的 AI Coding：非技术人的上手、场景与实战.md",
+    "date": "2026-05-19",
+    "source": "https://x.com/HiTw93/status/2048230976447557787",
+    "tags": [
+      "Claude Code",
+      "AI Coding",
+      "Skill"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "上个月在公司里给产品和业务的小伙伴分享了下如何上手 AI Coding，加上最近又发了条推特，聊到不少同学因为订阅门槛没机会用上一线 AI Coding 工具，方法和习惯…",
+    "cover": "https://pbs.twimg.com/media/HGzHLDWbgAAq2n_?format=jpg&name=large"
+  },
+  {
+    "title": "创建真正可用的 Skill 完整教程 - 拆解公众号排版",
+    "file": "创建真正可用的 Skill 完整教程 - 拆解公众号排版.md",
+    "date": "2026-05-18",
+    "source": "https://x.com/MinLiBuilds/status/2055980925452968351",
+    "tags": [
+      "Skill",
+      "HTML"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "我每次要把 MD 草稿排版到公众号，手动调样式 30 ～120分钟一篇。这种中频场景，非常适合做一个 Skill 。",
+    "cover": "https://pbs.twimg.com/media/HIfdulbbsAA3t2o?format=jpg&name=large"
+  },
+  {
+    "title": "教程：手把手教你玩转Tom老板开源的html-anything项目",
+    "file": "教程：手把手教你玩转Tom老板开源的html-anything项目.md",
+    "date": "2026-05-18",
+    "source": "https://x.com/yinmin1987/status/2056184488376586646",
+    "tags": [
+      "Claude Code",
+      "Agent",
+      "Skill",
+      "HTML"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "Claude Code 团队的工程师 Thariq 最近发了一篇《The Unreasonable Effectiveness of HTML》，核心观点一句话：我们内部…",
+    "cover": "https://pbs.twimg.com/media/HIkI3YRbIAAy7me?format=jpg&name=large"
+  },
+  {
+    "title": "我用 Cloudflare 免费搭了一套 AI 内容流水线，真的能跑起来",
+    "file": "我用 Cloudflare 免费搭了一套 AI 内容流水线，真的能跑起来.md",
+    "date": "2026-05-01",
+    "source": "https://x.com/xiangxiang103/status/2050199597113360755",
+    "tags": [
+      "Cloudflare"
+    ],
+    "category": "工具与配置",
+    "quality": "A",
+    "summary": "每天刷那么多信息，有用的记不住、存不下、找不到。",
+    "cover": "https://pbs.twimg.com/media/HHOT0grbkAA-dHu?format=jpg&name=large"
+  },
+  {
+    "title": "两天时间，我把巴菲特70年的股东信变成了知识图谱",
+    "file": "两天时间，我把巴菲特70年的股东信变成了知识图谱.md",
+    "date": "2026-04-29",
+    "source": "https://x.com/binbinmath/status/2040690438122987762",
+    "tags": [
+      "Claude Code",
+      "知识图谱"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "有一天晚上，我在读巴菲特2024年的股东信，读到他说可口可乐从1994年给伯克希尔分红7500万美元，到2022年涨到了7.04亿美元——同一笔投资，分红翻了将近10倍。",
+    "cover": "https://pbs.twimg.com/media/HFH8MVlbAAAQQmG?format=jpg&name=large"
+  },
+  {
+    "title": "开源「洁癖.Skill」，让你的Agent越用越聪明。",
+    "file": "开源「洁癖.Skill」，让你的Agent越用越聪明。.md",
+    "date": "2026-04-29",
+    "source": "https://x.com/Khazix0918/status/2049345300939391245",
+    "tags": [
+      "OpenClaw",
+      "Claude Code",
+      "Agent",
+      "Skill"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "今天没选题了，所以想开源一个我自己做的，已经用了快1个多月，迭代了好多版的一个我觉得很有用的Skill。",
+    "cover": "https://pbs.twimg.com/media/HHC72Cca8AAe7PT?format=jpg&name=large"
+  },
+  {
+    "title": "你不知道的 Claude Code：架构、治理与工程实践",
+    "file": "你不知道的 Claude Code：架构、治理与工程实践.md",
+    "date": "2026-03-13",
+    "source": "https://x.com/HiTw93/article/2032091246588518683",
+    "tags": [
+      "Claude Code",
+      "Agent",
+      "Skill"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "今天这篇文章源于最近半年深度使用 Claude Code、两个账号每月 40 刀氪金换来的一些踩坑经验，希望能给大伙一些输入。",
+    "cover": "https://pbs.twimg.com/media/HDNmq2FbkAAPRmY?format=jpg&name=large"
+  },
+  {
+    "title": "如何让OpenClaw指挥三位大哥协作写代码？ 1",
+    "file": "如何让OpenClaw指挥三位大哥协作写代码？ 1.md",
+    "date": "2026-03-07",
+    "source": "https://mp.weixin.qq.com/s/ZQ0nc2NpXD76VLoan-QIFQ",
+    "tags": [
+      "OpenClaw",
+      "Claude Code",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "原创 刘小排 刘小排r 2026年3月2日 18:54",
+    "cover": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/q6aOmBZKAbNBTI8C8hr4xddwTcur2oNbfQ8ib8rrJzP2LDiaetqO6KIqHfDDbY1Hayhm1mNg0lg6o7gnzEMTgNLHd4xV60CXAE5PiaeQAMNkog/0?wx_fmt=jpeg"
+  },
+  {
     "title": "Claude Native Designer: From Design to Ship (中英双语 / Bilingual)",
     "file": "The_Claude_Native_Designer_Bilingual.md",
     "date": "2026-03-05",
@@ -88,6 +233,20 @@
     "cover": "https://pbs.twimg.com/media/HCK8-0cWkAErWGw.jpg"
   },
   {
+    "title": "1个个人+1个Agent，27天交付一个商用系统",
+    "file": "1个个人+1个Agent，27天交付一个商用系统.md",
+    "date": "2026-02-28",
+    "source": "https://x.com/wquguru/status/2027716143625187748",
+    "tags": [
+      "OpenClaw",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "1月初，研究火遍全网的开源项目OpenClaw时，我发现创始人Peter在66天内一个人提交了7178次代码，日均127次，其中最多的一天349次——平均每4分钟一次。这…",
+    "cover": "https://pbs.twimg.com/media/HCPiQVpbEAQ7gAS?format=png&name=large"
+  },
+  {
     "title": "我只是想试试 OpenClaw 管 VPS，结果顺手抓到一场挖矿入侵",
     "file": "新手小白也能打赢VPS入侵战_OpenClaw实战复盘.md",
     "date": "2026-02-28",
@@ -102,6 +261,23 @@
     "category": "安全运维",
     "quality": "A",
     "summary": "以新手第一视角复盘：一次无意试用 OpenClaw 管理 VPS，如何从异常负载发现挖矿入侵并完成止血、清理与加固。",
+    "cover": ""
+  },
+  {
+    "title": "我的 VPS 被入侵挖矿的完整复盘：从 10 负载到清零",
+    "file": "VPS_被入侵挖矿的完整复盘_从发现到清理.md",
+    "date": "2026-02-28",
+    "source": "内部复盘（twitter-post-vps-hack.md）",
+    "tags": [
+      "安全",
+      "VPS",
+      "Docker",
+      "挖矿木马",
+      "事件响应"
+    ],
+    "category": "安全运维",
+    "quality": "A",
+    "summary": "从VPS挖矿入侵事件发现、取证到完全清理的完整实录，包含入侵溯源、恶意样本分析和加固方案。",
     "cover": ""
   },
   {
@@ -193,22 +369,5 @@
     "quality": "A",
     "summary": "从时间杠杆转向算法杠杆：知识库、技能框架和自动化执行的个人业务升级路径。",
     "cover": "https://pbs.twimg.com/media/HBsFX7hbgAAK85M.jpg"
-  },
-  {
-    "title": "我的 VPS 被入侵挖矿的完整复盘：从 10 负载到清零",
-    "file": "VPS_被入侵挖矿的完整复盘_从发现到清理.md",
-    "date": "2026-02-28",
-    "source": "内部复盘（twitter-post-vps-hack.md）",
-    "tags": [
-      "安全",
-      "VPS",
-      "Docker",
-      "挖矿木马",
-      "事件响应"
-    ],
-    "category": "安全运维",
-    "quality": "A",
-    "summary": "从VPS挖矿入侵事件发现、取证到完全清理的完整实录，包含入侵溯源、恶意样本分析和加固方案。",
-    "cover": ""
   }
 ]
