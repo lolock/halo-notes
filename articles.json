@@ -1,7 +1,7 @@
 [
   {
-    "title": "CPO 投资分析交互专题：AI 数据中心光互连瓶颈",
-    "file": "CPO投资分析交互专题_AI数据中心光互连瓶颈.md",
+    "title": "CPO 投资阅读版：AI 数据中心光互连瓶颈",
+    "file": "CPO投资阅读版_AI数据中心光互连瓶颈.md",
     "date": "2026-05-20",
     "source": "cpo.docx",
     "tags": [
@@ -13,8 +13,8 @@
     ],
     "category": "投资研究",
     "quality": "A",
-    "summary": "把 CPO 投资分析文档转化为交互式 HTML 专题，包含产业链地图、公司分层筛选、情景推演、验证点和完整原文保留。",
-    "cover": ""
+    "summary": "把 CPO 研究文本重构为投资阅读路径：一句话结论、瓶颈利润池、公司分层、情景推演、验证清单与完整原文核对。",
+    "cover": "visuals/cpo-investment-map/assets/cpo-hero.png"
   },
   {
     "title": "GPT2 又一套轻盈安静的提示词 x 适配各种用途",
