@@ -1,5 +1,22 @@
 [
   {
+    "title": "Claude Managed Agents 新功能：自托管沙盒与 MCP 隧道（双语）",
+    "file": "Claude_Managed_Agents_自托管沙盒与_MCP_隧道_双语.md",
+    "date": "2026-05-20",
+    "source": "https://claude.com/blog/claude-managed-agents-updates",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Managed Agents",
+      "MCP",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Managed Agents 新增自托管沙盒与 MCP tunnels，让企业在自有边界内运行工具执行并连接私有服务。",
+    "cover": ""
+  },
+  {
     "title": "A 股电力 ETF 试运行报告：买到的是电力运营，不是电网设备",
     "file": "A股电力ETF试运行报告_电力运营而非电网设备.md",
     "date": "2026-05-20",
