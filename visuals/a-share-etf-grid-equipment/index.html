@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A股电网设备ETF纠偏报告：AI电力瓶颈的设备侧表达</title>
+<style>
+:root {
+  --paper: #f4f1e8;
+  --paper-2: #ebe6d8;
+  --ink: #171915;
+  --body: #3c4239;
+  --muted: #6e756a;
+  --line: rgba(23, 25, 21, .16);
+  --deep: #142019;
+  --green: #1f6c51;
+  --green-2: #dce8dd;
+  --amber: #9b641c;
+  --amber-2: #ead9b7;
+  --red: #9f3d32;
+  --red-2: #ead0ca;
+  --blue: #345d68;
+  --shadow: 0 24px 70px rgba(20, 32, 25, .18);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(20,32,25,.04) 1px, transparent 1px) 0 0 / 44px 44px,
+    linear-gradient(180deg, #f8f6ee 0%, var(--paper) 44%, var(--paper-2) 100%);
+  font: 16px/1.58 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+  background: rgba(244, 241, 232, .95);
+}
+.top-inner {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+  min-height: 60px;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 28px;
+  align-items: center;
+}
+.brand { font-weight: 900; color: var(--deep); white-space: nowrap; }
+.nav { display: flex; gap: 20px; overflow: auto; }
+.nav a {
+  text-decoration: none;
+  white-space: nowrap;
+  color: #30392f;
+  padding: 18px 0 15px;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+}
+.nav a:hover { color: var(--green); border-bottom-color: var(--green); }
+.workspace {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+  padding: 34px 28px 56px;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 28px;
+}
+.rail {
+  position: sticky;
+  top: 86px;
+  align-self: start;
+  background: var(--deep);
+  color: #eef4ec;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.rail-head { padding: 26px 24px 22px; }
+.rail-label { color: #9db3a6; font-size: 12px; font-weight: 900; }
+.rail-title {
+  margin-top: 13px;
+  font: 700 34px/1.08 "Songti SC", "Noto Serif CJK SC", serif;
+}
+.meter {
+  margin-top: 24px;
+  height: 8px;
+  background: rgba(255,255,255,.16);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.meter span { display: block; width: 88%; height: 100%; background: #7db996; }
+.rail-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.1); }
+.rail-list li { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.rail-list small { display: block; color: #aebfb4; font-size: 12px; margin-bottom: 6px; }
+.rail-list b { display: block; line-height: 1.34; }
+.rail-note { padding: 18px 24px 24px; color: #c8d7ce; font-size: 13px; }
+.flow {
+  background: rgba(252, 250, 242, .94);
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.85) inset;
+  overflow: hidden;
+}
+.hero {
+  padding: 42px 44px 34px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(90deg, rgba(31,108,81,.10), transparent 66%);
+}
+.kicker { color: var(--green); font-size: 12px; font-weight: 900; }
+h1, h2, h3 { margin: 0; letter-spacing: 0; overflow-wrap: anywhere; }
+h1 {
+  max-width: 900px;
+  margin-top: 14px;
+  font: 700 clamp(34px, 5vw, 66px)/1.04 "Songti SC", "Noto Serif CJK SC", serif;
+}
+.lead {
+  max-width: 840px;
+  margin: 22px 0 0;
+  color: var(--body);
+  font-size: 19px;
+}
+.hero-strip {
+  margin-top: 30px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.hero-strip div { padding: 16px 18px; border-right: 1px solid var(--line); }
+.hero-strip div:last-child { border-right: 0; }
+.hero-strip small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+.hero-strip b { display: block; font-size: 18px; line-height: 1.34; }
+.section {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 26px;
+  padding: 34px 38px 40px;
+  border-bottom: 1px solid var(--line);
+}
+.section-meta { color: var(--muted); }
+.section-no { display: block; color: var(--green); font-weight: 900; font-size: 13px; margin-bottom: 12px; }
+h2 { font: 700 27px/1.17 "Songti SC", "Noto Serif CJK SC", serif; color: var(--ink); }
+.section-meta p { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+p { margin: 0; color: var(--body); }
+.table-wrap { overflow-x: auto; border-top: 2px solid var(--deep); }
+table { width: 100%; border-collapse: collapse; min-width: 760px; }
+.wide { min-width: 1120px; }
+th, td {
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(23,25,21,.12);
+  text-align: left;
+  vertical-align: top;
+}
+th { background: rgba(20,32,25,.045); color: var(--muted); font-size: 12px; font-weight: 900; }
+td { color: var(--body); }
+td b, strong { color: var(--ink); }
+.num, td:nth-child(n+4) { font-variant-numeric: tabular-nums; }
+.match {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.match:before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+.match-ok:before { background: var(--green); }
+.match-part:before, .match-weak:before { background: var(--amber); }
+.match-miss:before { background: var(--red); }
+.exposure {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: 30px;
+}
+.bars { display: grid; gap: 13px; }
+.bar { display: grid; grid-template-columns: 120px minmax(90px, 1fr) 60px; gap: 12px; align-items: center; }
+.bar > * { min-width: 0; }
+.bar span { overflow-wrap: anywhere; font-size: 14px; }
+.track { height: 10px; background: rgba(20,32,25,.09); border-radius: 999px; overflow: hidden; }
+.fill { height: 100%; background: var(--green); }
+.bar b { text-align: right; }
+.holdings { columns: 2; column-gap: 28px; margin: 0; padding: 0; list-style: none; }
+.holdings li { break-inside: avoid; padding: 0 0 10px; margin: 0 0 10px; border-bottom: 1px solid rgba(23,25,21,.12); }
+.holdings b { display: block; }
+.holdings span { color: var(--muted); font-size: 13px; }
+.quality {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+  border-top: 2px solid var(--deep);
+}
+.quality-row {
+  display: grid;
+  grid-template-columns: 152px 100px 1fr;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(23,25,21,.12);
+}
+.quality-row > * { min-width: 0; overflow-wrap: anywhere; }
+.quality-row .value { font-weight: 900; color: var(--green); }
+.risk-list { margin: 0; padding: 0; list-style: none; border-top: 2px solid var(--deep); }
+.risk-list li {
+  display: grid;
+  grid-template-columns: 92px 150px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(23,25,21,.12);
+}
+.risk-pill { font-size: 13px; font-weight: 900; }
+.risk-red { color: var(--red); }
+.risk-amber { color: var(--amber); }
+.risk-gray { color: var(--muted); }
+.monitor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+  border-top: 2px solid var(--deep);
+}
+.monitor { padding: 13px 0; border-bottom: 1px solid rgba(23,25,21,.12); }
+.monitor b { display: block; }
+.monitor small { color: var(--muted); }
+.source-list details { padding: 12px 0; border-bottom: 1px solid rgba(23,25,21,.12); }
+.source-list summary { cursor: pointer; font-weight: 900; }
+.source-list a { color: var(--blue); word-break: break-all; }
+.prompt {
+  padding: 34px 44px 44px;
+  background: var(--deep);
+  color: #edf4ed;
+}
+.prompt h2 { color: #edf4ed; }
+.prompt pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 18px 0;
+  padding: 18px;
+  color: #dceadf;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 8px;
+}
+.copy {
+  min-height: 54px;
+  border: 0;
+  border-radius: 8px;
+  background: #edf4ed;
+  color: var(--deep);
+  padding: 0 18px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.copy:active { transform: scale(.98); }
+.footer {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+  padding: 0 28px 42px 336px;
+  color: var(--muted);
+  font-size: 13px;
+}
+@media (max-width: 980px) {
+  .top-inner { grid-template-columns: 1fr; gap: 0; padding: 10px 18px; }
+  .workspace { grid-template-columns: 1fr; padding: 22px 18px 44px; }
+  .rail { position: static; }
+  .rail-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .section { grid-template-columns: 1fr; padding: 28px 24px 34px; }
+  .hero { padding: 32px 24px 28px; }
+  .exposure, .quality, .monitor-grid { grid-template-columns: 1fr; }
+  .footer { padding: 0 18px 36px; }
+}
+@media (max-width: 640px) {
+  .workspace { padding: 16px 12px 34px; }
+  .flow, .rail { border-radius: 6px; }
+  h1 { font-size: 29px; }
+  .hero-strip { grid-template-columns: 1fr; }
+  .hero-strip div { border-right: 0; border-bottom: 1px solid var(--line); }
+  .hero-strip div:last-child { border-bottom: 0; }
+  .rail-list { grid-template-columns: 1fr; }
+  .bar { grid-template-columns: 92px minmax(72px, 1fr) 60px; gap: 8px; }
+  .holdings { columns: 1; }
+  .quality-row { grid-template-columns: 1fr; gap: 4px; }
+  .risk-list li { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="top-inner">
+    <div class="brand">A股行业ETF研究桌面</div>
+    <nav class="nav">
+      <a href="#decision">结论</a>
+      <a href="#matrix">假设匹配</a>
+      <a href="#compare">ETF对比</a>
+      <a href="#exposure">持仓暴露</a>
+      <a href="#valuation">估值质量</a>
+      <a href="#risk">反证雷达</a>
+      <a href="#sources">来源</a>
+    </nav>
+  </div>
+</header>
+<main class="workspace">
+  <aside class="rail">
+    <div class="rail-head">
+      <div class="rail-label">VERDICT</div>
+      <div class="rail-title">观察 / 小仓位等待验证</div>
+      <div class="meter"><span></span></div>
+      <p style="margin-top:10px;color:#c8d7ce">数据完整度 88% · 置信度 中高</p>
+    </div>
+    <ul class="rail-list">
+      <li><small>主观察</small><b>159326 电网设备ETF华夏</b></li>
+      <li><small>第二观察</small><b>561380 电网设备ETF国泰</b></li>
+      <li><small>对照产品</small><b>159320 电网设备ETF广发</b></li>
+      <li><small>更新时间</small><b>2026-05-21T03:18:02+08:00</b></li>
+    </ul>
+    <div class="rail-note">主题匹配已经成立，但中证/恒生指数PE分别为33.8倍/37.89倍，159326成交和规模快速放大，必须等待估值、订单和资金拥挤度共同验证。</div>
+  </aside>
+  <div class="flow">
+    <section id="decision" class="hero">
+      <div class="kicker">GRID EQUIPMENT ETF DECISION PAGE</div>
+      <h1>A股电网设备ETF纠偏报告：AI电力瓶颈的设备侧表达</h1>
+      <p class="lead">纠偏后，电网设备ETF才是AI电力瓶颈更贴近的A股ETF表达；但估值和拥挤度已经不低，结论不能直接升级为可配置。</p>
+      <div class="hero-strip">
+        <div><small>适用假设</small><b>AI数据中心电网扩容、特高压、变压器、配网自动化、电网数字化、部分设备出海。</b></div>
+        <div><small>不适用假设</small><b>发电运营资产重估、火电利润修复、水核现金流、纯储能电池或纯电力电子。</b></div>
+        <div><small>主选择理由</small><b>159326规模、成交额和关注度明显领先，且跟踪中证电网设备主题指数，样本更分散，适合作为主观察工具。</b></div>
+      </div>
+    </section>
+    <section id="matrix" class="section">
+      <div class="section-meta"><span class="section-no">01</span><h2>假设匹配</h2><p>先判断利润链条，再选择ETF。</p></div>
+      <div class="table-wrap"><table class="wide"><thead><tr><th>匹配</th><th>假设</th><th>机制</th><th>ETF表达</th><th>判断</th></tr></thead><tbody><tr><td><span class="match match-ok">匹配</span></td><td><b>AI数据中心电网扩容</b></td><td>数据中心负荷增长推动主网架、变压器、配网自动化、开关和电能质量设备需求。</td><td>159326 / 561380 / 159320</td><td>这是纠偏后的主假设，电网设备ETF比电力运营ETF更接近设备侧利润链条。</td></tr>
+<tr><td><span class="match match-ok">强匹配</span></td><td><b>特高压和主网投资</b></td><td>新能源大基地外送、跨区输电和主网架升级带来换流阀、变压器、高压开关、电缆订单。</td><td>159326优先，561380/159320对照</td><td>159326样本数更多；恒生指数更集中，头部弹性更高但集中风险也更高。</td></tr>
+<tr><td><span class="match match-ok">匹配</span></td><td><b>电网自动化和数字化</b></td><td>调度、继保、智能电表、配网自动化和电力物联网提升二次设备和软件订单。</td><td>159326 / 561380</td><td>国电南瑞、四方股份、三星医疗等提供二次设备和自动化暴露。</td></tr>
+<tr><td><span class="match match-part">部分匹配</span></td><td><b>设备出海</b></td><td>海外电网老化、变压器短缺、AI电力需求和新能源并网推动电缆、变压器、开关出口。</td><td>561380 / 159320略更集中</td><td>亨通光电、中天科技、东方电缆权重较高，但ETF没有显式按海外收入筛选。</td></tr>
+<tr><td><span class="match match-weak">弱匹配</span></td><td><b>储能设备订单</b></td><td>电网侧储能、电力电子和安全部件受益，但电池链并非电网设备ETF核心仓位。</td><td>159326观察；另需新能源/储能ETF对照</td><td>可覆盖部分电力电子和设备，不适合单独表达储能电池逻辑。</td></tr>
+<tr><td><span class="match match-miss">错配</span></td><td><b>发电运营资产重估</b></td><td>煤价、容量电价、来水、利用小时和分红决定运营商利润。</td><td>159611 / 561560</td><td>这应回到上一版电力运营ETF，不应由电网设备ETF承担。</td></tr></tbody></table></div>
+    </section>
+    <section id="compare" class="section">
+      <div class="section-meta"><span class="section-no">02</span><h2>ETF对比</h2><p>雪球字段已填，不留空。</p></div>
+      <div class="table-wrap"><table class="wide"><thead><tr><th>ETF</th><th>指数/角色</th><th>资产净值</th><th>成交额</th><th>价格</th><th>单位净值</th><th>溢价率</th><th>前十大</th><th>关注</th><th>分组</th></tr></thead><tbody><tr><td><b>159326</b><br>电网设备ETF华夏</td><td>中证电网设备主题指数<br><small>主表达工具</small></td><td>326.69亿元<br><small>2026-05-20 15:04:18 北京时间</small></td><td>13.13亿元</td><td>2.15</td><td>2.15</td><td>0.09%</td><td>57.14%</td><td>3.11万</td><td>主观察池：规模和成交额明显领先</td></tr>
+<tr><td><b>561380</b><br>电网设备ETF国泰</td><td>恒生A股电网设备指数<br><small>高集中度对照</small></td><td>76.39亿元<br><small>2026-05-20 15:00:00 北京时间</small></td><td>1.98亿元</td><td>2.33</td><td>2.33</td><td>0.09%</td><td>60.56%</td><td>1.34万</td><td>观察池：同指数更集中，流动性次优</td></tr>
+<tr><td><b>159320</b><br>电网设备ETF广发</td><td>恒生A股电网设备指数<br><small>小规模同指对照</small></td><td>12.09亿元<br><small>2026-05-20 15:04:03 北京时间</small></td><td>1.02亿元</td><td>2.34</td><td>2.34</td><td>-0.21%</td><td>60.44%</td><td>2524</td><td>同指对照：规模较小，适合比较不适合优先</td></tr></tbody></table></div>
+    </section>
+    <section id="exposure" class="section">
+      <div class="section-meta"><span class="section-no">03</span><h2>持仓暴露</h2><p>主观察工具159326的前十大。</p></div>
+      <div class="exposure"><div><div class="bars"><div class="bar"><span>电缆/海缆/通信线缆</span><div class="track"><div class="fill" style="width:76.0%"></div></div><b>15.20%</b></div>
+<div class="bar"><span>变压器/特高压/输变电</span><div class="track"><div class="fill" style="width:54.7%"></div></div><b>10.94%</b></div>
+<div class="bar"><span>一次设备/开关/储能配套</span><div class="track"><div class="fill" style="width:51.4%"></div></div><b>10.28%</b></div>
+<div class="bar"><span>电网自动化/调度/二次设备</span><div class="track"><div class="fill" style="width:42.6%"></div></div><b>8.53%</b></div>
+<div class="bar"><span>特高压/变压器/开关</span><div class="track"><div class="fill" style="width:15.9%"></div></div><b>3.19%</b></div>
+<div class="bar"><span>低压电器/配网</span><div class="track"><div class="fill" style="width:13.5%"></div></div><b>2.70%</b></div>
+<div class="bar"><span>继电器/电力电子</span><div class="track"><div class="fill" style="width:11.6%"></div></div><b>2.31%</b></div>
+<div class="bar"><span>海缆/电缆</span><div class="track"><div class="fill" style="width:10.2%"></div></div><b>2.04%</b></div>
+<div class="bar"><span>绝缘材料/电工材料</span><div class="track"><div class="fill" style="width:9.8%"></div></div><b>1.95%</b></div></div><p style="margin-top:18px">设备侧暴露已经成立：变压器、特高压、电缆、自动化和配网设备是主线。</p></div><ul class="holdings"><li><b>特变电工 <span class="num">10.94%</span></b><span>600089 · 变压器/特高压/输变电</span></li>
+<li><b>思源电气 <span class="num">10.28%</span></b><span>002028 · 一次设备/开关/储能配套</span></li>
+<li><b>国电南瑞 <span class="num">8.53%</span></b><span>600406 · 电网自动化/调度/二次设备</span></li>
+<li><b>亨通光电 <span class="num">8.49%</span></b><span>600487 · 电缆/海缆/通信线缆</span></li>
+<li><b>中天科技 <span class="num">6.71%</span></b><span>600522 · 电缆/海缆/通信线缆</span></li>
+<li><b>中国西电 <span class="num">3.19%</span></b><span>601179 · 特高压/变压器/开关</span></li>
+<li><b>正泰电器 <span class="num">2.70%</span></b><span>601877 · 低压电器/配网</span></li>
+<li><b>宏发股份 <span class="num">2.31%</span></b><span>600885 · 继电器/电力电子</span></li>
+<li><b>东方电缆 <span class="num">2.04%</span></b><span>603606 · 海缆/电缆</span></li>
+<li><b>东材科技 <span class="num">1.95%</span></b><span>601208 · 绝缘材料/电工材料</span></li></ul></div>
+    </section>
+    <section id="valuation" class="section">
+      <div class="section-meta"><span class="section-no">04</span><h2>估值质量</h2><p>方向正确后，估值是第一道刹车。</p></div>
+      <div class="quality"><div class="quality-row"><b>中证电网设备主题指数PE</b><span class="value">33.8倍</span><span>估值不低，不能因为主题正确直接上调到可配置。<br><small>中证指数factsheet，2026-03-31</small></span></div>
+<div class="quality-row"><b>中证电网设备主题指数PB</b><span class="value">3.57倍</span><span>反映设备成长性溢价，需与订单和利润兑现同步验证。<br><small>中证指数factsheet，2026-03-31</small></span></div>
+<div class="quality-row"><b>中证电网设备主题指数股息率</b><span class="value">0.95%</span><span>不是红利资产，主要靠景气和盈利增长，不靠分红兜底。<br><small>中证指数factsheet，2026-03-31</small></span></div>
+<div class="quality-row"><b>恒生A股电网设备指数PE</b><span class="value">37.89倍</span><span>比中证口径更贵，且前十大集中度更高。<br><small>恒生指数factsheet，2026-04-30</small></span></div>
+<div class="quality-row"><b>恒生A股电网设备指数股息率</b><span class="value">0.93%</span><span>股息保护弱，更适合景气交易和设备订单兑现观察。<br><small>恒生指数factsheet，2026-04-30</small></span></div>
+<div class="quality-row"><b>159326股票仓位</b><span class="value">99.65%</span><span>基本为股票满仓指数表达，现金缓冲很低。<br><small>华夏2026年1季报</small></span></div>
+<div class="quality-row"><b>561380股票仓位</b><span class="value">99.76%</span><span>跟踪效率高，但回撤也接近指数。<br><small>国泰2026年1季报</small></span></div>
+<div class="quality-row"><b>159320股票仓位</b><span class="value">99.55%</span><span>同为满仓指数表达，小规模会放大交易质量约束。<br><small>广发2026年1季报</small></span></div></div>
+    </section>
+    <section id="risk" class="section">
+      <div class="section-meta"><span class="section-no">05</span><h2>反证雷达</h2><p>避免把主题热度误判成基本面兑现。</p></div>
+      <ol class="risk-list"><li><span class="risk-pill risk-amber">黄灯</span><b>估值透支</b><div>指数PE继续扩张，但订单/利润增速没有同步上修。<br><small>中证PE33.8倍，恒生PE37.89倍，已经不是低估值修复。</small></div></li>
+<li><span class="risk-pill risk-red">红灯</span><b>交易拥挤</b><div>份额和成交额快速扩张，主题情绪强于基本面兑现。<br><small>159326雪球显示资产净值326.69亿元、单日成交13.13亿元、关注3.11万；东方财富3月末规模环比+673.87%。</small></div></li>
+<li><span class="risk-pill risk-amber">黄灯</span><b>集中度</b><div>前五大权重股表现主导ETF，单一公司或电缆链波动放大。<br><small>561380/159320前五大合计约46.7%，159326前五大合计44.95%。</small></div></li>
+<li><span class="risk-pill risk-gray">灰灯</span><b>订单兑现不及预期</b><div>国网招标、特高压项目、配网自动化订单低于预期。<br><small>需接入国网招标、公司合同负债和在手订单数据库。</small></div></li>
+<li><span class="risk-pill risk-gray">灰灯</span><b>出海假设反噬</b><div>海外电网投资延后、贸易限制、汇率或交付周期影响毛利率。<br><small>ETF没有按海外收入筛选，需用成分股年报拆收入地区。</small></div></li>
+<li><span class="risk-pill risk-amber">黄灯</span><b>储能错配</b><div>用户想表达储能电池，而ETF主要买电网设备和电缆。<br><small>储能只属于弱匹配，需要单独比较储能/新能源ETF。</small></div></li></ol>
+    </section>
+    <section id="monitor" class="section">
+      <div class="section-meta"><span class="section-no">06</span><h2>监控变量</h2><p>把报告变成跟踪系统。</p></div>
+      <div class="monitor-grid"><div class="monitor"><b>国网/南网招标金额</b><p>验证特高压、变压器、开关、二次设备订单是否继续放量</p><small>月度/批次 · 未触发异常</small></div>
+<div class="monitor"><b>主要成分股合同负债</b><p>订单转收入的领先指标，尤其国电南瑞、思源电气、特变电工、中国西电</p><small>季报 · 等待下一季报</small></div>
+<div class="monitor"><b>海外电网投资与出口数据</b><p>验证电缆、变压器、开关设备出海逻辑</p><small>月度/季度 · 待接海关和公司公告</small></div>
+<div class="monitor"><b>铜、铝、取向硅钢价格</b><p>原材料上涨可能压缩设备利润率</p><small>每周 · 待接商品价格</small></div>
+<div class="monitor"><b>ETF份额和成交额</b><p>识别资金拥挤和主题过热</p><small>每日/每周 · 159326已高关注</small></div>
+<div class="monitor"><b>折溢价和IOPV偏离</b><p>识别场内交易价格偏离净值风险</p><small>每日 · 雪球显示溢价率已填充</small></div>
+<div class="monitor"><b>指数调样</b><p>检查成分股是否从核心设备转向泛制造</p><small>半年/季度 · 跟随指数公告</small></div>
+<div class="monitor"><b>发电运营ETF对照</b><p>防止再次把电力运营与电网设备混淆</p><small>每次报告 · 159611/561560保留为替代路径</small></div></div>
+    </section>
+    <section id="sources" class="section">
+      <div class="section-meta"><span class="section-no">07</span><h2>证据抽屉</h2><p>官方源、第三方源和推论分开。</p></div>
+      <div class="source-list"><details><summary>官方指数事实表：中证电网设备主题指数factsheet</summary><p><a href="https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/931994factsheet.pdf">https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/931994factsheet.pdf</a></p></details>
+<details><summary>基金公告：华夏中证电网设备主题ETF 2026年第1季度报告</summary><p><a href="https://accountquery.chinaamc.com/upload/resources/file/2026/04/22/da87c3dbc0fa4db69a9a6c0bc76e1961.pdf">https://accountquery.chinaamc.com/upload/resources/file/2026/04/22/da87c3dbc0fa4db69a9a6c0bc76e1961.pdf</a></p></details>
+<details><summary>交易所基金公告：国泰恒生A股电网设备ETF 2026年第1季度报告</summary><p><a href="https://www.sse.com.cn/disclosure/fund/announcement/c/new/2026-04-22/561380_20260422_WC2I.pdf">https://www.sse.com.cn/disclosure/fund/announcement/c/new/2026-04-22/561380_20260422_WC2I.pdf</a></p></details>
+<details><summary>基金公告转录：广发恒生A股电网设备ETF 2026年第1季度报告</summary><p><a href="https://www.9fzt.com/detail/fund_159320_2_10727323.html">https://www.9fzt.com/detail/fund_159320_2_10727323.html</a></p></details>
+<details><summary>官方指数事实表：恒生A股电网设备指数factsheet</summary><p><a href="https://www.hsi.com.hk/static/uploads/contents/zh_cn/dl_centre/factsheets/hscaupgc.pdf">https://www.hsi.com.hk/static/uploads/contents/zh_cn/dl_centre/factsheets/hscaupgc.pdf</a></p></details>
+<details><summary>官方指数方法：恒生A股电网设备指数编算方法</summary><p><a href="https://www.hsi.com.hk/static/uploads/contents/zh_cn/dl_centre/methodologies/IM_hscaupgc.pdf">https://www.hsi.com.hk/static/uploads/contents/zh_cn/dl_centre/methodologies/IM_hscaupgc.pdf</a></p></details>
+<details><summary>第三方已登录行情页：雪球ETF行情页</summary><p><a href="https://xueqiu.com/S/SZ159326">https://xueqiu.com/S/SZ159326</a></p></details>
+<details><summary>第三方基金/行情数据：东方财富基金页面与行情接口</summary><p><a href="https://fund.eastmoney.com/pingzhongdata/{code}.js">https://fund.eastmoney.com/pingzhongdata/{code}.js</a></p></details></div>
+    </section>
+    <section class="prompt">
+      <h2>下一步复核任务</h2>
+      <pre id="next-prompt">请在本报告基础上继续做第二轮复核：抓取159326、561380、159320逐日PCF、IOPV、盘口买一卖一价差、过去20日成交额和基金份额变化；把前20大成分股按变压器/特高压/电缆/电网自动化/配网/电力电子/材料分组，并聚合PE、PB、ROE、毛利率、经营现金流、合同负债和海外收入占比；若估值扩张快于订单兑现，结论维持观察。</pre>
+      <button id="copy-btn" class="copy" onclick="copyNextPrompt()">复制下一步复核任务</button>
+    </section>
+  </div>
+</main>
+<footer class="footer">只读研究，不构成投资建议、交易建议或收益承诺。核心内容已预渲染为静态HTML，脚本失效时表格和结论仍可阅读。</footer>
+<script>
+function copyNextPrompt() {
+  const text = document.getElementById('next-prompt').innerText;
+  navigator.clipboard.writeText(text).then(function () {
+    const btn = document.getElementById('copy-btn');
+    btn.innerText = '已复制';
+    setTimeout(function () { btn.innerText = '复制下一步复核任务'; }, 1500);
+  });
+}
+</script>
+</body>
+</html>
