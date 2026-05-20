@@ -47,8 +47,6 @@ wechat-publish-template/
 
 左边是Ring-1T-2.6做的，右边是Claude Opus 4.7做的，效果都非常好。而且Ring xhigh只花了2m17s就完成了，claude花了4m30s。后面有无删减评测视频。
 
-<video preload="none" tabindex="-1" playsinline="" aria-label="嵌入式视频" poster="https://pbs.twimg.com/amplify_video_thumb/2055856084305469440/img/jJTpkp8E7-bp73Tu.jpg" style="width: 100%; height: 100%; position: absolute; background-color: black; top: 0%; left: 0%; transform: rotate(0deg) scale(1.005);"><source type="video/mp4" src="blob:https://x.com/5409d7b6-d3f1-46c9-b8e8-450f2170dd49"></video>
-
 ![](https://pbs.twimg.com/amplify_video_thumb/2055856084305469440/img/jJTpkp8E7-bp73Tu.jpg?name=large)
 
 ## 二、Skill 的通用结构
