@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A 股电力 ETF 决策页：电力运营与电网设备错配</title>
+<style>
+:root {
+  --bg: #f7f6f1;
+  --panel: #ffffff;
+  --ink: #17212b;
+  --body: #344252;
+  --muted: #647386;
+  --line: #d9ded6;
+  --green: #207d5b;
+  --green-soft: #e8f4ee;
+  --amber: #a96b13;
+  --amber-soft: #fff3d8;
+  --red: #b33a32;
+  --red-soft: #fde8e6;
+  --steel: #41616f;
+  --steel-soft: #e6eef1;
+  --shadow: 0 18px 36px rgba(30, 35, 40, .08);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.58;
+  letter-spacing: 0;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+.wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247, 246, 241, .92);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+.topbar .wrap {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-width: 0;
+}
+.brand { font-weight: 700; color: var(--ink); white-space: nowrap; }
+.nav { display: flex; gap: 6px; overflow: auto; max-width: 100%; width: 100%; min-width: 0; }
+.nav a, button.copy {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #253342;
+  border-radius: 8px;
+  padding: 8px 11px;
+  text-decoration: none;
+  white-space: nowrap;
+  font: 600 13px/1.1 inherit;
+  cursor: pointer;
+}
+.nav a:hover, button.copy:hover { border-color: var(--steel); color: var(--steel); }
+main { padding-bottom: 48px; }
+section { padding: 34px 0; }
+.decision-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, .84fr) minmax(420px, 1.16fr);
+  gap: 18px;
+  padding-top: 26px;
+}
+.decision-lead {
+  background: #1f2b35;
+  color: #fff;
+  border: 1px solid #1a252e;
+  border-radius: 8px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+.kicker { color: #b6c9cf; font-weight: 700; font-size: 12px; }
+h1, h2, h3 { margin: 0; line-height: 1.16; letter-spacing: 0; overflow-wrap: anywhere; word-break: break-word; }
+h1 { margin-top: 10px; font-size: clamp(28px, 4vw, 48px); font-weight: 740; }
+h2 { font-size: 28px; margin-bottom: 12px; }
+h3 { font-size: 18px; margin-bottom: 8px; }
+p { margin: 0; color: var(--body); }
+.decision-lead p { color: #dbe6e8; margin-top: 14px; font-size: 18px; }
+.metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; min-width: 0; }
+.metric, .panel, .table-shell, .evidence, .risk-item, .monitor-item {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.metric { padding: 14px; min-height: 96px; min-width: 0; }
+.metric small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+.metric b { display: block; font-size: 20px; line-height: 1.24; overflow-wrap: anywhere; }
+.metric span { display: block; margin-top: 7px; color: var(--body); font-size: 13px; }
+.panel { padding: 22px; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+.section-head p { max-width: 620px; color: var(--muted); }
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.hypothesis {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 196px;
+}
+.status {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+.status-match { color: var(--green); background: var(--green-soft); }
+.status-partial, .status-weak { color: var(--amber); background: var(--amber-soft); }
+.status-mismatch, .status-triggered { color: var(--red); background: var(--red-soft); }
+.status-missing, .status-unverified { color: var(--steel); background: var(--steel-soft); }
+.hint { color: var(--muted); font-size: 13px; margin-top: 10px; }
+.exposure-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+.bar-list { display: grid; gap: 10px; }
+.bar-row { display: grid; grid-template-columns: 150px 1fr 70px; gap: 10px; align-items: center; }
+.bar-track { height: 18px; background: #e9ece4; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--steel); }
+.holdings { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.holding {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: #fbfcf9;
+}
+.holding b { display: block; }
+.holding span { color: var(--muted); font-size: 13px; }
+.table-shell { overflow: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 920px; }
+th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { background: #eef2eb; color: #26313c; font-size: 13px; position: sticky; top: 0; }
+td { color: var(--body); }
+.quality-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.quality { border: 1px solid var(--line); border-radius: 8px; padding: 13px; background: #fff; }
+.quality b { display: block; font-size: 17px; }
+.quality span { display: block; color: var(--red); margin-top: 6px; font-weight: 700; }
+.quality small { display: block; margin-top: 7px; color: var(--muted); }
+.risk-grid, .monitor-grid, .evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.risk-item, .monitor-item, .evidence { padding: 15px; box-shadow: none; }
+.risk-item strong, .monitor-item strong, .evidence strong { display: block; margin-bottom: 7px; }
+.source-list details {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+.source-list summary { cursor: pointer; font-weight: 700; }
+.prompt-box {
+  background: #1f2b35;
+  border-radius: 8px;
+  border: 1px solid #1a252e;
+  color: #fff;
+  padding: 18px;
+}
+.prompt-box pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 8px;
+  padding: 14px;
+  color: #f4f7f5;
+}
+.footer { padding: 24px 0 42px; color: var(--muted); font-size: 13px; }
+@media (max-width: 980px) {
+  .decision-shell, .exposure-grid { grid-template-columns: 1fr; }
+  .metric-grid, .matrix, .quality-grid, .risk-grid, .monitor-grid, .evidence-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 0 12px; }
+  .topbar .wrap { align-items: flex-start; flex-direction: column; padding: 12px 0; }
+  .metric-grid, .matrix, .quality-grid, .risk-grid, .monitor-grid, .evidence-grid, .holdings { grid-template-columns: 1fr; }
+  .bar-row { grid-template-columns: 110px 1fr 56px; }
+  h1 { font-size: 25px; word-break: break-all; }
+  .decision-lead { padding: 22px; }
+  section { padding: 25px 0; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">A 股行业 ETF 决策页</div>
+    <nav class="nav">
+      <a href="#decision">结论</a>
+      <a href="#matrix">假设匹配</a>
+      <a href="#exposure">持仓暴露</a>
+      <a href="#compare">ETF 对比</a>
+      <a href="#valuation">估值质量</a>
+      <a href="#radar">反证雷达</a>
+      <a href="#sources">证据</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section id="decision" class="wrap decision-shell">
+    <div class="decision-lead">
+      <div class="kicker">POWER ETF · DECISION CONSOLE</div>
+      <h1>A 股电力 ETF 决策页：电力运营与电网设备错配</h1>
+      <p>当前 A 股电力 ETF 买到的是发电运营/公用事业资产，不是 AI 电网设备订单弹性。</p>
+    </div>
+    <div class="metric-grid">
+      <div class="metric"><small>结论类别</small><b>观察 / 等待验证</b><span>数据不足时不上调到配置判断</span></div>
+      <div class="metric"><small>首选观察</small><b>159611 电力ETF广发</b><span>同类对照：561560 电力ETF华泰柏瑞</span></div>
+      <div class="metric"><small>置信度</small><b>中</b><span>数据完整度 60%</span></div>
+      <div class="metric"><small>更新时间</small><b>2026-05-20T23:43:15+08:00</b><span>直接静态页：https://lolock.github.io/halo-notes/visuals/a-share-etf-power/</span></div>
+      <div class="metric"><small>适用假设</small><b>电力运营资产重估、火电利润修复、水核现金流稳定。</b><span>偏运营资产与现金流</span></div>
+      <div class="metric"><small>不适用假设</small><b>AI 数据中心电网扩容、变压器、特高压、配网自动化、电力设备出海。</b><span>设备侧弹性需要另建池</span></div>
+      <div class="metric"><small>下一步</small><b>先补齐 PCF、IOPV、买卖价差、折溢价、跟踪误差和全持仓估值；并单独建立电网设备 ETF 候选池。</b><span>补数据后才讨论配置</span></div>
+      <div class="metric"><small>指数前十大</small><b>48.77%</b><span>来自 H30199 前十大权重</span></div>
+    </div>
+  </section>
+
+  <section id="matrix" class="wrap">
+    <div class="section-head">
+      <h2>假设 ETF 匹配矩阵</h2>
+      <p>用户说“电力”时，至少包含六种投资假设。当前电力公用事业 ETF 只适合其中一部分。</p>
+    </div>
+    <div class="matrix"><article class="hypothesis">
+  <span class="status status-match">匹配</span>
+  <h3>电力运营资产重估</h3>
+  <p>电价机制、容量电价、煤价、来水、利用小时和融资成本共同决定发电运营商利润。</p>
+  <p class="hint">当前电力 ETF 的主要可表达假设。</p>
+</article>
+<article class="hypothesis">
+  <span class="status status-partial">部分匹配</span>
+  <h3>火电利润修复</h3>
+  <p>煤价下行、容量电价和辅助服务收入提升火电盈利，但电价下行会抵消修复。</p>
+  <p class="hint">需要拆火电权重和煤价/电价变量，不能只看 ETF 名称。</p>
+</article>
+<article class="hypothesis">
+  <span class="status status-partial">部分匹配</span>
+  <h3>水核现金流稳定</h3>
+  <p>低边际成本、稳定上网电价、折旧周期和分红能力决定现金流质量。</p>
+  <p class="hint">长江电力、中国核电、中国广核权重较高，适合观察现金流资产重估。</p>
+</article>
+<article class="hypothesis">
+  <span class="status status-weak">弱匹配</span>
+  <h3>绿电运营</h3>
+  <p>消纳、绿证/绿电交易价格、补贴回款和融资成本决定收益率。</p>
+  <p class="hint">有三峡能源等运营商，但不是纯绿电 ETF。</p>
+</article>
+<article class="hypothesis">
+  <span class="status status-mismatch">错配</span>
+  <h3>AI 电网设备</h3>
+  <p>数据中心用电增长拉动变压器、特高压、配网自动化、电力电子和储能设备订单。</p>
+  <p class="hint">当前电力公用事业 ETF 不直接买设备订单弹性，需另建电网设备 ETF 候选池。</p>
+</article>
+<article class="hypothesis">
+  <span class="status status-mismatch">错配</span>
+  <h3>电力设备出海</h3>
+  <p>海外电网升级、变压器短缺、配网投资和出口订单决定设备公司利润。</p>
+  <p class="hint">需另找电力设备、智能电网、高端制造或出海链条 ETF。</p>
+</article></div>
+  </section>
+
+  <section id="exposure" class="wrap">
+    <div class="section-head">
+      <h2>持仓暴露图</h2>
+      <p>这张图只展示指数前十大权重的利润链条归类，用来判断方向，不替代完整 PCF 持仓穿透。</p>
+    </div>
+    <div class="exposure-grid">
+      <div class="panel">
+        <h3>前十大行业位置</h3>
+        <div class="bar-list"><div class="bar-row">
+  <span>核电运营</span>
+  <div class="bar-track"><div class="bar-fill" style="width:47.1%"></div></div>
+  <b>11.78%</b>
+</div>
+<div class="bar-row">
+  <span>水电运营</span>
+  <div class="bar-track"><div class="bar-fill" style="width:36.1%"></div></div>
+  <b>9.02%</b>
+</div>
+<div class="bar-row">
+  <span>综合发电运营</span>
+  <div class="bar-track"><div class="bar-fill" style="width:29.3%"></div></div>
+  <b>7.33%</b>
+</div>
+<div class="bar-row">
+  <span>新能源发电运营</span>
+  <div class="bar-track"><div class="bar-fill" style="width:25.9%"></div></div>
+  <b>6.47%</b>
+</div>
+<div class="bar-row">
+  <span>煤电/能源运营</span>
+  <div class="bar-track"><div class="bar-fill" style="width:16.7%"></div></div>
+  <b>4.18%</b>
+</div>
+<div class="bar-row">
+  <span>水火风光发电运营</span>
+  <div class="bar-track"><div class="bar-fill" style="width:14.5%"></div></div>
+  <b>3.62%</b>
+</div>
+<div class="bar-row">
+  <span>火电运营</span>
+  <div class="bar-track"><div class="bar-fill" style="width:13.1%"></div></div>
+  <b>3.28%</b>
+</div>
+<div class="bar-row">
+  <span>水电/能源投资</span>
+  <div class="bar-track"><div class="bar-fill" style="width:12.4%"></div></div>
+  <b>3.09%</b>
+</div></div>
+        <p class="hint">结论：利润来源是电价、煤价、来水、利用小时、资本开支和融资成本，不是电网设备订单。</p>
+      </div>
+      <div class="panel">
+        <h3>前十大持仓</h3>
+        <div class="holdings"><div class="holding">
+  <b>长江电力 9.02%</b>
+  <span>600900 · 水电运营</span>
+</div>
+<div class="holding">
+  <b>中国核电 7.92%</b>
+  <span>601985 · 核电运营</span>
+</div>
+<div class="holding">
+  <b>三峡能源 6.47%</b>
+  <span>600905 · 新能源发电运营</span>
+</div>
+<div class="holding">
+  <b>国电电力 4.59%</b>
+  <span>600795 · 综合发电运营</span>
+</div>
+<div class="holding">
+  <b>永泰能源 4.18%</b>
+  <span>600157 · 煤电/能源运营</span>
+</div>
+<div class="holding">
+  <b>中国广核 3.86%</b>
+  <span>003816 · 核电运营</span>
+</div>
+<div class="holding">
+  <b>国投电力 3.62%</b>
+  <span>600886 · 水火风光发电运营</span>
+</div>
+<div class="holding">
+  <b>华能国际 3.28%</b>
+  <span>600011 · 火电运营</span>
+</div>
+<div class="holding">
+  <b>川投能源 3.09%</b>
+  <span>600674 · 水电/能源投资</span>
+</div>
+<div class="holding">
+  <b>上海电力 2.74%</b>
+  <span>600021 · 综合发电运营</span>
+</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare" class="wrap">
+    <div class="section-head">
+      <h2>ETF 对比矩阵</h2>
+      <p>规模和收益为第三方页面可抓数据；买卖价差、折溢价、跟踪误差和费率待统一时间截面核实。</p>
+    </div>
+    <div class="table-shell">
+      <table>
+        <thead><tr><th>ETF</th><th>管理人/交易所</th><th>规模</th><th>近 20 日成交额</th><th>买卖价差</th><th>折溢价</th><th>跟踪误差</th><th>费率</th><th>集中度</th><th>Agent 分组</th></tr></thead>
+        <tbody><tr>
+  <td><b>159611</b><br>电力ETF广发</td>
+  <td>广发基金<br>深交所</td>
+  <td>66.88 亿元<br><small>2026-03-31</small></td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>约 48.77%（指数前十大，非实时 PCF）</td>
+  <td>主观察池</td>
+</tr>
+<tr>
+  <td><b>561560</b><br>电力ETF华泰柏瑞</td>
+  <td>华泰柏瑞基金<br>上交所</td>
+  <td>28.66 亿元<br><small>2026-03-31</small></td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>约 48.77%（指数前十大，非实时 PCF）</td>
+  <td>可观察</td>
+</tr>
+<tr>
+  <td><b>562350</b><br>电力ETF银华</td>
+  <td>银华基金<br>上交所</td>
+  <td>0.79 亿元<br><small>2026-03-31</small></td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>约 48.77%（指数前十大，非实时 PCF）</td>
+  <td>流动性/规模偏弱</td>
+</tr>
+<tr>
+  <td><b>561700</b><br>电力ETF博时</td>
+  <td>博时基金<br>上交所</td>
+  <td>3.48 亿元<br><small>2026-03-31</small></td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>约 48.77%（指数前十大，非实时 PCF）</td>
+  <td>可观察</td>
+</tr>
+<tr>
+  <td><b>560580</b><br>电力ETF南方</td>
+  <td>南方基金<br>上交所</td>
+  <td>3.03 亿元<br><small>2026-03-31</small></td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>约 48.77%（指数前十大，非实时 PCF）</td>
+  <td>可观察</td>
+</tr>
+<tr>
+  <td><b>560460</b><br>电力ETF平安</td>
+  <td>平安基金<br>上交所</td>
+  <td>5.66 亿元<br><small>2026-05-08</small></td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>约 48.77%（指数前十大，非实时 PCF）</td>
+  <td>新基金，等待验证</td>
+</tr>
+<tr>
+  <td><b>560830</b><br>电力ETF华夏</td>
+  <td>华夏基金<br>上交所</td>
+  <td>11.92 亿元<br><small>2026-05-15</small></td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>未核实</td>
+  <td>约 48.77%（指数前十大，非实时 PCF）</td>
+  <td>新基金，等待验证</td>
+</tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="valuation" class="wrap">
+    <div class="section-head">
+      <h2>估值质量面板</h2>
+      <p>电力运营 ETF 的配置判断必须看加权估值、股息、现金流和资本开支；缺失项不猜测。</p>
+    </div>
+    <div class="panel">
+      <div class="quality-grid"><div class="quality">
+  <b>加权 PE</b>
+  <span>未核实</span>
+  <small>需要全持仓权重和成分股 TTM 净利润</small>
+</div>
+<div class="quality">
+  <b>加权 PB</b>
+  <span>未核实</span>
+  <small>需要全持仓权重和成分股归母净资产</small>
+</div>
+<div class="quality">
+  <b>加权股息率</b>
+  <span>未核实</span>
+  <small>需要成分股分红和市值</small>
+</div>
+<div class="quality">
+  <b>加权 ROE</b>
+  <span>未核实</span>
+  <small>需要成分股净资产收益率</small>
+</div>
+<div class="quality">
+  <b>经营现金流/市值</b>
+  <span>未核实</span>
+  <small>需要成分股经营现金流和总市值</small>
+</div>
+<div class="quality">
+  <b>资本开支/收入</b>
+  <span>未核实</span>
+  <small>需要成分股购建固定资产现金流和收入</small>
+</div>
+<div class="quality">
+  <b>资产负债率</b>
+  <span>未核实</span>
+  <small>需要成分股资产负债表</small>
+</div></div>
+      <h3 style="margin-top:18px">当前缺口</h3>
+      <ul><li>逐日 PCF 和申购赎回清单</li>
+<li>实时 IOPV 偏离和买卖价差</li>
+<li>统一时间截面的成交额、份额、折溢价和申赎状态</li>
+<li>全 57 只成分股加权 PE、PB、ROE、股息率、现金流和资本开支</li>
+<li>盈利预期修正和历史估值分位</li></ul>
+    </div>
+  </section>
+
+  <section id="radar" class="wrap">
+    <div class="section-head">
+      <h2>反证雷达</h2>
+      <p>报告必须保留“我为什么可能错了”。其中“假设错配”已经触发，其余需要接入数据源持续验证。</p>
+    </div>
+    <div class="risk-grid"><article class="risk-item">
+  <span class="status status-triggered">已触发</span>
+  <strong>假设错配</strong>
+  <p>若目标是 AI 电网设备，当前电力 ETF 不匹配</p>
+  <p class="hint">改建电网设备 ETF 候选池</p>
+</article>
+<article class="risk-item">
+  <span class="status status-missing">未接入</span>
+  <strong>交易拥挤</strong>
+  <p>份额一周增长超过 20% 或成交额异常放大</p>
+  <p class="hint">接入 ETF 份额和成交额序列</p>
+</article>
+<article class="risk-item">
+  <span class="status status-missing">未接入</span>
+  <strong>折溢价异常</strong>
+  <p>溢价/折价持续扩大或 IOPV 偏离异常</p>
+  <p class="hint">接入 PCF、IOPV 和盘口数据</p>
+</article>
+<article class="risk-item">
+  <span class="status status-missing">未接入</span>
+  <strong>煤价反转</strong>
+  <p>煤价上行压缩火电盈利</p>
+  <p class="hint">接入动力煤价格</p>
+</article>
+<article class="risk-item">
+  <span class="status status-missing">未接入</span>
+  <strong>来水不及预期</strong>
+  <p>水电利润兑现低于预期</p>
+  <p class="hint">接入水电发电量和来水数据</p>
+</article>
+<article class="risk-item">
+  <span class="status status-missing">未接入</span>
+  <strong>电价机制走弱</strong>
+  <p>市场化电价下降或容量电价低于预期</p>
+  <p class="hint">接入电价政策和交易价格</p>
+</article>
+<article class="risk-item">
+  <span class="status status-unverified">未核实</span>
+  <strong>估值已反映</strong>
+  <p>估值扩张快于盈利上修</p>
+  <p class="hint">补齐加权估值和盈利修正</p>
+</article></div>
+  </section>
+
+  <section id="monitors" class="wrap">
+    <div class="section-head">
+      <h2>后续监控面板</h2>
+      <p>下一版要把机制说明变成可监控变量，避免每天输出长文。</p>
+    </div>
+    <div class="monitor-grid"><article class="monitor-item">
+  <strong>秦皇岛动力煤价格</strong>
+  <p>煤价上行压缩火电利润；下行支持火电修复</p>
+  <p class="hint">每日/每周 · 未接入</p>
+</article>
+<article class="monitor-item">
+  <strong>全社会用电量</strong>
+  <p>需求强弱决定电力运营收入和利用小时</p>
+  <p class="hint">月度 · 未接入</p>
+</article>
+<article class="monitor-item">
+  <strong>火电利用小时</strong>
+  <p>验证火电景气与容量电价兑现</p>
+  <p class="hint">月度 · 未接入</p>
+</article>
+<article class="monitor-item">
+  <strong>水电发电量和主要流域来水</strong>
+  <p>验证长江电力等水电利润弹性</p>
+  <p class="hint">月度/汛期高频 · 未接入</p>
+</article>
+<article class="monitor-item">
+  <strong>市场化交易电价</strong>
+  <p>电价下行会抵消煤价改善</p>
+  <p class="hint">月度 · 未接入</p>
+</article>
+<article class="monitor-item">
+  <strong>容量电价政策</strong>
+  <p>火电稳定收益的重要政策变量</p>
+  <p class="hint">政策事件 · 未接入</p>
+</article>
+<article class="monitor-item">
+  <strong>绿电交易价格和消纳</strong>
+  <p>验证绿电运营收益率</p>
+  <p class="hint">月度 · 未接入</p>
+</article>
+<article class="monitor-item">
+  <strong>10 年期国债收益率</strong>
+  <p>公用事业和高股息资产估值敏感变量</p>
+  <p class="hint">每日/每周 · 未接入</p>
+</article></div>
+  </section>
+
+  <section id="sources" class="wrap">
+    <div class="section-head">
+      <h2>证据抽屉</h2>
+      <p>证据等级绑定到具体结论：A 为官方披露，B 为第三方行情，D 为 Agent 推论。</p>
+    </div>
+    <div class="evidence-grid"><article class="evidence">
+  <span class="status status-match">A 类证据</span>
+  <strong>H30199 是中证全指电力公用事业指数，单个样本权重上限 10%。</strong>
+  <p>中证指数方法文件</p>
+</article>
+<article class="evidence">
+  <span class="status status-match">A 类证据</span>
+  <strong>H30199 在 2026-03-31 的样本数量为 57。</strong>
+  <p>中证指数 factsheet</p>
+</article>
+<article class="evidence">
+  <span class="status status-match">A 类证据</span>
+  <strong>广发产品主要投资于指数成份股和备选成份股，通常采用完全复制法。</strong>
+  <p>基金产品资料概要</p>
+</article>
+<article class="evidence">
+  <span class="status status-partial">B 类证据</span>
+  <strong>本轮产品规模、区间收益来自东方财富基金页面，时点可能不一致。</strong>
+  <p>东方财富基金页面</p>
+</article>
+<article class="evidence">
+  <span class="status status-unverified">D 类证据</span>
+  <strong>当前电力 ETF 不适合表达 AI 电网设备订单弹性。</strong>
+  <p>Agent 对指数持仓和利润链条的推论</p>
+</article></div>
+    <div class="source-list" style="margin-top:14px"><details>
+  <summary>官方指数方法：中证指数：中证全指电力公用事业指数编制方案</summary>
+  <p><a href="https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/H30199_Index_Methodology_cn.pdf">https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/H30199_Index_Methodology_cn.pdf</a></p>
+</details>
+<details>
+  <summary>官方指数事实表：中证指数：H30199 factsheet</summary>
+  <p><a href="https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/H30199factsheet.pdf">https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/H30199factsheet.pdf</a></p>
+</details>
+<details>
+  <summary>基金公告：广发中证全指电力公用事业 ETF 产品资料概要</summary>
+  <p><a href="https://static.cninfo.com.cn/finalpage/2025-05-26/1223645345.PDF">https://static.cninfo.com.cn/finalpage/2025-05-26/1223645345.PDF</a></p>
+</details>
+<details>
+  <summary>基金公告：华泰柏瑞中证全指电力公用事业 ETF 发售公告</summary>
+  <p><a href="https://static.cninfo.com.cn/finalpage/2022-04-01/1212773728.PDF">https://static.cninfo.com.cn/finalpage/2022-04-01/1212773728.PDF</a></p>
+</details>
+<details>
+  <summary>第三方基金数据：东方财富基金页面 pingzhongdata</summary>
+  <p><a href="https://fund.eastmoney.com/pingzhongdata/{code}.js">https://fund.eastmoney.com/pingzhongdata/{code}.js</a></p>
+</details></div>
+  </section>
+
+  <section id="prompt" class="wrap">
+    <div class="prompt-box">
+      <h2>复制下一步 Prompt</h2>
+      <pre id="next-prompt">请建立 A 股电网设备 ETF 候选池，对比中证电网设备主题指数、智能电网、电力设备、高端制造及相关 ETF，重点验证是否能表达 AI 数据中心电网扩容、变压器、特高压、配网自动化、储能设备订单改善的假设；输出指数规则、前二十大持仓、估值质量、交易质量、反证条件和可替代宽基。</pre>
+      <button id="copy-btn" class="copy" onclick="copyNextPrompt()">复制下一步 Prompt</button>
+    </div>
+  </section>
+</main>
+<footer class="wrap footer">
+  只读研究，不构成投资建议、交易建议或收益承诺。Markdown 底稿和 JSON 数据包保留在本地项目中，HTML 为 Halo Notes 预渲染决策页。
+</footer>
+<script>
+function copyNextPrompt() {
+  const text = document.getElementById('next-prompt').innerText;
+  navigator.clipboard.writeText(text).then(function () {
+    const btn = document.getElementById('copy-btn');
+    btn.innerText = '已复制';
+    setTimeout(function () { btn.innerText = '复制下一步 Prompt'; }, 1600);
+  });
+}
+</script>
+</body>
+</html>
