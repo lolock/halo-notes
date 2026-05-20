@@ -132,6 +132,14 @@
       nodes.forEach(n=>{ try{ if(n.scrollWidth>n.clientWidth+1){ n.style.maxWidth='100%'; n.style.overflowWrap='anywhere'; n.style.wordBreak=n.tagName==='A'?'break-all':'break-word'; n.style.whiteSpace='normal'; } }catch{} });
     }
 
+    function scrubUnsafeEmbeds(container){
+      container.querySelectorAll('video').forEach(v=>{
+        const html=(v.outerHTML||'').toLowerCase();
+        const src=[...v.querySelectorAll('source')].map(s=>s.getAttribute('src')||'').join(' ');
+        if(src.includes('blob:') || html.includes('position: absolute')) v.remove();
+      });
+    }
+
     function ensureVisible(container, item){
       if(!container || !item) return;
       const top=item.offsetTop, bottom=top+item.offsetHeight;
@@ -220,11 +228,14 @@
 
     if(!file){ el.textContent='缺少 file 参数'; }
     else {
-      raw.href='./articles/'+encodeURIComponent(file);
-      fetch('./articles/'+encodeURIComponent(file))
+      const articleUrl='./articles/'+encodeURIComponent(file);
+      const cacheKey=p.get('v') || Date.now().toString();
+      raw.href=articleUrl;
+      fetch(articleUrl+'?v='+encodeURIComponent(cacheKey), {cache:'no-store'})
         .then(r=>{ if(!r.ok) throw new Error('读取失败'); return r.text(); })
         .then(md=>{
           el.innerHTML = marked.parse(md);
+          scrubUnsafeEmbeds(el);
           compactLongLinks(el);
           hardenOverflow(el);
           const hs=buildToc(el);
