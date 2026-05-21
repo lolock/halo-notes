@@ -226,33 +226,8 @@ td b, strong { color: var(--ink); }
 .source-list details { padding: 12px 0; border-bottom: 1px solid rgba(23,25,21,.12); }
 .source-list summary { cursor: pointer; font-weight: 900; }
 .source-list a { color: var(--blue); word-break: break-all; }
-.prompt {
-  padding: 34px 44px 44px;
-  background: var(--deep);
-  color: #edf4ed;
-}
-.prompt h2 { color: #edf4ed; }
-.prompt pre {
-  white-space: pre-wrap;
-  word-break: break-word;
-  margin: 18px 0;
-  padding: 18px;
-  color: #dceadf;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: 8px;
-}
-.copy {
-  min-height: 54px;
-  border: 0;
-  border-radius: 8px;
-  background: #edf4ed;
-  color: var(--deep);
-  padding: 0 18px;
-  font-weight: 900;
-  cursor: pointer;
-}
-.copy:active { transform: scale(.98); }
+.audit-list { margin: 0; padding-left: 18px; color: var(--body); border-top: 2px solid var(--deep); }
+.audit-list li { padding: 12px 0; border-bottom: 1px solid rgba(23,25,21,.12); }
 .footer {
   width: min(1320px, 100%);
   margin: 0 auto;
@@ -312,7 +287,7 @@ td b, strong { color: var(--ink); }
       <li><small>主观察</small><b>159326 电网设备ETF华夏</b></li>
       <li><small>第二观察</small><b>561380 电网设备ETF国泰</b></li>
       <li><small>对照产品</small><b>159320 电网设备ETF广发</b></li>
-      <li><small>更新时间</small><b>2026-05-21T03:18:02+08:00</b></li>
+      <li><small>更新时间</small><b>2026-05-21T11:11:55+08:00</b></li>
     </ul>
     <div class="rail-note">主题匹配已经成立，但中证/恒生指数PE分别为33.8倍/37.89倍，159326成交和规模快速放大，必须等待估值、订单和资金拥挤度共同验证。</div>
   </aside>
@@ -342,8 +317,20 @@ td b, strong { color: var(--ink); }
 <tr><td><b>561380</b><br>电网设备ETF国泰</td><td>恒生A股电网设备指数<br><small>高集中度对照</small></td><td>76.39亿元<br><small>2026-05-20 15:00:00 北京时间</small></td><td>1.98亿元</td><td>2.33</td><td>2.33</td><td>0.09%</td><td>60.56%</td><td>1.34万</td><td>观察池：同指数更集中，流动性次优</td></tr>
 <tr><td><b>159320</b><br>电网设备ETF广发</td><td>恒生A股电网设备指数<br><small>小规模同指对照</small></td><td>12.09亿元<br><small>2026-05-20 15:04:03 北京时间</small></td><td>1.02亿元</td><td>2.34</td><td>2.34</td><td>-0.21%</td><td>60.44%</td><td>2524</td><td>同指对照：规模较小，适合比较不适合优先</td></tr></tbody></table></div>
     </section>
+    <section id="trading" class="section">
+      <div class="section-meta"><span class="section-no">03</span><h2>交易质量</h2><p>盘口和20日成交已自动复核。</p></div>
+      <div class="table-wrap"><table class="wide"><thead><tr><th>ETF</th><th>20日窗口</th><th>20日均成交</th><th>20日涨跌</th><th>买一</th><th>卖一</th><th>价差</th><th>盘中成交</th></tr></thead><tbody><tr><td><b>159326</b></td><td>2026-04-21至2026-05-21</td><td>17.15亿元</td><td>8.21%</td><td>2.12</td><td>2.12</td><td>0.001元 / 4.72bps</td><td>10.05亿元<br><small>2026-05-21 11:11:54</small></td></tr>
+<tr><td><b>561380</b></td><td>2026-04-21至2026-05-21</td><td>2.75亿元</td><td>8.39%</td><td>2.30</td><td>2.30</td><td>0.002元 / 8.7bps</td><td>1.40亿元<br><small>2026-05-21 11:11:56</small></td></tr>
+<tr><td><b>159320</b></td><td>2026-04-21至2026-05-21</td><td>1.29亿元</td><td>8.53%</td><td>2.31</td><td>2.31</td><td>0.001元 / 4.32bps</td><td>0.70亿元<br><small>2026-05-21 11:11:54</small></td></tr></tbody></table></div>
+    </section>
+    <section id="shares" class="section">
+      <div class="section-meta"><span class="section-no">04</span><h2>份额复核</h2><p>季报份额和雪球当前份额对照。</p></div>
+      <div class="table-wrap"><table class="wide"><thead><tr><th>ETF</th><th>Q1期初</th><th>Q1申购</th><th>Q1赎回</th><th>Q1期末</th><th>雪球当前</th><th>较Q1期末</th></tr></thead><tbody><tr><td><b>159326</b></td><td>26.23亿份</td><td>195.97亿份</td><td>58.68亿份</td><td>163.52亿份</td><td>152.45亿份</td><td>-11.07亿份</td></tr>
+<tr><td><b>561380</b></td><td>3.35亿份</td><td>39.88亿份</td><td>13.80亿份</td><td>29.43亿份</td><td>33.65亿份</td><td>4.22亿份</td></tr>
+<tr><td><b>159320</b></td><td>0.74亿份</td><td>6.57亿份</td><td>2.72亿份</td><td>4.59亿份</td><td>5.18亿份</td><td>0.59亿份</td></tr></tbody></table></div>
+    </section>
     <section id="exposure" class="section">
-      <div class="section-meta"><span class="section-no">03</span><h2>持仓暴露</h2><p>主观察工具159326的前十大。</p></div>
+      <div class="section-meta"><span class="section-no">05</span><h2>持仓暴露</h2><p>主观察工具159326的前十大。</p></div>
       <div class="exposure"><div><div class="bars"><div class="bar"><span>电缆/海缆/通信线缆</span><div class="track"><div class="fill" style="width:76.0%"></div></div><b>15.20%</b></div>
 <div class="bar"><span>变压器/特高压/输变电</span><div class="track"><div class="fill" style="width:54.7%"></div></div><b>10.94%</b></div>
 <div class="bar"><span>一次设备/开关/储能配套</span><div class="track"><div class="fill" style="width:51.4%"></div></div><b>10.28%</b></div>
@@ -364,7 +351,7 @@ td b, strong { color: var(--ink); }
 <li><b>东材科技 <span class="num">1.95%</span></b><span>601208 · 绝缘材料/电工材料</span></li></ul></div>
     </section>
     <section id="valuation" class="section">
-      <div class="section-meta"><span class="section-no">04</span><h2>估值质量</h2><p>方向正确后，估值是第一道刹车。</p></div>
+      <div class="section-meta"><span class="section-no">06</span><h2>估值质量</h2><p>方向正确后，估值是第一道刹车。</p></div>
       <div class="quality"><div class="quality-row"><b>中证电网设备主题指数PE</b><span class="value">33.8倍</span><span>估值不低，不能因为主题正确直接上调到可配置。<br><small>中证指数factsheet，2026-03-31</small></span></div>
 <div class="quality-row"><b>中证电网设备主题指数PB</b><span class="value">3.57倍</span><span>反映设备成长性溢价，需与订单和利润兑现同步验证。<br><small>中证指数factsheet，2026-03-31</small></span></div>
 <div class="quality-row"><b>中证电网设备主题指数股息率</b><span class="value">0.95%</span><span>不是红利资产，主要靠景气和盈利增长，不靠分红兜底。<br><small>中证指数factsheet，2026-03-31</small></span></div>
@@ -375,27 +362,27 @@ td b, strong { color: var(--ink); }
 <div class="quality-row"><b>159320股票仓位</b><span class="value">99.55%</span><span>同为满仓指数表达，小规模会放大交易质量约束。<br><small>广发2026年1季报</small></span></div></div>
     </section>
     <section id="risk" class="section">
-      <div class="section-meta"><span class="section-no">05</span><h2>反证雷达</h2><p>避免把主题热度误判成基本面兑现。</p></div>
+      <div class="section-meta"><span class="section-no">07</span><h2>反证雷达</h2><p>避免把主题热度误判成基本面兑现。</p></div>
       <ol class="risk-list"><li><span class="risk-pill risk-amber">黄灯</span><b>估值透支</b><div>指数PE继续扩张，但订单/利润增速没有同步上修。<br><small>中证PE33.8倍，恒生PE37.89倍，已经不是低估值修复。</small></div></li>
 <li><span class="risk-pill risk-red">红灯</span><b>交易拥挤</b><div>份额和成交额快速扩张，主题情绪强于基本面兑现。<br><small>159326雪球显示资产净值326.69亿元、单日成交13.13亿元、关注3.11万；东方财富3月末规模环比+673.87%。</small></div></li>
 <li><span class="risk-pill risk-amber">黄灯</span><b>集中度</b><div>前五大权重股表现主导ETF，单一公司或电缆链波动放大。<br><small>561380/159320前五大合计约46.7%，159326前五大合计44.95%。</small></div></li>
 <li><span class="risk-pill risk-gray">灰灯</span><b>订单兑现不及预期</b><div>国网招标、特高压项目、配网自动化订单低于预期。<br><small>需接入国网招标、公司合同负债和在手订单数据库。</small></div></li>
 <li><span class="risk-pill risk-gray">灰灯</span><b>出海假设反噬</b><div>海外电网投资延后、贸易限制、汇率或交付周期影响毛利率。<br><small>ETF没有按海外收入筛选，需用成分股年报拆收入地区。</small></div></li>
-<li><span class="risk-pill risk-amber">黄灯</span><b>储能错配</b><div>用户想表达储能电池，而ETF主要买电网设备和电缆。<br><small>储能只属于弱匹配，需要单独比较储能/新能源ETF。</small></div></li></ol>
+<li><span class="risk-pill risk-amber">黄灯</span><b>储能错配</b><div>用户想表达储能电池，而ETF主要买电网设备和电缆。<br><small>储能只属于弱匹配，储能电池逻辑由储能/新能源ETF报告承接。</small></div></li></ol>
     </section>
     <section id="monitor" class="section">
-      <div class="section-meta"><span class="section-no">06</span><h2>监控变量</h2><p>把报告变成跟踪系统。</p></div>
-      <div class="monitor-grid"><div class="monitor"><b>国网/南网招标金额</b><p>验证特高压、变压器、开关、二次设备订单是否继续放量</p><small>月度/批次 · 未触发异常</small></div>
-<div class="monitor"><b>主要成分股合同负债</b><p>订单转收入的领先指标，尤其国电南瑞、思源电气、特变电工、中国西电</p><small>季报 · 等待下一季报</small></div>
-<div class="monitor"><b>海外电网投资与出口数据</b><p>验证电缆、变压器、开关设备出海逻辑</p><small>月度/季度 · 待接海关和公司公告</small></div>
-<div class="monitor"><b>铜、铝、取向硅钢价格</b><p>原材料上涨可能压缩设备利润率</p><small>每周 · 待接商品价格</small></div>
-<div class="monitor"><b>ETF份额和成交额</b><p>识别资金拥挤和主题过热</p><small>每日/每周 · 159326已高关注</small></div>
-<div class="monitor"><b>折溢价和IOPV偏离</b><p>识别场内交易价格偏离净值风险</p><small>每日 · 雪球显示溢价率已填充</small></div>
-<div class="monitor"><b>指数调样</b><p>检查成分股是否从核心设备转向泛制造</p><small>半年/季度 · 跟随指数公告</small></div>
+      <div class="section-meta"><span class="section-no">08</span><h2>监控变量</h2><p>把报告变成跟踪系统。</p></div>
+      <div class="monitor-grid"><div class="monitor"><b>国网/南网招标金额</b><p>验证特高压、变压器、开关、二次设备订单是否继续放量</p><small>月度/批次 · 纳入Agent持续监控</small></div>
+<div class="monitor"><b>主要成分股合同负债</b><p>订单转收入的领先指标，尤其国电南瑞、思源电气、特变电工、中国西电</p><small>季报 · 纳入季报复核</small></div>
+<div class="monitor"><b>海外电网投资与出口数据</b><p>验证电缆、变压器、开关设备出海逻辑</p><small>月度/季度 · 纳入成分股公告复核</small></div>
+<div class="monitor"><b>铜、铝、取向硅钢价格</b><p>原材料上涨可能压缩设备利润率</p><small>每周 · 纳入商品价格监控</small></div>
+<div class="monitor"><b>ETF份额和成交额</b><p>识别资金拥挤和主题过热</p><small>每日/每周 · 已补雪球份额和20日成交</small></div>
+<div class="monitor"><b>折溢价和IOPV偏离</b><p>识别场内交易价格偏离净值风险</p><small>每日 · 已补雪球溢价率和盘口价差</small></div>
+<div class="monitor"><b>指数调样</b><p>检查成分股是否从核心设备转向泛制造</p><small>半年/季度 · 纳入指数公告复核</small></div>
 <div class="monitor"><b>发电运营ETF对照</b><p>防止再次把电力运营与电网设备混淆</p><small>每次报告 · 159611/561560保留为替代路径</small></div></div>
     </section>
     <section id="sources" class="section">
-      <div class="section-meta"><span class="section-no">07</span><h2>证据抽屉</h2><p>官方源、第三方源和推论分开。</p></div>
+      <div class="section-meta"><span class="section-no">09</span><h2>证据抽屉</h2><p>官方源、第三方源和推论分开。</p></div>
       <div class="source-list"><details><summary>官方指数事实表：中证电网设备主题指数factsheet</summary><p><a href="https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/931994factsheet.pdf">https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/931994factsheet.pdf</a></p></details>
 <details><summary>基金公告：华夏中证电网设备主题ETF 2026年第1季度报告</summary><p><a href="https://accountquery.chinaamc.com/upload/resources/file/2026/04/22/da87c3dbc0fa4db69a9a6c0bc76e1961.pdf">https://accountquery.chinaamc.com/upload/resources/file/2026/04/22/da87c3dbc0fa4db69a9a6c0bc76e1961.pdf</a></p></details>
 <details><summary>交易所基金公告：国泰恒生A股电网设备ETF 2026年第1季度报告</summary><p><a href="https://www.sse.com.cn/disclosure/fund/announcement/c/new/2026-04-22/561380_20260422_WC2I.pdf">https://www.sse.com.cn/disclosure/fund/announcement/c/new/2026-04-22/561380_20260422_WC2I.pdf</a></p></details>
@@ -405,23 +392,17 @@ td b, strong { color: var(--ink); }
 <details><summary>第三方已登录行情页：雪球ETF行情页</summary><p><a href="https://xueqiu.com/S/SZ159326">https://xueqiu.com/S/SZ159326</a></p></details>
 <details><summary>第三方基金/行情数据：东方财富基金页面与行情接口</summary><p><a href="https://fund.eastmoney.com/pingzhongdata/{code}.js">https://fund.eastmoney.com/pingzhongdata/{code}.js</a></p></details></div>
     </section>
-    <section class="prompt">
-      <h2>下一步复核任务</h2>
-      <pre id="next-prompt">请在本报告基础上继续做第二轮复核：抓取159326、561380、159320逐日PCF、IOPV、盘口买一卖一价差、过去20日成交额和基金份额变化；把前20大成分股按变压器/特高压/电缆/电网自动化/配网/电力电子/材料分组，并聚合PE、PB、ROE、毛利率、经营现金流、合同负债和海外收入占比；若估值扩张快于订单兑现，结论维持观察。</pre>
-      <button id="copy-btn" class="copy" onclick="copyNextPrompt()">复制下一步复核任务</button>
+    <section id="audit" class="section">
+      <div class="section-meta"><span class="section-no">10</span><h2>已完成复核</h2><p>核心交易和份额字段已进入本报告。</p></div>
+      <ul class="audit-list"><li>已通过已登录Chrome只读抓取雪球行情、单位净值、溢价率、基金份额、资产净值和关注人数。</li>
+<li>已抓取新浪盘口买一/卖一并计算价差bps。</li>
+<li>已抓取东方财富日K并计算最近20个交易日平均成交额、区间涨跌幅和平均换手率。</li>
+<li>已用基金季报补充2026Q1基金份额申购、赎回、期末份额，并与雪球当前份额对照。</li>
+<li>已用官方指数factsheet补充中证/恒生指数估值、股息率、样本数量和权重规则。</li></ul>
     </section>
   </div>
 </main>
 <footer class="footer">只读研究，不构成投资建议、交易建议或收益承诺。核心内容已预渲染为静态HTML，脚本失效时表格和结论仍可阅读。</footer>
-<script>
-function copyNextPrompt() {
-  const text = document.getElementById('next-prompt').innerText;
-  navigator.clipboard.writeText(text).then(function () {
-    const btn = document.getElementById('copy-btn');
-    btn.innerText = '已复制';
-    setTimeout(function () { btn.innerText = '复制下一步复核任务'; }, 1500);
-  });
-}
-</script>
+<script></script>
 </body>
 </html>
