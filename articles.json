@@ -1,5 +1,22 @@
 [
   {
+    "title": "Linear 为什么这么快？技术拆解（中英双语）",
+    "file": "Linear为什么这么快_技术拆解_中英双语.md",
+    "date": "2026-05-21",
+    "source": "https://performance.dev/how-is-linear-so-fast-a-technical-breakdown",
+    "tags": [
+      "Linear",
+      "性能优化",
+      "Web开发",
+      "本地优先",
+      "中英双语"
+    ],
+    "category": "技术文章",
+    "quality": "A",
+    "summary": "Dennis Brotzky 对 Linear 高性能体验的技术拆解：浏览器本地数据库、同步引擎、首次加载、代码分割、预加载、Service Worker、键盘优先设计与动画约束；已整理为中英双语对照版本。",
+    "cover": ""
+  },
+  {
     "title": "A股电网设备ETF决策页：AI电力瓶颈的设备侧表达",
     "file": "A股电网设备ETF决策页_AI电力瓶颈的设备侧表达.md",
     "date": "2026-05-21",
