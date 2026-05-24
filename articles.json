@@ -1,5 +1,45 @@
 [
   {
+    "title": "Agentic Design Patterns：一本让我重新理解\"Agent 到底是什么\"的书",
+    "file": "Agentic Design Patterns：一本让我重新理解_Agent 到底是什么_的书.md",
+    "date": "2026-05-24",
+    "source": "https://x.com/yanhua1010/status/2058552177912947044",
+    "tags": [
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "Antonio Gullí 是 Google 的工程总监。他写了本 453 页的书，把 AI Agent 开发拆成了 21 种设计模式。",
+    "cover": "https://pbs.twimg.com/media/HJFsJNLbkAAuNuw?format=jpg&name=large"
+  },
+  {
+    "title": "Markdown正在变成AI的语言，而HTML正在变成你的",
+    "file": "Markdown正在变成AI的语言，而HTML正在变成你的.md",
+    "date": "2026-05-24",
+    "source": "https://x.com/Pluvio9yte/status/2058008355353108654",
+    "tags": [
+      "HTML"
+    ],
+    "category": "工具与配置",
+    "quality": "A",
+    "summary": "Markdown正从“人类友好的写作语法”演变为“AI最优的序列化协议”，而HTML则重新成为人类消费复杂信息的默认UI层。",
+    "cover": "https://pbs.twimg.com/media/HI-DnOGaIAAmyrV?format=jpg&name=large"
+  },
+  {
+    "title": "为什么你的agent项目总是难以落地",
+    "file": "为什么你的agent项目总是难以落地.md",
+    "date": "2026-05-24",
+    "source": "https://x.com/anorth_chen/status/2058554497333407927",
+    "tags": [
+      "Claude Code",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "绝大部分agent项目在拿到业务正反馈之前，就被耗死在了手搓agent harness这些基础设施上",
+    "cover": "https://pbs.twimg.com/media/HJF0VK4WIAAAJgE?format=jpg&name=large"
+  },
+  {
     "title": "油价砸到多少，中海油才会喊疼？！",
     "file": "油价砸到多少，中海油才会喊疼？！.md",
     "date": "2026-05-23",
