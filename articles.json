@@ -1,5 +1,103 @@
 [
   {
+    "title": "Anthropic 刚发了创始人手册。读完我把自己的产品 pivot 了",
+    "file": "Anthropic 刚发了创始人手册。读完我把自己的产品 pivot 了.md",
+    "date": "2026-05-26",
+    "source": "https://x.com/stometaverse/status/2058910157283962997",
+    "tags": [
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "20260525，读完了 Anthropic 刚发的《The Founder's Playbook: Building an AINative Startup》。35 页…",
+    "cover": "https://pbs.twimg.com/media/HJK3EuqaIAAxaQQ?format=jpg&name=large"
+  },
+  {
+    "title": "GBRAIN 深度解读：YC 掌门人打造的 AI 知识引擎",
+    "file": "GBRAIN 深度解读：YC 掌门人打造的 AI 知识引擎.md",
+    "date": "2026-05-26",
+    "source": "https://x.com/PandaTalk8/status/2058755496522514853",
+    "tags": [
+      "知识图谱"
+    ],
+    "category": "知识管理",
+    "quality": "A",
+    "summary": "GBrain 是 Y Combinator 现任 CEO Garry Tan 开源的个人知识管理系统。项目地址：github.com/garrytan/gbrain。它的…",
+    "cover": "https://pbs.twimg.com/media/HJIrLeJaUAAlGGv?format=jpg&name=large"
+  },
+  {
+    "title": "Skill 工程设计指南（3天口播内容skill系统完整搭建复盘），新手友好，后附口播获客github网址，开源分享",
+    "file": "Skill 工程设计指南（3天口播内容skill系统完整搭建复盘），新手友好，后附口播获客github网址，开源分享.md",
+    "date": "2026-05-26",
+    "source": "https://x.com/Astronaut_1216/status/2059180933614330328",
+    "tags": [
+      "Claude Code",
+      "Agent",
+      "Skill",
+      "提示词"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "Skill 不是一段提示词。Skill 是一个有状态、有流程、有知识库、有自检机制的内容生产系统。",
+    "cover": "https://pbs.twimg.com/media/HJOuBwfWgAA1Rov?format=jpg&name=large"
+  },
+  {
+    "title": "从 Prompt 到 Harness：Agent 工程真正的分水岭（小白友好版）",
+    "file": "从 Prompt 到 Harness：Agent 工程真正的分水岭（小白友好版）.md",
+    "date": "2026-05-26",
+    "source": "https://x.com/knoYee_/status/2059252983523934371",
+    "tags": [
+      "Claude Code",
+      "Agent",
+      "Skill",
+      "提示词"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "我们经常花很长时间调 Prompt，只为让 Agent 在项目中的表现更稳定。",
+    "cover": "https://pbs.twimg.com/media/HJPvoV5bYAAm3dc?format=jpg&name=large"
+  },
+  {
+    "title": "从 Prompt 到 Harness：如何理解 LLM Engineering",
+    "file": "从 Prompt 到 Harness：如何理解 LLM Engineering.md",
+    "date": "2026-05-26",
+    "source": "https://x.com/yan5xu/status/2059117572826746979",
+    "tags": [
+      "AI",
+      "收藏"
+    ],
+    "category": "AI收藏",
+    "quality": "A",
+    "summary": "虽然 LLM 应用的历史始于 2022 年 ChatGPT 问世，但工程实践已经从 Prompt Engineering，经历 Context Engineering，发…",
+    "cover": ""
+  },
+  {
+    "title": "怎么使用 Codex 和 Claude Code 重构前端 UI",
+    "file": "怎么使用 Codex 和 Claude Code 重构前端 UI.md",
+    "date": "2026-05-26",
+    "source": "https://x.com/leon7hao/status/2059191435753410630",
+    "tags": [
+      "Claude Code"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "Lody 由于底层技术栈和人力的原因，完全使用 Web 来统一构建的网页端、桌面端和移动端。最开始只做了网页端，后续慢慢添加了桌面端和移动端，同时又是几乎在 vibe c…",
+    "cover": "https://pbs.twimg.com/media/HJOnY3MbQAAT0D2?format=jpg&name=large"
+  },
+  {
+    "title": "改源代码",
+    "file": "改源代码.md",
+    "date": "2026-05-26",
+    "source": "https://x.com/jianshuo/status/2059197567456666012",
+    "tags": [
+      "Skill"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "今天下午，我在一个叫 SKILL.md 的文件里改了一行字。",
+    "cover": "https://pbs.twimg.com/media/HJO82-QaQAArbpd?format=jpg&name=large"
+  },
+  {
     "title": "Agentic Design Patterns：一本让我重新理解\"Agent 到底是什么\"的书",
     "file": "Agentic Design Patterns：一本让我重新理解_Agent 到底是什么_的书.md",
     "date": "2026-05-24",
