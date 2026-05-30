@@ -1,5 +1,19 @@
 [
   {
+    "title": "如何写一个真正能用的 Claude Skill",
+    "file": "如何写一个真正能用的 Claude Skill.md",
+    "date": "2026-05-30",
+    "source": "https://x.com/max_ai_max/status/2060221653259547069",
+    "tags": [
+      "Skill",
+      "提示词"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "很多人第一次看到 SKILL.md 都会觉得\"不就是把提示词写成文件吗\"。写完一两个之后才发现：写得潦草的 skill 要么根本不被触发，要么触发了反而帮倒忙——把上下文…",
+    "cover": "https://pbs.twimg.com/media/HJdgqhVaoAAPmAQ?format=jpg&name=large"
+  },
+  {
     "title": "Anthropic 刚发了创始人手册。读完我把自己的产品 pivot 了",
     "file": "Anthropic 刚发了创始人手册。读完我把自己的产品 pivot 了.md",
     "date": "2026-05-26",
