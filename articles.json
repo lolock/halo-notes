@@ -1,5 +1,33 @@
 [
   {
+    "title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+    "file": "Paul Graham, Founder of Y Combinator, Live from Stockholm.md",
+    "date": "2026-05-31",
+    "source": "https://www.youtube.com/watch?v=QHJkUw31YX8",
+    "tags": [
+      "AI",
+      "收藏"
+    ],
+    "category": "AI收藏",
+    "quality": "A",
+    "summary": "Paul Graham, the Founder of Y Combinator, speaks live from Stockholm Waterfront Congr…",
+    "cover": "https://www.youtube.com/watch?v=QHJkUw31YX8"
+  },
+  {
+    "title": "趨勢交易全攻略",
+    "file": "趨勢交易全攻略.md",
+    "date": "2026-05-31",
+    "source": "https://www.youtube.com/watch?v=MTmz6OLCykc",
+    "tags": [
+      "AI",
+      "收藏"
+    ],
+    "category": "AI收藏",
+    "quality": "A",
+    "summary": "關於趨勢交易，你需要了解的一切。不論你是初學者還是老司機，看完這期視節目，我相信你一定會對趨勢有全新的認知。以後應對某一類的趨勢，就可以按圖索驥，做到心中有譜。 ————…",
+    "cover": "https://www.youtube.com/watch?v=MTmz6OLCykc"
+  },
+  {
     "title": "如何写一个真正能用的 Claude Skill",
     "file": "如何写一个真正能用的 Claude Skill.md",
     "date": "2026-05-30",
