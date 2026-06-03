@@ -1,5 +1,55 @@
 [
   {
+    "title": "Claude Cowork 入门最佳实践 / Best practices for getting started with Claude Cowork",
+    "file": "claude-cowork-入门最佳实践.md",
+    "date": "2026-06-03",
+    "source": "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Claude Cowork"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 增长营销负责人 Austin Lau 讲解何时使用 Claude Cowork、如何决定委派哪些工作流，以及具体的入门步骤。",
+    "cover": ""
+  },
+  {
+    "title": "构建 Claude Code 的教训：我们如何使用技能 / Lessons from building Claude Code: How we use skills",
+    "file": "构建-claude-code-技能的经验教训.md",
+    "date": "2026-06-03",
+    "source": "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Claude Code",
+      "Skill"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 内部数百个技能的使用经验总结，将技能分为九大类别，分享制作、分发和管理技能的最佳实践。",
+    "cover": ""
+  },
+  {
+    "title": "Anthropic 如何用 Claude 实现自助数据分析 / How Anthropic enables self-service data analytics with Claude",
+    "file": "anthropic-用-claude-实现自助数据分析.md",
+    "date": "2026-06-03",
+    "source": "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "数据分析",
+      "Enterprise AI"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 数据科学团队分享如何用 Claude Code Skills 实现 95% 业务分析查询自动化，并详解三个失败模式和 agent 分析栈。",
+    "cover": ""
+  },
+  {
     "title": "A harness for every task dynamic workflows in Claude Code",
     "file": "A harness for every task dynamic workflows in Claude Code.md",
     "date": "2026-06-03",
