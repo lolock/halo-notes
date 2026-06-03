@@ -1,5 +1,61 @@
 [
   {
+    "title": "A harness for every task dynamic workflows in Claude Code",
+    "file": "A harness for every task dynamic workflows in Claude Code.md",
+    "date": "2026-06-03",
+    "source": "https://x.com/trq212/status/2061907337154367865",
+    "tags": [
+      "Claude Code",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "Last week, we released dynamic workflows in Claude Code. Claude can now write its own…",
+    "cover": "https://pbs.twimg.com/media/HJ0q6o6aYAEM_ej?format=jpg&name=large"
+  },
+  {
+    "title": "How to master Dynamic Workflows in Claude Code 6 patterns and 14 steps Anthropic engineers actually",
+    "file": "How to master Dynamic Workflows in Claude Code 6 patterns and 14 steps Anthropic engineers actually.md",
+    "date": "2026-06-03",
+    "source": "https://x.com/0xCodez/status/2062127385923776831",
+    "tags": [
+      "Claude Code"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "Most Claude Code users still write their workflows by hand. They chain prompts, copy …",
+    "cover": "https://pbs.twimg.com/media/HJ4l2SjXsAALyp3?format=jpg&name=large"
+  },
+  {
+    "title": "Pi Coding Agent 最全面指南（完美支持goal）",
+    "file": "Pi Coding Agent 最全面指南（完美支持goal）.md",
+    "date": "2026-06-03",
+    "source": "https://x.com/wquguru/status/2056235143623495975",
+    "tags": [
+      "Claude Code",
+      "Agent",
+      "Skill"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "如果你已经习惯 Claude Code，Pi 第一眼不会显得更省心。Claude Code 的优势是把 subagents、Plan Mode、MCP、权限、上下文压缩、…",
+    "cover": "https://pbs.twimg.com/media/HIiJFOWboAAQVbZ?format=jpg&name=large"
+  },
+  {
+    "title": "个人 Agent 搭建完整合集：从 Vibe Coding 到每天都在用的个人工作系统",
+    "file": "个人 Agent 搭建完整合集：从 Vibe Coding 到每天都在用的个人工作系统.md",
+    "date": "2026-06-03",
+    "source": "https://x.com/Xudong07452910/status/2062087939547332948",
+    "tags": [
+      "OpenClaw",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "写在前面：这是一篇个人 Agent 搭建 和 Vibe Coding 方法的合集。",
+    "cover": "https://pbs.twimg.com/media/HJ0OF0MXEAAdBb9?format=jpg&name=large"
+  },
+  {
     "title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
     "file": "Paul Graham, Founder of Y Combinator, Live from Stockholm.md",
     "date": "2026-05-31",
