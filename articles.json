@@ -1,5 +1,127 @@
 [
   {
+    "title": "构建 Claude Code 的经验：我们如何使用 Skills",
+    "file": "构建 Claude Code 的经验：我们如何使用 Skills.md",
+    "date": "2026-06-05",
+    "source": "https://x.com/riba2534/status/2062496438630965457",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "原文链接： Lessons from building Claude Code: How we use skills https://claude.com/blog/lessons-from-building-claud…",
+    "cover": "https://pbs.twimg.com/media/HJ91jQ8asAAPGlB?format=jpg&name=large"
+  },
+  {
+    "title": "打造0-1爆款文章工作流：我用这套方法10篇爆了8篇 !一次性教会你！",
+    "file": "打造0-1爆款文章工作流：我用这套方法10篇爆了8篇 !一次性教会你！.md",
+    "date": "2026-06-05",
+    "source": "https://x.com/berryxia/status/2062740189588701316",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "兄弟们都知道，我做 AI 博主已经一年多时间了。日常其实最头疼的并不是“写”本身， 更多的是从选题、查资料到写文章、配图、排版这一整个流程。 一个人干完这些，写好一篇文章起码要半天到一天的时间打底。 现在随着 AI 时代…",
+    "cover": "https://pbs.twimg.com/media/HKBTNRragAAsy_z?format=jpg&name=large"
+  },
+  {
+    "title": "十分钟构建个人工作流，仅仅需要一个 Claude Code（CodeX）！",
+    "file": "十分钟构建个人工作流，仅仅需要一个 Claude Code（CodeX）！.md",
+    "date": "2026-06-05",
+    "source": "https://x.com/ZionFeng3364/status/2062702195750191182",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "你每天在重复做的事——写文章、审查代码、分析数据、生成报告，其实都可以变成一句话搞定。 不是夸张。是因为我把整个流程固化成了一个 Skill。 Claude Code 不只是写代码的工具。它是一个可以通过 Skill 无…",
+    "cover": "https://pbs.twimg.com/media/HKAwpA7b0AEHj6k?format=jpg&name=large"
+  },
+  {
+    "title": "Vibe Coding 零基础指南：rico-md 实战案例教程",
+    "file": "Vibe Coding 零基础指南：rico-md 实战案例教程.md",
+    "date": "2026-06-05",
+    "source": "https://x.com/ricouii/status/2062724435329810547",
+    "tags": [
+      "X Article",
+      "Inbox"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "一、从简单的项目开始 上一篇（一）我们理清了基础概念——前端/后端/数据库的分工、框架和组件库、AI 工具选择，还简单提了一下 PRD 和 Vibe Coding 的核心技巧。 4月29日 但概念终究是概念。 \"道理我都…",
+    "cover": "https://pbs.twimg.com/media/HKBEabebMAAPRJg?format=jpg&name=large"
+  },
+  {
+    "title": "Hermes Agent 入门指南：如何用辅助模型提升 Agent 效率「结尾附配置」",
+    "file": "Hermes Agent 入门指南：如何用辅助模型提升 Agent 效率「结尾附配置」.md",
+    "date": "2026-06-05",
+    "source": "https://x.com/Lonely__MH/status/2062368928148701584",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "这篇是 Hermes Agent 入门系列的续篇，主要聊聊 Auxiliary Models（辅助模型） 的配置与使用。 很多刚接触 Agent 的朋友，容易默认“什么任务都丢给主模型”。但实际上，很多杂活、重复任务，完…",
+    "cover": "https://pbs.twimg.com/media/HJf5VMFbgAAPF5N?format=jpg&name=large"
+  },
+  {
+    "title": "如何构建在您睡觉时运行的人工智能工作流程 / HOW TO BUILD AI WORKFLOWS THAT RUN WHILE YOU SLEEP",
+    "file": "HOW TO BUILD AI WORKFLOWS THAT RUN WHILE YOU SLEEP.md",
+    "date": "2026-06-05",
+    "source": "https://x.com/mikenevermiss/status/2062441790112764214",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "双语翻译",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "There are 5 workflow types worth your time right now. 译：现在有 5 种工作流程类型值得您花时间。 Everything else is still experime…",
+    "cover": "https://pbs.twimg.com/media/HJ9Day8WkAAOmCQ?format=jpg&name=large"
+  },
+  {
+    "title": "构建云代理基础设施有何不同以及我们学到了什么 / Building cloud agent infrastructure what's different, and what we learned",
+    "file": "Building cloud agent infrastructure what's different, and what we learned.md",
+    "date": "2026-06-05",
+    "source": "https://x.com/intuitiveml/status/2062699747224568212",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "双语翻译",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "Most agent frameworks today assume a desktop. One user, one machine, one process. The agent runs while the lap…",
+    "cover": "https://pbs.twimg.com/media/HKAs9ukakAAOoou?format=jpg&name=large"
+  },
+  {
+    "title": "我每天使用的 7 个克劳德项目改变了我的工作方式 / 7 Claude Projects I Use Every Day That Changed How I Work",
+    "file": "7 Claude Projects I Use Every Day That Changed How I Work.md",
+    "date": "2026-06-05",
+    "source": "https://x.com/0xMortyx/status/2062496856811229235",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "双语翻译",
+      "Agent"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "Claude Projects are the most underused feature on claude.ai https://claude.ai/ . Most people don't use them at…",
+    "cover": "https://pbs.twimg.com/media/HJvrNqpW0AAOPu7?format=jpg&name=large"
+  },
+  {
     "title": "Claude Cowork 入门最佳实践 / Best practices for getting started with Claude Cowork",
     "file": "claude-cowork-入门最佳实践.md",
     "date": "2026-06-03",
