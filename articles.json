@@ -1,5 +1,37 @@
 [
   {
+    "title": "运营 AI 原生工程组织 / Running an AI-native engineering org",
+    "file": "running-an-ai-native-engineering-org.md",
+    "date": "2026-06-03",
+    "source": "https://claude.com/blog/running-an-ai-native-engineering-org",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Claude Code"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Code 团队分享在智能体编码成为默认工作方式后，工程规划、代码审查、团队结构与流程指标如何重塑。",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a1f0f1a5a045e955123064a_og_running-an-ai-native-engineering-org.jpg"
+  },
+  {
+    "title": "为每项任务配备 Harness：Claude Code 中的动态工作流 / A harness for every task: dynamic workflows in Claude Code",
+    "file": "a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+    "date": "2026-06-02",
+    "source": "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Claude Code"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 介绍 Claude Code 动态工作流如何按任务即时生成多智能体 harness，并总结适用模式、场景和实践建议。",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/691422974acd1cc3d6467e3a_og_skills-explained.jpg"
+  },
+  {
     "title": "构建 Claude Code 的经验：我们如何使用 Skills",
     "file": "构建 Claude Code 的经验：我们如何使用 Skills.md",
     "date": "2026-06-05",
