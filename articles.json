@@ -1,5 +1,38 @@
 [
   {
+    "title": "Claude Cowork 产品指南 / The Claude Cowork product guide",
+    "file": "the-claude-cowork-product-guide.md",
+    "date": "2026-06-05",
+    "source": "https://claude.com/blog/the-claude-cowork-product-guide",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Claude Cowork"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 发布 Claude Cowork 实用产品指南，说明其与对话式 AI、Claude Code 的区别，以及跨应用知识工作的典型场景。",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69fa37dbcbe6846b96a3c801_og_deploying-claude-across-financial-services.jpg"
+  },
+  {
+    "title": "一位 Anthropic 销售如何用 Claude Code 重建团队工作流 / How one Anthropic seller rebuilt his team's workflows with Claude Code",
+    "file": "how-anthropic-uses-claude-gtm-engineering.md",
+    "date": "2026-06-05",
+    "source": "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Claude Code",
+      "Claude Cowork"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 讲述 Jared Sires 如何从零代码背景出发，用 Claude Code 构建 CLAFTS 和销售插件，重塑 GTM 团队工作流。",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a230a62bab9804671086b19_og_how-anthropic-uses-claude-gtm-engineering%20(1).jpg"
+  },
+  {
     "title": "运营 AI 原生工程组织 / Running an AI-native engineering org",
     "file": "running-an-ai-native-engineering-org.md",
     "date": "2026-06-03",
