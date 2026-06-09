@@ -1,5 +1,39 @@
 [
   {
+    "title": "用 Claude 为 Apple 平台构建智能应用 / Building intelligent apps for Apple platforms with Claude in the Foundation Models framework",
+    "file": "claude-for-foundation-models.md",
+    "date": "2026-06-08",
+    "source": "https://claude.com/blog/claude-for-foundation-models",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Apple",
+      "Foundation Models"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 发布 Swift package，让 Apple 开发者通过 Foundation Models framework 将复杂推理、代码生成和结构化响应交给 Claude。",
+    "cover": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg"
+  },
+  {
+    "title": "构建 Connector 的开发者可用 Observability / Observability for developers building connectors",
+    "file": "observability-for-developers-building-connectors.md",
+    "date": "2026-06-08",
+    "source": "https://claude.com/blog/observability-for-developers-building-connectors",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "MCP",
+      "Connectors"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 为已发布 connectors 提供观测 dashboard，并支持开发者直接在 Claude 内提交 MCP server 到 directory。",
+    "cover": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg"
+  },
+  {
     "title": "Claude Cowork 产品指南 / The Claude Cowork product guide",
     "file": "the-claude-cowork-product-guide.md",
     "date": "2026-06-05",
