@@ -1,5 +1,22 @@
 [
   {
+    "title": "Claude Managed Agents 新功能：定时运行 Agent，并在 Vault 中保存环境变量 / New in Claude Managed Agents: run agents on a schedule and store environment variables in vaults",
+    "file": "claude-managed-agents-schedule-vaults.md",
+    "date": "2026-06-09",
+    "source": "https://claude.com/blog/whats-new-in-claude-managed-agents",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Claude Managed Agents",
+      "Vaults"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 为 Claude Managed Agents 推出定时部署和 Vault 环境变量，帮助 agent 自动执行周期任务并安全调用 CLI 与认证服务。",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6903d22a7bb714a55b503cd7_cad034e66b44f7f017c0cb931c403a97d1763758-1000x1000.svg"
+  },
+  {
     "title": "用 Claude 为 Apple 平台构建智能应用 / Building intelligent apps for Apple platforms with Claude in the Foundation Models framework",
     "file": "claude-for-foundation-models.md",
     "date": "2026-06-08",
