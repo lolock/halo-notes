@@ -1,5 +1,23 @@
 [
   {
+    "title": "代理式交互界面的演进：基于 Claude Managed Agents 构建 / The evolution of agentic surfaces: building with Claude Managed Agents",
+    "file": "building-with-claude-managed-agents.md",
+    "date": "2026-06-10",
+    "source": "https://claude.com/blog/building-with-claude-managed-agents",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Claude Managed Agents",
+      "Agent 架构",
+      "Agent SDK"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic Applied AI 团队详解 Claude 代理架构的演进历程：从简单 API 到 Agent SDK，再到将大脑与双手解耦的 Managed Agents，涵盖凭证安全、延迟优化、会话持久化和企业客户实战案例。",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a298c97d4a887f2666a50b6_03%20_%20Claude%20Managed%20Agents.png"
+  },
+  {
     "title": "一行命令，让所有Agent共享大脑",
     "file": "一行命令，让所有Agent共享大脑.md",
     "date": "2026-06-10",
