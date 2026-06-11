@@ -1,5 +1,56 @@
 [
   {
+    "title": "零成本副业新风口：用AI帮人改简历赚钱",
+    "file": "零成本副业新风口：用AI帮人改简历赚钱.md",
+    "date": "2026-06-10",
+    "source": "https://x.com/better_christal/status/2064551425087352868",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "AI副业",
+      "简历优化",
+      "Claude"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "2026年5月一个小红书账号靠发简历对比图文月入2.5万+，本文拆解了Claude+DeepSeek-R1双链路、24小时交付SOP、三档定价策略和完整引流流程。",
+    "cover": "https://pbs.twimg.com/media/HKbCHFoaMAAXyrg?format=jpg&name=large"
+  },
+  {
+    "title": "段永平说，买股票就是买公司：从投资原理到实践框架",
+    "file": "段永平说，买股票就是买公司：从投资原理到实践框架.md",
+    "date": "2026-06-11",
+    "source": "https://chatgpt.com/g/g-p-69520e7fabc08191babad8c1d3faa4c6/c/6a2a0e40-f630-8330-9096-96bbc37aa610",
+    "tags": [
+      "AI",
+      "投资",
+      "段永平",
+      "价值投资",
+      "ETF"
+    ],
+    "category": "AI收藏",
+    "quality": "A",
+    "summary": "深入解读段永平“买股票就是买公司”的投资理念，结合巴菲特指数基金推荐，提供普通投资者可执行的个股+ETF双框架，含A股行业ETF低谷布局策略。",
+    "cover": ""
+  },
+  {
+    "title": "工程化的本质：从 Prompt 到 Loop 的个人 AI Lab 演进",
+    "file": "工程化的本质：从Prompt到Loop的个人AI-Lab演进.md",
+    "date": "2026-06-06",
+    "source": "https://chatgpt.com/g/g-p-69ef420d98548191aba106931f0a88a3/c/6a23c58f-8a44-832f-88cf-237c08f13e51",
+    "tags": [
+      "AI",
+      "Agent",
+      "工程化",
+      "Codex",
+      "Skill"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "从Prompt→Agent→Harness→Loop四个阶段的AI开发范式演进，以Mac mini自托管AI Lab为实例，详解如何用Next.js+Cloudflare Tunnel+Codex构建个人实验平台。",
+    "cover": ""
+  },
+  {
     "title": "代理式交互界面的演进：基于 Claude Managed Agents 构建 / The evolution of agentic surfaces: building with Claude Managed Agents",
     "file": "building-with-claude-managed-agents.md",
     "date": "2026-06-10",
