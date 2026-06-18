@@ -1,5 +1,60 @@
 [
   {
+    "title": "Claude Opus 4.8 Build Day 黑客马拉松获奖者揭晓 / Meet the winners of our Claude Opus 4.8 Build Day hackathon",
+    "file": "Claude-Opus-4-8-Build-Day-Hackathon-Winners.md",
+    "date": "2026-06-17",
+    "source": "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Hackathon",
+      "Opus 4.8",
+      "Claude Code",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Opus 4.8 Build Day 黑客马拉松三个获奖项目揭晓：Tekton（唐代建筑3D重建）、Sim Francisco（旧金山人口数字孪生）和 Custom Universe（单张照片变3D场景）。",
+    "cover": ""
+  },
+  {
+    "title": "Claude Design 现已支持日常工作中的品牌一致性 / Claude Design now stays on brand for daily work",
+    "file": "Claude-Design-Stays-On-Brand.md",
+    "date": "2026-06-17",
+    "source": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Design",
+      "Claude Code",
+      "设计系统",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Design 新增设计系统导入、Claude Code 双向同步、直接画布编辑和多项工具集成连接器（Adobe、Canva、Replit 等），提升日常设计工作的品牌一致性。",
+    "cover": ""
+  },
+  {
+    "title": "使用 Workload Identity Federation 安全访问 Claude Platform / Secure access to the Claude Platform with Workload Identity Federation",
+    "file": "Workload-Identity-Federation-for-Claude-Platform.md",
+    "date": "2026-06-17",
+    "source": "https://claude.com/blog/workload-identity-federation",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "WIF",
+      "Workload Identity Federation",
+      "安全",
+      "Claude Platform",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Workload Identity Federation (WIF) 在 Claude Platform 上正式可用，支持 OIDC 身份提供商，用短期凭证替代静态 API 密钥，并引入服务账号和审计日志。",
+    "cover": ""
+  },
+  {
     "title": "Meet the Winners of Built with Opus 4.7 Claude Code Hackathon / Built with Opus 4.7 Claude Code 黑客马拉松获奖者揭晓",
     "file": "Meet-the-Winners-of-Built-with-Opus-4-7-Claude-Code-Hackathon.md",
     "date": "2026-06-15",
