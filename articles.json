@@ -1,5 +1,60 @@
 [
   {
+    "title": "Claude Code 现已支持 Artifacts / Claude Code now supports artifacts",
+    "file": "articles/Claude Code Artifacts 支持.md",
+    "date": "2026-06-18",
+    "source": "https://claude.com/blog/artifacts-in-claude-code",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "Artifacts",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Code 可以将工作进度生成为实时、可分享的交互式网页（Artifact），包含 PR 审查、系统说明、仪表盘等，默认私有并支持组织内分享。",
+    "cover": ""
+  },
+  {
+    "title": "驾驭 Claude Code：CLAUDE.md、Skills、Hooks、Rules、Subagents 等七种定制方法 / Steering Claude Code: CLAUDE.md files, skills, hooks, rules, subagents and more",
+    "file": "articles/Claude Code 定制指南.md",
+    "date": "2026-06-18",
+    "source": "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "Skills",
+      "Hooks",
+      "Subagents",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Code 提供七种指令定制方法：CLAUDE.md、Rules、Skills、Subagents、Hooks、输出风格和系统提示追加，各有不同的加载时机、持久性和上下文成本。",
+    "cover": ""
+  },
+  {
+    "title": "集中管理 MCP 连接器的企业级授权 / Centrally manage authorization for MCP connectors",
+    "file": "articles/MCP 连接器企业授权.md",
+    "date": "2026-06-18",
+    "source": "https://claude.com/blog/enterprise-managed-auth",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "MCP",
+      "Enterprise",
+      "Identity",
+      "Okta",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude 企业版新增 Enterprise-Managed Authorization 功能，管理员可通过 Okta 等身份提供商集中管理 MCP 连接器授权，员工首次登录即可自动获得连接权限。",
+    "cover": ""
+  },
+  {
     "title": "Claude Opus 4.8 Build Day 黑客马拉松获奖者揭晓 / Meet the winners of our Claude Opus 4.8 Build Day hackathon",
     "file": "Claude-Opus-4-8-Build-Day-Hackathon-Winners.md",
     "date": "2026-06-17",
