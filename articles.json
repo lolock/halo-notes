@@ -1,5 +1,24 @@
 [
   {
+    "title": "Goal + Loop + Workflows 三大利器",
+    "file": "articles/Goal Loop Workflows 三大利器.md",
+    "date": "2026-06-20",
+    "source": "https://x.com/PandaTalk8/status/2065714368071745710",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "Claude Code",
+      "Agent",
+      "Goal",
+      "Loop",
+      "Workflows"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "深度解析 Claude Code 中 /goal、/loop、/workflows 三个命令的本质区别：一个管终点、一个管节奏、一个管规模，并列出五种高频错误用法和正确选择框架。",
+    "cover": "https://pbs.twimg.com/media/HKrkPAZawAAoCCi?format=jpg&name=large"
+  },
+  {
     "title": "Claude Code 现已支持 Artifacts / Claude Code now supports artifacts",
     "file": "articles/Claude Code Artifacts 支持.md",
     "date": "2026-06-18",
