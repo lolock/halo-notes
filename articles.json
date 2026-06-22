@@ -1,5 +1,23 @@
 [
   {
+    "title": "从 OpenClaw 到 FastClaw：如何设计优秀的多 Agent 架构",
+    "file": "articles/从 OpenClaw 到 FastClaw：如何设计优秀的多 Agent 架构.md",
+    "date": "2026-06-22",
+    "source": "https://x.com/idoubicc/status/2069014328037330953",
+    "tags": [
+      "X Article",
+      "Inbox",
+      "OpenClaw",
+      "FastClaw",
+      "Agent",
+      "架构设计"
+    ],
+    "category": "Agent实战",
+    "quality": "A",
+    "summary": "从 OpenClaw 的单体架构到 FastClaw 的云原生设计，深度拆解多 Agent 框架的核心挑战：多租户隔离、存算分离、插件隔离、Fallback 容错和 Token 管理，总结五条 Agent 基础设施设计经验。",
+    "cover": "https://pbs.twimg.com/media/HLaPLHnaUAAwvqC?format=jpg&name=large"
+  },
+  {
     "title": "Goal + Loop + Workflows 三大利器",
     "file": "articles/Goal Loop Workflows 三大利器.md",
     "date": "2026-06-20",
