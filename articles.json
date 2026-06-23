@@ -1,5 +1,25 @@
 [
   {
+    "title": "Claude Desktop 在 AWS、Google Cloud 和 Microsoft Foundry 上全面可用 / The Full Claude Desktop Experience on AWS, Google Cloud, and Microsoft Foundry",
+    "file": "articles/claude-desktop-aws-google-microsoft-foundry.md",
+    "date": "2026-06-22",
+    "source": "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Desktop",
+      "Enterprise",
+      "AWS",
+      "Google Cloud",
+      "Microsoft Foundry",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Desktop 现已在 AWS、Google Cloud 和 Microsoft Foundry 上提供完整的 Chat/Claude Cowork/Claude Code 三件套体验，支持组织级 SSO、MDM 策略部署、离线安装器和 M365 本地连接器。",
+    "cover": ""
+  },
+  {
     "title": "从 OpenClaw 到 FastClaw：如何设计优秀的多 Agent 架构",
     "file": "articles/从 OpenClaw 到 FastClaw：如何设计优秀的多 Agent 架构.md",
     "date": "2026-06-22",
