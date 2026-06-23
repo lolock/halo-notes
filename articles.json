@@ -1,5 +1,24 @@
 [
   {
+    "title": "Agent identity（代理身份）：Claude Tag 中自主、团队级 AI 的新访问模型 / Agent Identity in Claude Tag: A New Access Model for Autonomous, Team-Wide AI",
+    "file": "articles/claude-tag-agent-identity-access-model.md",
+    "date": "2026-06-24",
+    "source": "https://claude.com/blog/agent-identity-access-model",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Tag",
+      "Agent Identity",
+      "Security",
+      "Enterprise",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Tag 引入了一个全新的代理身份（agent identity）访问模型，让 Claude 在共享频道中以自己的身份行动，而不是代表单个用户，从而实现安全、自主、跨系统的多人 AI 协作。",
+    "cover": ""
+  },
+  {
     "title": "Claude Desktop 在 AWS、Google Cloud 和 Microsoft Foundry 上全面可用 / The Full Claude Desktop Experience on AWS, Google Cloud, and Microsoft Foundry",
     "file": "articles/claude-desktop-aws-google-microsoft-foundry.md",
     "date": "2026-06-22",
