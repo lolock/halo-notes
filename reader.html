@@ -228,7 +228,9 @@
 
     if(!file){ el.textContent='缺少 file 参数'; }
     else {
-      const articleUrl='./articles/'+encodeURIComponent(file);
+      // articles.json 中的 file 有的带 "articles/" 前缀，有的只有文件名
+      const hasDir = file.includes('/');
+      const articleUrl = './' + (hasDir ? '' : 'articles/') + file;
       const cacheKey=p.get('v') || Date.now().toString();
       raw.href=articleUrl;
       fetch(articleUrl+'?v='+encodeURIComponent(cacheKey), {cache:'no-store'})
