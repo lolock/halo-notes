@@ -1,5 +1,106 @@
 [
   {
+    "title": "前沿之声：Hebbia 如何在金融尽调中构建不放过任何细节的 AI / Working at the frontier: How Hebbia builds AI for financial diligence that can't miss a detail",
+    "file": "articles/前沿之声 Hebbia 如何在金融尽调中构建不放过任何细节的 AI.md",
+    "date": "2026-07-13",
+    "source": "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Fable",
+      "Hebbia",
+      "金融",
+      "AI",
+      "双语翻译",
+      "Enterprise AI"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Hebbia 的 Divya Mehta 和 Adithya Ramanathan 分享 Claude Fable 5 如何在金融尽调中实现 20% 的准确率提升，将交易生命周期从数天压缩到几分钟。",
+    "cover": ""
+  },
+  {
+    "title": "前沿之声：Cognition 如何信任 Claude Fable 5 彻夜工作 / Working at the frontier: How Cognition trusts Claude Fable 5 to work through the night",
+    "file": "articles/前沿之声 Cognition 如何信任 Claude Fable 5 彻夜工作.md",
+    "date": "2026-07-10",
+    "source": "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Fable",
+      "Cognition",
+      "Devin",
+      "编码",
+      "AI智能体",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Cognition 的 Alberti 分享 Claude Fable 5 如何突破智能体自主工作时长限制，在 Frontier Code 基准上得分从 10% 跃升至 30%，实现连续八小时自主工作。",
+    "cover": ""
+  },
+  {
+    "title": "前沿之声：Thomson Reuters 如何为高风险专业工作构建 AI / Working at the frontier: How Thomson Reuters builds AI for high-stakes professional work",
+    "file": "articles/前沿之声 Thomson Reuters 如何为高风险专业工作构建 AI.md",
+    "date": "2026-07-08",
+    "source": "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Fable",
+      "Thomson Reuters",
+      "法律",
+      "AI",
+      "CoCounsel",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Thomson Reuters 首席 AI 官 Joel Hron 分享在 CoCounsel Legal 中部署 Claude Fable 5 的四个信任标准，以及如何将生产问题修复从三小时缩短到四分钟。",
+    "cover": ""
+  },
+  {
+    "title": "Anthropic 营销运营团队如何使用 Claude Cowork 自动化报告和活动构建 / How Anthropic's marketing operations team uses Claude Cowork to automate reporting and campaign builds",
+    "file": "articles/Anthropic 营销运营团队如何使用 Claude Cowork 自动化报告和活动构建.md",
+    "date": "2026-07-08",
+    "source": "https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Cowork",
+      "营销运营",
+      "自动化",
+      "AI智能体",
+      "双语翻译",
+      "Enterprise AI"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 营销运营团队的 Ian Chan 和 Annabel Custer 分享如何用 Claude Cowork 将每周报告从两天缩短到两小时，以及用智能体调度系统自动化活动搭建。",
+    "cover": ""
+  },
+  {
+    "title": "将 Claude Code 和 Claude Cowork 带给政府部门 / Bringing Claude Code and Claude Cowork to government",
+    "file": "articles/将 Claude Code 和 Claude Cowork 带给政府部门.md",
+    "date": "2026-07-07",
+    "source": "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "Claude Cowork",
+      "政府",
+      "FedRAMP",
+      "安全",
+      "双语翻译",
+      "Enterprise AI"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 宣布 Claude Code 和 Claude Cowork 面向政府部门开放，支持 FedRAMP High 环境、分层管理、防篡改审计日志和基于拨款的计费方式。",
+    "cover": ""
+  },
+  {
     "title": "Cursor 如何判断 Claude Fable 5 已准备好应对最难的前 1% 问题 / Working at the frontier: How Cursor knew Claude Fable 5 was ready for the hardest 1% of problems",
     "file": "articles/Cursor 如何判断 Claude Fable 5 已准备好应对最难的前 1% 问题.md",
     "date": "2026-07-17",
