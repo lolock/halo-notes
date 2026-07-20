@@ -1,5 +1,94 @@
 [
   {
+    "title": "选择 Claude 模型与努力等级 / Choosing a Claude model and effort level in Claude Code",
+    "file": "articles/选择 Claude 模型与努力等级.md",
+    "date": "2026-07-07",
+    "source": "https://claude.com/blog/claude-model-and-effort-level-in-claude-code",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "双语翻译",
+      "AI Engineering",
+      "最佳实践"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Code 的模型选择与努力等级详解：模型决定能力范围，努力控制工作深度，从默认设置开始按需调整。",
+    "cover": ""
+  },
+  {
+    "title": "Claude Cowork 登陆移动端与网页端 / Claude Cowork is coming to mobile and web",
+    "file": "articles/claude-cowork-web-mobile.md",
+    "date": "2026-07-07",
+    "source": "https://claude.com/blog/cowork-web-mobile",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Cowork",
+      "双语翻译",
+      "移动端",
+      "Web"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Cowork 正在向移动端和网页端推出，从 Max 用户开始逐步开放 Beta 访问，让会话和文件跟随你到达任何设备。",
+    "cover": ""
+  },
+  {
+    "title": "人们如何使用 Claude Cowork / How people are using Claude Cowork",
+    "file": "articles/how-people-are-using-claude-cowork.md",
+    "date": "2026-07-07",
+    "source": "https://claude.com/blog/how-people-are-using-claude-cowork",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Cowork",
+      "双语翻译",
+      "AI应用"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "超过 90% 的 Claude Cowork 使用场景并非软件开发，而是业务运营和内容创作等日常知识工作。",
+    "cover": ""
+  },
+  {
+    "title": "Claude Fable 5 实战指南：发现你的未知 / A field guide to Claude Fable 5: Finding your unknowns",
+    "file": "articles/claude-fable-finding-unknowns.md",
+    "date": "2026-07-06",
+    "source": "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Fable",
+      "双语翻译",
+      "AI Engineering",
+      "最佳实践"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "把 Claude Fable 5 当作未知发现引擎来使用，用 MapReduce 形式构建工作流，让 Fable 探索发现而其他模型实现细节。",
+    "cover": ""
+  },
+  {
+    "title": "为管理员提供更丰富的 Claude 消费监控与控制 / Giving admins more visibility and control over Claude spend",
+    "file": "articles/giving-admins-control-over-claude-spend.md",
+    "date": "2026-07-02",
+    "source": "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Enterprise",
+      "双语翻译",
+      "管理",
+      "安全"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Enterprise 引入更丰富的管理员分析、模型级别授权控制和消费预算提醒，帮助组织管理 AI 支出。",
+    "cover": ""
+  },
+  {
     "title": "前沿之声：Hebbia 如何在金融尽调中构建不放过任何细节的 AI / Working at the frontier: How Hebbia builds AI for financial diligence that can't miss a detail",
     "file": "articles/前沿之声 Hebbia 如何在金融尽调中构建不放过任何细节的 AI.md",
     "date": "2026-07-13",
