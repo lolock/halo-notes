@@ -1,5 +1,24 @@
 [
   {
+    "title": "前沿实战：乐天用 Claude Fable 5 隔夜构建 Agent / How Rakuten builds agents overnight with Claude Fable 5",
+    "file": "articles/rakuten-claude-fable-agents.md",
+    "date": "2026-07-20",
+    "source": "https://claude.com/blog/working-at-the-frontier-rakuten",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Enterprise AI",
+      "Agent",
+      "Rakuten",
+      "Fable 5"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "乐天 AI 负责人分享 Claude Fable 5 实战体验：自主隔夜运行、自我验证纠正、品味对齐三大能力改变企业 Agent 部署范式。",
+    "cover": ""
+  },
+  {
     "title": "选择 Claude 模型与努力等级 / Choosing a Claude model and effort level in Claude Code",
     "file": "articles/选择 Claude 模型与努力等级.md",
     "date": "2026-07-07",
