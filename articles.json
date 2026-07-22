@@ -1,5 +1,43 @@
 [
   {
+    "title": "Anthropic 如何保护其 AI 原生软件开发生命周期 / How Anthropic secures its AI-native software development lifecycle",
+    "file": "articles/anthropic-secures-ai-native-sdlc.md",
+    "date": "2026-07-22",
+    "source": "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Security",
+      "SDLC",
+      "Claude Code",
+      "Enterprise AI"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 副首席信息安全官 Jason Clinton 介绍安全工程团队如何保护一个 AI 编写了 80% 合并代码的 SDLC，涵盖规划、编码、CI、CD、监控和治理各阶段的安全策略与持久原则。",
+    "cover": ""
+  },
+  {
+    "title": "Datadog 如何为 Claude Code 构建“万能机械工具” / How Datadog built a “universal machine tool” for Claude Code",
+    "file": "articles/datadog-universal-machine-tool-claude-code.md",
+    "date": "2026-07-22",
+    "source": "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Datadog",
+      "Claude Code",
+      "Enterprise AI",
+      "Temper"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Datadog 工程副总裁 Sesh Nalla 详解 Temper——一个让 Agent 编写规范而非代码、通过确定性内核验证执行的“万能机械工具”，以及暗工厂和工业化软件开发的未来。",
+    "cover": ""
+  },
+  {
     "title": "前沿实战：乐天用 Claude Fable 5 隔夜构建 Agent / How Rakuten builds agents overnight with Claude Fable 5",
     "file": "articles/rakuten-claude-fable-agents.md",
     "date": "2026-07-20",
