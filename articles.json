@@ -1,5 +1,42 @@
 [
   {
+    "title": "在 Claude Code 中使用 Skills 构建验证循环 / Building verification loops in Claude Code with skills",
+    "file": "articles/verification-loops-claude-code-skills.md",
+    "date": "2026-07-22",
+    "source": "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "Skills",
+      "Verification",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "将手动检查转化为 Claude Code Skills，让 Claude 自行闭环验证反馈，涵盖内置验证、自定义 Skill 编写与嵌入/链式/PR 三种触发模式。",
+    "cover": ""
+  },
+  {
+    "title": "Outtake 如何基于 Claude 构建网络调查 Agent / How Outtake built a cyber investigator on Claude",
+    "file": "articles/outtake-cyber-investigator-claude.md",
+    "date": "2026-07-22",
+    "source": "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Outtake",
+      "Cybersecurity",
+      "Agent SDK",
+      "Claude Code",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Outtake 用 Claude Code 和 Agent SDK 构建长期自主运行的 Recon Agent 网络调查系统，分享四阶段构建方法和 Agent 安全、评估、提示词管理经验。",
+    "cover": ""
+  },
+  {
     "title": "Anthropic 如何保护其 AI 原生软件开发生命周期 / How Anthropic secures its AI-native software development lifecycle",
     "file": "articles/anthropic-secures-ai-native-sdlc.md",
     "date": "2026-07-22",
