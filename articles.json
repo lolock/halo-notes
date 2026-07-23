@@ -1,5 +1,24 @@
 [
   {
+    "title": "用语音模式攻克难题 / Think through hard problems in voice mode",
+    "file": "articles/voice-mode-hard-problems.md",
+    "date": "2026-07-23",
+    "source": "https://claude.com/blog/think-through-hard-problems-in-voice-mode",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Voice Mode",
+      "Opus",
+      "Sonnet",
+      "Haiku",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude 语音模式全面升级：Opus 和 Sonnet 加入，支持 Gmail/Slack 等工具操作，新增 11 种语言，从思考到执行一气呵成。",
+    "cover": ""
+  },
+  {
     "title": "在 Claude Code 中使用 Skills 构建验证循环 / Building verification loops in Claude Code with skills",
     "file": "articles/verification-loops-claude-code-skills.md",
     "date": "2026-07-22",
