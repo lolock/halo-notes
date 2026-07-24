@@ -1,5 +1,22 @@
 [
   {
+    "title": "四种基于角色的 Claude 认证 / Four role-based certifications for the people who put Claude to work for customers",
+    "file": "articles/four-role-based-certifications.md",
+    "date": "2026-07-24",
+    "source": "https://claude.com/blog/four-role-based-claude-certifications",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Certification",
+      "Partner Network",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 扩展 Claude 认证计划，新增三种基于角色的认证，覆盖从非技术到架构设计的完整团队，Accenture、PwC 等巨头已承诺数万人规模的认证计划。",
+    "cover": ""
+  },
+  {
     "title": "用语音模式攻克难题 / Think through hard problems in voice mode",
     "file": "articles/voice-mode-hard-problems.md",
     "date": "2026-07-23",
