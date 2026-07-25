@@ -1,5 +1,64 @@
 [
   {
+    "title": "Claude 模型详解：为你的使用场景选择最佳模型 / Claude models explained: choosing the best model for your use case",
+    "file": "articles/claude-models-explained.md",
+    "date": "2026-07-24",
+    "source": "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Mythos",
+      "Fable",
+      "Opus",
+      "Sonnet",
+      "Haiku",
+      "Model Selection",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "从 Mythos/Fable 到 Opus、Sonnet 和 Haiku，详解各模型系列的特点、选择策略、顾问策略和评估方法。",
+    "cover": ""
+  },
+  {
+    "title": "Claude 5 代模型上下文工程的新规则 / The new rules of context engineering for Claude 5 generation models",
+    "file": "articles/context-engineering-new-rules.md",
+    "date": "2026-07-24",
+    "source": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Context Engineering",
+      "System Prompt",
+      "Claude Code",
+      "Skills",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 删除了 80% 的 Claude Code 系统提示词，教你如何为新一代 Claude 5 模型做上下文工程：从给规则到让模型运用判断力。",
+    "cover": ""
+  },
+  {
+    "title": "设计 Claude Design 的产品设计师如何用 Claude 探索创意 / How the product designer who built Claude Design uses it to explore ideas before building them",
+    "file": "articles/claude-design-product-designer.md",
+    "date": "2026-07-24",
+    "source": "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Design",
+      "Product Design",
+      "Design Tools",
+      "HTML",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 产品设计师 Nate Parrott 分享如何使用 Claude Design 探索视觉创意——从产品原型、幻灯片到动画的最佳实践。",
+    "cover": ""
+  },
+  {
     "title": "四种基于角色的 Claude 认证 / Four role-based certifications for the people who put Claude to work for customers",
     "file": "articles/four-role-based-certifications.md",
     "date": "2026-07-24",
