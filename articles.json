@@ -1,5 +1,23 @@
 [
   {
+    "title": "将 MCP 2026-07-28 带到 Claude / Bringing MCP 2026-07-28 to Claude",
+    "file": "articles/bringing-mcp-2026-07-28-to-claude.md",
+    "date": "2026-07-28",
+    "source": "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "MCP",
+      "Model Context Protocol",
+      "Protocol",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "MCP 2026-07-28 规范发布：无状态核心、MCP Apps/Tasks 标准化扩展框架、OAuth 2.0 授权强化，Claude 全线产品逐步支持。",
+    "cover": ""
+  },
+  {
     "title": "Claude 模型详解：为你的使用场景选择最佳模型 / Claude models explained: choosing the best model for your use case",
     "file": "articles/claude-models-explained.md",
     "date": "2026-07-24",
