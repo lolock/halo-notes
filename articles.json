@@ -554,6 +554,24 @@
     "cover": ""
   },
   {
+    "title": "工程化的本质：从 Prompt 到 Loop 的个人 AI-Lab 演进",
+    "file": "articles/工程化的本质：从Prompt到Loop的个人AI-Lab演进.md",
+    "date": "2026-06-06",
+    "source": "https://chatgpt.com/g/g-p-69ef420d98548191aba106931f0a88a3/c/6a23c58f-8a44-832f-88cf-237c08f13e51",
+    "tags": [
+      "AI",
+      "工程化",
+      "Prompt",
+      "Loop",
+      "AI-Lab",
+      "OpenClaw"
+    ],
+    "category": "AI 工作流",
+    "quality": "A",
+    "summary": "本文将个人 AI 能力从 Prompt 阶段推进到 Loop 阶段，结合统一试验台、Harness 与验收闭环，给出可落地的 AI-Lab 演进路线。",
+    "cover": ""
+  },
+  {
     "title": "Agent identity（代理身份）：Claude Tag 中自主、团队级 AI 的新访问模型 / Agent Identity in Claude Tag: A New Access Model for Autonomous, Team-Wide AI",
     "file": "articles/claude-tag-agent-identity-access-model.md",
     "date": "2026-06-24",
@@ -1926,5 +1944,23 @@
     "quality": "A",
     "summary": "从时间杠杆转向算法杠杆：知识库、技能框架和自动化执行的个人业务升级路径。",
     "cover": "https://pbs.twimg.com/media/HBsFX7hbgAAK85M.jpg"
+  },
+  {
+    "title": "CPO 投资阅读版：AI 数据中心光互连瓶颈（交互专题入口）",
+    "file": "articles/CPO投资分析交互专题_AI数据中心光互连瓶颈.md",
+    "date": "2026-05-20",
+    "source": "https://lolock.github.io/halo-notes/visuals/cpo-investment-map/",
+    "tags": [
+      "CPO",
+      "AI数据中心",
+      "光互连",
+      "投资分析",
+      "可视化",
+      "交互专题"
+    ],
+    "category": "投资研究",
+    "quality": "A",
+    "summary": "AI 数据中心光互连瓶颈专题入口页，承接 CPO 长文研究内容并引导到可交互可展开的专题页。",
+    "cover": "visuals/cpo-investment-map/assets/cpo-hero.png"
   }
 ]
