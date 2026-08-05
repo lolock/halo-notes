@@ -12,12 +12,9 @@
 ## 引言 / Introduction
 
 > **EN:** Businesses use Claude in many ways, from rolling it out to thousands of employees to startups and single teams building applications on the Claude Platform. Cost matters to all of them.
+> In this post, we explain how IT admins can use the controls available today for seeing and managing what Claude costs, along with some best practices for deciding where to spend.
 
-企业对 Claude 的使用方式多种多样：有的将其推广给数千名员工，有的则是初创公司和单一团队在 Claude Platform 上构建应用。成本对所有这些用户都至关重要。
-
-> **EN:** In this post, we explain how IT admins can use the controls available today for seeing and managing what Claude costs, along with some best practices for deciding where to spend.
-
-在本文中，我们将介绍 IT 管理员如何利用现有的管控功能来查看和管理 Claude 的成本，并分享一些决定资金投向的最佳实践。
+企业对 Claude 的使用方式多种多样：有的将其推广给数千名员工，有的则是初创公司和单一团队在 Claude Platform 上构建应用。成本对所有这些用户都至关重要。 在本文中，我们将介绍 IT 管理员如何利用现有的管控功能来查看和管理 Claude 的成本，并分享一些决定资金投向的最佳实践。
 
 ## 思考成本的有用方式 / Useful ways to think about cost
 
@@ -52,12 +49,9 @@ Claude 的模型家族为你提供了选择：
 - Haiku 适合高吞吐量的常规任务。
 
 > **EN:** For any of these, effort controls dial up or down how much the model “thinks” when it solves a problem, and the advisor tool lets smaller models consult a frontier model only when it hits a wall.
+> Many organizations use several models, often on the same project. For example, an insurance company might put a frontier model helping an adjuster evaluate a complex commercial claim while Haiku tags and triages the documents feeding into it.
 
-对于上述任何模型，effort（努力程度）控制都可以调高或调低模型在解决问题时的“思考”程度；advisor 工具则让较小模型只有在遇到瓶颈时才去咨询前沿模型。
-
-> **EN:** Many organizations use several models, often on the same project. For example, an insurance company might put a frontier model helping an adjuster evaluate a complex commercial claim while Haiku tags and triages the documents feeding into it.
-
-许多组织会同时使用多个模型，通常在同一项目上。例如，一家保险公司可能让一个前沿模型帮助理赔员评估复杂的商业理赔，同时用 Haiku 为输入其中的文档打标签和分流。
+对于上述任何模型，effort（努力程度）控制都可以调高或调低模型在解决问题时的“思考”程度；advisor 工具则让较小模型只有在遇到瓶颈时才去咨询前沿模型。 许多组织会同时使用多个模型，通常在同一项目上。例如，一家保险公司可能让一个前沿模型帮助理赔员评估复杂的商业理赔，同时用 Haiku 为输入其中的文档打标签和分流。
 
 ## 如何查看和控制支出 / How to see and control your spend
 
@@ -102,12 +96,9 @@ Claude 的模型家族为你提供了选择：
 ## 在 API 上构建时的控制 / Controls for building on the API
 
 > **EN:** The Claude Console offers controls to organizations and developers building on the Claude Platform. Workspaces separate API usage by product, team, or environment, and it has its own line in your cost and usage reporting.
+> Useful cost levers on the Claude Platform include:
 
-Claude Console 为在 Claude Platform 上构建的组织和开发者提供控制。Workspaces（工作区）按产品、团队或环境分隔 API 用量，并在你的成本与用量报告中拥有自己的条目。
-
-> **EN:** Useful cost levers on the Claude Platform include:
-
-Claude Platform 上实用的成本杠杆包括：
+Claude Console 为在 Claude Platform 上构建的组织和开发者提供控制。Workspaces（工作区）按产品、团队或环境分隔 API 用量，并在你的成本与用量报告中拥有自己的条目。 Claude Platform 上实用的成本杠杆包括：
 
 > **EN:**
 > - Prompt caching stores content that gets reused across requests, so the model doesn’t reprocess it every time. Turn it on if you send the same reference material with every call, which can cost 10% of the normal input rate on cache hits.
