@@ -1,12 +1,10 @@
 # 为什么你的agent项目总是难以落地
-
-- 原始链接：<https://x.com/anorth_chen/status/2058554497333407927>
+- 原始链接：https://x.com/anorth_chen/status/2058554497333407927
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-24
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJF0VK4WIAAAJgE?format=jpg&name=large)
 
 绝大部分agent项目在拿到业务正反馈之前，就被耗死在了手搓agent harness这些基础设施上

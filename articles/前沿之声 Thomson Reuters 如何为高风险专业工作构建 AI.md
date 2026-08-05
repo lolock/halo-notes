@@ -1,12 +1,10 @@
 # 前沿之声：Thomson Reuters 如何为高风险专业工作构建 AI / Working at the frontier: How Thomson Reuters builds AI for high-stakes professional work
-
-- 原文链接：https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work
+- 作者：未提供
 - 发布时间：2026-07-08
-- 抓取时间：2026-07-19
+- X Article：无
 
 ---
-
 > EN: Thomson Reuters provides the information, technology, and expertise that professionals in law, tax, accounting, and risk need to do work that has to be right.
 >
 > ZH: Thomson Reuters 为法律、税务、会计和风险领域的专业人士提供信息、技术和专业知识，帮助他们完成必须准确无误的工作。

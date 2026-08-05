@@ -1,12 +1,10 @@
 # 零风险并非职责所在：CISO 的智能体 AI 指南 / Zero risk isn't the job: a CISO's guide to agentic AI
-
-- 原始链接：<https://claude.com/blog/ciso-guide-to-agentic-ai>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/ciso-guide-to-agentic-ai
+- 作者：未提供
 - 发布时间：2026-07-17
-- 抓取时间：2026-07-19
+- X Article：无
 
 ---
-
 > **EN:** Anthropic's Deputy CISO, Jason Clinton, shares his team's lessons learned adopting agentic AI, and the risk assessment framework they've developed for building and deploying agents securely.
 >
 > **ZH:** Anthropic 副首席信息安全官 Jason Clinton 分享了他的团队在采用智能体 AI 过程中学到的经验，以及他们为安全构建和部署智能体而开发的风险评估框架。

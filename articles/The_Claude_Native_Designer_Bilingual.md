@@ -1,3 +1,10 @@
+# Claude Native Designer: From Design to Ship (中英双语 / Bilingual)
+- 原始链接：https://x.com/felixleezd/status/2029236285005860903
+- 作者：Felix Lee（@felixleezd）
+- 发布时间：2026-03-05
+- X Article：有
+
+---
 # The Claude-Native Designer (中英双语)
 
 - 原始链接：<https://x.com/felixleezd/status/2029236285005860903>

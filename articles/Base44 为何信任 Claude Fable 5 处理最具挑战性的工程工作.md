@@ -1,3 +1,10 @@
+# Base44 为何信任 Claude Fable 5 处理最具挑战性的工程工作 / Why Base44 trusts Claude Fable 5 with their most challenging engineering work
+- 原始链接：https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work
+- 作者：未提供
+- 发布时间：2026-07-15
+- X Article：无
+
+---
 # Base44 为何信任 Claude Fable 5 处理其最具挑战性的工程工作 / Working at the frontier: Why Base44 trusts Claude Fable 5 with their most challenging engineering work
 
 - 原始链接：<https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work>

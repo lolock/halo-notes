@@ -1,12 +1,10 @@
 # Claude Managed Agents 新功能：定时运行 Agent，并在 Vault 中保存环境变量 / New in Claude Managed Agents: run agents on a schedule and store environment variables in vaults
-
-- 原文链接：https://claude.com/blog/whats-new-in-claude-managed-agents
-- 来源：Claude Blog
-- 原文发布时间：June 9, 2026
-- 抓取时间：2026-06-09 UTC
+- 原始链接：https://claude.com/blog/whats-new-in-claude-managed-agents
+- 作者：未提供
+- 发布时间：2026-06-09
+- X Article：无
 
 ---
-
 Starting today, Claude Managed Agents can run on a schedule and securely access CLI tools and other authenticated services. Both features are now available in public beta on the Claude Platform.
 
 从今天开始，Claude Managed Agents 可以按计划定时运行，并安全访问 CLI 工具和其他需要认证的服务。这两项功能现在都已在 Claude Platform 上进入 public beta。

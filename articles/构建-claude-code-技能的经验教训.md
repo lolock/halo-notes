@@ -1,12 +1,10 @@
 # 构建 Claude Code 的教训：我们如何使用技能 / Lessons from building Claude Code: How we use skills
-
-- 原文链接：<https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills
+- 作者：未提供
 - 发布时间：2026-06-03
-- 抓取时间：2026-06-03
+- X Article：无
 
 ---
-
 **技能已成为 Claude Code 中最常用的扩展点之一。它们灵活、易于创建、易于分发。**
 
 Skills have become one of the most used extension points in Claude Code. They're flexible, easy to make, and easy to distribute.

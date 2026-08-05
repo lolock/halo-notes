@@ -1,12 +1,10 @@
 # Claude Opus 4.8 Build Day 黑客马拉松获奖者揭晓 / Meet the winners of our Claude Opus 4.8 Build Day hackathon
-
-- 原文链接：<https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon
+- 作者：未提供
 - 发布时间：2026-06-17
-- 抓取时间：2026-06-18
+- X Article：无
 
 ---
-
 > 从重建唐代建筑到为旧金山构建仿真人口模型，来看看我们最新黑客马拉松的获奖者们在一天之内用 Claude Opus 4.8 搭建了什么。
 
 6 月 13 日，我们邀请了 300 多位创始人和开发者到旧金山参加一场 12 小时的 Claude Opus 4.8 黑客马拉松。超过 1500 人报名，最终 310 人参与，其中许多人从世界各地赶来，每人获得 500 美元额度，用一天时间将一个想法变成可工作的原型。

@@ -1,12 +1,10 @@
 # 怎么使用 Codex 和 Claude Code 重构前端 UI
-
-- 原始链接：<https://x.com/leon7hao/status/2059191435753410630>
+- 原始链接：https://x.com/leon7hao/status/2059191435753410630
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-26
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJOnY3MbQAAT0D2?format=jpg&name=large)
 
 > 声明：我不是设计师，也不是专业的前端，重构之后的设计也存在各种 UI UX 问题，一切都还是以我个人的评价能力来做的，不存在专业向的意见，只是想分享如何通过 vibe coding 的方式来做比较大的 UI 和架构的重构。**全文手打无AI，欢迎**大家评论区讨论，提供更多建议。[原文链接](https://leon7hao.com/posts/2026-05-26-how-to-vibe-ui)

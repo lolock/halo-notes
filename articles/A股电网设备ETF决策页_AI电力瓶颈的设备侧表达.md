@@ -1,5 +1,10 @@
 # A股电网设备ETF决策页：AI电力瓶颈的设备侧表达
+- 原始链接：A股行业ETF研究Agent HTML决策页
+- 作者：未提供
+- 发布时间：2026-05-21
+- X Article：无
 
+---
 这篇是A股行业ETF研究Agent的纠偏后静态HTML决策页入口。
 
 直接打开：[https://lolock.github.io/halo-notes/visuals/a-share-etf-grid-equipment/](https://lolock.github.io/halo-notes/visuals/a-share-etf-grid-equipment/)

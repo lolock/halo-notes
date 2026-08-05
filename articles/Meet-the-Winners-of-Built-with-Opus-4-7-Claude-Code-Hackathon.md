@@ -1,12 +1,10 @@
 # Meet the Winners of Built with Opus 4.7 Claude Code Hackathon / Built with Opus 4.7 Claude Code 黑客马拉松获奖者揭晓
-
-- 原文链接：<https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon>
-- 来源：Claude Blog
-- 发布时间：June 15, 2026
-- 抓取时间：2026-06-16
+- 原始链接：https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon
+- 作者：未提供
+- 发布时间：2026-06-15
+- X Article：无
 
 ---
-
 Last week, we hosted Claude Build Day, our latest hackathon where builders got together in San Francisco to put their ideas to work using Claude Opus 4.8.
 
 While we wait to see what they built, we chatted with the winners of our Built with Opus 4.7 hackathon about their projects. They tackled medical training, electronics repair, computer science education, interactive play, home repair, and factory maintenance.

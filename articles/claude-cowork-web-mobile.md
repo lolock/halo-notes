@@ -1,12 +1,10 @@
 # Claude Cowork 登陆移动端与网页端 / Claude Cowork is coming to mobile and web
-
-- 原文链接：[https://claude.com/blog/cowork-web-mobile](https://claude.com/blog/cowork-web-mobile)
-- 来源：Claude Blog / Anthropic
+- 原始链接：https://claude.com/blog/cowork-web-mobile
+- 作者：未提供
 - 发布时间：2026-07-07
-- 抓取时间：2026-07-20
+- X Article：无
 
 ---
-
 Claude Cowork 正在向移动端和网页端推出，意味着你的会话和文件将跟随你到达任何设备。Beta 访问将在未来几周内逐步开放，从 Max 用户开始，后续覆盖更多订阅方案。
 
 > EN: Claude Cowork is rolling out to mobile and web so your sessions and files go where you go, on any device. Beta access is rolling out over the next several weeks starting with Max users, with more plans to follow.

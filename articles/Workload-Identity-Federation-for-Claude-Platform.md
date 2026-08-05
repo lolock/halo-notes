@@ -1,12 +1,10 @@
 # 使用 Workload Identity Federation 安全访问 Claude Platform / Secure access to the Claude Platform with Workload Identity Federation
-
-- 原文链接：<https://claude.com/blog/workload-identity-federation>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/workload-identity-federation
+- 作者：未提供
 - 发布时间：2026-06-17
-- 抓取时间：2026-06-18
+- X Article：无
 
 ---
-
 > EN: Workload Identity Federation (WIF) is now generally available on the Claude Platform. WIF is compatible with any OIDC-compliant identity provider and covers all Claude API endpoints, including when accessing the endpoints through our first-party SDKs and Claude Code.
 
 Workload Identity Federation (WIF) 现已在 Claude Platform 上正式发布（GA）。WIF 兼容任何符合 OIDC 标准的身份提供商，覆盖所有 Claude API 端点，包括通过我们的第一方 SDK 和 Claude Code 访问时。

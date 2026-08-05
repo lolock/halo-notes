@@ -1,12 +1,10 @@
 # Paul Graham, Founder of Y Combinator, Live from Stockholm
-
-- 原始链接：<https://www.youtube.com/watch?v=QHJkUw31YX8>
+- 原始链接：https://www.youtube.com/watch?v=QHJkUw31YX8
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-31
 - X Article：无
 
 ---
-
 ![](https://www.youtube.com/watch?v=QHJkUw31YX8)
 
 Paul Graham, the Founder of Y Combinator, speaks live from Stockholm Waterfront Congress Centre in Stockholm, Sweden. He covers two topics -- if you should you go to Silicon Valley and what Sweden can do to thrive as a Startup hub.  

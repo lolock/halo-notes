@@ -1,12 +1,10 @@
 # Skill 工程设计指南（3天口播内容skill系统完整搭建复盘），新手友好，后附口播获客github网址，开源分享
-
-- 原始链接：<https://x.com/Astronaut_1216/status/2059180933614330328>
+- 原始链接：https://x.com/Astronaut_1216/status/2059180933614330328
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-26
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJOuBwfWgAA1Rov?format=jpg&name=large)
 
 ## Claude Code Skill 工程设计指南

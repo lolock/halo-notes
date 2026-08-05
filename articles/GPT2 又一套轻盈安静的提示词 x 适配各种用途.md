@@ -1,12 +1,10 @@
 # GPT2 又一套轻盈安静的提示词 x 适配各种用途
-
-- 原始链接：<https://x.com/xiaoxiaodong01/status/2056615926724976911>
+- 原始链接：https://x.com/xiaoxiaodong01/status/2056615926724976911
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-19
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HIqPPIra0AEA3LK?format=jpg&name=large)
 
 其实这个提示词还是适用，比如说海报、信息图，或者自媒体封面，甚至是朋友圈或者邀请函，还有各式各样的场景都可适合。

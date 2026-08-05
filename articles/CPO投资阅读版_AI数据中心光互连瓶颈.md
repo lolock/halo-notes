@@ -1,5 +1,10 @@
 # CPO 投资阅读版：AI 数据中心光互连瓶颈
+- 原始链接：cpo.docx
+- 作者：未提供
+- 发布时间：2026-05-20
+- X Article：无
 
+---
 [进入正式投资阅读版](https://lolock.github.io/halo-notes/visuals/cpo-investment-map/)
 
 这是入口页。正式内容在交互专题中阅读，不在这里堆原文。

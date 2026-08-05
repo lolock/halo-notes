@@ -1,12 +1,10 @@
 # Anthropic 如何用 Claude 实现自助数据分析 / How Anthropic enables self-service data analytics with Claude
-
-- 原文链接：<https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude
+- 作者：未提供
 - 发布时间：2026-06-03
-- 抓取时间：2026-06-03
+- X Article：无
 
 ---
-
 **许多数据科学和数据工程团队都深有体会：实现自助业务分析历来是一项艰巨的任务。**
 
 As many data science and data engineering teams can attest, enabling self-service business analytics has traditionally been a slog.

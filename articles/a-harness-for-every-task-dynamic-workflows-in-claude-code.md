@@ -1,12 +1,10 @@
 # 为每项任务配备 Harness：Claude Code 中的动态工作流 / A harness for every task: dynamic workflows in Claude Code
-
-- 原文链接：https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code
-- 来源：Claude Blog
-- 发布时间：Jun 02, 2026
-- 抓取时间：2026-06-05 15:25:43 UTC
+- 原始链接：https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code
+- 作者：未提供
+- 发布时间：2026-06-02
+- X Article：无
 
 ---
-
 > EN: Claude Code can now write and orchestrate its own multi-agent harness on the fly. Here's how dynamic workflows work, and the patterns that get the most out of them.
 
 ZH：Claude Code 现在可以即时编写和编排自己的多代理工具。以下是动态工作流程的工作原理以及充分利用它们的模式。

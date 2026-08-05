@@ -1,3 +1,10 @@
+# 零成本副业新风口：用AI帮人改简历赚钱
+- 原始链接：https://x.com/better_christal/status/2064551425087352868
+- 作者：@better_christal
+- 发布时间：2026-06-10
+- X Article：有
+
+---
 # 零成本副业新风口：用AI帮人改简历赚钱，从账号搭建到定价接单全盘拆解
 
 - 原始链接：https://x.com/better_christal/status/2064551425087352868

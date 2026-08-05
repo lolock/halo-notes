@@ -1,11 +1,10 @@
 # OpenClaw Memory终极指南
-- 原始链接：<https://x.com/lijiuer92/status/2025678747509391664?s=46&t=o6nmInNQm8GsCZeHlQaxjQ>
+- 原始链接：https://x.com/lijiuer92/status/2025678747509391664?s=20
 - 作者：李韭二（@lijiuer92）
-- 发布时间：2026-02-22T21:07:03.000Z
-- X Article：<http://x.com/i/article/2025660122606022656>
+- 发布时间：2026-02-23
+- X Article：有
 
 ---
-
 ![](https://pbs.twimg.com/media/HByZYd7bgAALaBi.jpg)
 
 你的OpenClaw小龙虾每次失忆，不仅烧了你的钱，还要了你的命。

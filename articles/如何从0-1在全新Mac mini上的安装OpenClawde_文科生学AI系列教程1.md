@@ -1,3 +1,10 @@
+# 如何从0-1在全新Mac mini上的安装OpenClawde？｜文科生学AI系列教程1
+- 原始链接：https://x.com/wangdefou/status/2024801707218329982?s=46&t=o6nmInNQm8GsCZeHlQaxjQ
+- 作者：得否（@wangdefou）
+- 发布时间：2026-02-22
+- X Article：有
+
+---
 # 如何从0-1在全新 Mac mini 上安装 OpenClawde？｜文科生学AI系列教程1
 
 - 原始链接：<https://x.com/wangdefou/status/2024801707218329982>
@@ -103,4 +110,3 @@ openclaw tui
 作者备注（原文）：
 我是得否，一个文科生，正在搭建「文科生学AI」社群。  
 如果你也是文科生，想学AI、想用AI做事，可以进来看看。
-

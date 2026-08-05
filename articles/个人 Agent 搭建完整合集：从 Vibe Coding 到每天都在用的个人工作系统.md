@@ -1,12 +1,10 @@
 # 个人 Agent 搭建完整合集：从 Vibe Coding 到每天都在用的个人工作系统
-
-- 原始链接：<https://x.com/Xudong07452910/status/2062087939547332948>
+- 原始链接：https://x.com/Xudong07452910/status/2062087939547332948
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-03
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJ0OF0MXEAAdBb9?format=jpg&name=large)
 
 **写在前面：这是一篇个人 Agent 搭建 和 Vibe Coding 方法的合集。**

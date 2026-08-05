@@ -1,12 +1,10 @@
 # 教程：手把手教你玩转Tom老板开源的html-anything项目
-
-- 原始链接：<https://x.com/yinmin1987/status/2056184488376586646>
+- 原始链接：https://x.com/yinmin1987/status/2056184488376586646
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-18
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HIkI3YRbIAAy7me?format=jpg&name=large)
 
 Claude Code 团队的工程师 Thariq 最近发了一篇《The Unreasonable Effectiveness of HTML》，核心观点一句话：我们内部已经不写 Markdown 了，反正不是人在写，agent 输出 HTML 和输出 Markdown 成本一样，但 HTML 的表达上限高得多。反对派说 HTML 门槛太高是倒退，但 Thariq 反问了一句——你还在亲手编辑这些文件吗？

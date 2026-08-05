@@ -1,12 +1,10 @@
 # 从 OpenClaw 到 FastClaw：如何设计优秀的多 Agent 架构
-
 - 原始链接：https://x.com/idoubicc/status/2069014328037330953
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-22
-- X Article：https://x.com/idoubicc/status/2069014328037330953
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HLaPLHnaUAAwvqC?format=jpg&name=large)
 
 > 做了一年 Agent 基础设施，踩了无数坑，我终于想明白了一件事：好的 Agent 架构不是把所有功能塞进一个进程，而是让每一层都能独立演化。

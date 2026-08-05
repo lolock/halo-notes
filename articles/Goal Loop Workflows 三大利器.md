@@ -1,12 +1,10 @@
 # Goal + Loop + Workflows 三大利器
-
 - 原始链接：https://x.com/PandaTalk8/status/2065714368071745710
 - 作者：@PandaTalk8（来自收藏导出）
 - 发布时间：2026-06-20
-- X Article：https://x.com/PandaTalk8/status/2065714368071745710
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HKrkPAZawAAoCCi?format=jpg&name=large)
 
 ## 有什么区别

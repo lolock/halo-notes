@@ -1,12 +1,10 @@
 # 运营 AI 原生工程组织 / Running an AI-native engineering org
-
-- 原文链接：https://claude.com/blog/running-an-ai-native-engineering-org
-- 来源：Claude Blog
-- 发布时间：Jun 03, 2026
-- 抓取时间：2026-06-05 15:25:43 UTC
+- 原始链接：https://claude.com/blog/running-an-ai-native-engineering-org
+- 作者：未提供
+- 发布时间：2026-06-03
+- X Article：无
 
 ---
-
 > EN: At Code w/ Claude SF 2026, Director of Engineering for Claude Code and Claude Cowork Fiona Fung walked through how the team’s processes and structure changed once agentic coding became the default way of working.
 
 ZH：在 Code w/ Claude SF 2026 上，Claude Code 和 Claude Cowork 的工程总监 Fiona Fung 讲述了代理编码成为默认工作方式后团队的流程和结构如何变化。

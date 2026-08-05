@@ -1,12 +1,10 @@
 # 一位 Anthropic 销售如何用 Claude Code 重建团队工作流 / How one Anthropic seller rebuilt his team's workflows with Claude Code
-
-- 原文链接：<https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering
+- 作者：未提供
 - 发布时间：2026-06-05
-- 抓取时间：2026-06-05 21:39 UTC
+- X Article：无
 
 ---
-
 > EN: Before he joined Anthropic, Jared Sires, GTM product manager, had never opened a terminal. Now Anthropic’s Sales team uses his tools.
 
 ZH: 在加入 Anthropic 之前，GTM 产品经理 Jared Sires 从未打开过终端。如今，Anthropic 销售团队正在使用他构建的工具。

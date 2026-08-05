@@ -1,12 +1,10 @@
 # Anthropic 如何使用 Claude Code 进行大规模代码迁移 / How Anthropic runs large-scale code migrations with Claude Code
-
-- 原始链接：<https://claude.com/blog/ai-code-migration>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/ai-code-migration
+- 作者：未提供
 - 发布时间：2026-07-16
-- 抓取时间：2026-07-19
+- X Article：无
 
 ---
-
 **EN:** Code migrations, projects that port a production codebase to a new language, were multi-year endeavors until recently.
 
 **ZH:** 代码迁移——将生产代码库移植到新语言的项目——直到最近还是耗时数年的工程。

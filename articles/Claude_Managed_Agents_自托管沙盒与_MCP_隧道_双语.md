@@ -1,3 +1,10 @@
+# Claude Managed Agents 新功能：自托管沙盒与 MCP 隧道（双语）
+- 原始链接：https://claude.com/blog/claude-managed-agents-updates
+- 作者：未提供
+- 发布时间：2026-05-20
+- X Article：无
+
+---
 # Claude Managed Agents 新功能：自托管沙盒与 MCP 隧道 / New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels
 
 - 原文链接：https://claude.com/blog/claude-managed-agents-updates

@@ -1,3 +1,10 @@
+# Linear 为什么这么快？技术拆解（中英双语）
+- 原始链接：https://performance.dev/how-is-linear-so-fast-a-technical-breakdown
+- 作者：未提供
+- 发布时间：2026-05-21
+- X Article：无
+
+---
 # Linear 为什么这么快？技术拆解
 
 > # How's Linear so fast? A technical breakdown

@@ -1,13 +1,10 @@
 # Anthropic 如何保护其 AI 原生软件开发生命周期 / How Anthropic secures its AI-native software development lifecycle
-
-- 原文链接：<https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle
 - 作者：Jason Clinton, Deputy CISO, Anthropic
-- 发布时间：2026-07-21
-- 抓取时间：2026-07-22
+- 发布时间：2026-07-22
+- X Article：无
 
 ---
-
 > Anthropic 副首席信息安全官 Jason Clinton 详述安全工程团队如何保护一个 AI 编写了 80% 合并代码的 SDLC。
 
 在 Anthropic，代码量和部署速度呈指数级增长。我们的软件工程师每季度交付的代码量比 2021 至 2025 年间平均高出 8 倍。我们的审查、监控和其他安全流程必须跟上这一加速步伐，否则就会成为瓶颈（阿姆达尔定律）。

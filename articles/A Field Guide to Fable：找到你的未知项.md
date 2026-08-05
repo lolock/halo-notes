@@ -1,12 +1,10 @@
 # A Field Guide to Fable：找到你的未知项 / A Field Guide to Fable: Finding Your Unknowns
-
 - 原始链接：https://x.com/trq212/status/2073100352921215386
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-07-04
-- X Article：https://x.com/trq212/status/2073100352921215386
+- X Article：有
 
 ---
-
 ## 中文翻译 / Chinese Translation
 
 和 Claude Fable 5 一起工作，一直在提醒我一个老道理：地图不是疆域。

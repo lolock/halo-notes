@@ -1,12 +1,10 @@
 # 构建 Claude Code 的教训：像 Agent 一样思考
-
-- 原始链接：<https://x.com/trq212/status/2027463795355095314>
+- 原始链接：https://x.com/trq212/status/2027463795355095314
 - 作者：Thariq（@trq212）
-- 发布时间：2026-02-27
-- X Article：<http://x.com/i/article/2027446899310313472>
+- 发布时间：2026-03-02
+- X Article：有
 
 ---
-
 ![](https://pbs.twimg.com/media/HCLxeR3acAAf2R9.jpg)
 
 构建 Agent 框架最难的部分之一，就是设计它的行动空间（action space）。

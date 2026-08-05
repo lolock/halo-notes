@@ -1,3 +1,10 @@
+# 前沿实战：乐天用 Claude Fable 5 隔夜构建 Agent / How Rakuten builds agents overnight with Claude Fable 5
+- 原始链接：https://claude.com/blog/working-at-the-frontier-rakuten
+- 作者：未提供
+- 发布时间：2026-07-20
+- X Article：无
+
+---
 # 前沿实战：乐天如何用 Claude Fable 5 隔夜构建 Agent / Working at the frontier: How Rakuten builds agents overnight with Claude Fable 5
 
 - 原文链接：https://claude.com/blog/working-at-the-frontier-rakuten

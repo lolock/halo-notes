@@ -1,12 +1,10 @@
 # Anthropic 刚发了创始人手册。读完我把自己的产品 pivot 了
-
-- 原始链接：<https://x.com/stometaverse/status/2058910157283962997>
+- 原始链接：https://x.com/stometaverse/status/2058910157283962997
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-26
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJK3EuqaIAAxaQQ?format=jpg&name=large)
 
 ## 零、为什么写这篇

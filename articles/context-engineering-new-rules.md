@@ -1,11 +1,10 @@
 # Claude 5 代模型上下文工程的新规则 / The new rules of context engineering for Claude 5 generation models
-
 - 原始链接：https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models
-- 来源：Claude Blog
+- 作者：未提供
 - 发布时间：2026-07-24
+- X Article：无
 
 ---
-
 > **EN:** We removed over 80% of Claude Code's system prompt for more advanced models. How to apply the lessons we learned to your own context engineering in Claude Code and with your own agents.
 >
 > **ZH:** 我们为更先进的模型删除了超过 80% 的 Claude Code 系统提示词。如何将这些经验应用于你自己的 Claude Code 上下文工程和自己的 Agent 中。

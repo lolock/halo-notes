@@ -1,10 +1,10 @@
 # 将 MCP 2026-07-28 带到 Claude / Bringing MCP 2026-07-28 to Claude
-
-- 原文链接：[https://claude.com/blog/bringing-mcp-2026-07-28-to-claude](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude)
-- 来源：Claude Blog (Anthropic)
+- 原始链接：https://claude.com/blog/bringing-mcp-2026-07-28-to-claude
+- 作者：未提供
 - 发布时间：2026-07-28
-- 抓取时间：2026-07-28
+- X Article：无
 
+---
 ## 什么是 MCP 2026-07-28 的新内容 / What's new in MCP
 
 模型上下文协议（Model Context Protocol, MCP）的第五个规范版本——**MCP 2026-07-28** 正式发布。最新规范将 MCP 迁移为无状态核心，同时强化了授权机制并正式确立了官方扩展。Claude 全线产品正在逐步推出对该版本的支持。

@@ -1,12 +1,10 @@
 # 从 Prompt 到 Harness：如何理解 LLM Engineering
-
-- 原始链接：<https://x.com/yan5xu/status/2059117572826746979>
+- 原始链接：https://x.com/yan5xu/status/2059117572826746979
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-26
-- X Article：无
+- X Article：有
 
 ---
-
 虽然 LLM 应用的历史始于 2022 年 ChatGPT 问世，但工程实践已经从 Prompt Engineering，经历 Context Engineering，发展到如今的 Harness Engineering。
 
 想要彻底理解 Harness Engineering，就必须回到前面两者，理解为什么旧的做法不够用了，新的做法解决了什么，又卡在了哪里。

@@ -1,12 +1,10 @@
 # Agentic Design Patterns：一本让我重新理解"Agent 到底是什么"的书
-
-- 原始链接：<https://x.com/yanhua1010/status/2058552177912947044>
+- 原始链接：https://x.com/yanhua1010/status/2058552177912947044
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-24
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJFsJNLbkAAuNuw?format=jpg&name=large)
 
 Antonio Gullí 是 Google 的工程总监。他写了本 453 页的书，把 AI Agent 开发拆成了 21 种设计模式。

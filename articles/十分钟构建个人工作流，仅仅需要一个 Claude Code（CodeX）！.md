@@ -1,12 +1,10 @@
 # 十分钟构建个人工作流，仅仅需要一个 Claude Code（CodeX）！
-
 - 原始链接：https://x.com/ZionFeng3364/status/2062702195750191182
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-05
-- X Article：https://x.com/ZionFeng3364/status/2062702195750191182
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HKAwpA7b0AEHj6k?format=jpg&name=large)
 
 你每天在重复做的事——写文章、审查代码、分析数据、生成报告，其实都可以变成一句话搞定。

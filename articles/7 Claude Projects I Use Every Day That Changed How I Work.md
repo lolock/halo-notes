@@ -1,12 +1,10 @@
 # 我每天使用的 7 个克劳德项目改变了我的工作方式 / 7 Claude Projects I Use Every Day That Changed How I Work
-
 - 原始链接：https://x.com/0xMortyx/status/2062496856811229235
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-05
-- X Article：https://x.com/0xMortyx/status/2062496856811229235
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJvrNqpW0AAOPu7?format=jpg&name=large)
 
 Claude Projects are the most underused feature on [claude.ai](https://claude.ai/). Most people don't use them at all. They open a new chat, type a question, get an answer, close the tab. Every session starts from zero.

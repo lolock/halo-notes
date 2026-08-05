@@ -1,12 +1,10 @@
 # AI 能力试验台工程化：把 Skill、Prompt、Harness 变成可复用流程
-
 - 原始链接：https://chatgpt.com/g/g-p-69ef420d98548191aba106931f0a88a3/c/6a23c58f-8a44-832f-88cf-237c08f13e51
 - 作者：ChatGPT 对话导出
 - 发布时间：2026-06-06
 - X Article：无
 
 ---
-
 有个词语叫工程化。
 我想实现一个过程的工程化，我不知道怎么描述，可能没有那么清楚。比如我在网上发现...
 Original URL: https://chatgpt.com/g/g-p-69ef420d98548191aba106931f0a88a3/c/6a23c58f-8a44-832f-88cf-237c08f13e51
@@ -1124,4 +1122,3 @@ Harness 阶段：测试结果提示 Codex。
 Loop 阶段：状态机提示 Codex。
 
 你的 AI Lab 最终应该变成第四种，但现在应该从第二种开始建。
-

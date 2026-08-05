@@ -1,12 +1,10 @@
 # 构建 Connector 的开发者可用 Observability / Observability for developers building connectors
-
-- 原文链接：<https://claude.com/blog/observability-for-developers-building-connectors>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/observability-for-developers-building-connectors
+- 作者：未提供
 - 发布时间：2026-06-08
-- 抓取时间：2026-06-09 00:00 UTC
+- X Article：无
 
 ---
-
 > EN: Developers can now monitor their connectors' performance across Claude products and submit connectors to the directory in-app.
 
 ZH: 开发者现在可以监控自己的 connectors 在 Claude 各产品中的表现，并且可以直接在应用内把 connectors 提交到目录。

@@ -1,12 +1,10 @@
 # Vibe Coding 零基础指南：rico-md 实战案例教程
-
 - 原始链接：https://x.com/ricouii/status/2062724435329810547
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-05
-- X Article：https://x.com/ricouii/status/2062724435329810547
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HKBEabebMAAPRJg?format=jpg&name=large)
 
 ## 一、从简单的项目开始

@@ -1,13 +1,10 @@
 # Agent identity（代理身份）：Claude Tag 中自主、团队级 AI 的新访问模型 / Agent Identity in Claude Tag: A New Access Model for Autonomous, Team-Wide AI
-
-- 原文链接：<https://claude.com/blog/agent-identity-access-model>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/agent-identity-access-model
 - 作者：Noah Zweben, Claude Code 技术团队成员
 - 发布时间：2026-06-24
-- 抓取时间：2026-06-23
+- X Article：无
 
 ---
-
 > 本文介绍 Claude Tag 的 agent identity（代理身份）访问模型的工作原理，以及在团队工作区中配置它的最佳实践。
 
 ## 引言 / Introduction

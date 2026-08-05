@@ -1,12 +1,10 @@
 # Claude Design 现已支持日常工作中的品牌一致性 / Claude Design now stays on brand for daily work
-
-- 原文链接：<https://claude.com/blog/claude-design-stays-on-brand-for-daily-work>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/claude-design-stays-on-brand-for-daily-work
+- 作者：未提供
 - 发布时间：2026-06-17
-- 抓取时间：2026-06-18
+- X Article：无
 
 ---
-
 > EN: Claude Design now sticks to your design system across projects, works fluidly with Claude Code, lets you edit directly on the canvas, and connects to more tools you already use. It has a new home in the sidebar on the Claude desktop app; you can also find it at claude.ai/design.
 
 Claude Design 现在能够跨项目遵循你的设计系统，与 Claude Code 流畅配合，让你直接在画布上进行编辑，并连接更多你已经使用的工具。它现在位于 Claude 桌面应用侧边栏的新位置；你也可以在 claude.ai/design 找到它。

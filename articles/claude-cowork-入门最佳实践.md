@@ -1,12 +1,10 @@
 # Claude Cowork 入门最佳实践 / Best practices for getting started with Claude Cowork
-
-- 原文链接：<https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork
+- 作者：未提供
 - 发布时间：2026-06-03
-- 抓取时间：2026-06-03
+- X Article：无
 
 ---
-
 **Anthropic 增长营销负责人 Austin Lau 讲解何时使用 Claude Cowork、如何决定委派哪些工作流，以及具体的入门步骤。**
 
 Austin Lau, growth marketing lead at Anthropic, explains when to use Claude Cowork, how to decide what workflows to delegate, and concrete steps to get started.

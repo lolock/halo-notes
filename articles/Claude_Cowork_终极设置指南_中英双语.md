@@ -1,12 +1,10 @@
 # Claude Cowork：终极设置指南（中英双语 / Bilingual）
-
-- 原始链接：<https://x.com/witcheer/status/2027759832523051263>
+- 原始链接：https://x.com/witcheer/status/2027759832523051263
 - 作者：witcheer ☯︎（@witcheer）
-- 发布时间：2026-02-28
-- X Article：<http://x.com/i/article/2027684552156577793>
+- 发布时间：2026-03-02
+- X Article：有
 
 ---
-
 ![](https://pbs.twimg.com/media/HCPJAI6XoAEzgrK.jpg)
 
 ## 第一节：Cowork 究竟是什么 / What Cowork Actually Is

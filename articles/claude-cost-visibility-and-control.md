@@ -1,10 +1,10 @@
 # Claude 成本可见性与管控指南 / A guide to cost visibility and control in Claude
-
-- 原文链接：[https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude](https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude)
-- 来源：Claude Blog (Anthropic)
+- 原始链接：https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude
+- 作者：未提供
 - 发布时间：2026-08-04
-- 抓取时间：2026-08-05
+- X Article：无
 
+---
 了解 IT 管理员如何通过 Claude Enterprise 的成本管控功能优化支出。
 
 > **EN:** Learn how to optimize costs on Claude Enterprise with cost controls for IT admins.

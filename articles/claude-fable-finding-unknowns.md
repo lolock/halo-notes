@@ -1,12 +1,10 @@
 # Claude Fable 5 实战指南：发现你的未知 / A field guide to Claude Fable 5: Finding your unknowns
-
-- 原文链接：[https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns](https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns)
-- 来源：Claude Blog / Anthropic
+- 原始链接：https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns
+- 作者：未提供
 - 发布时间：2026-07-06
-- 抓取时间：2026-07-20
+- X Article：无
 
 ---
-
 在使用 Claude Code 时，我常常想起地图与领土之间的区别。
 
 地图是我提供给 Claude 的东西——我的提示词、技能和上下文——是我对需要完成的工作的表示。领土才是工作真正需要发生的地方：代码库、真实世界、它自己的深处逻辑和几十年积累的人为决策。地图永远不会是领土本身，但一张好地图能去芜存菁，标示出道路。Claude Fable 5 可靠地减少了地图与领土之间的差距。

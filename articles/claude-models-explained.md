@@ -1,11 +1,10 @@
 # Claude 模型详解：为你的使用场景选择最佳模型 / Claude models explained: choosing the best model for your use case
-
 - 原始链接：https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case
-- 来源：Claude Blog
+- 作者：未提供
 - 发布时间：2026-07-24
+- X Article：无
 
 ---
-
 > **EN:** Our advice: start smart. A comprehensive guide to choosing the right Claude model class — Mythos, Fable, Opus, Sonnet, Haiku.
 >
 > **ZH:** 我们的建议：从明智的选择开始。一份选择合适 Claude 模型系列——Mythos、Fable、Opus、Sonnet、Haiku 的全面指南。

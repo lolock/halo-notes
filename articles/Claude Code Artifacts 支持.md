@@ -1,12 +1,10 @@
 # Claude Code 现已支持 Artifacts / Claude Code now supports artifacts
-
-- 原文链接：https://claude.com/blog/artifacts-in-claude-code
-- 来源：Claude Blog
-- 发布时间：June 18, 2026
-- 抓取时间：2026-06-18 18:56
+- 原始链接：https://claude.com/blog/artifacts-in-claude-code
+- 作者：未提供
+- 发布时间：2026-06-18
+- X Article：无
 
 ---
-
 > EN: Starting today, Claude Code can capture work progress as an artifact, which turn Claude Code's work into live, shareable visual pages— including PR walkthroughs, system explainers, dashboards, and release checklists—that update themselves as your session works.
 > ZH: 从今天开始，Claude Code 可以将工作进度捕获为 Artifact，将 Claude Code 的工作成果转化为实时、可分享的可视化页面——包括 PR 走查、系统说明、仪表盘和发布清单——这些页面会随着你的会话进展自动更新。
 

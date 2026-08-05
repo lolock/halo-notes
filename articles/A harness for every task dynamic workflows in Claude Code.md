@@ -1,12 +1,10 @@
 # A harness for every task dynamic workflows in Claude Code
-
-- 原始链接：<https://x.com/trq212/status/2061907337154367865>
+- 原始链接：https://x.com/trq212/status/2061907337154367865
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-03
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJ0q6o6aYAEM_ej?format=jpg&name=large)
 
 Last week, we released [dynamic workflows](https://code.claude.com/docs/en/workflows) in Claude Code. Claude can now write its own [harness](https://code.claude.com/docs/en/glossary#agentic-harness) on the fly, custom-built for the task at hand.

@@ -1,12 +1,10 @@
 # 如何构建在您睡觉时运行的人工智能工作流程 / HOW TO BUILD AI WORKFLOWS THAT RUN WHILE YOU SLEEP
-
 - 原始链接：https://x.com/mikenevermiss/status/2062441790112764214
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-05
-- X Article：https://x.com/mikenevermiss/status/2062441790112764214
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJ9Day8WkAAOmCQ?format=jpg&name=large)
 
 There are 5 workflow types worth your time right now.

@@ -1,13 +1,9 @@
----
-title: "一行命令，让所有Agent共享大脑"
-source: "https://x.com/Zesee/status/2064629321562517662"
-author:
-  - "[[@Zesee]]"
-published: 2026-06-10
-created: 2026-06-10
-description: "上周三下午，我在Claude Code里花了20分钟，把一个老项目的重构方案敲定了：后端统一用FastAPI，文档风格口语化，变量命名用下划线。Claude记得很清楚，配合得很顺。第二天早上切到Codex继续写，它上来就给我生成了camelCase的变量名，没有用下划线。那一刻我..."
-tags:
-  - "clippings"
+# 一行命令，让所有Agent共享大脑
+- 原始链接：https://x.com/Zesee/status/2064629321562517662
+- 作者：未提供
+- 发布时间：2026-06-10
+- X Article：有
+
 ---
 ![图像](https://pbs.twimg.com/media/HKcH3dbXIAA9Te1?format=jpg&name=large)
 

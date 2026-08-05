@@ -1,12 +1,10 @@
 # Claude Cowork 产品指南 / The Claude Cowork product guide
-
-- 原文链接：<https://claude.com/blog/the-claude-cowork-product-guide>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/the-claude-cowork-product-guide
+- 作者：未提供
 - 发布时间：2026-06-05
-- 抓取时间：2026-06-05 21:39 UTC
+- X Article：无
 
 ---
-
 > EN: We share how to get started with Claude Cowork, including the workflows, habits, and plugins that turn your ideas into polished deliverables.
 
 ZH: 这篇文章介绍如何开始使用 Claude Cowork，包括哪些工作流、习惯和插件能把你的想法转化为打磨完成的交付物。

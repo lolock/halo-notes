@@ -1,12 +1,10 @@
 # 如何让OpenClaw指挥三位大哥协作写代码？ 1
-
-- 原始链接：<https://mp.weixin.qq.com/s/ZQ0nc2NpXD76VLoan-QIFQ>
+- 原始链接：https://mp.weixin.qq.com/s/ZQ0nc2NpXD76VLoan-QIFQ
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-03-07
 - X Article：无
 
 ---
-
 ![cover_image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/q6aOmBZKAbNBTI8C8hr4xddwTcur2oNbfQ8ib8rrJzP2LDiaetqO6KIqHfDDbY1Hayhm1mNg0lg6o7gnzEMTgNLHd4xV60CXAE5PiaeQAMNkog/0?wx_fmt=jpeg)
 
 原创 刘小排 [刘小排r](https://mp.weixin.qq.com/s/) *2026年3月2日 18:54*

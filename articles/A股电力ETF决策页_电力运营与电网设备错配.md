@@ -1,5 +1,10 @@
 # A 股电力 ETF 决策页：电力运营与电网设备错配
+- 原始链接：A股行业ETF研究Agent HTML决策页
+- 作者：未提供
+- 发布时间：2026-05-20
+- X Article：无
 
+---
 这篇是 A 股行业 ETF 研究 Agent 的静态 HTML 决策页入口。
 
 直接打开：[https://lolock.github.io/halo-notes/visuals/a-share-etf-power/](https://lolock.github.io/halo-notes/visuals/a-share-etf-power/)

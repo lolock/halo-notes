@@ -69,7 +69,9 @@ def check_json_items(items: List[Dict]) -> Tuple[List[str], List[str]]:
 
         for key in REQUIRED_JSON_KEYS:
             if not str(item[key]).strip():
-                warnings.append(f"{prefix}: empty field '{key}'")
+                # cover can be intentionally empty for text-only/无封面文章
+                if key != "cover":
+                    warnings.append(f"{prefix}: empty field '{key}'")
 
         if not is_valid_date(str(item.get("date", ""))):
             errors.append(f"{prefix}: invalid date '{item.get('date')}', expected YYYY-MM-DD")

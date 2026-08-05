@@ -1,12 +1,10 @@
 # 前沿之声：Hebbia 如何在金融尽调中构建不放过任何细节的 AI / Working at the frontier: How Hebbia builds AI for financial diligence that can't miss a detail
-
-- 原文链接：https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail
+- 作者：未提供
 - 发布时间：2026-07-13
-- 抓取时间：2026-07-19
+- X Article：无
 
 ---
-
 > EN: Hebbia is an AI platform built for the rigor of institutional finance, serving more than a third of the top 50 asset managers along with tier-1 investment banks and law firms. Divya Mehta, the company's founding product manager, spends roughly half her time with its largest investment banking, private equity, and credit customers.
 >
 > ZH: Hebbia 是一个为机构金融的严谨性而构建的 AI 平台，服务于前 50 大资产管理公司中超过三分之一，以及顶级投资银行和律师事务所。公司的创始产品经理 Divya Mehta 大约有一半时间都在与最大的投资银行、私募股权和信贷客户打交道。

@@ -1,12 +1,10 @@
 # Pi Coding Agent 最全面指南（完美支持goal）
-
-- 原始链接：<https://x.com/wquguru/status/2056235143623495975>
+- 原始链接：https://x.com/wquguru/status/2056235143623495975
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-03
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HIiJFOWboAAQVbZ?format=jpg&name=large)
 
 如果你已经习惯 Claude Code，Pi 第一眼不会显得更省心。Claude Code 的优势是把 subagents、Plan Mode、MCP、权限、上下文压缩、skills、commands 这些工程特性都焊进产品里，开箱即用。

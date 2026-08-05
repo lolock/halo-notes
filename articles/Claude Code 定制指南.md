@@ -1,12 +1,10 @@
 # 驾驭 Claude Code：CLAUDE.md、Skills、Hooks、Rules、Subagents 等七种定制方法 / Steering Claude Code: CLAUDE.md files, skills, hooks, rules, subagents and more
-
-- 原文链接：https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more
-- 来源：Claude Blog
-- 发布时间：June 18, 2026
-- 抓取时间：2026-06-18 18:56
+- 原始链接：https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more
+- 作者：未提供
+- 发布时间：2026-06-18
+- X Article：无
 
 ---
-
 > EN: Claude is built to work the way you work, and in Claude Code you can customize it.
 > ZH: Claude 的设计理念是适应你的工作方式，而在 Claude Code 中，你可以对其进行定制。
 

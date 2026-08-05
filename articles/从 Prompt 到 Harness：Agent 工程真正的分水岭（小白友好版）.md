@@ -1,12 +1,10 @@
 # 从 Prompt 到 Harness：Agent 工程真正的分水岭（小白友好版）
-
-- 原始链接：<https://x.com/knoYee_/status/2059252983523934371>
+- 原始链接：https://x.com/knoYee_/status/2059252983523934371
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-26
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJPvoV5bYAAm3dc?format=jpg&name=large)
 
 我们经常花很长时间调 Prompt，只为让 Agent 在项目中的表现更稳定。

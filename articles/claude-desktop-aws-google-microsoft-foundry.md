@@ -1,12 +1,10 @@
 # Claude Desktop 在 AWS、Google Cloud 和 Microsoft Foundry 上全面可用 / The Full Claude Desktop Experience on AWS, Google Cloud, and Microsoft Foundry
-
-- 原文链接：https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry
-- 来源：Claude Blog
-- 发布时间：June 22, 2026
-- 抓取时间：2026-06-23
+- 原始链接：https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry
+- 作者：未提供
+- 发布时间：2026-06-22
+- X Article：无
 
 ---
-
 > EN: Organizations that use Claude Desktop through AWS, Google Cloud, and Microsoft Foundry now get the full Desktop experience — chat, Claude Cowork, and Claude Code, all in one app.
 
 ZH: 通过 AWS、Google Cloud 和 Microsoft Foundry 使用 Claude Desktop 的组织，现在可以获得完整的桌面体验——Chat、Claude Cowork 和 Claude Code，全部集成在一个应用中。

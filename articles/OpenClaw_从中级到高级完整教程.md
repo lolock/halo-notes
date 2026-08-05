@@ -1,12 +1,10 @@
 # OpenClaw 从中级到高级完整教程
-
-- 原始链接：<https://x.com/onehopea9/status/2026905651088339408>
+- 原始链接：https://x.com/onehopea9/status/2026905651088339408
 - 作者：OneHopeA9（@onehopeA9）
-- 发布时间：2026-02-26T06:22:19.000Z
-- X Article：<http://x.com/i/article/2026829268270067712>
+- 发布时间：2026-02-26
+- X Article：有
 
 ---
-
 ![](https://pbs.twimg.com/media/HCED2lXaMAMuax7.jpg)
 
 最后更新：2026 年 2 月

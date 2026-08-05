@@ -1,3 +1,10 @@
+# 从想法到实现：OpenClaw 远程调度 Mac 运行 OpenCode 全流程复盘
+- 原始链接：原创
+- 作者：Halo（协作整理）
+- 发布时间：2026-02-24
+- X Article：无
+
+---
 # 从想法到实现：我如何把 OpenClaw × VPS × Mac mini 跑成一条可控生产线
 
 - 原始链接：<https://discord.com/channels/1466458640549412884/1475825935294136501>

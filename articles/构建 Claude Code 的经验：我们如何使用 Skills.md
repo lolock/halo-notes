@@ -1,12 +1,10 @@
 # 构建 Claude Code 的经验：我们如何使用 Skills
-
 - 原始链接：https://x.com/riba2534/status/2062496438630965457
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-05
-- X Article：https://x.com/riba2534/status/2062496438630965457
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJ91jQ8asAAPGlB?format=jpg&name=large)
 
 > 原文链接：[Lessons from building Claude Code: How we use skills](https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills)

@@ -1,12 +1,10 @@
 # 集中管理 MCP 连接器的企业级授权 / Centrally manage authorization for MCP connectors
-
-- 原文链接：https://claude.com/blog/enterprise-managed-auth
-- 来源：Claude Blog
-- 发布时间：June 18, 2026
-- 抓取时间：2026-06-18 18:56
+- 原始链接：https://claude.com/blog/enterprise-managed-auth
+- 作者：未提供
+- 发布时间：2026-06-18
+- X Article：无
 
 ---
-
 > EN: Admins can now provision MCP connectors for their whole organization through their identity provider, starting with Okta. Users get connector access automatically on first login, with authorization configured centrally by their organization.
 > ZH: 管理员现在可以通过身份提供商（从 Okta 开始）为整个组织配置 MCP 连接器。用户首次登录即可自动获得连接器访问权限，授权由组织集中配置。
 

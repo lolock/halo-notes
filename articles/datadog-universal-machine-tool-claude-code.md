@@ -1,3 +1,10 @@
+# Datadog 如何为 Claude Code 构建“万能机械工具” / How Datadog built a “universal machine tool” for Claude Code
+- 原始链接：https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code
+- 作者：Datadog
+- 发布时间：2026-07-22
+- X Article：无
+
+---
 # Datadog 如何为 Claude Code 构建"万能机械工具" / How Datadog built a "universal machine tool" for Claude Code
 
 - 原文链接：<https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code>

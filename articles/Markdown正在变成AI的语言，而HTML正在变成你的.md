@@ -1,12 +1,10 @@
 # Markdown正在变成AI的语言，而HTML正在变成你的
-
-- 原始链接：<https://x.com/Pluvio9yte/status/2058008355353108654>
+- 原始链接：https://x.com/Pluvio9yte/status/2058008355353108654
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-24
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HI-DnOGaIAAmyrV?format=jpg&name=large)
 
 Markdown正从“人类友好的写作语法”演变为“AI最优的序列化协议”，而HTML则重新成为人类消费复杂信息的默认UI层。

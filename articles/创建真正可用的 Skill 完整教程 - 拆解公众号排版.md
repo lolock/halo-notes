@@ -1,12 +1,10 @@
 # 创建真正可用的 Skill 完整教程 - 拆解公众号排版
-
-- 原始链接：<https://x.com/MinLiBuilds/status/2055980925452968351>
+- 原始链接：https://x.com/MinLiBuilds/status/2055980925452968351
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-18
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HIfdulbbsAA3t2o?format=jpg&name=large)
 
 我每次要把 MD 草稿排版到公众号，手动调样式 30 ～120分钟一篇。这种中频场景，非常适合做一个 Skill 。

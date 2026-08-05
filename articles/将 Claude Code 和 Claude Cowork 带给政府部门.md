@@ -1,12 +1,10 @@
 # 将 Claude Code 和 Claude Cowork 带给政府部门 / Bringing Claude Code and Claude Cowork to government
-
-- 原文链接：https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government
+- 作者：未提供
 - 发布时间：2026-07-07
-- 抓取时间：2026-07-19
+- X Article：无
 
 ---
-
 > EN: With Claude Code, public sector teams can build and modernize the software systems that underpin public services. Claude Cowork works directly with files on the desktop, allowing agency staff to delegate memo creation, RFP reviews, casework, and decks to Claude.
 >
 > ZH: 借助 Claude Code，公共部门团队可以构建和现代化支撑公共服务的软件系统。Claude Cowork 直接在桌面上处理文件，使机构工作人员可以将备忘录创建、RFP（需求建议书）评审、个案工作和演示文稿交给 Claude 完成。

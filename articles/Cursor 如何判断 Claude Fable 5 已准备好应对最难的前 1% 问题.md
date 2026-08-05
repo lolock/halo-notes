@@ -1,12 +1,10 @@
 # Cursor 如何判断 Claude Fable 5 已准备好应对最难的前 1% 问题 / Working at the frontier: How Cursor knew Claude Fable 5 was ready for the hardest 1% of problems
-
-- 原始链接：<https://claude.com/blog/working-at-the-frontier-cursor>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/working-at-the-frontier-cursor
+- 作者：未提供
 - 发布时间：2026-07-17
-- 抓取时间：2026-07-19
+- X Article：无
 
 ---
-
 > **EN:** Nate Schmidt's job at Cursor is to evaluate frontier models against their ability to tackle long-running, real-world engineering problems. Here's why–and how–Claude Fable 5 changed the calculus on what coding agents are capable of.
 >
 > **ZH:** Nate Schmidt 在 Cursor 的职责是评估前沿模型处理长期、真实工程问题的能力。以下是他为什么以及如何发现 Claude Fable 5 改变了编程智能体的能力计算方式。

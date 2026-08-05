@@ -1,12 +1,10 @@
 # 刚刚，Hermes 上线 /learn 模式：从任何资料提炼 Skill
-
 - 原始链接：https://x.com/DracoVibeCoding/status/2069671865518633088
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-24
-- X Article：https://x.com/DracoVibeCoding/status/2069671865518633088
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HLi9JtQW0AAGQUK?format=jpg&name=large)
 
 刚刚，Hermes上线了 /learn 能力，你可以喂给他任何资料（Github仓库/代码、PDF、API文档、配置文件、等等），它可以自行学习、提炼、封装出合适的Skill来~

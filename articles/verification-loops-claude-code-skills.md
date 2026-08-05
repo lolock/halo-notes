@@ -1,11 +1,10 @@
 # 在 Claude Code 中使用 Skills 构建验证循环 / Building verification loops in Claude Code with skills
-
 - 原始链接：https://claude.com/blog/building-verification-loops-in-claude-code-with-skills
-- 来源：Claude Blog
+- 作者：未提供
 - 发布时间：2026-07-22
+- X Article：无
 
 ---
-
 > **EN:** How to turn your manual checks into skills, so Claude closes its own feedback loop.
 >
 > **ZH:** 把你的手动检查变成 Skills，让 Claude 自己闭环反馈。

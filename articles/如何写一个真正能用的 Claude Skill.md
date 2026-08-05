@@ -1,12 +1,10 @@
 # 如何写一个真正能用的 Claude Skill
-
-- 原始链接：<https://x.com/max_ai_max/status/2060221653259547069>
+- 原始链接：https://x.com/max_ai_max/status/2060221653259547069
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-30
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJdgqhVaoAAPmAQ?format=jpg&name=large)
 
 很多人第一次看到 SKILL.md 都会觉得"不就是把提示词写成文件吗"。写完一两个之后才发现：写得潦草的 skill 要么根本不被触发，要么触发了反而帮倒忙——把上下文撑爆、把 Claude 带偏、还白白烧 token。

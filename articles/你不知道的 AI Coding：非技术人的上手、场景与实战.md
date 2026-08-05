@@ -1,12 +1,10 @@
 # 你不知道的 AI Coding：非技术人的上手、场景与实战
-
-- 原始链接：<https://x.com/HiTw93/status/2048230976447557787>
+- 原始链接：https://x.com/HiTw93/status/2048230976447557787
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-19
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HGzHLDWbgAAq2n_?format=jpg&name=large)
 
 ## 太长可不读

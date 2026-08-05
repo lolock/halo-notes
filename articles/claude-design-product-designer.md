@@ -1,11 +1,10 @@
 # 设计 Claude Design 的产品设计师如何用 Claude 探索创意 / How the product designer who built Claude Design uses it to explore ideas before building them
-
 - 原始链接：https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them
-- 来源：Claude Blog
+- 作者：未提供
 - 发布时间：2026-07-24
+- X Article：无
 
 ---
-
 > **EN:** Nate Parrott, a product designer at Anthropic, shares how he uses Claude Design (in beta) to explore, iterate on, and share visual ideas early, from product prototypes to slide decks and animations.
 >
 > **ZH:** Anthropic 产品设计师 Nate Parrott 分享他如何使用免费的 Claude Design（测试版）在早期探索、迭代和分享视觉创意——从产品原型到幻灯片和动画。

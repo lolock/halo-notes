@@ -1,12 +1,10 @@
 # 代理式交互界面的演进：基于 Claude Managed Agents 构建 / The evolution of agentic surfaces: building with Claude Managed Agents
-
-- 原文链接：https://claude.com/blog/building-with-claude-managed-agents
-- 来源：Claude Blog
-- 发布时间：Jun 10, 2026
-- 抓取时间：2026-06-10T23:00:00Z
+- 原始链接：https://claude.com/blog/building-with-claude-managed-agents
+- 作者：未提供
+- 发布时间：2026-06-10
+- X Article：无
 
 ---
-
 Getting an agent into production takes more than a good prompt. The agent needs somewhere to run the code it writes, credentials to reach your data, observable sessions, and infrastructure that scales with usage. On the Applied AI team, we work at the intersection of product, research, and the customers building on Claude—and we see the same pattern repeatedly: infrastructure is what separates a prototype from a production agent. All too often, teams burn development cycles on security, state management, permissioning, and harness tuning.
 
 将 Agent 投入生产环境，远不止写好 prompt 那么简单。Agent 需要一个执行代码的运行环境、访问数据的凭证、可观测的会话，以及能够随用量弹性伸缩的基础设施。在 Applied AI 团队，我们身处产品、研究和 Claude 客户三者的交汇点，反复目睹同一个模式：基础设施才是原型与生产级 Agent 之间的分水岭。团队往往把大量开发周期消耗在安全、状态管理、权限和 harness 调优上。

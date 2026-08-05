@@ -1,12 +1,10 @@
 # Hermes Agent 入门指南：如何用辅助模型提升 Agent 效率「结尾附配置」
-
 - 原始链接：https://x.com/Lonely__MH/status/2062368928148701584
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-05
-- X Article：https://x.com/Lonely__MH/status/2062368928148701584
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJf5VMFbgAAPF5N?format=jpg&name=large)
 
 这篇是 Hermes Agent 入门系列的续篇，主要聊聊 Auxiliary Models（辅助模型） 的配置与使用。

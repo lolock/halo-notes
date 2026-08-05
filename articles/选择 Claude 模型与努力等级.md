@@ -1,12 +1,10 @@
 # 选择 Claude 模型与努力等级 / Choosing a Claude model and effort level in Claude Code
-
-- 原文链接：[https://claude.com/blog/claude-model-and-effort-level-in-claude-code](https://claude.com/blog/claude-model-and-effort-level-in-claude-code)
-- 来源：Claude Blog / Anthropic
+- 原始链接：https://claude.com/blog/claude-model-and-effort-level-in-claude-code
+- 作者：未提供
 - 发布时间：2026-07-07
-- 抓取时间：2026-07-20
+- X Article：无
 
 ---
-
 Claude Code 提供了两个看起来都能"让答案更好"的设置：模型（model）和努力等级（effort level）。你可能以为更大的模型（如 Claude Fable 5）比 Claude Sonnet 输出更智能的结果，而更高的努力等级意味着 Claude 在回答前想得更久。
 
 > EN: Claude Code gives you two settings that appear to "make the answer better": the model setting and the effort level. You may expect that larger models like Claude Fable 5 provide a smarter output than Claude Sonnet, and a higher effort level means Claude thinks longer before it answers.

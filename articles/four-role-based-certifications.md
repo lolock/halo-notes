@@ -1,8 +1,10 @@
 # 四种基于角色的 Claude 认证 / Four role-based certifications for the people who put Claude to work for customers
-
-- 原文链接：https://claude.com/blog/four-role-based-claude-certifications
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/four-role-based-claude-certifications
+- 作者：未提供
 - 发布时间：2026-07-24
+- X Article：无
+
+---
 - 分类：Product announcements
 - 抓取时间：2026-07-24
 

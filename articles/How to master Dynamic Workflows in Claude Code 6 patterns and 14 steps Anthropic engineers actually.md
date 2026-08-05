@@ -1,12 +1,10 @@
 # How to master Dynamic Workflows in Claude Code 6 patterns and 14 steps Anthropic engineers actually
-
-- 原始链接：<https://x.com/0xCodez/status/2062127385923776831>
+- 原始链接：https://x.com/0xCodez/status/2062127385923776831
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-03
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJ4l2SjXsAALyp3?format=jpg&name=large)
 
 Most Claude Code users still write their workflows by hand. They chain prompts, copy outputs, paste them into the next prompt, fix what went wrong, repeat.

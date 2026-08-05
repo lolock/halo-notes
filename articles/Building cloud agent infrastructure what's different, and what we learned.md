@@ -1,12 +1,10 @@
 # 构建云代理基础设施有何不同以及我们学到了什么 / Building cloud agent infrastructure what's different, and what we learned
-
 - 原始链接：https://x.com/intuitiveml/status/2062699747224568212
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-06-05
-- X Article：https://x.com/intuitiveml/status/2062699747224568212
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HKAs9ukakAAOoou?format=jpg&name=large)
 
 ![图像](https://pbs.twimg.com/media/HKAtFFLbkAAtjb6?format=jpg&name=large)

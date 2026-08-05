@@ -1,12 +1,10 @@
 # 在 Claude Cowork 中使用 Claude Fable 5 / Working with Claude Fable 5 in Claude Cowork
-
-- 原始链接：<https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork>
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork
+- 作者：未提供
 - 发布时间：2026-07-16
-- 抓取时间：2026-07-19
+- X Article：无
 
 ---
-
 **EN:** Claude Fable 5 is Anthropic's most capable generally available model, built for long-running, complex and asynchronous work. Claude Fable 5 is particularly effective carrying out multi-step workflows on its own for extended periods of time, testing and evaluating its results as it goes.
 
 **ZH:** Claude Fable 5 是 Anthropic 最强大的普遍可用模型，专为长时间、复杂和异步工作而构建。Claude Fable 5 特别擅长独立执行多步骤工作流，持续较长时间，同时不断测试和评估自己的结果。

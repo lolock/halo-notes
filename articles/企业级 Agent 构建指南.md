@@ -1,12 +1,10 @@
 # 企业级 Agent 构建指南
-
-- 原始链接：<https://x.com/ma_zhenyuan/status/2056633189687586958>
+- 原始链接：https://x.com/ma_zhenyuan/status/2056633189687586958
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-19
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HIqgTikbYAAvxvs?format=jpg&name=large)
 
 上个月给一个客户定制了一套 Deep Research 系统，本质就是多 Agent，客户的报价 **12W**。

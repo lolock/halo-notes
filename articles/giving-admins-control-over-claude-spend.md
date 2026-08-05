@@ -1,12 +1,10 @@
 # 为管理员提供更丰富的 Claude 消费监控与控制 / Giving admins more visibility and control over Claude spend
-
-- 原文链接：[https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend](https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend)
-- 来源：Claude Blog / Anthropic
+- 原始链接：https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend
+- 作者：未提供
 - 发布时间：2026-07-02
-- 抓取时间：2026-07-20
+- X Article：无
 
 ---
-
 我们正在为 Claude Enterprise 引入更丰富的管理员分析、模型级别的授权控制以及消费预算提醒。随着 Claude 在整个组织中承担日益复杂和困难的 agent 工作，用量和成本模式与常规聊天工具有着显著不同。这些控制赋予管理员所需的可见性，以了解 Claude 的使用情况并管理总支出。
 
 > EN: We're introducing richer admin analytics, model-level entitlements, and spend alerts for Claude Enterprise. As Claude takes on increasingly difficult and complex agentic work across the organization, usage and cost patterns look different from a standard chat tool. These controls give admins the visibility they need to understand how Claude is being used and manage total spend.

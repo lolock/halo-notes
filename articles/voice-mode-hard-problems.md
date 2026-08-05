@@ -1,8 +1,10 @@
 # 用语音模式攻克难题 / Think through hard problems in voice mode
-
-- 原文链接：https://claude.com/blog/think-through-hard-problems-in-voice-mode
-- 来源：Claude Blog
+- 原始链接：https://claude.com/blog/think-through-hard-problems-in-voice-mode
+- 作者：未提供
 - 发布时间：2026-07-23
+- X Article：无
+
+---
 - 分类：Product announcements
 - 抓取时间：2026-07-23
 

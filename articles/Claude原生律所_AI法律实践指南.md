@@ -1,12 +1,10 @@
 # Claude 原生律所：2026 年 AI 法律实践指南
-
-- 原始链接：<https://x.com/zackbshapiro/status/2027389987444957625>
+- 原始链接：https://x.com/zackbshapiro/status/2027389987444957625
 - 作者：Zack Shapiro（@zackbshapiro）
-- 发布时间：2026-02-27
-- X Article：<http://x.com/i/article/2027387535412830208>
+- 发布时间：2026-03-01
+- X Article：有
 
 ---
-
 ![](https://pbs.twimg.com/media/HCK8-0cWkAErWGw.jpg)
 
 ## 我怎么在 2026 年真正用 AI 执业

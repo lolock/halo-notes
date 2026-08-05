@@ -1,12 +1,10 @@
 # GBRAIN 深度解读：YC 掌门人打造的 AI 知识引擎
-
-- 原始链接：<https://x.com/PandaTalk8/status/2058755496522514853>
+- 原始链接：https://x.com/PandaTalk8/status/2058755496522514853
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-26
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HJIrLeJaUAAlGGv?format=jpg&name=large)
 
 ## 这个项目是什么

@@ -1,11 +1,10 @@
 # Outtake 如何基于 Claude 构建网络调查 Agent / How Outtake built a cyber investigator on Claude
-
 - 原始链接：https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude
-- 来源：Claude Blog
+- 作者：未提供
 - 发布时间：2026-07-22
+- X Article：无
 
 ---
-
 > **EN:** How Outtake ensures multi-hour agent sessions stay on track to uncover attack network operations.
 >
 > **ZH:** Outtake 如何确保长达数小时的 Agent 会话保持在正轨上，以揭露攻击网络运作。

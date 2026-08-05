@@ -1,12 +1,10 @@
 # 人们如何使用 Claude Cowork / How people are using Claude Cowork
-
-- 原文链接：[https://claude.com/blog/how-people-are-using-claude-cowork](https://claude.com/blog/how-people-are-using-claude-cowork)
-- 来源：Claude Blog / Anthropic
+- 原始链接：https://claude.com/blog/how-people-are-using-claude-cowork
+- 作者：未提供
 - 发布时间：2026-07-07
-- 抓取时间：2026-07-20
+- X Article：无
 
 ---
-
 2025 年 Claude Code 发布时，我们惊讶地发现许多非技术用户开始尝试使用它。从未打开过终端的人竟然用它来创建整理文件夹、去重文件、编写电子表格公式的 agent。
 
 > EN: When we released Claude Code in 2025, we were surprised at how many non-technical users started playing around with it. People who had never opened the terminal before were using it to create agents that organized folders, deduplicated files, and wrote spreadsheet formulas.

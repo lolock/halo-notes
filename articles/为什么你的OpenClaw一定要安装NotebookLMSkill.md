@@ -1,12 +1,10 @@
 # 为什么你的 OpenClaw 一定要安装 NotebookLM Skill
-
-- 原始链接：<https://x.com/onenewbite/status/2024819940327379286>
+- 原始链接：https://x.com/onenewbite/status/2024819940327379286
 - 作者：一口新饭（@onenewbite）
-- 发布时间：2026-02-20T12:14:27.000Z
-- X Article：<http://x.com/i/article/2024814801235607552>
+- 发布时间：2026-02-23
+- X Article：有
 
 ---
-
 给 NotebookLM 超能力，然后让 NotebookLM 反过来给你的 OpenClaw 超能力
 
 懒人版：你可以直接把这整篇文章扔给你的 OpenClaw，让它帮你安装 NotebookLM skill、完成验证、并告诉你它能帮你做什么。你唯一需要做的事情就是在它打开浏览器的时候，登录你的 Google 账号完成授权。
@@ -410,4 +408,3 @@ NotebookLM 作为 OpenClaw 的第二大脑
 给 NotebookLM 超能力，然后让 NotebookLM 反过来给你的 OpenClaw 超能力。
 
 这个 skill，就是连接两边的那座桥。
-

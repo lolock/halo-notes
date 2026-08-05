@@ -1,12 +1,10 @@
 # 我用 Cloudflare 免费搭了一套 AI 内容流水线，真的能跑起来
-
-- 原始链接：<https://x.com/xiangxiang103/status/2050199597113360755>
+- 原始链接：https://x.com/xiangxiang103/status/2050199597113360755
 - 作者：未标注（来自收藏导出）
 - 发布时间：2026-05-01
-- X Article：无
+- X Article：有
 
 ---
-
 ![图像](https://pbs.twimg.com/media/HHOT0grbkAA-dHu?format=jpg&name=large)
 
 每天刷那么多信息，有用的记不住、存不下、找不到。
