@@ -1,5 +1,23 @@
 [
   {
+    "title": "Claude 成本可见性与管控指南 / A guide to cost visibility and control in Claude",
+    "file": "articles/claude-cost-visibility-and-control.md",
+    "date": "2026-08-04",
+    "source": "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Enterprise",
+      "成本管控",
+      "Cost Control",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "面向 IT 管理员的 Claude Enterprise 成本管控指南：访问控制、模型控制、硬性支出上限，以及 API 侧的提示词缓存、批处理、effort 参数与 advisor 策略。",
+    "cover": ""
+  },
+  {
     "title": "将 MCP 2026-07-28 带到 Claude / Bringing MCP 2026-07-28 to Claude",
     "file": "articles/bringing-mcp-2026-07-28-to-claude.md",
     "date": "2026-07-28",
