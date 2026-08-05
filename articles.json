@@ -1,5 +1,24 @@
 [
   {
+    "title": "推理钩子：为 Claude Enterprise 提供内联数据丢失防护 / Inference hooks: inline data loss prevention for Claude Enterprise",
+    "file": "articles/claude-enterprise-inference-hooks.md",
+    "date": "2026-08-05",
+    "source": "https://claude.com/blog/claude-enterprise-inference-hooks",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Enterprise",
+      "DLP",
+      "Inference Hooks",
+      "数据防泄漏",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Enterprise 推出推理钩子（Inference hooks）测试版：在提示词与工具调用结果到达模型之前，由企业自己的 DLP 服务器实时检查并执行放行/拦截策略，统一覆盖 chat、Claude Code、Claude Cowork 等全部企业级入口。",
+    "cover": ""
+  },
+  {
     "title": "Claude 成本可见性与管控指南 / A guide to cost visibility and control in Claude",
     "file": "articles/claude-cost-visibility-and-control.md",
     "date": "2026-08-04",
