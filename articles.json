@@ -1,5 +1,24 @@
 [
   {
+    "title": "Millennium 与 Anthropic 正在用 Claude 打造数字风险分析师 / Millennium and Anthropic are building a digital risk analyst with Claude",
+    "file": "articles/millennium-anthropic-digital-risk-analyst.md",
+    "date": "2026-08-06",
+    "source": "https://claude.com/blog/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Millennium",
+      "Claude Code",
+      "金融服务",
+      "风险管理",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 与全球最大的另类投资管理公司之一 Millennium 合作，共同开发「数字风险分析师」：一个在人类风险经理监督下工作的 AI 队友，由 Millennium 自有数据与 Claude 前沿智能驱动，帮助发现新的风险洞察、解释每日风险变化，并对跨资产类别的风险敞口形成判断。",
+    "cover": ""
+  },
+  {
     "title": "推理钩子：为 Claude Enterprise 提供内联数据丢失防护 / Inference hooks: inline data loss prevention for Claude Enterprise",
     "file": "articles/claude-enterprise-inference-hooks.md",
     "date": "2026-08-05",
