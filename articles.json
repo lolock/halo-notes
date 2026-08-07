@@ -1,5 +1,24 @@
 [
   {
+    "title": "自托管环境：在自有基础设施上运行 Claude Code 会话 / Run Claude Code sessions on your own compute",
+    "file": "articles/claude-code-self-hosted-environments.md",
+    "date": "2026-08-06",
+    "source": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "自托管",
+      "Self-hosted",
+      "企业部署",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Code 自托管环境进入公开测试版：会话在你的自有基础设施上运行，可访问内网服务、预装工具链并满足合规要求，支持固定与按需两种 runner 模式，面向 Claude Team 与 Enterprise 计划开放。",
+    "cover": ""
+  },
+  {
     "title": "Millennium 与 Anthropic 正在用 Claude 打造数字风险分析师 / Millennium and Anthropic are building a digital risk analyst with Claude",
     "file": "articles/millennium-anthropic-digital-risk-analyst.md",
     "date": "2026-08-06",
