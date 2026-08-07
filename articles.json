@@ -1,5 +1,43 @@
 [
   {
+    "title": "自动模式现已成为 Claude Code Pro、Max 与 Team 计划的默认设置 / Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+    "file": "articles/claude-code-auto-mode-default.md",
+    "date": "2026-08-07",
+    "source": "https://claude.com/blog/auto-mode-default-in-claude-code",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "自动模式",
+      "Auto mode",
+      "AI 安全",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Code 将自动模式设为 Pro、Max 与 Team 计划的默认设置：分类器替代逐条审批，内部与第三方评估显示其在拦截危险命令、防止提示注入方面均优于人工审查，并附 1,053 人对照实验与生产客户数据。",
+    "cover": ""
+  },
+  {
+    "title": "在生产环境中运行自动模式 / Running auto mode in production",
+    "file": "articles/claude-code-auto-mode-in-production.md",
+    "date": "2026-08-07",
+    "source": "https://claude.com/blog/auto-mode-in-production",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "自动模式",
+      "Auto mode",
+      "企业实践",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Nuro、Gusto 与 Garner Health 三家团队分享将 Claude Code 自动模式作为生产环境日常默认的实践：从驱动隔夜研究 agent、消除权限疲劳到构建标准化软件开发生命周期，在速度与安全之间取得平衡。",
+    "cover": ""
+  },
+  {
     "title": "自托管环境：在自有基础设施上运行 Claude Code 会话 / Run Claude Code sessions on your own compute",
     "file": "articles/claude-code-self-hosted-environments.md",
     "date": "2026-08-06",
