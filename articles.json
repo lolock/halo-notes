@@ -1,5 +1,23 @@
 [
   {
+    "title": "Anthropic 业务拓展团队如何用 Claude 规模化运营入站与出站 / How Anthropic's business development team uses Claude to run inbound and outbound at scale",
+    "file": "articles/anthropic-bd-team-claude-inbound-outbound.md",
+    "date": "2026-08-07",
+    "source": "https://claude.com/blog/how-anthropics-business-development-team-uses-claude-to-run-inbound-and-outbound-at-scale",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Cowork",
+      "业务拓展",
+      "BD",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 业务拓展团队用 Claude Cowork 规模化运营入站与出站：收件箱技能每小时自动起草回复、夜间定时任务覆盖上百个客户的开拓与调研、探索电话记分卡与用量分析，并分享团队上手 Claude Cowork 的六条建议。",
+    "cover": ""
+  },
+  {
     "title": "Herdr 软件全面调研与使用教程",
     "file": "articles/herdr-software-guide.md",
     "date": "2026-08-10",
