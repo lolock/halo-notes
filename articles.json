@@ -1,5 +1,24 @@
 [
   {
+    "title": "Herdr 软件全面调研与使用教程",
+    "file": "articles/herdr-software-guide.md",
+    "date": "2026-08-10",
+    "source": "https://github.com/joeseesun/herdr-guide/blob/main/Herdr_%E8%BD%AF%E4%BB%B6%E5%85%A8%E9%9D%A2%E8%B0%83%E7%A0%94%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md",
+    "tags": [
+      "Herdr",
+      "AI 编程代理",
+      "终端复用器",
+      "Claude Code",
+      "Codex",
+      "工具评测",
+      "教程"
+    ],
+    "category": "工具与配置",
+    "quality": "A",
+    "summary": "Herdr 全面调研与 15 分钟上手教程：作为 AI 编程代理终端复用器，它把多个 Claude Code、Codex 等命令行代理变成可扫描的注意力队列，支持终端关闭后进程继续运行、SSH 远程与手机查看、代理互调与 Git Worktree 隔离；附安装、快捷键、推荐布局、隐私安全与最终评分。",
+    "cover": ""
+  },
+  {
     "title": "自动模式现已成为 Claude Code Pro、Max 与 Team 计划的默认设置 / Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
     "file": "articles/claude-code-auto-mode-default.md",
     "date": "2026-08-07",
