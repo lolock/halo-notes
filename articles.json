@@ -1,5 +1,24 @@
 [
   {
+    "title": "Compliance API 覆盖范围扩展至 Claude Cowork 与 Claude Code / Compliance API coverage extends to Claude Cowork and Claude Code",
+    "file": "articles/compliance-api-cowork-claude-code.md",
+    "date": "2026-08-11",
+    "source": "https://claude.com/blog/compliance-api-cowork-and-claude-code",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Compliance API",
+      "Claude Cowork",
+      "Claude Code",
+      "企业合规",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude 的 Compliance API 现以 Beta 形式将覆盖范围扩展至 Claude Cowork（桌面端、Web、移动端）与 Claude Code（CLI 和桌面端），合规与安全团队可通过同一接口拉取整合的会话内容与元数据，用于审计和 eDiscovery。",
+    "cover": ""
+  },
+  {
     "title": "Anthropic 业务拓展团队如何用 Claude 规模化运营入站与出站 / How Anthropic's business development team uses Claude to run inbound and outbound at scale",
     "file": "articles/anthropic-bd-team-claude-inbound-outbound.md",
     "date": "2026-08-07",
