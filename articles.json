@@ -1,5 +1,42 @@
 [
   {
+    "title": "Slack 中的自助式数据分析：Anthropic 如何部署 Claude Tag 回答即席问题 / Self-service data analytics in Slack: how Anthropic deploys Claude Tag for ad-hoc questions",
+    "file": "articles/claude-tag-slack-self-service-data-analytics.md",
+    "date": "2026-08-13",
+    "source": "https://claude.com/blog/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Tag",
+      "Slack",
+      "数据分析",
+      "语义层",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 数据团队分享过去一年在 Slack 中部署 Claude Tag 数据分析智能体的五条核心经验：像刷新数据模型一样刷新技能、连接业务上下文、审慎为服务账号授权、为每次回答埋点，以及用讨论串承载协作。",
+    "cover": ""
+  },
+  {
+    "title": "Claude Tag 现在更会察言观色 / Claude Tag now reads even more of the room",
+    "file": "articles/claude-tag-reads-even-more-of-the-room.md",
+    "date": "2026-08-13",
+    "source": "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Tag",
+      "Slack",
+      "主动协作",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Tag 现在会利用整个频道的上下文、记忆与长期指令来判断何时主动参与 Slack 对话，判断准确率提升约 30%，且额外上下文不计入用量限额。",
+    "cover": ""
+  },
+  {
     "title": "Claude in Chrome 侧边栏现已升级为 Claude Cowork / The Claude in Chrome side panel is now Claude Cowork",
     "file": "articles/cowork-chrome-side-panel.md",
     "date": "2026-08-12",
