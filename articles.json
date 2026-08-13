@@ -1,5 +1,24 @@
 [
   {
+    "title": "Claude in Chrome 侧边栏现已升级为 Claude Cowork / The Claude in Chrome side panel is now Claude Cowork",
+    "file": "articles/cowork-chrome-side-panel.md",
+    "date": "2026-08-12",
+    "source": "https://claude.com/blog/cowork-chrome-side-panel",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Cowork",
+      "Claude in Chrome",
+      "浏览器扩展",
+      "提示注入",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude in Chrome 侧边栏现已升级为 Claude Cowork 会话：对话保存到历史记录，技能与连接器在浏览器中可用，任务可在桌面端、Web 与移动端之间无缝延续，今日起面向 Max 和 Team 套餐开放。",
+    "cover": ""
+  },
+  {
     "title": "Compliance API 覆盖范围扩展至 Claude Cowork 与 Claude Code / Compliance API coverage extends to Claude Cowork and Claude Code",
     "file": "articles/compliance-api-cowork-claude-code.md",
     "date": "2026-08-11",
