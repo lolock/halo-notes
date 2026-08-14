@@ -1,5 +1,23 @@
 [
   {
+    "title": "最大化 Claude Code 会话的价值 / Maximizing the value of your Claude Code sessions",
+    "file": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
+    "date": "2026-08-14",
+    "source": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "提示缓存",
+      "token 成本",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Code 官方指南：从模型选择、输入/输出 token 与提示缓存的计价原理，到 /clear、/compact、@提及文件和子代理等降低会话成本的实操技巧。",
+    "cover": ""
+  },
+  {
     "title": "守护前沿：JetBrains 如何评估与部署 Claude Fable 5 / Securing the frontier: How JetBrains evaluates and deploys Claude Fable 5",
     "file": "articles/jetbrains-evaluates-claude-fable-5.md",
     "date": "2026-08-13",
