@@ -1,5 +1,23 @@
 [
   {
+    "title": "ABC Legal 如何用 Claude Managed Agents 让每位员工都成为构建者 / How ABC Legal turned every employee into a builder with Claude Managed Agents",
+    "file": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
+    "date": "2026-08-17",
+    "source": "https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Managed Agents",
+      "智能体",
+      "企业部署",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "ABC Legal 的 CTO 讲述如何用 Claude Managed Agents 把每个智能体当作代码管理：从 15 人非开发者委员会起步，到 50+ 个生产智能体、310 名员工日常使用 Claude，以及收割者-调优者的自我改进循环。",
+    "cover": ""
+  },
+  {
     "title": "最大化 Claude Code 会话的价值 / Maximizing the value of your Claude Code sessions",
     "file": "articles/maximizing-the-value-of-your-claude-code-sessions.md",
     "date": "2026-08-14",
