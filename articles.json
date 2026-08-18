@@ -1,5 +1,40 @@
 [
   {
+    "title": "Claude 值班：Claude Tag 如何成为 Anthropic CI/CD 故障的第一响应者 / Claude on call: How Claude Tag serves as Anthropic's first responder for CI/CD failures",
+    "file": "articles/ai-ci-cd-on-call.md",
+    "date": "2026-08-18",
+    "source": "https://claude.com/blog/ai-ci-cd-on-call",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Tag",
+      "CI/CD",
+      "值班",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic CI 工程师讲述如何用 Claude Tag 构建值班智能体：检测告警、15 分钟内发布首份故障分析、动态工作流分诊、自动化修复与交接，并附开源搭建套件 oncall-kit。",
+    "cover": ""
+  },
+  {
+    "title": "Claude Science 产品指南 / The Claude Science product guide",
+    "file": "articles/the-claude-science-product-guide.md",
+    "date": "2026-08-18",
+    "source": "https://claude.com/blog/the-claude-science-product-guide",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Science",
+      "生命科学",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Science（测试版）产品指南：面向生命科学每一步的 AI 工作台，涵盖各产品界面选用时机、本地守护进程架构、五大设计选择与三阶段采用路线图。",
+    "cover": ""
+  },
+  {
     "title": "ABC Legal 如何用 Claude Managed Agents 让每位员工都成为构建者 / How ABC Legal turned every employee into a builder with Claude Managed Agents",
     "file": "articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.md",
     "date": "2026-08-17",
