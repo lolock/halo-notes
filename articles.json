@@ -1,5 +1,23 @@
 [
   {
+    "title": "如何超过大多数人",
+    "file": "articles/如何超过大多数人.md",
+    "date": "2026-08-19",
+    "source": "https://coolshell.cn/articles/19464.html",
+    "tags": [
+      "酷壳",
+      "CoolShell",
+      "陈皓",
+      "成长",
+      "认知",
+      "方法论"
+    ],
+    "category": "收藏文章",
+    "quality": "A",
+    "summary": "陈皓（左耳朵耗子）的经典文章：先以反讽手法列出大众是如何被信息茧房、碎片学习、加班文化困在底层的，再从认知（信息渠道/质量/密度）、知识（知识树/缘由/方法套路）、技能（精益求精/犯错/切磋）、领导力（天赋/兴趣/习惯/勤奋）四个维度给出超过大多数人的正道。",
+    "cover": "articles/assets/coolshell-competition.png"
+  },
+  {
     "title": "Claude 值班：Claude Tag 如何成为 Anthropic CI/CD 故障的第一响应者 / Claude on call: How Claude Tag serves as Anthropic's first responder for CI/CD failures",
     "file": "articles/ai-ci-cd-on-call.md",
     "date": "2026-08-18",
