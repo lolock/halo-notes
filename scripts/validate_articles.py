@@ -7,6 +7,7 @@ Checks:
 - File existence and duplicate files/titles
 - Markdown file presence vs index consistency
 - Basic markdown header format (required metadata block)
+- Local markdown image paths resolve under the GitHub Pages site root
 - U+FFFD replacement character scan
 
 Usage:
@@ -17,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -27,6 +29,7 @@ DEFAULT_JSON = ROOT / "articles.json"
 
 REQUIRED_JSON_KEYS = {"title", "file", "date", "source", "summary", "quality", "cover", "category"}
 REQUIRED_HEADER_MARKERS = ["- 原始链接：", "- 作者：", "- 发布时间："]
+MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)")
 
 
 def parse_args() -> argparse.Namespace:
@@ -113,6 +116,25 @@ def find_markdown_header_issues() -> Tuple[List[str], List[str]]:
 
         if "\ufffd" in text:
             warnings.append(f"{rel}: contains Unicode replacement chars (U+FFFD)")
+
+        for match in MARKDOWN_IMAGE_RE.finditer(text):
+            target = match.group(1).strip("<>")
+            if target.startswith("assets/"):
+                errors.append(
+                    f"{rel}: local image '{target}' resolves from reader.html to the wrong directory; "
+                    "use '/halo-notes/articles/assets/...'"
+                )
+                continue
+
+            if target.startswith("/halo-notes/"):
+                site_relative = target.removeprefix("/halo-notes/").split("?", 1)[0].split("#", 1)[0]
+            elif target.startswith("articles/assets/"):
+                site_relative = target.split("?", 1)[0].split("#", 1)[0]
+            else:
+                continue
+
+            if not (ROOT / site_relative).is_file():
+                errors.append(f"{rel}: local image not found: {target}")
 
         lines = text.splitlines()
         if not lines:
