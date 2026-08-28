@@ -61,7 +61,7 @@ Claude 在 Chrome 的功能已正式在所有付费 Claude 套餐上全面上线
 
 在最初的评估（参见[Claude in Chrome 试点发布说明](https://claude.com/blog/claude-for-chrome)）中，我们测试了 Claude Cowork 面对提示注入攻击的抗性。该评估当时由当初发布试点时的测试框架启动，结果显示在[该框架](https://claude.com/blog/cowork-chrome-side-panel)中，Claude Fable 5、Claude Opus 5、Claude Sonnet 5 都未出现成功攻击，且在未启用上述探针与分类器时已表现稳定。
 
-![提示注入评估图 1](https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8e8c30f077b615a7429ea7_8477d5f5.png)
+![提示注入评估图 1](https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8e8c30f077b615a7429ea7_8477d7f5.png)
 
 > **EN:** Because we saturated that evaluation (as evidenced by the 0% success rate), we decided to retire it. On our [current evaluation](https://www-cdn.anthropic.com/b514064af1408018e64b1ad24e7d5e75850b4ffd/Claude%20Opus%205%20System%20Card.pdf#page=76.73), which uses stronger attacks sourced by professional red-teamers, attacks that reached the model succeeded against Opus 4.5 17.6% of the time and against Opus 5 3.8% of the time, before any additional safeguards. With the strongest safeguards available in November 2025, attacks against Opus 4.5 running with probes succeeded 16.7% of the time. Against every model from Opus 4.8 onwards, when running with probes and the safety classifier, no attacks succeeded against Claude Sonnet 5, Claude Opus 5, or Claude Mythos 5. We saw a 0.3% attack success rate against Fable 5. We have manually verified that all successful breaks are in low-severity scenarios and are working to mitigate them.
 
