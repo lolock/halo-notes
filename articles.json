@@ -1,5 +1,93 @@
 [
   {
+    "title": "Claude for Teachers, now available for schools and districts / Claude for Teachers, now available for schools and districts",
+    "file": "articles/claude-for-teachers-now-available-for-schools-and-districts.md",
+    "date": "2026-08-28",
+    "source": "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude for Teachers",
+      "教育",
+      "双语翻译",
+      "K-12"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 将 Claude for Teachers 扩展到学校和学区企业版，支持统一组织管理、SSO、域名接管和多项教学能力，帮助教育组织快速组织部署。",
+    "cover": ""
+  },
+  {
+    "title": "Claude 在 Chrome 正式全面上线 / Claude in Chrome is generally available",
+    "file": "articles/claude-in-chrome-generally-available.md",
+    "date": "2026-08-26",
+    "source": "https://claude.com/blog/claude-in-chrome-generally-available",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude in Chrome",
+      "安全",
+      "双语翻译",
+      "提示注入"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude 正式在付费计划上线浏览器自动化能力，新增更强提示注入防护、动作校验与评估数据，并提供企业级安装与治理配置。",
+    "cover": ""
+  },
+  {
+    "title": "Claude Cowork 新增内置浏览器：无需安装 / Claude Cowork gets a built-in browser: nothing to install",
+    "file": "articles/cowork-built-in-browser.md",
+    "date": "2026-08-26",
+    "source": "https://claude.com/blog/cowork-built-in-browser",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Cowork",
+      "内置浏览器",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Claude Cowork 增加了内置浏览器，支持在桌面端直接处理网页任务，减少对用户当前浏览器会话和复杂登录转移的依赖，同时保留安全与可控开关。",
+    "cover": ""
+  },
+  {
+    "title": "Warp 如何在 Claude 上构建可自我改进的智能体 / How Warp builds self-improving agents on Claude",
+    "file": "articles/how-warp-builds-self-improving-agents-on-claude.md",
+    "date": "2026-08-26",
+    "source": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Agent",
+      "自我改进",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Warp 以双技能闭环（基础技能+改进技能）实现“反馈可持续沉淀”，让代码评审、Issue 分流等智能体通过人类反馈不断迭代优化。",
+    "cover": ""
+  },
+  {
+    "title": "贝恩公司加入 Claude 合作伙伴网络，成为全球前沿伙伴 / Bain & Company joins the Claude Partner Network as a Global Premier partner",
+    "file": "articles/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner.md",
+    "date": "2026-08-25",
+    "source": "https://claude.com/blog/bain-company-joins-the-claude-partner-network-as-a-global-premier-partner",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Bain",
+      "合作伙伴",
+      "AI转型",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Bain 与 Anthropic 成为全球前沿合作伙伴，结合 Claude 技术与咨询交付能力，推动企业从 AI 试验迈向可交付的业务化落地。",
+    "cover": ""
+  },
+  {
     "title": "都 Agent 时代了，我还是想分享给你这 12 个我最常用的 Prompt",
     "file": "articles/都 Agent 时代了，我还是想分享给你这 12 个我最常用的 Prompt.md",
     "date": "2026-08-29",
