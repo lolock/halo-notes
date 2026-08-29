@@ -1,5 +1,90 @@
 [
   {
+    "title": "Anthropic 如何教授与学习 AI / Anthropic’s approach to teaching and learning AI",
+    "file": "articles/anthropic-approach-to-teaching-and-learning-ai-双语.md",
+    "date": "2026-08-20",
+    "source": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "AI 教育",
+      "Claude Academy",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "Anthropic 展示了如何用 Claude Academy 建立 AI 素养框架：把 AI 安全、判断和协同放在核心，通过持续学习与技能治理推动全民上手。",
+    "cover": ""
+  },
+  {
+    "title": "monday.com 如何从传统平台演进为人机共生的智能体优先产品 / How monday.com transformed its platform into an agent-first product where humans and agents collaborate",
+    "file": "articles/monday-agent-first-人类与智能体协作-双语.md",
+    "date": "2026-08-20",
+    "source": "https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "monday.com",
+      "agent-first",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "本文展示 monday.com 的三阶段重构经验：从“AI 点缀”转向原生智能体协作，明确角色化智能体，并建立可扩展治理与治理中的重建机制。",
+    "cover": ""
+  },
+  {
+    "title": "启动式指南：Claude Code 对初创公司意味着什么 / The Claude Code guide for startups",
+    "file": "articles/claude-code-startups-guide-双语.md",
+    "date": "2026-08-20",
+    "source": "https://claude.com/blog/claude-code-guide-for-startups",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "AI Native SDLC",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "文章梳理了初创企业在 Claude Code 下的五条执行原则与实践清单，强调人人可参与、闭环验证、重建为常态以及内部产品先行再外部化。",
+    "cover": ""
+  },
+  {
+    "title": "使用 Computer use、Skills API 与 Files API 打造生产级智能体 / Build production agents with computer use, the Skills API, and the Files API",
+    "file": "articles/computer-use-skills-files-api-双语.md",
+    "date": "2026-08-20",
+    "source": "https://claude.com/blog/computer-use-skills-api-files-api",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Computer use",
+      "Skills API",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "更新发布了 Claude Platform 的 computer use、Skills API 与 Files API：支持可见界面软件操作、技能版本化以及文档读写闭环，面向生产环境构建可复用智能体。",
+    "cover": ""
+  },
+  {
+    "title": "Slack 如何把对话转化为知识：打造人机共事团队 / Turning conversation into knowledge: how Slack builds human-agent teams",
+    "file": "articles/slack-将对话转为知识-双语.md",
+    "date": "2026-08-19",
+    "source": "https://claude.com/blog/turning-conversation-into-knowledge-how-slack-builds-human-agent-teams",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Slack",
+      "human-agent teams",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "本文复盘 Slack 的实践：公开优先的对话治理、智能体与人类的任务交接、可复制的角色化、以及用结果而非活跃量评估 AI 协作效果。",
+    "cover": ""
+  },
+  {
     "title": "Anthropic 员工如何使用 Claude Tag / How Anthropic employees use Claude Tag",
     "file": "articles/how-anthropic-employees-use-claude-tag.md",
     "date": "2026-08-28",
