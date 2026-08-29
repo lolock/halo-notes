@@ -1,5 +1,90 @@
 [
   {
+    "title": "Anthropic 员工如何使用 Claude Tag / How Anthropic employees use Claude Tag",
+    "file": "articles/how-anthropic-employees-use-claude-tag.md",
+    "date": "2026-08-28",
+    "source": "https://claude.com/blog/how-anthropic-employees-use-claude-tag",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Tag",
+      "双语翻译",
+      "生产力"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "本文展示了 Anthropic 团队在销售、法务与协作场景中使用 Claude Tag 的 3 个实际案例，说明 AI 入口与审核机制如何把周会前信息整理、客户支持和合规审核提速到分钟级。",
+    "cover": ""
+  },
+  {
+    "title": "Claude 的记忆无处不在，你可以决定里面有什么 / Claude's memory works everywhere, and you decide what's in it",
+    "file": "articles/claudes-memory-works-everywhere-and-you-decide-whats-in-it.md",
+    "date": "2026-08-25",
+    "source": "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "记忆",
+      "隐私",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "文章说明 Claude 的内存与 Cowork/聊天共享，支持按主题查看、编辑和删除记忆，并新增敏感主题开关与默认保护策略。",
+    "cover": ""
+  },
+  {
+    "title": "Anthropic 现场营销人员如何使用 Claude Code 向每位销售代表发送每周个性化更新 / How an Anthropic field marketer uses Claude Code to send weekly personalized updates to every sales rep",
+    "file": "articles/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep.md",
+    "date": "2026-08-24",
+    "source": "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Claude Code",
+      "销售流程",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "用 Claude Code 将每周销售周报从手工流程升级为可持续迭代的自动化流程，覆盖多数据源聚合、规则化提示与反馈驱动优化。",
+    "cover": ""
+  },
+  {
+    "title": "将 Claude Mythos 5 的网络安全功能带给更多防御者 / Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
+    "file": "articles/bringing-claude-mythos-5-to-more-defenders.md",
+    "date": "2026-08-21",
+    "source": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "Mythos 5",
+      "网络安全",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "本文发布 Mythos 5 的扩展路线：在防守工具、Claude Security 与合作伙伴生态中提供更多防御级接入，并同步推进基金与验证计划。",
+    "cover": ""
+  },
+  {
+    "title": "AI-Native SDLC 手册 / The AI-Native SDLC playbook",
+    "file": "articles/the-ai-native-sdlc-playbook.md",
+    "date": "2026-08-21",
+    "source": "https://claude.com/blog/the-ai-native-sdlc-playbook",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "AI Native SDLC",
+      "软件工程",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "提出 AI-Native SDLC 的六阶段重构方法：在 plan/design/build/test/deploy/maintain 中通过 intent/spec/plan 等可追溯工件、hooks、审核与回路实现从人工主导到可控自动化。",
+    "cover": ""
+  },
+  {
     "title": "Claude for Teachers, now available for schools and districts / Claude for Teachers, now available for schools and districts",
     "file": "articles/claude-for-teachers-now-available-for-schools-and-districts.md",
     "date": "2026-08-28",
@@ -976,24 +1061,6 @@
     "cover": ""
   },
   {
-    "title": "工程化的本质：从 Prompt 到 Loop 的个人 AI-Lab 演进",
-    "file": "articles/工程化的本质：从Prompt到Loop的个人AI-Lab演进.md",
-    "date": "2026-06-06",
-    "source": "https://chatgpt.com/g/g-p-69ef420d98548191aba106931f0a88a3/c/6a23c58f-8a44-832f-88cf-237c08f13e51",
-    "tags": [
-      "AI",
-      "工程化",
-      "Prompt",
-      "Loop",
-      "AI-Lab",
-      "OpenClaw"
-    ],
-    "category": "AI 工作流",
-    "quality": "A",
-    "summary": "本文将个人 AI 能力从 Prompt 阶段推进到 Loop 阶段，结合统一试验台、Harness 与验收闭环，给出可落地的 AI-Lab 演进路线。",
-    "cover": ""
-  },
-  {
     "title": "Agent identity（代理身份）：Claude Tag 中自主、团队级 AI 的新访问模型 / Agent Identity in Claude Tag: A New Access Model for Autonomous, Team-Wide AI",
     "file": "articles/claude-tag-agent-identity-access-model.md",
     "date": "2026-06-24",
@@ -1924,24 +1991,6 @@
     "category": "AI收藏",
     "quality": "A",
     "summary": "从事投资也有十多年了，经历了很多起起落落，有些“价值”回归了，有些始终没有，或者只是一个周期起伏罢了。这让我思考什么是价值。",
-    "cover": ""
-  },
-  {
-    "title": "A 股电力 ETF 决策页：电力运营与电网设备错配",
-    "file": "A股电力ETF决策页_电力运营与电网设备错配.md",
-    "date": "2026-05-20",
-    "source": "A股行业ETF研究Agent HTML决策页",
-    "tags": [
-      "ETF",
-      "A股",
-      "电力",
-      "公用事业",
-      "HTML决策页",
-      "投资研究"
-    ],
-    "category": "投资研究",
-    "quality": "A",
-    "summary": "静态 HTML 决策页：顶部结论卡片、假设匹配矩阵、持仓暴露、ETF 对比、估值缺口、反证雷达和下一步 Prompt。",
     "cover": ""
   },
   {
