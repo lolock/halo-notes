@@ -20,21 +20,21 @@
 > ZH: 在最近的一次功能发布中，一位销售代表要求提供非技术资料，以解释该功能如何为客户和潜在客户发挥作用；产品营销团队的 Hema Thanki 在 45 分钟内将随后的 Slack 线程变成了可供审阅的文档。
 
 > EN: That Slack thread ran to more than 15 messages, with multiple people chiming in with suggestions or additional asks, and a touch of tension around what was actually needed and whether the existing technical material was enough. Rather than attempting to clarify ambiguity, Hema tagged Claude in the thread: @Claude, go through this Slack thread and come up with a one pager that [the requester] is asking for.
-> ZH: 该 Slack 线程包含超过 15 条消息，多人提出建议或其他问题，围绕实际需要的内容以及现有的技术材料是否足够，存在着一丝紧张。Hema 没有试图澄清歧义，而是在线程中标记了 Claude：@Claude，浏览此 Slack 线程并提出[请求者] 要求的一个寻呼机。
+> ZH: 该 Slack 线程包含超过 15 条消息，多人提出建议或其他问题，围绕实际需要的内容以及现有的技术材料是否足够，存在着一丝紧张。Hema 没有试图澄清歧义，而是在线程中标记了 Claude：@Claude，浏览此 Slack 线程并提出[请求者] 要求的一个一页文档。
 ![](https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a91db2a994de3cf1ac088c6_c0ede71e.png)
 
 > EN: Claude generated a two-page draft in about two minutes, covering what the feature does in plain terms, the business case for it, what implementation involves, and an appendix with more detailed information.
-> ZH: 克劳德在大约两分钟内生成了一份两页的草稿，简单地介绍了该功能的用途、其业务案例、实施涉及的内容以及包含更详细信息的附录。
+> ZH: Claude在大约两分钟内生成了一份两页的草稿，简单地介绍了该功能的用途、其业务案例、实施涉及的内容以及包含更详细信息的附录。
 
 > EN: Next, Hema asked Claude to verify its responses: "@Claude, is everything in this doc factual and correct?" Claude sorted the document's claims into ones verified against public documentation and those that were its own framing, which it flagged for product-lead sign-off. Hema supplied two official resources with relevant information, and Claude rewrote one section to match the approved wording in those resources.
-> ZH: 接下来，Hema 要求 Claude 验证其回复：“@Claude，本文档中的所有内容均属事实且正确吗？”克劳德将该文档的声明分为根据公共文档验证的声明和自己的框架，并将其标记为产品负责人签字。Hema 提供了两份包含相关信息的官方资源，Claude 重写了其中一节以匹配这些资源中批准的措辞。
+> ZH: 接下来，Hema 要求 Claude 验证其回复：“@Claude，本文档中的所有内容均属事实且正确吗？”Claude将该文档的声明分为根据公共文档验证的声明和自己的框架，并将其标记为产品负责人签字。Hema 提供了两份包含相关信息的官方资源，Claude 重写了其中一节以匹配这些资源中批准的措辞。
 ![](https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a91db2a994de3cf1ac088c9_e46dcfe0.png)
 
 > EN: At that point, Hema noticed the truncated thread had skewed the framing, so she pasted in the fuller context. She went back and forth with Claude for a total of four versions. About 45 minutes after the first ask, she shared the document with the feature's product lead for review. Rather than spend hours researching and drafting the document, Hema’s time went to challenging accuracy, supplying sources, and deciding what information to include, all tasks that required human judgment and made the customer asset even stronger.
-> ZH: 此时，Hema 注意到被截断的线已经扭曲了框架，因此她粘贴了更完整的上下文。她和克劳德一起来来回回，一共制作了四个版本。第一次询问后大约 45 分钟，她与该功能的产品负责人共享了该文档以供审核。盒马鲜生没有花大量时间研究和起草文档，而是将时间花在挑战准确性、提供来源以及决定要包含哪些信息，所有这些任务都需要人工判断并让客户资产变得更加强大。
+> ZH: 此时，Hema 注意到被截断的线已经扭曲了框架，因此她粘贴了更完整的上下文。她和Claude一起来来回回，一共制作了四个版本。第一次询问后大约 45 分钟，她与该功能的产品负责人共享了该文档以供审核。Hema没有花大量时间研究和起草文档，而是将时间花在挑战准确性、提供来源以及决定要包含哪些信息，所有这些任务都需要人工判断并让客户资产变得更加强大。
 
 > EN: Beyond generating briefs from Slack threads, Hema also uses Claude Tag across her day to day work. She keeps a private Slack channel with Claude where she makes requests in separate threads, @-mentioning Claude the way she'd tag a colleague. In that channel, Claude reads whatever she pastes or attaches, searches the Slack workspace and public documentation, and works in the background, posting a progress checklist it updates as it goes. Claude’s access is deliberately scoped: it only works from the channels and documents it has been granted access to, and will let her know when it does not have the access to these resources.
-> ZH: 除了从 Slack 线程生成摘要之外，Hema 还在日常工作中使用 Claude Tag。她与 Claude 保持着一个私人 Slack 频道，在单独的线程中提出请求，@-提及 Claude，就像她标记同事的方式一样。在该频道中，Claude 阅读她粘贴或附加的所有内容，搜索 Slack 工作区和公共文档，并在后台工作，发布一个随时更新的进度清单。克劳德的访问权限是有意限定的：它只能在其被授予访问权限的渠道和文档中起作用，并且当它无法访问这些资源时会让她知道。
+> ZH: 除了从 Slack 线程生成摘要之外，Hema 还在日常工作中使用 Claude Tag。她与 Claude 保持着一个私人 Slack 频道，在单独的线程中提出请求，@-提及 Claude，就像她标记同事的方式一样。在该频道中，Claude 阅读她粘贴或附加的所有内容，搜索 Slack 工作区和公共文档，并在后台工作，发布一个随时更新的进度清单。Claude的访问权限是有意限定的：它只能在其被授予访问权限的渠道和文档中起作用，并且当它无法访问这些资源时会让她知道。
 
 ## 整合并跟进分散在 Slack 渠道中的请求 / Consolidating and following up on requests scattered throughout Slack channels
 
@@ -49,13 +49,13 @@
 ![](https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a91db2a994de3cf1ac088d2_805fca4a.png)
 
 > EN: Steph then put Claude on a bigger consolidation job that she wouldn’t have had the bandwidth to do on her own: she wanted a picture of every product problem enterprise customers had reported in the previous week, including what was broken, what was already fixed, and which, if any, reports pointed at the same underlying issue. She told Claude to read all Slack channels covering incident, escalation, support, and product-feedback, and roughly 50 minutes later Claude posted a write-up, organized by product area, that included 23 issues that were still open and 14 resolved ones, condensed from about 120 raw findings. Each issue included a summary and a link to the source thread. Steph then asked Claude to check its work, and it surfaced 15 more issues.
-> ZH: 然后，斯蒂芬让克劳德承担一项更大的整合工作，而她自己没有足够的带宽来完成：她想要一张企业客户在上周报告的每个产品问题的图片，包括哪些问题、哪些已经修复，以及哪些报告指出了相同的根本问题（如果有）。她告诉 Claude 阅读涵盖事件、升级、支持和产品反馈的所有 Slack 频道，大约 50 分钟后，Claude 发布了一篇按产品领域组织的文章，其中包括 23 个仍悬而未决的问题和 14 个已解决的问题，这些问题是从约 120 个原始调查结果中浓缩而成的。每个问题都包含摘要和源线程的链接。斯蒂芬随后要求克劳德检查其工作，结果又发现了 15 个问题。
+> ZH: 然后，斯蒂芬让Claude承担一项更大的整合工作，而她自己没有足够的带宽来完成：她想要一张企业客户在上周报告的每个产品问题的图片，包括哪些问题、哪些已经修复，以及哪些报告指出了相同的根本问题（如果有）。她告诉 Claude 阅读涵盖事件、升级、支持和产品反馈的所有 Slack 频道，大约 50 分钟后，Claude 发布了一篇按产品领域组织的文章，其中包括 23 个仍悬而未决的问题和 14 个已解决的问题，这些问题是从约 120 个原始调查结果中浓缩而成的。每个问题都包含摘要和源线程的链接。斯蒂芬随后要求Claude检查其工作，结果又发现了 15 个问题。
 
 > EN: Steph estimates that combing through, analyzing, and synthesizing this much information would have taken her at least a week of full-time work, or would never have gotten done. Instead, with Claude Tag, she took a few minutes to shape up her ask, and Claude worked in the background.
-> ZH: 斯蒂芬估计，梳理、分析和综合这么多信息将花费她至少一周的全职工作，或者永远无法完成。相反，她和克劳德·塔格一起花了几分钟来确定她的要求，克劳德在后台工作。
+> ZH: 斯蒂芬估计，梳理、分析和综合这么多信息将花费她至少一周的全职工作，或者永远无法完成。相反，她和Claude·塔格一起花了几分钟来确定她的要求，Claude在后台工作。
 
 > EN: Steph also works with Claude in a private channel, sending full instructions up front that include where to search, what counts as a match, and usually an example of the output format. Claude searches the workspace, reads the channels it has been invited to, and posts progress updates as it works. When the feedback hub blocks access, Claude attempts to gather related or relevant information via accessible docs and channels, or even asks for access to these channels.
-> ZH: Steph 还在私人频道中与 Claude 合作，预先发送完整的说明，包括搜索位置、什么算作匹配以及通常输出格式的示例。克劳德搜索工作区，阅读它被邀请加入的频道，并在工作时发布进度更新。当反馈中心阻止访问时，克劳德尝试通过可访问的文档和渠道收集相关信息，甚至请求访问这些渠道。
+> ZH: Steph 还在私人频道中与 Claude 合作，预先发送完整的说明，包括搜索位置、什么算作匹配以及通常输出格式的示例。Claude搜索工作区，阅读它被邀请加入的频道，并在工作时发布进度更新。当反馈中心阻止访问时，Claude尝试通过可访问的文档和渠道收集相关信息，甚至请求访问这些渠道。
 
 ## 加快法律文件审查 / Expediting legal document reviews
 
@@ -63,14 +63,14 @@
 > ZH: Anthropic 的法律团队会在公开发布之前审查每个博客、登陆页面、电子邮件或任何其他宣传材料。在产品发布前的几天里，营销团队可以在紧迫的期限内将数十种不同的资产排队等待审核。这是在审核队列中流动的所有其他营销资料之上的，范围从一段社交文案到 2,500 字的博客草稿、带有十多个选项卡的规划文档，以及跨多个接触点的多种变体的电子邮件系列。法律团队的产品顾问 Molly Villagra 创建了一个专门的 Slack 频道，Claude Tag 首先检查每项营销资产，将每项资产的营销法律审查周转时间从一天（或更长）压缩到 30 分钟。
 
 > EN: To request legal review, marketers post a document link in the Slack channel, where Molly, who has no engineering background, has set up specific rules and instructions for Claude. Not only can Claude spot issues for legal (like unsubstantiated marketing claims), but it can also help check factual statements in the marketing content because it has access to the company Slack, an internal knowledge index, and the public web. If there are flags, Claude lists those with specific instructions on how to address them and works directly with the requester to do so. For remaining issues that need legal sign-off, Claude tags the appropriate product counsel, who can quickly review the flagged statements.
-> ZH: 为了请求法律审查，营销人员在 Slack 频道中发布了一个文档链接，其中没有工程背景的 Molly 为 Claude 设置了具体的规则和说明。Claude 不仅可以发现法律问题（例如未经证实的营销主张），还可以帮助检查营销内容中的事实陈述，因为它可以访问公司 Slack、内部知识索引和公共网络。如果有标志，克劳德会列出这些标志，并提供有关如何处理这些标志的具体说明，并直接与请求者合作来完成此操作。对于需要法律签字的剩余问题，Claude 会标记适当的产品顾问，他们可以快速查看标记的声明。
+> ZH: 为了请求法律审查，营销人员在 Slack 频道中发布了一个文档链接，其中没有工程背景的 Molly 为 Claude 设置了具体的规则和说明。Claude 不仅可以发现法律问题（例如未经证实的营销主张），还可以帮助检查营销内容中的事实陈述，因为它可以访问公司 Slack、内部知识索引和公共网络。如果有标志，Claude会列出这些标志，并提供有关如何处理这些标志的具体说明，并直接与请求者合作来完成此操作。对于需要法律签字的剩余问题，Claude 会标记适当的产品顾问，他们可以快速查看标记的声明。
 ![](https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a91db2a994de3cf1ac088cf_43aa7144.png)
 
 > EN: In a recent newsletter review, for example, Claude flagged three key items, then just minutes later, unprompted, resolved one of them after finding the information it needed in internal documents. Molly asked it to make this the default by tagging @Claude in the marketing legal review channel: “Your three bullets are good callouts, but they can all be verified by you. Will you try to verify these things in real time when you flag them in the future?” At Molly’s request, Claude Tag added this new instruction to its set of instructions to follow in all future reviews, allowing it to improve with channel feedback in real time.
-> ZH: 例如，在最近的一份时事通讯评论中，克劳德标记了三个关键项目，然后几分钟后，在内部文件中找到所需的信息后，自发地解决了其中一个问题。Molly 要求它通过在营销法律审查频道中标记 @Claude 来将其设置为默认值：“您的三颗子弹是很好的标注，但它们都可以由您验证。您将来标记它们时会尝试实时验证这些事情吗？”应 Molly 的要求，Claude Tag 将这条新指令添加到其指令集中，以便在未来的所有审核中遵循，从而使其能够通过实时渠道反馈进行改进。
+> ZH: 例如，在最近的一份时事通讯评论中，Claude标记了三个关键项目，然后几分钟后，在内部文件中找到所需的信息后，自发地解决了其中一个问题。Molly 要求它通过在营销法律审查频道中标记 @Claude 来将其设置为默认值：“您的三条关键点是很好的标注，但它们都可以由您验证。您将来标记它们时会尝试实时验证这些事情吗？”应 Molly 的要求，Claude Tag 将这条新指令添加到其指令集中，以便在未来的所有审核中遵循，从而使其能够通过实时渠道反馈进行改进。
 
 > EN: This feedback loop inspired Molly to create a new routine, instructing Claude to review the week’s counsel feedback each Friday and propose an update to the shared instructions for her approval.
-> ZH: 这种反馈循环启发莫莉创建了一个新的例程，指示克劳德每周五查看本周的律师反馈，并提出对共享指令的更新以供她批准。
+> ZH: 这种反馈循环启发莫莉创建了一个新的例程，指示Claude每周五查看本周的律师反馈，并提出对共享指令的更新以供她批准。
 
 > EN: Each of the workflows we’ve shared above is saving Anthropic employees hours or days of work, and enables projects that simply wouldn’t have happened before. What workflows or projects would your team hand over to Claude first?
 > ZH: 我们上面分享的每个工作流程都为 Anthropic 员工节省了数小时或数天的工作时间，并实现了以前根本不会发生的项目。您的团队会首先将哪些工作流程或项目移交给 Claude？

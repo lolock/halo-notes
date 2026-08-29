@@ -149,13 +149,13 @@
 - ZH: 发起者用自己的话向Claude描述了这个问题。发起者可能会描述他们今天不能做什么、谁受到这个想法的影响、什么看起来更好，或者什么超出了范围。不需要正式语言。
 
 - EN: Brainstorm until the idea is concrete. Claude asks the questions an analyst would ask: scope, users, constraints, and what success looks like.
-- ZH: 集思广益，直到想法具体化。克劳德提出了分析师会问的问题：范围、用户、限制以及成功是什么样子。
+- ZH: 集思广益，直到想法具体化。Claude提出了分析师会问的问题：范围、用户、限制以及成功是什么样子。
 
 - EN: Ask Claude to write the result as intent.md using the organization's template, which can be encoded as a skill set up by a technical team member and signed off by a lead. This can cover the problem, proposed outcome, affected users and systems, constraints, and open questions.
 - ZH: 要求 Claude 使用组织的模板将结果编写为intent.md，该模板可以编码为由技术团队成员设置并由主管签署的技能。这可以涵盖问题、建议的结果、受影响的用户和系统、约束和悬而未决的问题。
 
 - EN: The originator corrects anything Claude misunderstood.
-- ZH: 创始人纠正了克劳德的任何误解。
+- ZH: 创始人纠正了Claude的任何误解。
 
 - EN: Commit intent.md to the shared home. Author and timestamp join the record, and the product owner picks the idea up from there.
 - ZH: 将intent.md 提交到共享主目录。作者和时间戳加入记录，产品负责人从那里选取想法。
@@ -208,10 +208,10 @@
 - ZH: 工程师以计划模式与 Claude 开始会话。
 
 - EN: The engineer gives Claude the intent.md and the spec.md and asks for an implementation plan that names the files that change, the order of the work, and the tests that prove it.
-- ZH: 工程师向克劳德提供了intent.md和spec.md，并要求提供一个实施计划，其中列出了更改的文件、工作顺序以及证明这一点的测试。
+- ZH: 工程师向Claude提供了intent.md和spec.md，并要求提供一个实施计划，其中列出了更改的文件、工作顺序以及证明这一点的测试。
 
 - EN: Interrogate the plan by asking what the change could break, which step is most risky, and what other options Claude chose not to do.
-- ZH: 通过询问改变可能会破坏什么、哪一步风险最大，以及克劳德选择不做的其他选项来质疑计划。
+- ZH: 通过询问改变可能会破坏什么、哪一步风险最大，以及Claude选择不做的其他选项来质疑计划。
 
 - EN: Iterate until an engineer who has never seen the conversation could implement the change from the plan alone.
 - ZH: 不断迭代，直到从未见过对话的工程师能够单独实施计划中的更改。
@@ -220,16 +220,16 @@
 - ZH: 将批准的计划提交为 plan.md。该计划加入了审计跟踪，并且 PR 审查（第 5 阶段：部署）根据它检查最终的差异。
 
 - EN: Accept the plan and let Claude implement. With a solid plan, the implementation is often a single pass.
-- ZH: 接受这个计划，让克劳德去执行。有了可靠的计划，实施通常只需一次。
+- ZH: 接受这个计划，让Claude去执行。有了可靠的计划，实施通常只需一次。
 
 - EN: When implementation departs from the plan, update plan.md in the same commit. Consider using a hook to enforce synchronization between the two.
 - ZH: 当实施偏离计划时，请在同一提交中更新 plan.md。考虑使用挂钩来强制两者之间的同步。
 
 
 > EN: Design review happens before any code is generated, when changing course is still a matter of editing a document. Plan mode enforces this itself, since Claude cannot edit files until the engineer accepts the plan. The plan and its revisions are logged along with who accepted it. Routine changes are approved by the engineer, and anything the organization classes as higher risk goes to a tech lead or architect.
-> ZH: 设计审查发生在生成任何代码之前，而更改过程仍然是编辑文档的问题。计划模式本身强制执行此操作，因为在工程师接受计划之前，克劳德无法编辑文件。该计划及其修订以及接受者都被记录下来。例行变更由工程师批准，组织归类为较高风险的任何内容都会交给技术主管或架构师。
+> ZH: 设计审查发生在生成任何代码之前，而更改过程仍然是编辑文档的问题。计划模式本身强制执行此操作，因为在工程师接受计划之前，Claude无法编辑文件。该计划及其修订以及接受者都被记录下来。例行变更由工程师批准，组织归类为较高风险的任何内容都会交给技术主管或架构师。
 
-### 克劳德·代码开启自动模式 / Claude Code on auto mode
+### Claude·代码开启自动模式 / Claude Code on auto mode
 
 > EN: Claude Code can also run in auto mode, where the engineer approves the plan and, once happy and iterated upon, Claude applies each change without a per-edit prompt. As the guardrails from the later plays mature (a tuned CLAUDE.md, skills that encode policy, hooks that block unsafe actions, and a test suite Claude can run), auto-accept becomes the default for routine work: a tight spec.md, a small blast radius, and code the tests already cover.
 > ZH: Claude Code 还可以在自动模式下运行，工程师批准该计划，一旦满意并进行迭代，Claude 就会应用每个更改，而无需每次编辑提示。随着后来的护栏逐渐成熟（经过调整的 CLAUDE.md、编码策略的技能、阻止不安全操作的钩子以及 Claude 可以运行的测试套件），自动接受成为日常工作的默认设置：严格的 spec.md、较小的爆炸半径以及已涵盖的测试代码。
@@ -239,7 +239,7 @@
 
 ### 遗留系统和事实来源 / Legacy systems and the source of truth
 
-### 克劳德.md / The CLAUDE.md
+### Claude.md / The CLAUDE.md
 
 > EN: CLAUDE.md gives Claude the context a new joiner would need, covering conventions, commands, architecture, and the mistakes the team sees most often. Knowledge that used to sit in people's heads and on wikis becomes a file the agent reads at the start of every session, maintained by the whole team and iterated on whenever a mistake is made.
 > ZH: CLAUDE.md 为 Claude 提供了新加入者所需的上下文，涵盖约定、命令、架构以及团队最常看到的错误。过去存在于人们头脑中和维基百科上的知识变成了代理在每次会话开始时读取的文件，由整个团队维护，并在出现错误时进行迭代。
@@ -256,7 +256,7 @@
 - ZH: 工作规则在这里会有所帮助。当 Claude 犯两次错误时，更正会进入 CLAUDE.md。
 
 - EN: Keep it under a page, because Claude reads all of it at the start of a session and anything stale is taking up context for no benefit.
-- ZH: 将其保留在一页下，因为克劳德在会话开始时会阅读所有内容，而任何过时的内容都会毫无意义地占用上下文。
+- ZH: 将其保留在一页下，因为Claude在会话开始时会阅读所有内容，而任何过时的内容都会毫无意义地占用上下文。
 
 
 > EN: CLAUDE.md is version controlled, so the instructions the agent works to are reviewable and auditable. Team conventions are applied through the file, changes to it are logged in git history, and code owners approve those changes in PR review.
@@ -270,13 +270,13 @@
 - ZH: 选择一项目前执行不一致的知识。这可以是安全标准、API 设计约定或品牌规则。
 
 - EN: Write it as a skill, a folder containing a SKILL.md whose frontmatter says when it triggers and whose body says what to do. An engineer writes it from the policy owner's source of truth, using Claude to help.
-- ZH: 将其写为一项技能，一个包含 SKILL.md 的文件夹，其 frontmatter 说明何时触发，body 说明要做什么。一位工程师在克劳德的帮助下，根据保单所有者的真实来源编写了该文件。
+- ZH: 将其写为一项技能，一个包含 SKILL.md 的文件夹，其 frontmatter 说明何时触发，body 说明要做什么。一位工程师在Claude的帮助下，根据保单所有者的真实来源编写了该文件。
 
 - EN: Put the skill in the repo at .claude/skills/<name>/ so it ships with the code, or distribute it organization-wide through a plugin.
 - ZH: 将技能放在 .claude/skills/<name>/ 的存储库中，以便它随代码一起提供，或者通过插件在组织范围内分发。
 
 - EN: Test that the skill triggers. Ask Claude to do the relevant task in different ways and confirm the skill loads each time.
-- ZH: 测试技能是否触发。要求克劳德以不同的方式完成相关任务，并每次确认技能负载。
+- ZH: 测试技能是否触发。要求Claude以不同的方式完成相关任务，并每次确认技能负载。
 
 - EN: When the policy changes, change the skill and have the policy owner sign off the change.
 - ZH: 当保单发生变化时，更改技能并让保单所有者签署变更。
@@ -342,7 +342,7 @@
 
 ## 测试 / Test
 
-### 给克劳德一个反馈循环 / Give Claude a feedback loop
+### 给Claude一个反馈循环 / Give Claude a feedback loop
 
 > EN: Always give Claude a way to verify its own work, whether tests, a build, or a screenshot diff. A session checks its own work and fixes its own mistakes before an engineer sees them.
 > ZH: 始终为 Claude 提供一种验证其工作的方法，无论是测试、构建还是屏幕截图差异。会话会在工程师看到错误之前检查自己的工作并修复自己的错误。
@@ -405,7 +405,7 @@
 ### 公关审查循环中的人工智能 / AI in the PR review loop
 
 > EN: Claude both gives and receives reviews. It reviews incoming PRs against the organization's policies and addresses review comments on its own PRs. This allows engineers to focus on behavior in their PR review, which boils down to judging intent and risk.
-> ZH: 克劳德既给出评价又接受评价。它根据组织的政策审查传入的 PR，并处理对其自己的 PR 的审查意见。这使得工程师能够在公关审查中关注行为，归结为判断意图和风险。
+> ZH: Claude既给出评价又接受评价。它根据组织的政策审查传入的 PR，并处理对其自己的 PR 的审查意见。这使得工程师能够在公关审查中关注行为，归结为判断意图和风险。
 - EN: The managed Code Review service is the fastest start. An admin enables it and selects repositories. Run the review in your own CI with the claude-code-action when you need control of the pipeline or want API calls routed through your own cloud agreement (the CI/CD play covers that plumbing).
 - ZH: 托管代码审查服务是最快的启动方式。管理员启用它并选择存储库。当您需要控制管道或希望通过您自己的云协议路由 API 调用时，请使用 claude-code-action 在您自己的 CI 中运行审核（CI/CD 操作涵盖了该管道）。
 
@@ -416,7 +416,7 @@
 - ZH: 技术主管设定了人类的门槛。调查结果本身并不批准或阻止 PR，并且分支保护仍然需要代码所有者的批准。想要对结果进行合并的平台工程师可以读取检查运行作为机器可读计数发布的严重性计数。
 
 - EN: When a reviewer or the author tags @claude on a review comment, Claude addresses the comment and pushes the fix. The PR thread records both the request and the change. This fix loop runs through the claude-code-action. In the managed service, commenting @claude review requests a fresh review instead. For PRs Claude opened, go further and let Claude babysit the PR to merge. Teams wrap the loop in a custom slash command that sweeps the unresolved review comments and failing checks on the PR, addresses them and pushes the fixes, until the PR is green and waiting only on code owner approval.
-- ZH: 当审阅者或作者在审阅评论上标记 @claude 时，Claude 会处理该评论并推送修复。PR 线程记录请求和更改。此修复循环贯穿克劳德代码操作。在托管服务中，评论 @claude review 会请求重新审核。对于 Claude 打开的 PR，更进一步，让 Claude 照顾 PR 进行合并。团队将循环包装在自定义斜线命令中，该命令清除未解决的审核评论和 PR 上的失败检查，解决它们并推送修复，直到 PR 变为绿色并仅等待代码所有者批准。
+- ZH: 当审阅者或作者在审阅评论上标记 @claude 时，Claude 会处理该评论并推送修复。PR 线程记录请求和更改。此修复循环贯穿Claude代码操作。在托管服务中，评论 @claude review 会请求重新审核。对于 Claude 打开的 PR，更进一步，让 Claude 照顾 PR 进行合并。团队将循环包装在自定义斜线命令中，该命令清除未解决的审核评论和 PR 上的失败检查，解决它们并推送修复，直到 PR 变为绿色并仅等待代码所有者批准。
 
 - EN: Review findings feed back into CLAUDE.md. When a review flags a mistake for the second time, the correction goes into CLAUDE.md as part of that review, and because review reads CLAUDE.md the mistake is caught from the next PR onwards. Review also flags when a change has made CLAUDE.md outdated.
 - ZH: 审查结果反馈到 CLAUDE.md。当审查第二次标记错误时，更正会作为该审查的一部分进入 CLAUDE.md，并且因为审查读取 CLAUDE.md，所以从下一个 PR 开始就会发现错误。当更改导致 CLAUDE.md 过时时，审核还会进行标记。
@@ -496,7 +496,7 @@
 ### 维护和闭环 / Maintenance and closing the loop
 
 > EN: So far, we've discussed how to add Claude to each stage of the SDLC process, with each stage requiring a human to launch the initial steps. This stage, however, shifts the focus to autonomous running of Claude to close the loop.
-> ZH: 到目前为止，我们已经讨论了如何将 Claude 添加到 SDLC 流程的每个阶段，每个阶段都需要人工启动初始步骤。然而，这个阶段将重点转移到克劳德的自主运行上以关闭循环。
+> ZH: 到目前为止，我们已经讨论了如何将 Claude 添加到 SDLC 流程的每个阶段，每个阶段都需要人工启动初始步骤。然而，这个阶段将重点转移到Claude的自主运行上以关闭循环。
 
 > EN: For example, a continuously running monitoring agent could, off the back of a bug ticket being raised, create an intent.md, and flow through the requirements, plan, build test and review phases. Stage 6: Maintenance runs headless, with an independent confidence gate between stages, a deterministic check or an adversarial reviewing agent, deciding whether the previous stage's output continues or is escalated to a human.
 > ZH: 例如，持续运行的监控代理可以在提出错误单后创建一个intent.md，并贯穿需求、计划、构建测试和审查阶段。第 6 阶段：维护无头运行，阶段之间有独立的置信门、确定性检查或对抗性审查代理，决定前一阶段的输出是继续还是升级给人类。
@@ -577,16 +577,16 @@
 > EN: Fixes reach production through the PR review gate and branch protection rather than from the scan itself. Claude Security augments existing static analysis and dependency scanning. The deterministic checks stay in CI, and the model-driven scan covers the context-dependent vulnerabilities those checks are not built to find.
 > ZH: 修复通过 PR 审查门和分支保护而不是通过扫描本身到达生产环境。Claude Security 增强了现有的静态分析和依赖性扫描。确定性检查保留在 CI 中，模型驱动的扫描涵盖了这些检查并不是为了查找而构建的上下文相关漏洞。
 
-### 克劳德与克劳德·塔格通话 / Claude on call with Claude Tag
+### Claude与Claude·塔格通话 / Claude on call with Claude Tag
 
 > EN: Incidents can also arrive via other means such as workplace communication apps, like Slack or Teams. Incidents can look like a 10pm Slack message for an urgent fix on an incident channel and can now be actioned immediately. Claude Tag (public beta currently available in Slack) makes Claude a member of those channels under its own identity, so each new incident gets a first responder and the response itself becomes part of the loop and memory for future incidents.
-> ZH: 事件还可以通过其他方式到达，例如工作场所通信应用程序，如 Slack 或 Teams。事件可能看起来像晚上 10 点 Slack 消息，用于紧急修复事件通道，现在可以立即采取行动。Claude Tag（目前在 Slack 中提供公共测试版）使 Claude 以自己的身份成为这些通道的成员，因此每个新事件都会有一个第一响应者，并且响应本身会成为未来事件循环和内存的一部分。
+> ZH: 事件还可以通过其他方式到达，例如工作场所通信应用程序，如 Slack 或 Teams。事件可能看起来像晚上 10 点 Slack 消息，用于紧急修复事件通道，现在可以立即采取行动。Claude Tag（目前在 Slack 中提供公共测试版）使 Claude 以自己的身份成为这些通道的成员，因此每个新事件都会有一个第一响应者，并且响应本身会成为未来事件循环和记忆的一部分。
 
 > EN: The conversation and institutional knowledge stay in the channel, with anyone in the channel able to guide and action the response. Any team member can test hypotheses, explore new options and investigate in real time with the channel history adding to the auditability. Through access to MCP Claude verifies the metric is back at baseline and confirms it in the thread, writes the post-mortem to a version-controlled lessons file that future investigations can read.
 > ZH: 对话和机构知识保留在渠道中，渠道中的任何人都能够指导和采取应对措施。任何团队成员都可以测试假设、探索新选项并实时调查，通道历史记录增加了可审核性。通过访问 MCP，Claude 验证指标是否回到基线并在线程中进行确认，将事后分析写入版本控制的课程文件以供将来的调查读取。
 
 > EN: Incidents are not the only work Claude Tag picks up. Tagged on a ticket over MCP or asked in the channel, Claude triages the work the same way. A small, well-bounded fix arrives as a PR through the review gate, and anything larger is written up as intent.md for Stage 1: Plan, at which point the loop starts feeding itself. See: how Claude Tag runs on-call for CI/CD at Anthropic.
-> ZH: 事件并不是克劳德·塔格从事的唯一工作。通过 MCP 在票证上标记或在频道中询问，克劳德以同样的方式对工作进行分类。一个小的、有明确界限的修复通过审查门作为 PR 到达，任何更大的东西都被写成阶段 1：计划的 Intent.md，此时循环开始自我反馈。请参阅：Claude Tag 如何在 Anthropic 按需运行 CI/CD。
+> ZH: 事件并不是Claude·塔格从事的唯一工作。通过 MCP 在票证上标记或在频道中询问，Claude以同样的方式对工作进行分类。一个小的、有明确界限的修复通过审查门作为 PR 到达，任何更大的东西都被写成阶段 1：计划的 Intent.md，此时循环开始自我反馈。请参阅：Claude Tag 如何在 Anthropic 按需运行 CI/CD。
 ![](https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8760aded54a2a8319cd5b9_fe6d780d.png)
 
 ## 结束语 / Closing thoughts

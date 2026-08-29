@@ -15,7 +15,7 @@
 > ZH: 今年 4 月，我们启动了 Project Glasswing，将我们最强大的前沿模型 Claude Mythos Preview（及其后继者 Claude Mythos 5）交给一小群组织，以保护世界上最关键的软件。这为防御者提供了一个时间窗口，可以在具有类似功能的模型普遍可用或到达恶意行为者之前找到并修复漏洞。
 
 > EN: Our goal has always been to expand Mythos-level defense to as many defenders as we safely can. To do that, we've been working on safety classifiers and safeguards that let us expand access to Mythos-class models without putting their offensive cyber capabilities in the wrong hands. Claude Fable 5 was the first step: it made the model broadly available while blocking dual-use cyber work.
-> ZH: 我们的目标始终是在安全的情况下将神话级防御扩展到尽可能多的防御者。为此，我们一直致力于安全分类器和保障措施，使我们能够扩大对神话级模型的访问，而不会将其攻击性网络能力落入坏人之手。《克劳德寓言 5》是第一步：它使该模型广泛可用，同时阻止了双重用途的网络工作。
+> ZH: 我们的目标始终是在安全的情况下将神话级防御扩展到尽可能多的防御者。为此，我们一直致力于安全分类器和保障措施，使我们能够扩大对神话级模型的访问，而不会将其攻击性网络能力落入坏人之手。《Claude寓言 5》是第一步：它使该模型广泛可用，同时阻止了双重用途的网络工作。
 
 > EN: Today, we’re taking the next steps. The riskiest behavior occurs when a user has direct access to a model, where a malicious actor can try to steer it toward harmful uses. But if users can only receive specific outputs, such as a patch for a vulnerability or a security alert, that risk is much lower. The changes we’re announcing give users greater access to the defensive results, while maintaining appropriate guardrails around direct access to the model:
 > ZH: 今天，我们正在采取后续步骤。当用户直接访问模型时，就会发生最危险的行为，恶意行为者可能会尝试将模型引向有害用途。但如果用户只能接收特定的输出，例如漏洞补丁或安全警报，那么风险就会低得多。我们宣布的更改使用户可以更好地访问防御结果，同时围绕直接访问模型保持适当的护栏：
