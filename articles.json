@@ -1,5 +1,39 @@
 [
   {
+    "title": "有效商务代理剖析指南 / A guide to the anatomy of effective commerce agents",
+    "file": "articles/the-anatomy-of-effective-commerce-agents-双语.md",
+    "date": "2026-09-02",
+    "source": "https://claude.com/blog/the-anatomy-of-effective-commerce-agents",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "e-commerce",
+      "intelligent agents",
+      "双语翻译"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "本文梳理了高效商务代理的构成与实施路径：从任务路由、上下文管理到监控与治理，强调以可复用架构和高效工具协同提升执行质量。",
+    "cover": ""
+  },
+  {
+    "title": "与 Claude 一起建立商务代理 / Building commerce agents with Claude",
+    "file": "articles/claude-for-commerce-agents-双语.md",
+    "date": "2026-09-02",
+    "source": "https://claude.com/blog/claude-for-commerce-agents",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "commerce agents",
+      "双语翻译",
+      "电子商务"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "本文给出基于 Claude 的商务代理落地框架，包括商家/购物两类代理蓝图、能力边界、提示词工程、工具与发布治理，适合面向电商场景快速起步。",
+    "cover": ""
+  },
+  {
     "title": "Anthropic 如何教授与学习 AI / Anthropic’s approach to teaching and learning AI",
     "file": "articles/anthropic-approach-to-teaching-and-learning-ai-双语.md",
     "date": "2026-08-20",
