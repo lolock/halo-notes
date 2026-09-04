@@ -1,5 +1,24 @@
 [
   {
+    "title": "Vibe Coding 零基础入门：六步工作流拆解",
+    "file": "articles/Vibe Coding 零基础入门：六步工作流拆解.md",
+    "date": "2026-09-04",
+    "source": "https://x.com/ricouii/status/2095695306633683048",
+    "tags": [
+      "Vibe Coding",
+      "AI 编程",
+      "Agent",
+      "AGENTS.md",
+      "DESIGN.md",
+      "产品设计",
+      "前端开发"
+    ],
+    "category": "AI 工作流",
+    "quality": "S",
+    "summary": "RicoUI 以截图美化工具 RicoScreenshot 为案例，完整拆解从读懂项目、建立视觉规范、规划功能、开发实现、视觉与交互走查到测试上线的六步 Vibe Coding 工作流，并给出 AGENTS.md、DESIGN.md、TODO.md 和 DOCS 的落地方法。",
+    "cover": "articles/assets/x-2095695306633683048/cover.jpg"
+  },
+  {
     "title": "有效商务代理剖析指南 / A guide to the anatomy of effective commerce agents",
     "file": "articles/the-anatomy-of-effective-commerce-agents-双语.md",
     "date": "2026-09-02",
