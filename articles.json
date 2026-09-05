@@ -1,5 +1,24 @@
 [
   {
+    "title": "重新思考 GPT-6 Astra 的 Skills 与提示词 / Rethinking skills and prompts for GPT-6 Astra",
+    "file": "articles/重新思考 GPT-6 Astra 的 Skills 与提示词 — 中英双语.md",
+    "date": "2026-09-04",
+    "source": "https://x.com/pvncher/status/2095991462416490862",
+    "tags": [
+      "GPT-6 Astra",
+      "Skills",
+      "AGENTS.md",
+      "Prompt Engineering",
+      "Codex",
+      "Agent",
+      "双语翻译"
+    ],
+    "category": "AI Engineering",
+    "quality": "S",
+    "summary": "Eric Provencher 讨论 GPT-6 Astra 时代应如何重新审视技能文件、AGENTS.md、决策边界与持续执行规则：减少臃肿指令，采用渐进式披露，为不同模型保留合适自由度，并在任务开始前明确完成标准。中英双语全文。",
+    "cover": "articles/assets/x-2095991462416490862/cover.jpg"
+  },
+  {
     "title": "Vibe Coding 零基础入门：六步工作流拆解",
     "file": "articles/Vibe Coding 零基础入门：六步工作流拆解.md",
     "date": "2026-09-04",
