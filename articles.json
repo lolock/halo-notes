@@ -1,5 +1,24 @@
 [
   {
+    "title": "AI 工程技能图谱：使用编程智能体 / AI Engineering Skills Map: Using coding agents",
+    "file": "articles/AI 工程技能图谱：使用编程智能体 — 中英双语.md",
+    "date": "2026-09-04",
+    "source": "https://x.com/andrewyng/status/2095890279865721217",
+    "tags": [
+      "Andrew Ng",
+      "AI Engineering",
+      "Coding Agents",
+      "Agent",
+      "软件开发",
+      "AI 编程",
+      "双语翻译"
+    ],
+    "category": "AI Engineering",
+    "quality": "S",
+    "summary": "Andrew Ng 总结使用编程智能体的 AI 工程技能图谱：从规划、执行到部署监控，并深入阐述引导工作流、启用智能体自主性、审查成果、定制环境和理解智能体基础五项核心能力。中英双语全文。",
+    "cover": "articles/assets/x-2095890279865721217/cover.jpg"
+  },
+  {
     "title": "重新思考 GPT-6 Astra 的 Skills 与提示词 / Rethinking skills and prompts for GPT-6 Astra",
     "file": "articles/重新思考 GPT-6 Astra 的 Skills 与提示词 — 中英双语.md",
     "date": "2026-09-04",
