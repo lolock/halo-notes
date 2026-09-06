@@ -1,5 +1,23 @@
 [
   {
+    "title": "Codex No.1教程:喝茶聊天谈合同，最速项目一天交付，代码称斤时代已经到来",
+    "file": "articles/Codex No.1教程:喝茶聊天谈合同，最速项目一天交付，代码称斤时代已经到来.md",
+    "date": "2026-09-05",
+    "source": "https://x.com/dashen_wang/status/2096157899554693239",
+    "tags": [
+      "Codex",
+      "多智能体",
+      "Agent",
+      "蜂群OS",
+      "AI工程",
+      "软件交付"
+    ],
+    "category": "AI Engineering",
+    "quality": "S",
+    "summary": "一套用于真实软件接管、并发开发、自动测试与客户交付的 Codex 多智能体工程方法，涵盖控制面、AGENTS.md、任务 DAG、模型路由、Tailscale 权限、验收证据和系统自举。",
+    "cover": "articles/assets/x-2096157899554693239/cover.png"
+  },
+  {
     "title": "拯救了我的大脑（以及未来）的写作习惯 / The writing habit that saved my brain (and my future)",
     "file": "articles/拯救了我的大脑（以及未来）的写作习惯 — 中英双语.md",
     "date": "2026-07-15",
