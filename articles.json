@@ -1,5 +1,23 @@
 [
   {
+    "title": "降低成本并提升 Claude Platform 性能 / Reducing cost and improving performance with Claude Platform",
+    "file": "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
+    "date": "2026-09-08",
+    "source": "https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Claude Platform",
+      "成本优化",
+      "性能优化"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "本文给出在 Claude Platform 中三类核心降本方法：提示词缓存管理、反模式指令清理与 effort 标定，并给出可复用的 claude-api 流程。",
+    "cover": ""
+  },
+  {
     "title": "Codex No.1教程:喝茶聊天谈合同，最速项目一天交付，代码称斤时代已经到来",
     "file": "articles/Codex No.1教程:喝茶聊天谈合同，最速项目一天交付，代码称斤时代已经到来.md",
     "date": "2026-09-05",
