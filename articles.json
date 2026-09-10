@@ -1,5 +1,45 @@
 [
   {
+    "title": "T. Rowe Price 在其投资流程中引入更多 Claude / T. Rowe Price brings more of Claude to its investment process",
+    "file": "articles/t-rowe-price-将Claude融入投资流程-双语.md",
+    "date": "2026-09-10",
+    "source": "https://claude.com/blog/t-rowe-price-brings-more-of-claude-to-its-investment-process",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "投资",
+      "资产管理",
+      "AI in Finance",
+      "Claude Cowork",
+      "Claude Code"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "T. Rowe Price 扩大 Claude 在投资组织中的应用，覆盖研究、流程编排和工具研发，并将 AI 纳入由投资与全球分销共同推动的人在中心治理框架。",
+    "cover": ""
+  },
+  {
+    "title": "一千位小企业主教会我们的 AI 课题 / What 1,000 small business owners taught us about AI",
+    "file": "articles/1000位小企业主带来的AI启示-双语.md",
+    "date": "2026-09-10",
+    "source": "https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "双语翻译",
+      "Small Business",
+      "AI Fluency",
+      "AI安全",
+      "AI治理",
+      "中小企业"
+    ],
+    "category": "Claude Blog",
+    "quality": "A",
+    "summary": "来自 1000 位小企业主的巡访反馈集中在两点：第一，AI 能替代高频后台与执行负担；第二，企业主最关注的是准确性、数据安全与治理框架，最终共识是通过实操工作流与同伴学习推进规模化采用。",
+    "cover": ""
+  },
+  {
     "title": "降低成本并提升 Claude Platform 性能 / Reducing cost and improving performance with Claude Platform",
     "file": "articles/reducing-cost-and-improving-performance-with-claude-platform.md",
     "date": "2026-09-08",
