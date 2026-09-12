@@ -1,5 +1,23 @@
 [
   {
+    "title": "2026 我的 Obsidian 完整分享",
+    "file": "articles/2026 我的 Obsidian 完整分享.md",
+    "date": "2026-09-04",
+    "source": "https://x.com/jackywine/status/2095750518941659567",
+    "tags": [
+      "Obsidian",
+      "知识管理",
+      "个人知识库",
+      "LLM-Wiki",
+      "AI工作流",
+      "笔记方法"
+    ],
+    "category": "知识管理",
+    "quality": "S",
+    "summary": "Jackywine 回顾六年 Obsidian 使用经验，系统讨论插件、链接优先、常青笔记、File over App、LLM-Wiki 与 AI 时代的人机协作知识库方法。",
+    "cover": "articles/assets/x-2095750518941659567/cover.jpg"
+  },
+  {
     "title": "T. Rowe Price 在其投资流程中引入更多 Claude / T. Rowe Price brings more of Claude to its investment process",
     "file": "articles/t-rowe-price-将Claude融入投资流程-双语.md",
     "date": "2026-09-10",
