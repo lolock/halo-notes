@@ -1,5 +1,21 @@
 [
   {
+    "title": "HTML 小白从 0 到 1：学懂网页基础，再用 Agent 做出个人主页",
+    "file": "articles/HTML 小白从 0 到 1：学懂网页基础，再用 Agent 做出个人主页.md",
+    "date": "2026-08-06",
+    "date_kind": "collected",
+    "source": "https://x.com/AdrianPunk115/status/2083832138462605504",
+    "source_name": "X / Inbox",
+    "summary": "从 HTML、CSS、JavaScript 和项目结构入门，逐步用 Agent 制作并验收个人主页。",
+    "category": "工具与配置",
+    "tags": [
+      "Vibe Coding",
+      "教程"
+    ],
+    "quality": "A",
+    "cover": "/halo-notes/articles/assets/inbox-2083832138462605504/00.jpg"
+  },
+  {
     "title": "Vibe Coding 视觉词典（上篇）：布局、页面结构、导航与常用组件",
     "file": "articles/Vibe Coding 视觉词典（上篇）：布局、页面结构、导航与常用组件.md",
     "date": "2026-08-06",
