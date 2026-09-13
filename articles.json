@@ -1,5 +1,22 @@
 [
   {
+    "title": "最近大火的 AI 岗位，FDE 到底是干嘛的？普通人怎么上车？",
+    "file": "articles/最近大火的 AI 岗位，FDE 到底是干嘛的？普通人怎么上车？.md",
+    "date": "2026-08-02",
+    "date_kind": "collected",
+    "source": "https://x.com/AdrianPunk115/status/2083090241683128626",
+    "source_name": "X / Inbox",
+    "summary": "介绍 FDE 的职责、AI 项目落地流程及从其他岗位转入这一方向的实践路径。",
+    "category": "AI应用",
+    "tags": [
+      "FDE",
+      "AI应用",
+      "职业发展"
+    ],
+    "quality": "A",
+    "cover": "/halo-notes/articles/assets/inbox-2083090241683128626/00.jpg"
+  },
+  {
     "title": "Vibe Coding 零基础：讲清楚版本管理及工具对比 Git、GitHub 与 UGit",
     "file": "articles/Vibe Coding 零基础：讲清楚版本管理及工具对比 Git、GitHub 与 UGit.md",
     "date": "2026-07-10",
