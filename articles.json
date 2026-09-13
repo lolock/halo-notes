@@ -1,5 +1,21 @@
 [
   {
+    "title": "Vibe Coding 零基础：讲清楚版本管理及工具对比 Git、GitHub 与 UGit",
+    "file": "articles/Vibe Coding 零基础：讲清楚版本管理及工具对比 Git、GitHub 与 UGit.md",
+    "date": "2026-07-10",
+    "date_kind": "collected",
+    "source": "https://x.com/ricouii/status/2074410118503145521",
+    "source_name": "X / Inbox",
+    "summary": "讲清 Git、GitHub 和可视化客户端的分工，以及与 AI 协作时的版本管理和恢复方法。",
+    "category": "工具与配置",
+    "tags": [
+      "Vibe Coding",
+      "教程"
+    ],
+    "quality": "A",
+    "cover": "/halo-notes/articles/assets/inbox-2074410118503145521/00.jpg"
+  },
+  {
     "title": "Vibe Coding 视觉词典（下篇）：滚动动作、提示加载、视觉风格与高级效果",
     "file": "articles/Vibe Coding 视觉词典（下篇）：滚动动作、提示加载、视觉风格与高级效果.md",
     "date": "2026-08-06",
