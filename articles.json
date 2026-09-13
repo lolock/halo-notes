@@ -1,5 +1,23 @@
 [
   {
+    "title": "😤越改越烂！为什么 AI 自动修改 UI 总是翻车？「附终极解法」",
+    "file": "articles/😤越改越烂！为什么 AI 自动修改 UI 总是翻车？「附终极解法」.md",
+    "date": "2026-09-13",
+    "source": "https://x.com/lonely__mh/status/2099133528361628074",
+    "tags": [
+      "AI编程",
+      "UI复刻",
+      "视觉回归测试",
+      "Codex",
+      "Browser Automation",
+      "前端开发"
+    ],
+    "category": "AI Engineering",
+    "quality": "S",
+    "summary": "复盘 AI 根据截图自动修改 UI 容易越改越差的原因，并给出目标截图、浏览器渲染、逐像素 Diff、诊断优先、保留历史最佳版本的闭环工作流。",
+    "cover": "articles/assets/x-2099133528361628074/cover.jpg"
+  },
+  {
     "title": "2026 我的 Obsidian 完整分享",
     "file": "articles/2026 我的 Obsidian 完整分享.md",
     "date": "2026-09-04",
