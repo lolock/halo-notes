@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Publish prepared bundles under a repository lock; verify Pages before completion."""
 import argparse
+import hashlib
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import json
@@ -32,6 +33,8 @@ def verify(files, site=SITE):
         path = article_path(value)
         item = next((i for i in index if article_path(i['file']) == path), None)
         if item is None: raise ValueError('Not in Pages index: ' + path)
+        expected = next(i for i in json.loads((ROOT / 'articles.json').read_text()) if article_path(i['file']) == path)
+        if item != expected: raise ValueError('Pages metadata differs: ' + path)
         url = site + quote(path)
         md = fetch(url)
         if md != (ROOT / path).read_bytes(): raise ValueError('Pages content differs: ' + path)
@@ -50,10 +53,10 @@ def verify(files, site=SITE):
     for path in ('reader.html', 'assets/reader.js', 'assets/vendor/marked.js', 'assets/vendor/purify.js'):
         if fetch(site + path) != (ROOT / path).read_bytes(): raise ValueError('Reader deployment differs: ' + path)
     evidence = {'status': 'verified', 'verified_at': datetime.now(timezone.utc).isoformat(), 'commit': run('git', 'rev-parse', 'HEAD'), 'articles': articles, 'assets': verified}
-    key = evidence['commit'][:12] + '-' + str(len(files))
+    key = evidence['commit'][:12] + '-' + hashlib.sha256(json.dumps(sorted(files)).encode()).hexdigest()[:12]
     atomic_json(STATE / 'receipts' / (key + '.json'), evidence)
     for entry in articles:
-        record = STATE / 'receipts' / ('publish-' + __import__('hashlib').sha256(source_key(entry['source']).encode()).hexdigest()[:16] + '.json')
+        record = STATE / 'receipts' / ('publish-' + hashlib.sha256(source_key(entry['source']).encode()).hexdigest()[:16] + '.json')
         if record.exists():
             data = json.loads(record.read_text()); data.update(status='verified', verification=evidence)
             atomic_json(record, data)
@@ -74,8 +77,7 @@ def publish(bundle):
     manifest = {'source': item.get('source'), 'source_key': source_key(item.get('source')), 'status': 'draft', 'created_at': datetime.now(timezone.utc).isoformat(), 'files': {str(p): digest(bundle / p) for p in allowed}}
     if (bundle / 'source.json').exists(): manifest['source_sha256'] = digest(bundle / 'source.json')
     if (bundle / 'manifest.json').exists(): manifest['content_check'] = json.loads((bundle / 'manifest.json').read_text())
-    receipt = STATE / 'receipts' / ('publish-' + __import__('hashlib').sha256(source_key(item.get('source')).encode()).hexdigest()[:16] + '.json')
-    atomic_json(receipt, manifest)
+    receipt = STATE / 'receipts' / ('publish-' + hashlib.sha256(source_key(item.get('source')).encode()).hexdigest()[:16] + '.json')
     with locked(STATE / '.publish.lock'):
         if run('git', 'status', '--porcelain'): raise ValueError('Shared checkout has edits; keep bundle and retry after existing work completes')
         run('git', 'fetch', 'https://github.com/lolock/halo-notes.git', 'main')
@@ -88,6 +90,10 @@ def publish(bundle):
         for rel in allowed:
             target = ROOT / rel
             if target.exists(): raise ValueError('Would overwrite existing file: ' + str(rel))
+        if receipt.exists():
+            old = json.loads(receipt.read_text())
+            manifest['previous_attempts'] = old.get('previous_attempts', []) + [{k: old.get(k) for k in ('status', 'commit', 'error', 'created_at')}]
+        atomic_json(receipt, manifest)
         original_index = (ROOT / 'articles.json').read_bytes()
         for rel in allowed:
             target = ROOT / rel; target.parent.mkdir(parents=True, exist_ok=True); shutil.copy2(bundle / rel, target)
