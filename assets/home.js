@@ -50,9 +50,8 @@
         const el=document.createElement('article');
         el.className='card';
         const coverClass=((it.category||'').includes('OpenClaw')?'cat-openclaw':((it.category||'').includes('工具')?'cat-tools':((it.category||'').includes('工作流')?'cat-workflow':'cat-default')));
-        const coverStyle='';
         el.innerHTML=`
-          <a class="cover ${coverClass}" ${coverStyle} href="${href}">
+          <a class="cover ${coverClass}" href="${href}">
             <div class="metaTop">
               <span class="chip">${escapeHTML(it.category||'未分类')}</span>
               <span class="chip q-${qv}">${qv}</span>
@@ -64,6 +63,25 @@
             <div class="m2"><span class="mono">${escapeHTML(it.date||'')}</span><span>·</span><a href="${safeSource(it.source)}" target="_blank" rel="noopener">↗ 原始链接</a></div>
             <div class="tags">${(() => { const tags=(it.tags||[]); const head=tags.slice(0,2).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join(''); const more=tags.length>2?`<span class="tag">+${tags.length-2}</span>`:''; return head+more; })()}</div>
           </div>`;
+        const cover = el.querySelector('.cover');
+        cover.setAttribute('aria-label', it.title || '阅读文章');
+        const fallback = document.createElement('div');
+        fallback.className = 'cover-fallback';
+        const mark = document.createElement('span'); mark.className = 'cover-mark mono'; mark.textContent = 'HALO NOTES';
+        const title = document.createElement('span'); title.className = 'cover-title'; title.textContent = (it.title || '').split(' / ')[0];
+        fallback.append(mark, title); cover.prepend(fallback);
+        if (it.cover) {
+          try {
+            const url = new URL(it.cover, location.href);
+            if (['http:', 'https:'].includes(url.protocol)) {
+              const img = document.createElement('img');
+              img.className = 'cover-image'; img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
+              img.onload = () => { cover.classList.add('has-image'); fallback.hidden = true; };
+              img.onerror = () => { img.remove(); cover.classList.remove('has-image'); fallback.hidden = false; };
+              img.src = url.href; cover.prepend(img);
+            }
+          } catch { /* Keep the title cover for unavailable images. */ }
+        }
         list.appendChild(el);
       });
       empty.style.display=filtered.length? 'none':'block';

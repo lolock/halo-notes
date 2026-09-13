@@ -35,7 +35,21 @@ const assert = require('node:assert/strict');
   assert.equal(await page.locator('.card img,.card script,.card b').count(),0);
   assert.equal(await page.locator('.m2 a').getAttribute('href'),'#');
   assert.equal(await page.evaluate(() => window.pwned),undefined);
+  await page.unroute('**/articles.json');
+  const pixel = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a9WQAAAAASUVORK5CYII=', 'base64');
+  await page.route('**/test-cover.png', r => r.fulfill({contentType:'image/png', body:pixel}));
+  await page.route('**/broken-cover.png', r => r.fulfill({status:404, body:'missing'}));
+  await page.route('**/articles.json', r => r.fulfill({json:[
+    {title:'Real',file:'articles/test.md',cover:'./test-cover.png'},
+    {title:'No image',file:'articles/test.md',cover:''},
+    {title:'Broken',file:'articles/test.md',cover:'./broken-cover.png'},
+    {title:'Unsafe',file:'articles/test.md',cover:'javascript:alert(1)'}
+  ]}));
+  await page.reload();
+  await page.waitForFunction(() => document.querySelectorAll('.cover.has-image').length === 1 && !document.querySelector('img[src*=broken-cover]'));
+  assert.equal(await page.locator('.cover-fallback:not([hidden])').count(),3);
+  assert.equal(await page.locator('img[src^="javascript:"]').count(),0);
   assert.deepEqual(errors,[]);
-  console.log('PASS: reader 390/850/1200, live resize, TOC/progress, XSS cleanup, index retry/escaping');
+  console.log('PASS: reader 390/850/1200, live resize, TOC/progress, XSS cleanup, index retry/escaping, cover images/fallback');
   await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

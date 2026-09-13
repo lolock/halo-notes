@@ -192,7 +192,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "本文给出在 Claude Platform 中三类核心降本方法：提示词缓存管理、反模式指令清理与 effort 标定，并给出可复用的 claude-api 流程。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a9f8d87cec69dcbb7d97cb2_image3.png",
     "source_name": "Claude Blog"
   },
   {
@@ -304,7 +304,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "本文梳理了高效商务代理的构成与实施路径：从任务路由、上下文管理到监控与治理，强调以可复用架构和高效工具协同提升执行质量。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a97121e31e08caa3a0e6679_02653800.png",
     "source_name": "Claude Blog"
   },
   {
@@ -322,7 +322,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "本文给出基于 Claude 的商务代理落地框架，包括商家/购物两类代理蓝图、能力边界、提示词工程、工具与发布治理，适合面向电商场景快速起步。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a95f44f1757be75a0616bd0_demo-retail.webp",
     "source_name": "Claude Blog"
   },
   {
@@ -340,7 +340,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "Anthropic 展示了如何用 Claude Academy 建立 AI 素养框架：把 AI 安全、判断和协同放在核心，通过持续学习与技能治理推动全民上手。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a869c873ac9215b510583a4_5917bf5c.png",
     "source_name": "Claude Blog"
   },
   {
@@ -376,7 +376,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "文章梳理了初创企业在 Claude Code 下的五条执行原则与实践清单，强调人人可参与、闭环验证、重建为常态以及内部产品先行再外部化。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a860f726d9f0514aae99ebd_Artemis%20Security.jpg",
     "source_name": "Claude Blog"
   },
   {
@@ -430,7 +430,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "本文展示了 Anthropic 团队在销售、法务与协作场景中使用 Claude Tag 的 3 个实际案例，说明 AI 入口与审核机制如何把周会前信息整理、客户支持和合规审核提速到分钟级。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a91db2a994de3cf1ac088c6_c0ede71e.png",
     "source_name": "Claude Blog"
   },
   {
@@ -448,7 +448,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "文章说明 Claude 的内存与 Cowork/聊天共享，支持按主题查看、编辑和删除记忆，并新增敏感主题开关与默认保护策略。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8cc19ec0d328f3250d2a32_3bc1dbe9.png",
     "source_name": "Claude Blog"
   },
   {
@@ -466,7 +466,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "用 Claude Code 将每周销售周报从手工流程升级为可持续迭代的自动化流程，覆盖多数据源聚合、规则化提示与反馈驱动优化。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a88b9f50a3e987d4b342927_LATEST%20slack-weekly-update.png",
     "source_name": "Claude Blog"
   },
   {
@@ -502,7 +502,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "提出 AI-Native SDLC 的六阶段重构方法：在 plan/design/build/test/deploy/maintain 中通过 intent/spec/plan 等可追溯工件、hooks、审核与回路实现从人工主导到可控自动化。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8739a1b934ffe55bfc9715_44592f18.png",
     "source_name": "Claude Blog"
   },
   {
@@ -540,7 +540,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "Claude 正式在付费计划上线浏览器自动化能力，新增更强提示注入防护、动作校验与评估数据，并提供企业级安装与治理配置。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8e8c30f077b615a7429ea1_a9d1d161.png",
     "source_name": "Claude Blog"
   },
   {
@@ -576,7 +576,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "Warp 以双技能闭环（基础技能+改进技能）实现“反馈可持续沉淀”，让代码评审、Issue 分流等智能体通过人类反馈不断迭代优化。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8f1a9a1b33f40618a9d59a_selfimprove-loop.jpg",
     "source_name": "Claude Blog"
   },
   {
@@ -651,7 +651,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "Anthropic CI 工程师讲述如何用 Claude Tag 构建值班智能体：检测告警、15 分钟内发布首份故障分析、动态工作流分诊、自动化修复与交接，并附开源搭建套件 oncall-kit。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a84a163e2030bce8127dd8b_b6ba2d45.png",
     "source_name": "Claude Blog"
   },
   {
@@ -688,7 +688,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "ABC Legal 的 CTO 讲述如何用 Claude Managed Agents 把每个智能体当作代码管理：从 15 人非开发者委员会起步，到 50+ 个生产智能体、310 名员工日常使用 Claude，以及收割者-调优者的自我改进循环。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8313ee791ba5b5e5308366_196c45a5.png",
     "source_name": "Claude Blog"
   },
   {
@@ -707,7 +707,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "Claude Code 官方指南：从模型选择、输入/输出 token 与提示缓存的计价原理，到 /clear、/compact、@提及文件和子代理等降低会话成本的实操技巧。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a7f1946bc7cd69c4c8919db_be236b0d.png",
     "source_name": "Claude Blog"
   },
   {
@@ -825,7 +825,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "Anthropic 业务拓展团队用 Claude Cowork 规模化运营入站与出站：收件箱技能每小时自动起草回复、夜间定时任务覆盖上百个客户的开拓与调研、探索电话记分卡与用量分析，并分享团队上手 Claude Cowork 的六条建议。",
-    "cover": "",
+    "cover": "/halo-notes/articles/assets/bd-skills-panel.png",
     "source_name": "Claude Blog"
   },
   {
@@ -864,7 +864,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "Claude Code 将自动模式设为 Pro、Max 与 Team 计划的默认设置：分类器替代逐条审批，内部与第三方评估显示其在拦截危险命令、防止提示注入方面均优于人工审查，并附 1,053 人对照实验与生产客户数据。",
-    "cover": "",
+    "cover": "/halo-notes/articles/assets/auto-mode-experiment.png",
     "source_name": "Claude Blog"
   },
   {
@@ -944,7 +944,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "Claude Enterprise 推出推理钩子（Inference hooks）测试版：在提示词与工具调用结果到达模型之前，由企业自己的 DLP 服务器实时检查并执行放行/拦截策略，统一覆盖 chat、Claude Code、Claude Cowork 等全部企业级入口。",
-    "cover": "",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a7362314ccf1158f2bffe5f_Claude-blog-prompt-hooks-DLP%20(1).png",
     "source_name": "Claude Blog"
   },
   {
@@ -2496,7 +2496,7 @@
     "category": "Claude应用",
     "quality": "A",
     "summary": "Claude Managed Agents 新增自托管沙盒与 MCP tunnels，让企业在自有边界内运行工具执行并连接私有服务。",
-    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a0c965b35dd4ce814b00c56_Sandboxes_3%20(1",
+    "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a0c965b35dd4ce814b00c56_Sandboxes_3%20(1).png",
     "source_name": "Claude Blog"
   },
   {

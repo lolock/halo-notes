@@ -14,6 +14,9 @@ import halo_publish as publisher
 from extract_claude_blog import ArticleParser
 
 class PipelineTests(unittest.TestCase):
+    def test_cover_url_keeps_parentheses(self):
+        from fix_articles_metadata import first_image_url
+        self.assertEqual(first_image_url('![Cover](https://example.org/image%20(1).png)'), 'https://example.org/image%20(1).png')
     def test_source_identity(self):
         self.assertEqual(common.source_key('https://twitter.com/author/status/123?s=20&utm_source=x'),common.source_key('https://x.com/other/status/123'))
         self.assertNotEqual(common.source_key('https://example.org/?id=1'), common.source_key('https://example.org/?id=2'))

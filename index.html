@@ -44,6 +44,13 @@
     .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.18s ease}
     .card:hover{transform:translateY(-1px);background:var(--panel2);border-color:#7dd3fc55}
     .cover{position:relative;display:block;aspect-ratio:2/1;background:linear-gradient(120deg,#0ea5e933,#22c55e33),linear-gradient(180deg,#1f2937,#111827);background-size:cover;background-position:center;transition:transform .25s ease, filter .25s ease}
+    .cover{overflow:hidden;text-decoration:none}
+    .cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .2s}
+    .cover.has-image .cover-image{opacity:1}
+    .cover-fallback{height:100%;padding:48px 22px 18px;display:flex;flex-direction:column;justify-content:center;gap:9px;color:#f1f5f9;background:radial-gradient(circle at 95% 5%,#7dd3fc22 0 23%,transparent 23.5%),repeating-linear-gradient(135deg,transparent 0 23px,#ffffff04 23px 24px)}
+    .cover-fallback[hidden]{display:none}
+    .cover-mark{font-size:10px;letter-spacing:.16em;color:#a5d9ef}
+    .cover-title{font-size:21px;font-weight:600;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .card:hover .cover{transform:scale(1.02);filter:saturate(1.08)}
     .cover.cat-openclaw{background:linear-gradient(120deg,#0ea5e944,#22c55e44),linear-gradient(180deg,#123040,#0f172a)}
     .cover.cat-tools{background:linear-gradient(120deg,#2563eb44,#06b6d444),linear-gradient(180deg,#1e293b,#111827)}

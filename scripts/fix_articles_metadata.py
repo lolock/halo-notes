@@ -19,7 +19,7 @@ from typing import Dict
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLES_DIR = ROOT / "articles"
 INDEX_PATH = ROOT / "articles.json"
-IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
+IMAGE_RE = re.compile(r"(?<!\\)!\[[^\]]*\]\(((?:[^()\s]|\([^()]*\))+)\)")
 
 REQUIRED_META_KEYS = ["- 原始链接：", "- 作者：", "- 发布时间：", "- X Article："]
 
