@@ -16,7 +16,10 @@ from halo_common import ROOT, STATE, atomic_json, locked, source_key, article_pa
 SITE = 'https://lolock.github.io/halo-notes/'
 
 def run(*args):
-    return subprocess.check_output(args, cwd=ROOT, text=True).strip()
+    result = subprocess.run(args, cwd=ROOT, text=True, capture_output=True)
+    if result.returncode:
+        raise RuntimeError(' '.join(args) + '\n' + result.stdout + result.stderr)
+    return result.stdout.strip()
 
 def fetch(url):
     with urllib.request.urlopen(url, timeout=30) as r:
@@ -49,6 +52,11 @@ def verify(files, site=SITE):
     evidence = {'status': 'verified', 'verified_at': datetime.now(timezone.utc).isoformat(), 'commit': run('git', 'rev-parse', 'HEAD'), 'articles': articles, 'assets': verified}
     key = evidence['commit'][:12] + '-' + str(len(files))
     atomic_json(STATE / 'receipts' / (key + '.json'), evidence)
+    for entry in articles:
+        record = STATE / 'receipts' / ('publish-' + __import__('hashlib').sha256(source_key(entry['source']).encode()).hexdigest()[:16] + '.json')
+        if record.exists():
+            data = json.loads(record.read_text()); data.update(status='verified', verification=evidence)
+            atomic_json(record, data)
     return evidence
 
 def publish(bundle):
@@ -80,10 +88,22 @@ def publish(bundle):
         for rel in allowed:
             target = ROOT / rel
             if target.exists(): raise ValueError('Would overwrite existing file: ' + str(rel))
+        original_index = (ROOT / 'articles.json').read_bytes()
         for rel in allowed:
             target = ROOT / rel; target.parent.mkdir(parents=True, exist_ok=True); shutil.copy2(bundle / rel, target)
         atomic_json(ROOT / 'articles.json', [item] + items)
-        run('python3', 'scripts/validate_articles.py', '--strict')
+        prepared_index = (ROOT / 'articles.json').read_bytes()
+        try:
+            run('python3', 'scripts/validate_articles.py', '--strict')
+        except Exception as error:
+            # Undo only our newly created, unchanged files. Never erase other edits.
+            for rel in allowed:
+                target = ROOT / rel
+                if target.is_file() and digest(target) == manifest['files'][str(rel)]: target.unlink()
+            if (ROOT / 'articles.json').read_bytes() == prepared_index:
+                (ROOT / 'articles.json').write_bytes(original_index)
+            manifest.update(status='validation_failed', error=str(error)); atomic_json(receipt, manifest)
+            raise
         manifest['status'] = 'validated'; atomic_json(receipt, manifest)
         run('git', 'add', '--', 'articles.json', *map(str, allowed))
         run('git', 'commit', '-m', '发布文章：' + item['title'])

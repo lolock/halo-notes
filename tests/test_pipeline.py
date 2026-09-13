@@ -18,7 +18,7 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(common.source_key('https://twitter.com/author/status/123?s=20&utm_source=x'),common.source_key('https://x.com/other/status/123'))
         self.assertNotEqual(common.source_key('https://example.org/?id=1'), common.source_key('https://example.org/?id=2'))
     def test_resources_include_video_not_code(self):
-        md='[video](/halo-notes/articles/assets/a.mp4)\n![image](articles/assets/a.jpg)\n```html\n<a href="fake">demo</a>\n```\n`[x](fake)`'
+        md='[video](/halo-notes/articles/assets/a.mp4)\n![image](articles/assets/a.jpg)\n```html\n<a href="fake">demo</a>\n```\n`[x](fake)`\nhref="css/style.css" is a code explanation'
         self.assertEqual(common.local_targets(md),['articles/assets/a.jpg','articles/assets/a.mp4'])
     def test_path_boundary(self):
         for p in ('../private.md','articles/../x.md','/tmp/x.md','articles/x.html'):
@@ -59,6 +59,22 @@ class PipelineTests(unittest.TestCase):
             with patch.object(queue,'published',return_value=[]),patch.object(queue,'inventory',return_value=('mac',rows)):
                 self.assertEqual(queue.scan()['enqueued'],1)
                 self.assertEqual(queue.scan()['enqueued'],0)
+    def test_validation_failure_rolls_back_only_bundle(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)/'repo';root.mkdir();bundle=Path(td)/'bundle';(bundle/'articles').mkdir(parents=True)
+            (root/'articles.json').write_text('[]')
+            (root/'keep.txt').write_text('existing work')
+            (bundle/'articles/new.md').write_text('# new')
+            (bundle/'entry.json').write_text(json.dumps({'file':'articles/new.md','title':'new','source':'https://example.org/new'}))
+            def fake_run(*args):
+                if args[0]=='python3':raise RuntimeError('invalid content')
+                return ''
+            with patch.object(publisher,'ROOT',root),patch.object(publisher,'STATE',Path(td)/'state'),patch.object(publisher,'run',side_effect=fake_run):
+                with self.assertRaises(RuntimeError):publisher.publish(bundle)
+            self.assertEqual((root/'articles.json').read_text(),'[]')
+            self.assertFalse((root/'articles/new.md').exists())
+            self.assertEqual((root/'keep.txt').read_text(),'existing work')
+            self.assertTrue((bundle/'articles/new.md').exists())
     def test_pages_failure_does_not_finish_queue(self):
         with patch.object(publisher,'fetch',side_effect=RuntimeError('Pages not deployed')):
             with self.assertRaises(RuntimeError):queue.finish('one','articles/a.md')

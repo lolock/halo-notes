@@ -76,7 +76,7 @@ def local_targets(markdown):
     markdown = re.sub(r'(`+).*?\1', '', '\n'.join(lines))
     markdown = markdown.replace(r'\[', '').replace(r'\]', '')
     targets = re.findall(r'!?\[[^\]]*\]\(<?([^\s)>]+)', markdown)
-    targets += re.findall(r'(?:src|href)=[\"\']([^\"\']+)', markdown)
+    targets += re.findall(r'<[A-Za-z][^>]*?\b(?:src|href)=[\"\']([^\"\']+)', markdown)
     result = set()
     for target in targets:
         u = urlsplit(target)
