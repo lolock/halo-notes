@@ -1,6 +1,10 @@
-# Halo Notes 内容与发布约定 v3
+# Halo Notes 内容与发布约定 v4
 
-Halo Notes 由 Hermes 操作，Git/Markdown 保存文章，GitHub Pages 提供阅读。适用于指定链接、Mac Inbox 收藏、双语翻译和交互专题。英文全文必须保留并逐块配中文；正文、链接、代码、媒体顺序不可因排版丢失。首页保持简洁，Claude Blog 自动订阅保持停用。
+Halo Notes 由 Hermes 操作，Git/Markdown 保存文章，GitHub Pages 提供阅读。适用于指定链接、Mac Inbox 收藏、双语翻译和交互专题。英文全文必须保留，以完整段落/自然小节组织杂志式双语；正文、链接、代码、媒体顺序不可因排版丢失。首页保持简洁，Claude Blog 自动订阅保持停用。
+
+## 双语阅读要求
+
+先读 [双语编辑与杂志阅读规范](bilingual-editorial.md)。新英文文章使用 `source_language: "en"` 和 `bilingual_format: "magazine-v1"`，按完整论点分组，中文连续阅读、英文连续阅读。禁止逐句交替、按短行分隔和用引用块包装普通英文。源文完整性按源 ID/顺序核对，不再数 EN 标签。发布脚本会拒绝不符合新格式的双语 bundle。
 
 ## 内容格式
 
@@ -59,6 +63,9 @@ python3 scripts/halo_queue.py skip <id> --reason '明确跳过原因'
 ```bash
 python3 scripts/validate_articles.py --strict
 python3 -m unittest discover -s tests -v
+node scripts/check_bilingual.cjs
+node tests/bilingual_checks.cjs
+node --check assets/bilingual.js
 node --check assets/reader.js
 node --check assets/home.js
 ```

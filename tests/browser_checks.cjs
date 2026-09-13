@@ -1,6 +1,8 @@
 // Run with NODE_PATH pointing to playwright-core and HALO_TEST_URL to a local server.
 const {chromium} = require('playwright-core');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
 (async () => {
   const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || '/snap/bin/chromium', headless: true});
   const base = process.env.HALO_TEST_URL || 'http://127.0.0.1:8765';
@@ -26,6 +28,46 @@ const assert = require('node:assert/strict');
   await page.locator('#tocPanel summary').click();
   await page.locator('#tocLinks a').nth(4).click();
   await page.waitForFunction(() => document.querySelector('#tocLinks a.active')?.textContent==='Section 4');
+  // Every indexed article keeps all text characters, links, images and code.
+  // Language labels are presentation metadata; section reordering is intended.
+  const root = path.resolve(__dirname, '..');
+  const corpus = JSON.parse(fs.readFileSync(path.join(root, 'articles.json'))).map(entry => {
+    const file = entry.file.startsWith('articles/') ? entry.file : 'articles/' + entry.file;
+    return {file, md:fs.readFileSync(path.join(root,file),'utf8')};
+  });
+  const conservation = await page.evaluate(files => files.map(({file,md}) => {
+    const before = document.createElement('div'), after = document.createElement('div');
+    before.innerHTML = DOMPurify.sanitize(marked.parse(md,{gfm:true,breaks:false}));
+    const result = HaloBilingual.render(md,marked);
+    after.innerHTML = DOMPurify.sanitize(result.html);
+    after.querySelectorAll('.language-label').forEach(e => e.remove());
+    const chars = el => [...el.textContent.replace(/\b(?:EN|ZH)\s*[:：]/gi,'').replace(/\s/g,'')].sort().join('');
+    const attrs = (el,selector,attr) => [...el.querySelectorAll(selector)].map(e => e.getAttribute(attr)).sort();
+    const code = el => [...el.querySelectorAll('pre')].map(e => e.textContent);
+    return {file, sections:result.sections.length, ok:!result.issues.length && chars(before)===chars(after)
+      && JSON.stringify(attrs(before,'a','href'))===JSON.stringify(attrs(after,'a','href'))
+      && JSON.stringify(attrs(before,'img','src'))===JSON.stringify(attrs(after,'img','src'))
+      && JSON.stringify(code(before))===JSON.stringify(code(after))};
+  }), corpus);
+  assert.deepEqual(conservation.filter(r => !r.ok),[]);
+  for (const width of [1440,850,390]) {
+    await page.setViewportSize({width,height:1000});
+    await page.goto(base+'/reader.html?file='+encodeURIComponent('articles/computer-use-skills-files-api-双语.md'));
+    await page.waitForSelector('.bilingual-section');
+    assert.equal(await page.locator('.bilingual-section').count(),4);
+    const positions = await page.locator('.bilingual-section').first().evaluate(section => {
+      const [zh,en] = section.children;const a=zh.getBoundingClientRect(),b=en.getBoundingClientRect();
+      return {alongside:b.left>a.right,stacked:b.top>=a.bottom,noOverflow:document.documentElement.scrollWidth<=innerWidth};
+    });
+    assert(positions.noOverflow);
+    assert(width>=1100 ? positions.alongside : positions.stacked);
+    await page.evaluate(() => { document.documentElement.dataset.theme='light';const first=document.querySelector('.bilingual-section');if(innerWidth>768)document.getElementById('content').scrollTop=first.offsetTop-document.getElementById('content').offsetTop-20; });
+    await page.screenshot({path:'/tmp/halo-editorial-'+width+'.png'});
+  }
+  await page.goto(base+'/article.html?file='+encodeURIComponent('articles/computer-use-skills-files-api-双语.md'));
+  await page.waitForSelector('.bilingual-section');
+  assert.equal(await page.locator('.bilingual-section').count(),4);
+  console.log('PASS: all '+corpus.length+' articles preserve text/resources/code; '+conservation.filter(r=>r.sections).length+' have bilingual sections; desktop/mobile/legacy reader layouts');
   let fail = true;
   await page.route('**/articles.json', r => fail ? r.fulfill({status:503,body:'unavailable'}) : r.fulfill({json:[{title:'<img src=x onerror="window.pwned=1">',file:'articles/test.md',date:'2026-01-01',summary:'<script>bad</script>',category:'<b>category</b>',tags:['<img>'],source:'javascript:alert(1)',quality:'S'}]}));
   await page.goto(base+'/');

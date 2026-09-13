@@ -60,7 +60,7 @@ def verify(files, site=SITE):
     with ThreadPoolExecutor(max_workers=6) as pool:
         verified = list(pool.map(check, checks.items()))
     # Reader shell + its local runtime must be deployed as well.
-    for path in ('reader.html', 'assets/reader.js', 'assets/vendor/marked.js', 'assets/vendor/purify.js'):
+    for path in ('reader.html', 'assets/reader.js', 'assets/bilingual.js', 'assets/bilingual.css', 'assets/vendor/marked.js', 'assets/vendor/purify.js'):
         if fetch(site + path) != (ROOT / path).read_bytes(): raise ValueError('Reader deployment differs: ' + path)
     evidence = {'status': 'verified', 'verified_at': datetime.now(timezone.utc).isoformat(), 'commit': run('git', 'rev-parse', 'HEAD'), 'articles': articles, 'assets': verified}
     key = evidence['commit'][:12] + '-' + hashlib.sha256(json.dumps(sorted(files)).encode()).hexdigest()[:12]
@@ -84,6 +84,7 @@ def publish(bundle):
             raise ValueError('Unexpected bundle path: ' + str(rel))
         allowed.append(rel)
     if Path(path) not in allowed: raise ValueError('Article missing in bundle')
+    run('node', 'scripts/check_bilingual.cjs', '--bundle', str(bundle))
     manifest = {'source': item.get('source'), 'source_key': source_key(item.get('source')), 'status': 'draft', 'created_at': datetime.now(timezone.utc).isoformat(), 'files': {str(p): digest(bundle / p) for p in allowed}}
     if (bundle / 'source.json').exists(): manifest['source_sha256'] = digest(bundle / 'source.json')
     if (bundle / 'manifest.json').exists(): manifest['content_check'] = json.loads((bundle / 'manifest.json').read_text())

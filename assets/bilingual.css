@@ -1,0 +1,58 @@
+/* Quiet editorial typography; a spread aligns sections, never individual lines. */
+.magazine-reader{--accent:#bba584;--accent2:#b8c9d7;--bg:#191b1d;--panel:#222426;--line:#414244;--text:#e8e5df;--muted:#b6b3ad}
+[data-theme="light"] .magazine-reader{--bg:#eeeae3;--panel:#fffdf8;--line:#ded7cb;--text:#292820;--muted:#69675f;--accent:#876748;--accent2:#526978}
+.magazine-reader .wrap{width:min(1480px,100%);padding-inline:28px}
+.magazine-reader .layout{grid-template-columns:minmax(0,1fr) 218px;gap:28px}
+.magazine-reader .layout.no-toc{grid-template-columns:minmax(0,1fr)}
+.magazine-reader .paper{background:var(--panel);border-radius:3px;padding:42px 46px;box-shadow:0 8px 32px #0000000b}
+.magazine-reader .content{font-family:Georgia,"Noto Serif CJK SC","Source Han Serif SC","Songti SC",SimSun,serif;font-size:17px;overflow-wrap:break-word;word-break:normal}
+.magazine-reader .content h1{font-size:clamp(28px,3vw,42px);line-height:1.35;margin:0 0 24px;letter-spacing:-.025em;font-weight:600}
+.magazine-reader .content h2{font-size:26px;margin:2em 0 1em;padding-top:1em;border-top:1px solid var(--line);font-weight:600}
+.magazine-reader .content h3{font-size:21px;margin:1.6em 0 .8em;font-weight:600}
+.magazine-reader .content p{margin:0 0 1em;line-height:1.95}
+.magazine-reader .content > h1 + ul{font:12px/1.9 "IBM Plex Sans",sans-serif;color:var(--muted);list-style:none;padding:0;margin-bottom:28px}
+.magazine-reader .content hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.magazine-reader .content a{display:inline;vertical-align:baseline;word-break:normal;overflow-wrap:anywhere;text-underline-offset:3px}
+.magazine-reader .content blockquote{border-left:2px solid var(--accent);padding-left:18px;color:var(--text);margin:1.5em 0;font-style:normal}
+.magazine-reader .content img{border-radius:2px}
+.magazine-reader .tocCard{border:0;border-top:1px solid var(--line);border-radius:0;background:none;padding:16px 0}
+.magazine-reader .toc-link{font-size:12px;line-height:1.7;padding-block:7px;color:var(--muted)}
+.magazine-reader .toc-link.active{color:var(--text);background:none;border-color:var(--accent);border-radius:0}
+.magazine-reader .tocTitle{font-size:13px;color:var(--text);letter-spacing:.15em}
+.magazine-reader .progressWrap{height:3px;border:0}
+.bilingual-section{display:grid;grid-template-columns:1fr;gap:22px;margin:1.8em 0 2.4em}
+.bilingual-column{min-width:0}
+.language-label{font:10px/1.5 "IBM Plex Sans",sans-serif;letter-spacing:.18em;color:var(--muted);margin-bottom:18px}
+.bilingual-column[lang="en"]{color:var(--muted);font-size:17px}
+.magazine-reader .bilingual-column[lang="en"] p,.magazine-reader .bilingual-column[lang="en"] li{line-height:1.7;hyphens:auto}
+.bilingual-column > :last-child{margin-bottom:0}
+@media(min-width:1100px){
+  .bilingual-section{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:34px}
+  .bilingual-column[lang="en"]{border-left:1px solid var(--line);padding-left:30px}
+}
+@media(max-width:1099px){
+  .magazine-reader .wrap{padding-inline:16px}
+  .magazine-reader .paper{padding:30px 28px}
+  .bilingual-column[lang="en"]{border-top:1px solid var(--line);padding-top:20px}
+}
+@media(max-width:768px){
+  .magazine-reader .wrap{padding:12px 12px 30px}
+  .magazine-reader .layout{grid-template-columns:1fr;gap:12px}
+  .magazine-reader .paper{padding:26px 20px}
+  .magazine-reader .tocCard{padding:10px 4px}
+  .magazine-reader .tocTitle{margin-bottom:0}
+  .magazine-reader .content h2{font-size:23px}
+  .magazine-reader .content h3{font-size:20px}
+  .magazine-reader .content p,.magazine-reader .content li{font-size:17px}
+  .magazine-reader .bilingual-column[lang="en"] p,.magazine-reader .bilingual-column[lang="en"] li{font-size:16px}
+}
+@media print{
+  .magazine-reader .wrap,.magazine-reader .layout,.magazine-reader .paper{height:auto;overflow:visible}
+  .magazine-reader .layout{display:block}
+  .magazine-reader .side,.magazine-reader .top{display:none}
+  .bilingual-section{break-inside:avoid}
+}
+
+.magazine-reader .heading-translation{display:block;font-size:.62em;font-weight:400;line-height:1.45;letter-spacing:0;color:var(--muted);margin-top:.45em}
+.magazine-reader .heading-separator{display:none}
+.magazine-reader .content > h1 + ul li{font-size:12px;line-height:1.8}

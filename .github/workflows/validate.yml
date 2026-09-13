@@ -13,5 +13,8 @@ jobs:
         run: |
           python3 scripts/validate_articles.py --strict
           python3 -m unittest discover -s tests -v
+          node scripts/check_bilingual.cjs
+          node tests/bilingual_checks.cjs
+          node --check assets/bilingual.js
           node --check assets/reader.js
           node --check assets/home.js

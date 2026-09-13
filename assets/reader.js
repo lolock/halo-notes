@@ -75,7 +75,9 @@
       if (!response.ok) throw new Error('读取失败（' + response.status + '）');
       const md = await response.text();
       if (!window.marked || !window.DOMPurify) throw new Error('阅读组件加载失败');
-      el.innerHTML = DOMPurify.sanitize(marked.parse(md, {gfm: true, breaks: true}), {
+      const reading = window.HaloBilingual ? HaloBilingual.render(md, marked) : {html:marked.parse(md, {gfm:true, breaks:false}), sections:[]};
+      document.body.classList.toggle('magazine-reader', reading.sections.length > 0);
+      el.innerHTML = DOMPurify.sanitize(reading.html, {
         USE_PROFILES: {html: true}, FORBID_TAGS: ['style', 'iframe', 'form', 'input', 'button', 'video', 'audio'],
         FORBID_ATTR: ['style', 'srcset'], SANITIZE_NAMED_PROPS: true
       });
@@ -86,6 +88,19 @@
         if (key === 'href') node.rel = 'noopener noreferrer';
       });
       document.title = (el.querySelector('h1')?.textContent || '文章阅读') + ' - Halo Notes';
+      if (reading.sections.length) {
+        el.querySelectorAll('h1,h2,h3').forEach(heading => {
+          if (heading.childElementCount) return;
+          const parts = heading.textContent.split(' / ');
+          const hasChinese = text => /[\u3400-\u9fff]/.test(text);
+          if (parts.length !== 2 || hasChinese(parts[0]) === hasChinese(parts[1])) return;
+          const zh = document.createElement('span'), en = document.createElement('span'), separator = document.createElement('span');
+          zh.lang = 'zh-CN'; zh.textContent = parts.find(hasChinese);
+          en.lang = 'en'; en.className = 'heading-translation'; en.textContent = parts.find(text => !hasChinese(text));
+          separator.className = 'heading-separator'; separator.textContent = ' / ';
+          heading.replaceChildren(zh, separator, en);
+        });
+      }
       buildToc();
     } catch (error) {
       el.replaceChildren(document.createTextNode('加载失败：' + error.message + ' '));

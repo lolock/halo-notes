@@ -395,7 +395,9 @@
     "quality": "A",
     "summary": "更新发布了 Claude Platform 的 computer use、Skills API 与 Files API：支持可见界面软件操作、技能版本化以及文档读写闭环，面向生产环境构建可复用智能体。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Slack 如何把对话转化为知识：打造人机共事团队 / Turning conversation into knowledge: how Slack builds human-agent teams",
