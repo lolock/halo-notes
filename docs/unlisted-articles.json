@@ -1,0 +1,10 @@
+{
+  "articles/A股电力ETF决策页_电力运营与电网设备错配.md": {
+    "reason": "历史决策页入口，保留原地址；正式索引使用同主题试运行报告。",
+    "replaced_by": "articles/A股电力ETF试运行报告_电力运营而非电网设备.md"
+  },
+  "articles/工程化的本质：从Prompt到Loop的个人AI-Lab演进.md": {
+    "reason": "同一 ChatGPT 来源的历史整理版，保留原文件；正式索引使用完整对话整理版。",
+    "replaced_by": "articles/AI 能力试验台工程化：把 Skill、Prompt、Harness 变成可复用流程.md"
+  }
+}

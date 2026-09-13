@@ -22,6 +22,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Tuple
+from halo_common import source_key, article_path, local_targets
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLES_DIR = ROOT / "articles"
@@ -62,7 +63,26 @@ def check_json_items(items: List[Dict]) -> Tuple[List[str], List[str]]:
     seen_titles: Dict[str, int] = {}
     valid_qualities = {"S", "A", "B"}
 
+    seen_sources = {}
     for i, item in enumerate(items):
+        if not isinstance(item, dict):
+            errors.append(f"[{i}]: item must be an object")
+            continue
+        for key in REQUIRED_JSON_KEYS:
+            if key in item and not isinstance(item[key], str):
+                errors.append(f"[{i}]: {key} must be a string")
+        if any(key in item and not isinstance(item[key], str) for key in REQUIRED_JSON_KEYS):
+            continue
+        if 'tags' in item and (not isinstance(item['tags'], list) or not all(isinstance(t, str) for t in item['tags'])):
+            errors.append(f"[{i}]: tags must be a list of strings")
+        try:
+            article_path(item.get('file', ''))
+        except ValueError as exc:
+            errors.append(str(exc)); continue
+        source = source_key(item.get('source'))
+        if source.startswith('https://') and source in seen_sources:
+            errors.append(f"duplicate source: {source}")
+        seen_sources[source] = i
         prefix = f"[{i}] {item.get('title', 'UNKNOWN')}"
 
         missing = REQUIRED_JSON_KEYS - set(item.keys())
@@ -117,24 +137,12 @@ def find_markdown_header_issues() -> Tuple[List[str], List[str]]:
         if "\ufffd" in text:
             warnings.append(f"{rel}: contains Unicode replacement chars (U+FFFD)")
 
-        for match in MARKDOWN_IMAGE_RE.finditer(text):
-            target = match.group(1).strip("<>")
-            if target.startswith("assets/"):
-                errors.append(
-                    f"{rel}: local image '{target}' resolves from reader.html to the wrong directory; "
-                    "use '/halo-notes/articles/assets/...'"
-                )
-                continue
-
-            if target.startswith("/halo-notes/"):
-                site_relative = target.removeprefix("/halo-notes/").split("?", 1)[0].split("#", 1)[0]
-            elif target.startswith("articles/assets/"):
-                site_relative = target.split("?", 1)[0].split("#", 1)[0]
-            else:
-                continue
-
-            if not (ROOT / site_relative).is_file():
-                errors.append(f"{rel}: local image not found: {target}")
+        try:
+            for target in local_targets(text):
+                if not (ROOT / target).is_file():
+                    errors.append(f"{rel}: local resource not found: {target}")
+        except ValueError as exc:
+            errors.append(f"{rel}: {exc}")
 
         lines = text.splitlines()
         if not lines:
@@ -178,7 +186,12 @@ def check_index_consistency(json_files: List[str]) -> Tuple[List[str], List[str]
     md_set_prefixed = {normalize_file_path(p) for p in (p.relative_to(ROOT).as_posix() for p in sorted(ARTICLES_DIR.glob("*.md")))}
 
     missing = sorted(json_set - md_set_prefixed)
-    extra = sorted(md_set_prefixed - json_set)
+    exceptions_path = ROOT / 'docs/unlisted-articles.json'
+    exceptions = json.loads(exceptions_path.read_text()) if exceptions_path.exists() else {}
+    for path, info in exceptions.items():
+        if path not in md_set_prefixed or path in json_set or not info.get('reason') or info.get('replaced_by') not in json_set:
+            errors.append(f"invalid unlisted article record: {path}")
+    extra = sorted(md_set_prefixed - json_set - set(exceptions))
 
     if missing:
         errors.extend([f"articles.json references missing markdown file: {p}" for p in missing])
@@ -217,7 +230,7 @@ def main() -> int:
 
     e1, w1 = check_json_items(items)
     e2, w2 = find_markdown_header_issues()
-    e3, w3 = check_index_consistency([str(i.get("file", "")) for i in items])
+    e3, w3 = check_index_consistency([str(i.get("file", "")) for i in items if isinstance(i, dict)])
 
     errors = e1 + e2 + e3
     warnings = w1 + w2 + w3

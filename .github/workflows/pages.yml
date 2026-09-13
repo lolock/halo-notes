@@ -8,10 +8,13 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 jobs:
+  validate:
+    uses: ./.github/workflows/validate.yml
   deploy:
+    needs: validate
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -19,8 +22,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Stage public site only
+        run: |
+          mkdir -p _site
+          cp index.html reader.html article.html articles.json .nojekyll _site/
+          cp -R articles assets visuals _site/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4

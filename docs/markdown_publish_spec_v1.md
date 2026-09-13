@@ -1,103 +1,72 @@
-# Halo Notes 发布排版规范 v2
+# Halo Notes 内容与发布约定 v3
 
-> 目标：把「X 链接 → Halo Notes 上线」做成稳定可复用流水线，确保全文完整、插图位置正确、发布可回溯。
+Halo Notes 由 Hermes 操作，Git/Markdown 保存文章，GitHub Pages 提供阅读。适用于指定链接、Mac Inbox 收藏、双语翻译和交互专题。英文全文必须保留并逐块配中文；正文、链接、代码、媒体顺序不可因排版丢失。首页保持简洁，Claude Blog 自动订阅保持停用。
 
-## 0. 适用范围
-- 来源：`x.com` / `twitter.com` 链接（推文或 X Article）
-- 输出：`halo-notes/articles/*.md` + `articles.json` 元数据
-- 要求：正文可导航、插图在正文语义位置、可直接发布
+## 内容格式
 
-## 1. 数据提取优先级（必须）
-1. 优先使用 Twitter API 返回的 `article.plain_text`（完整正文）。
-2. 若无 `article.plain_text`，再使用 tweet 文本 + 线程补全。
-3. 禁止仅用网页可见片段替代全文。
+`articles/<标题>.md` 以标题、原始链接、作者、发布时间、可选 X Article 链接及 `---` 开头。source 使用实际原文链接；`date` 使用 YYYY-MM-DD，区分收录时间与原始发布时间。正文只保留一个主标题；不改动代码块里的标题。
 
-## 2. 文档头部（必须）
-每篇文章必须以如下结构开头：
+索引必需字段：title/file/date/source/summary/category/quality/cover；tags 为字符串列表。file 统一为 articles/ 前缀。source_name 可记录来源站点，category 表示主题。现有 S/A/B 表示提取完整程度，不代表观点正确性；S 必须验证完整正文、代码和媒体，无法完整核验用 A，预览用 B。
 
-```md
-# 标题
+图片与视频放在 `articles/assets/<slug>/`，Markdown 用 `/halo-notes/articles/assets/...`。保留代码、列表、链接及原始媒体顺序。校验器检查本地图片、视频和专题链接，忽略代码示例中的路径。提取内容如存在乱码，先对照原文修复，不直接猜测替换。
 
-- 原始链接：<...>
-- 作者：...（@...）
-- 发布时间：...
-- X Article：<...>
+## 发布 bundle
 
----
+在共享仓库之外准备：
+
+```text
+<bundle>/entry.json
+<bundle>/articles/<filename>.md
+<bundle>/articles/assets/<slug>/...
+<bundle>/source.json                 可选、私有源快照
 ```
 
-## 3. 插图放置规则（必须）
+entry.json 是一条完整索引记录。用以下命令发布：
 
-### 3.1 基础规则
-- 图 1 作为封面：放在 `---` 后、正文第一段前。
-- 其余图片必须“就近插入”对应章节，不再统一堆在文末图集。
-- 图片使用标准 Markdown：
-
-```md
-![](https://...)
-```
-
-### 3.2 章节锚点策略（长文默认）
-当文章是结构化长文（如“一、二、三...”）时，按章节锚点插图：
-- 图2 → 第二章前
-- 图3 → 第四章前
-- 图4 → 第五章前
-- 图5 → 第七章前
-- 图6 → 第八章前
-- 图7 → 第十章前
-
-若原文章节数/配图数不匹配：
-- 优先保持“语义邻近”（相关段落前后）。
-- 不得打断引用、代码块、列表的连续性。
-
-## 4. 标题层级与可导航性（必须）
-- 主章节：`##`
-- 子章节：`###`
-- 禁止跳级（例如 `##` 直接到 `####`）
-- 文章 >600 字建议至少 3 个 `##`
-
-## 5. 清洗规则（必须）
-- 删除乱码替代字符：`U+FFFD`（`�`）
-- 合并多余空行（最多保留 1 个空行）
-- 去除相邻重复段落
-- 统一中英文标点和空格（不做过度“润色改写”）
-
-## 6. 元数据同步（必须）
-更新 `articles.json`：
-- `title`、`file`、`date`、`source`
-- `summary`（1 句，强调价值）
-- `cover`（默认取图1）
-- `quality`：
-  - `S`：`article.plain_text` 全文 + 插图正确落位
-  - `A`：正文完整，存在轻度人工整理
-  - `B`：仅预览/待补全文
-
-## 7. 发布前质量门（必须）
-- [ ] 全文来源正确（优先 `article.plain_text`）
-- [ ] 文档头部完整
-- [ ] 插图不是文末堆叠，且位置语义正确
-- [ ] 无乱码字符 `�`
-- [ ] 标题层级可生成目录
-- [ ] `articles.json` 已同步
-- [ ] 本地 diff 仅包含预期变更
-
-## 8. Git 发布流程（必须）
 ```bash
-# 在 halo-notes 仓库内
-git status
-git add articles/<文件名>.md articles.json docs/markdown_publish_spec_v1.md
-git commit -m "更新文章：全文+插图落位+元数据"
-git push
+python3 scripts/halo_publish.py publish --bundle <bundle>
 ```
 
-## 9. 回滚与修复
-- 发布后发现图片错位：直接修 md 并二次 commit（禁止“口头说明已修复”）。
-- 若全文抽取异常：保留原文链接，标记 `quality=B`，并在后续补全再升级质量等级。
+脚本使用同一发布锁，检查工作区无未完成修改，fetch + ff-only，对来源规范化去重，拒绝覆盖已有文件，更新索引并运行严格校验后提交推送。失败保留 bundle 和现场供恢复；禁止 force push 或硬重置来清除用户工作。未完成的推送可在确认远端未冲突后重试同一提交，不重复生成文章。
 
-## 10. 默认执行口径（给助手）
-- 收到“提取全文包括插图到 halos 网站”时，默认执行：
-  1) 抽取全文（API）
-  2) 插图按正文锚点落位
-  3) 更新 `articles.json`
-  4) commit + push
-  5) 回报 commit hash
+发布记录在 `~/.hermes/state/halos_publish_queue/receipts/`，源快照放私有 drafts，不能混入公开站点。记录 draft/validated/committed/pushed；完成 Pages 部署后运行：
+
+```bash
+python3 scripts/halo_publish.py verify --file articles/<filename>.md
+```
+
+只有 Pages 索引、正文、关联本地资源和阅读组件均通过才 verified；raw GitHub 可访问不算上线完成。可用时再用浏览器确认正文、图片及交互。正文/资源与本地逐字节比对，验收写入私有 receipt。
+
+## Inbox 与失败恢复
+
+Mac 地址和 Inbox 读取 `~/.hermes/state/halos_config.json`。每日 detector 和每 30 分钟单篇 worker 通过兼容 wrapper 调用本仓库脚本。
+
+```bash
+python3 scripts/halo_queue.py scan --dry-run
+python3 scripts/halo_queue.py scan
+python3 scripts/halo_queue.py status
+python3 scripts/halo_queue.py claim
+python3 scripts/halo_queue.py retry <failed-id>
+python3 scripts/halo_queue.py finish <id> --file articles/<filename>.md
+python3 scripts/halo_queue.py fail <id> --reason '具体原因'
+python3 scripts/halo_queue.py skip <id> --reason '明确跳过原因'
+```
+
+扫描以远端索引为依据；连接失败返回错误并记录状态，不能伪装为空 Inbox。领取/重试采用跨进程锁；worker 在独立 draft_dir 准备 bundle，不能领取后随意修改共享索引。done 必须通过 Pages 验证；failed 不自动无限重试。处理中断超过六小时可回收，三次失败进入 failed，需检查后显式重试。无任务时跳过模型调用。
+
+## 验证与部署
+
+```bash
+python3 scripts/validate_articles.py --strict
+python3 -m unittest discover -s tests -v
+node --check assets/reader.js
+node --check assets/home.js
+```
+
+GitHub Pages 的 deploy 依赖同一提交上的 validate job。公开产物只包括页面、文章、索引、assets 和 visuals，不包括维护脚本、测试、临时目录或报告。
+
+历史未索引文章在 `docs/unlisted-articles.json` 明确记录保留原因及索引替代项，不删除旧地址、不重复上架。新遗漏仍导致严格校验失败。
+
+前端依赖本地固定版本及许可证见 `assets/vendor/versions.json`。阅读器使用 DOMPurify 清理 Markdown 生成的 HTML。
+
+参考：[Marked 安全说明](https://marked.js.org/)、[GitHub job 依赖](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-jobs)。

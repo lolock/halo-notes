@@ -9,13 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script>
     (function(){
-      const saved = localStorage.getItem('halo_theme');
+      let saved; try { saved = localStorage.getItem('halo_theme'); } catch {}
       let theme = saved;
       if(!theme){ const h=new Date().getHours(); theme=(h>=7&&h<19)?'light':'dark'; }
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./assets/vendor/marked.js"></script>
+  <script src="./assets/vendor/purify.js"></script>
   <style>
     :root{--bg:#0a0a0a;--panel:#141414;--text:#f1f5f9;--muted:#94a3b8;--line:#262626;--accent:#00ff41;--accent2:#00ffff;--code:#070b16;--codeText:#d7e1ff}
     [data-theme="light"]{--bg:#f8fafc;--panel:#ffffff;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--accent:#16a34a;--accent2:#0369a1;--code:#eef2ff;--codeText:#1e293b}
@@ -34,6 +35,7 @@
      .side{position:sticky;top:14px;align-self:start}
 
     .tocCard{border:1px dashed rgba(0,255,65,.35);border-radius:10px;background:rgba(0,255,65,.05);padding:10px}
+    [hidden]{display:none!important}
     .tocTitle{display:block;color:var(--accent);margin-bottom:8px;font-weight:600}
     .tocList{max-height:calc(100vh - 170px);overflow:auto;padding-right:4px}
     .toc-link{display:block;padding:4px 0 4px 8px;border-left:2px solid transparent;color:var(--accent2);text-decoration:none;font-size:14px;line-height:1.4}
@@ -65,7 +67,10 @@
     }
     @media (max-width:768px){
       .layout{grid-template-columns:1fr}
-      .side{display:none}
+      .side{display:block;position:sticky;top:0;grid-row:1;z-index:5;background:var(--bg)}
+      .tocList{max-height:45vh}
+      .tocTitle{cursor:pointer}
+      .paper{grid-row:2}
                 }
     @media (max-width:640px){.content h1{font-size:24px}.content h2{font-size:20px}.content h3{font-size:18px}.content p,.content li{font-size:16px}}
   </style>
@@ -83,156 +88,15 @@
     <section class="layout">
       <article class="paper content" id="content">加载中…</article>
       <aside id="sideToc" class="side">
-        <div class="tocCard">
-          <span class="tocTitle">目录</span>
+        <details class="tocCard" id="tocPanel" open>
+          <summary class="tocTitle">目录</summary>
           <div id="tocLinks" class="tocList"></div>
           <div class="progressWrap"><div id="progressBar" class="progressBar"></div></div>
-        </div>
+        </details>
       </aside>
     </section>
   </main>
 
-  <script>
-    marked.setOptions({breaks:true,gfm:true});
-    const p = new URLSearchParams(location.search);
-    const file = p.get('file');
-    const el = document.getElementById('content');
-    const raw = document.getElementById('raw');
-    const sideToc=document.getElementById('sideToc');
-    const layout=document.querySelector('.layout');
-    const themeToggle=document.getElementById('themeToggle');
-
-    function syncThemeBtn(){
-      const t=document.documentElement.getAttribute('data-theme')||'dark';
-      themeToggle.textContent = t==='light' ? '☀️ 日间' : '🌙 夜间';
-    }
-    themeToggle.addEventListener('click',()=>{
-      const now=document.documentElement.getAttribute('data-theme')||'dark';
-      const next= now==='light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme',next);
-      localStorage.setItem('halo_theme',next);
-      syncThemeBtn();
-    });
-    syncThemeBtn();
-
-
-    function compactLongLinks(container){
-      const links=[...container.querySelectorAll('a[href]')];
-      links.forEach(a=>{
-        const href=a.getAttribute('href')||'';
-        const txt=(a.textContent||'').trim();
-        if(!(txt.length>48 || href.length>72)) return;
-        try{ const u=new URL(href, location.origin); const short=u.pathname.length>16?u.pathname.slice(0,16)+'…':u.pathname; a.textContent=`${u.host}${short}`; a.title=href; }
-        catch{ a.textContent=txt.slice(0,28)+'…'; a.title=href||txt; }
-      });
-    }
-
-    function hardenOverflow(container){
-      const nodes=[container,...container.querySelectorAll('*')];
-      nodes.forEach(n=>{ try{ if(n.scrollWidth>n.clientWidth+1){ n.style.maxWidth='100%'; n.style.overflowWrap='anywhere'; n.style.wordBreak=n.tagName==='A'?'break-all':'break-word'; n.style.whiteSpace='normal'; } }catch{} });
-    }
-
-    function ensureVisible(container, item){
-      if(!container || !item) return;
-      const top=item.offsetTop, bottom=top+item.offsetHeight;
-      const viewTop=container.scrollTop, viewBottom=viewTop+container.clientHeight;
-      if(top<viewTop) container.scrollTop=top-12;
-      else if(bottom>viewBottom) container.scrollTop=bottom-container.clientHeight+12;
-    }
-
-    function buildToc(container){
-      const hs=[...container.querySelectorAll('h2,h3')];
-      const desktop=document.getElementById('tocLinks');
-      desktop.innerHTML='';
-      const isMobile = window.matchMedia('(max-width:768px)').matches;
-      if(!hs.length || isMobile){
-        if(sideToc) sideToc.style.display='none';
-        if(layout) layout.classList.add('no-toc');
-        return [];
-      }
-      if(sideToc) sideToc.style.display='block';
-      if(layout) layout.classList.remove('no-toc');
-      hs.forEach((h,i)=>{
-        if(!h.id) h.id='sec-'+i;
-        const t=(h.tagName==='H3'?'↳ ':'')+h.textContent;
-        const a=document.createElement('a'); a.href='#'+h.id; a.className='toc-link'; a.textContent=t; desktop.appendChild(a);
-      });
-      return hs;
-    }
-
-    function bindReadingSync(headings){
-      if(!headings || !headings.length) return;
-      const links=[...document.querySelectorAll('#tocLinks .toc-link')];
-      const list=document.getElementById('tocLinks');
-      const bar=document.getElementById('progressBar');
-
-      const isMobile = window.matchMedia('(max-width:980px)').matches;
-      const scroller = isMobile ? window : el;
-
-      function getProgress(){
-        if(isMobile){
-          const d=document.documentElement;
-          const max=d.scrollHeight-d.clientHeight;
-          const val=max>0?window.scrollY:0;
-          return {val,max};
-        }
-        const max=scroller.scrollHeight-scroller.clientHeight;
-        return {val:scroller.scrollTop,max};
-      }
-
-      function activeIndex(){
-        let a=0;
-        if(isMobile){
-          headings.forEach((h,i)=>{ if(h.getBoundingClientRect().top<=140) a=i; });
-        }else{
-          const hostTop = scroller.getBoundingClientRect().top;
-          headings.forEach((h,i)=>{ if((h.getBoundingClientRect().top - hostTop)<=110) a=i; });
-        }
-        return a;
-      }
-
-      function sync(){
-        const p=getProgress();
-        const pct=p.max>0?Math.max(0,Math.min(100,(p.val/p.max)*100)):0;
-        bar.style.width=pct.toFixed(1)+'%';
-
-        const ai=activeIndex();
-        links.forEach((l,i)=>l.classList.toggle('active',i===ai));
-        ensureVisible(list, links[ai]);
-      }
-
-      // toc click should scroll article container on desktop
-      links.forEach((a,idx)=>{
-        a.addEventListener('click',(e)=>{
-          e.preventDefault();
-          const h=headings[idx];
-          if(!h) return;
-          if(isMobile) h.scrollIntoView({behavior:'smooth',block:'start'});
-          else scroller.scrollTo({top: Math.max(0,h.offsetTop-20), behavior:'smooth'});
-        });
-      });
-
-      scroller.addEventListener('scroll', sync, {passive:true});
-      window.addEventListener('resize', sync);
-      sync();
-    }
-
-
-    if(!file){ el.textContent='缺少 file 参数'; }
-    else {
-      raw.href='./articles/'+encodeURIComponent(file);
-      fetch('./articles/'+encodeURIComponent(file))
-        .then(r=>{ if(!r.ok) throw new Error('读取失败'); return r.text(); })
-        .then(md=>{
-          el.innerHTML = marked.parse(md);
-          compactLongLinks(el);
-          hardenOverflow(el);
-          const hs=buildToc(el);
-          bindReadingSync(hs);
-          document.title=(md.match(/^#\s+(.+)/m)?.[1]||'文章阅读')+' - Halo Notes';
-        })
-        .catch(e=>{ el.textContent='加载失败：'+e.message; });
-    }
-  </script>
+  <script src="./assets/reader.js"></script>
 </body>
 </html>
