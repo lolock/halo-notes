@@ -6,7 +6,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import halo_common as common
 import halo_queue as queue
@@ -75,6 +75,13 @@ class PipelineTests(unittest.TestCase):
             self.assertFalse((root/'articles/new.md').exists())
             self.assertEqual((root/'keep.txt').read_text(),'existing work')
             self.assertTrue((bundle/'articles/new.md').exists())
+    def test_incomplete_transport_read_retries(self):
+        import http.client
+        response=MagicMock();response.__enter__.return_value=response
+        response.read.side_effect=[http.client.IncompleteRead(b'part',4),b'complete']
+        with patch.object(publisher.urllib.request,'urlopen',return_value=response) as request,patch.object(publisher.time,'sleep'):
+            self.assertEqual(publisher.fetch('https://example.org/article'),b'complete')
+            self.assertEqual(request.call_count,2)
     def test_pages_failure_does_not_finish_queue(self):
         with patch.object(publisher,'fetch',side_effect=RuntimeError('Pages not deployed')):
             with self.assertRaises(RuntimeError):queue.finish('one','articles/a.md')

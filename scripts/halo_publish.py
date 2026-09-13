@@ -2,6 +2,9 @@
 """Publish prepared bundles under a repository lock; verify Pages before completion."""
 import argparse
 import hashlib
+import http.client
+import time
+import urllib.error
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import json
@@ -23,8 +26,15 @@ def run(*args):
     return result.stdout.strip()
 
 def fetch(url):
-    with urllib.request.urlopen(url, timeout=30) as r:
-        return r.read()
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(url, timeout=30) as r:
+                return r.read()
+        except urllib.error.HTTPError:
+            raise  # Missing/stale deployment remains a failed verification.
+        except (OSError, http.client.HTTPException):
+            if attempt == 2: raise
+            time.sleep(attempt + 1)
 
 def verify(files, site=SITE):
     index = json.loads(fetch(site + 'articles.json'))
