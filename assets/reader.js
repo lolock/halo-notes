@@ -9,7 +9,9 @@
   const toggle = document.getElementById('themeToggle');
   let headings = [], links = [], ticking = false;
   function themeLabel() {
-    toggle.textContent = '深色模式';
+    const label=document.documentElement.dataset.theme==='dark'?'切换至浅色模式':'切换至深色模式';
+    toggle.setAttribute('aria-label',label);
+    toggle.title=label;
     toggle.setAttribute('aria-pressed',String(document.documentElement.dataset.theme === 'dark'));
   }
   toggle.onclick = () => {
@@ -112,7 +114,7 @@
       buildToc();
     } catch (error) {
       el.replaceChildren(document.createTextNode('加载失败：' + error.message + ' '));
-      const retry = document.createElement('button'); retry.textContent = '重试'; retry.className = 'themeBtn'; retry.onclick = load; el.append(retry);
+      const retry = document.createElement('button'); retry.textContent = '重试'; retry.className = 'emptyBtn'; retry.onclick = load; el.append(retry);
     }
   }
   load();

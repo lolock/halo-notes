@@ -10,7 +10,9 @@
 
     function syncThemeBtn(){
       const t=document.documentElement.getAttribute('data-theme')||'dark';
-      themeToggle.textContent = '深色模式';
+      const label=t==='dark'?'切换至浅色模式':'切换至深色模式';
+      themeToggle.setAttribute('aria-label',label);
+      themeToggle.title=label;
       themeToggle.setAttribute('aria-pressed',String(t==='dark'));
     }
     themeToggle.addEventListener('click',()=>{

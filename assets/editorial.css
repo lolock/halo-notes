@@ -97,3 +97,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .journal-reader .content table{display:block;width:max-content;max-width:100%;overflow-x:auto;border-collapse:collapse;font-size:15px;line-height:1.7;margin:24px 0}
 .journal-reader .content th,.journal-reader .content td{text-align:start;padding:10px 14px;border-bottom:1px solid var(--rule)}
 .journal-reader .content th{font-family:var(--sans);font-weight:500;background:var(--wash)}
+
+/* Header controls are small editorial utilities, not form panels. */
+button,input{-webkit-appearance:none;appearance:none}
+#themeToggle{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;min-height:44px;padding:0;border:0;box-shadow:none;background:transparent;color:var(--quiet)}
+.masthead #themeToggle{align-self:start;justify-self:end;margin-top:8px}
+#themeToggle:hover,#themeToggle[aria-pressed="true"]{color:var(--signal);background:transparent}
+#themeToggle svg{display:block;flex:none}
+.toolbar{gap:12px;padding:8px 0;margin-top:12px;border-bottom:1px solid var(--rule);transition:border-color .15s}
+.search-icon{flex:0 0 18px;fill:none;stroke:var(--quiet);stroke-width:1.4;stroke-linecap:round}
+.toolbar .search{width:100%;height:44px;min-height:44px;border:0;border-radius:0;box-shadow:none;outline:none;background:transparent;padding:10px 0;font:16px/1.5 var(--sans);color:var(--ink)}
+.toolbar:focus-within{border-bottom-color:var(--signal);box-shadow:0 1px 0 var(--signal)}
+.search::-webkit-search-decoration,.search::-webkit-search-cancel-button{-webkit-appearance:none}

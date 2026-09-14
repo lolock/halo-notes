@@ -13,3 +13,9 @@
 样式入口为 `assets/editorial.css`，由首页、reader.html 和兼容入口 article.html 共享。reader.css 负责阅读结构，bilingual.css 保持双语布局职责。所有按钮使用相同字体、44px 最小点击高度、细边框及交互状态；深色模式使用明确文字和 aria-pressed，不使用表情图标。
 
 阅读页的来源元信息保存在可展开的“来源信息”中；不修改文章 Markdown。常驻工具栏仅保留文章目录与深色模式，移除原始 Markdown 技术入口。表格、代码块、引用与正文共用相同墨色、细线与强调色。
+
+## 刊头控件与缓存
+
+主题切换使用 18px 单色明暗图标，保留 44px 点击区域、可访问名称和键盘焦点，不显示整行边框按钮。搜索使用放大镜、单个输入提示与底部细线，聚焦只强调底线，不套表单方框。
+
+三个 HTML 入口的本地 CSS/JS 引用都带文件内容散列。修改这些资源后运行 `python3 scripts/version_assets.py`；CI 使用 `--check` 拒绝资源与缓存版本号不一致的提交，防止回访读者拿新页面搭配旧样式。缓存回归入口：`tests/asset_cache_checks.cjs`。

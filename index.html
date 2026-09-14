@@ -15,17 +15,18 @@
       document.documentElement.setAttribute('data-theme',theme);
     })();
   </script>
-  <link rel="stylesheet" href="./assets/editorial.css" />
+  <link rel="stylesheet" href="./assets/editorial.css?v=31329fc63f45" />
 </head>
 <body class="journal-home">
   <main class="wrap">
     <section class="hero">
       <div class="masthead">
         <h1>Halo Notes<span>技术与思想札记</span></h1>
-        <button id="themeToggle" class="themeBtn" type="button" aria-pressed="false">深色模式</button>
+        <button id="themeToggle" class="themeBtn" type="button" aria-pressed="false" aria-label="切换至深色模式" title="切换至深色模式"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg></button>
       </div>
       <div class="toolbar">
-        <label class="sr-only" for="q">搜索文章</label><input id="q" class="search" placeholder="搜索文章" />
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4 4"/></svg>
+        <input id="q" class="search" type="search" aria-label="搜索文章" placeholder="搜索文章" />
       </div>
       <details class="category-menu"><summary id="categoryLabel">全部分类</summary><div id="filters" class="filters"></div></details>
     </section>
@@ -36,6 +37,6 @@
     <div id="empty" class="empty" style="display:none">没有匹配结果，换个关键词试试。<div><button id="clearBtn" class="emptyBtn">清空筛选</button></div></div>
   </main>
 
-  <script src="./assets/home.js"></script>
+  <script src="./assets/home.js?v=824ca3309ee9"></script>
 </body>
 </html>
