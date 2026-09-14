@@ -20,23 +20,20 @@
 <body class="journal-home">
   <main class="wrap">
     <section class="hero">
-      <div class="heroTop">
-        <span class="k mono">A JOURNAL OF TECHNOLOGY &amp; IDEAS</span>
-        <button id="themeToggle" class="themeBtn mono" type="button">🌙 夜间</button>
+      <div class="masthead">
+        <h1>Halo Notes<span>技术与思想札记</span></h1>
+        <button id="themeToggle" class="themeBtn" type="button" aria-pressed="false">深色模式</button>
       </div>
-      <div class="masthead"><h1>Halo Notes<span>技术与思想札记</span></h1><p class="editorial-note">在技术的变化中，<br>留下一些值得慢读的思考。</p></div>
-      <div class="edition-line"><span>观察 · 实践 · 长阅读</span><span class="mono">READ. REFLECT. BUILD.</span></div>
       <div class="toolbar">
-        <label class="search-label" for="q">检索文章 <span class="mono">INDEX</span></label><input id="q" class="search" placeholder="搜索标题/摘要/标签（例如：OpenClaw、Agent）" />
+        <label class="sr-only" for="q">搜索文章</label><input id="q" class="search" placeholder="搜索文章" />
       </div>
-      <div id="filters" class="filters"></div>
+      <details class="category-menu"><summary id="categoryLabel">全部分类</summary><div id="filters" class="filters"></div></details>
     </section>
 
 
-    <div class="section-heading"><h2>文章选读 <span>Latest readings</span></h2><p id="articleCount" class="mono" aria-live="polite">按时间收录</p></div>
+    <div class="section-heading"><h2>最新文章</h2><p id="articleCount" aria-live="polite">按时间收录</p></div>
     <section id="list" class="grid"></section>
     <div id="empty" class="empty" style="display:none">没有匹配结果，换个关键词试试。<div><button id="clearBtn" class="emptyBtn">清空筛选</button></div></div>
-    <footer class="mono">HALO NOTES <span>技术有进展，阅读有余地。</span></footer>
   </main>
 
   <script src="./assets/home.js"></script>

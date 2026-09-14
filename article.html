@@ -16,73 +16,16 @@
   </script>
   <script src="./assets/vendor/marked.js"></script>
   <script src="./assets/vendor/purify.js"></script>
-  <style>
-    :root{--bg:#0a0a0a;--panel:#141414;--text:#f1f5f9;--muted:#94a3b8;--line:#262626;--accent:#00ff41;--accent2:#00ffff;--code:#070b16;--codeText:#d7e1ff}
-    [data-theme="light"]{--bg:#f8fafc;--panel:#ffffff;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--accent:#16a34a;--accent2:#0369a1;--code:#eef2ff;--codeText:#1e293b}
-    *{box-sizing:border-box}
-    html,body{width:100%;max-width:100%;overflow-x:hidden!important}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
-    .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
-    .wrap{width:min(1200px,100%);margin:0 auto;padding:18px 12px 46px}
-    .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
-    .top a{color:var(--accent2);text-decoration:none;font-size:14px}
-    .themeBtn{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px;cursor:pointer}
-
-    .layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
-    .layout.no-toc{grid-template-columns:minmax(0,1fr)}
-    .paper{width:100%;background:linear-gradient(180deg,rgba(0,255,65,.04),transparent 120px),var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 16px;box-shadow:0 20px 50px -10px rgba(0,0,0,.35);overflow:hidden}
-     .side{position:sticky;top:14px;align-self:start}
-
-    .tocCard{border:1px dashed rgba(0,255,65,.35);border-radius:10px;background:rgba(0,255,65,.05);padding:10px}
-    [hidden]{display:none!important}
-    .tocTitle{display:block;color:var(--accent);margin-bottom:8px;font-weight:600}
-    .tocList{max-height:calc(100vh - 170px);overflow:auto;padding-right:4px}
-    .toc-link{display:block;padding:4px 0 4px 8px;border-left:2px solid transparent;color:var(--accent2);text-decoration:none;font-size:14px;line-height:1.4}
-    .toc-link.active{border-left-color:var(--accent);color:var(--accent);background:rgba(34,197,94,.10);border-radius:6px}
-    .progressWrap{margin-top:10px;border:1px solid var(--line);border-radius:999px;height:8px;overflow:hidden;background:rgba(148,163,184,.2)}
-    .progressBar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-
-    .content{max-width:100%;overflow:hidden;overflow-wrap:anywhere;word-break:break-word}
-    .content *{max-width:100%}
-    .content h1,.content h2,.content h3{line-height:1.35;margin-top:1.2em;scroll-margin-top:84px}
-    .content h1{font-size:30px;letter-spacing:-.02em}
-    .content p,.content li{line-height:1.9}
-    .content img{max-width:100%;height:auto;border-radius:10px}
-    .content pre{overflow:auto;background:var(--code);color:var(--codeText);padding:12px;border-radius:10px;border:1px solid rgba(0,255,65,.2)}
-    .content code{font-family:"JetBrains Mono",ui-monospace,monospace}
-    .content blockquote{border-left:3px solid rgba(0,255,65,.45);padding-left:12px;color:var(--muted);margin-left:0}
-    .content a{display:inline-block;max-width:100%;overflow-wrap:anywhere;word-break:break-all;white-space:normal;vertical-align:bottom;color:var(--accent2)}
-    .content ul,.content ol{padding-left:1.2em}
-    .tocListM{max-height:44vh;overflow:auto}
-
-    
-    @media (min-width:769px){
-      html,body{height:100%;overflow:hidden}
-      .wrap{height:100vh;padding-bottom:12px}
-      .layout{height:calc(100vh - 74px);grid-template-columns:minmax(0,1fr) 300px}
-      .paper{height:100%;overflow-y:auto}
-      .side{height:100%}
-      .tocList{height:calc(100vh - 170px)}
-    }
-    @media (max-width:768px){
-      .layout{grid-template-columns:1fr}
-      .side{display:block;position:sticky;top:0;grid-row:1;z-index:5;background:var(--bg)}
-      .tocList{max-height:45vh}
-      .tocTitle{cursor:pointer}
-      .paper{grid-row:2}
-                }
-    @media (max-width:640px){.content h1{font-size:24px}.content h2{font-size:20px}.content h3{font-size:18px}.content p,.content li{font-size:16px}}
-  </style>
+  <link rel="stylesheet" href="./assets/reader.css" />
   <link rel="stylesheet" href="./assets/bilingual.css" />
   <link rel="stylesheet" href="./assets/editorial.css" />
 </head>
 <body class="journal-reader">
   <main class="wrap">
     <div class="top">
-      <a href="./index.html">← Halo Notes · 文章目录</a>
-      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-        <button id="themeToggle" class="themeBtn mono" type="button">🌙 夜间</button>
-        <a id="raw" href="#" target="_blank" rel="noopener" class="mono">查看原始 Markdown</a>
+      <a href="./index.html">← 文章目录</a>
+      <div class="reader-actions">
+        <button id="themeToggle" class="themeBtn" type="button" aria-pressed="false">深色模式</button>
       </div>
     </div>
 

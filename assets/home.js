@@ -10,7 +10,8 @@
 
     function syncThemeBtn(){
       const t=document.documentElement.getAttribute('data-theme')||'dark';
-      themeToggle.textContent = t==='light' ? '☀️ 日间' : '🌙 夜间';
+      themeToggle.textContent = '深色模式';
+      themeToggle.setAttribute('aria-pressed',String(t==='dark'));
     }
     themeToggle.addEventListener('click',()=>{
       const now=document.documentElement.getAttribute('data-theme')||'dark';
@@ -24,6 +25,7 @@
     list.innerHTML='<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>';
 
     function renderFilters(){
+      document.getElementById('categoryLabel').textContent=state.category==='全部'?'全部分类':state.category;
       const cats=['全部',...new Set(state.items.map(i=>i.category||'未分类'))];
       filters.innerHTML='';
       cats.forEach(c=>{
@@ -31,7 +33,7 @@
         b.className='filter'+(state.category===c?' active':'');
         b.textContent=c;
         b.setAttribute('aria-pressed',String(state.category===c));
-        b.onclick=()=>{state.category=c;render();renderFilters();};
+        b.onclick=()=>{state.category=c;render();renderFilters();document.querySelector('.category-menu').open=false;document.getElementById('categoryLabel').focus();};
         filters.appendChild(b);
       });
     }
@@ -45,9 +47,9 @@
         return hay.includes(q);
       });
       list.innerHTML='';
-      document.getElementById('articleCount').textContent = filtered.length+' 篇 / ARTICLES';
+      document.getElementById('articleCount').textContent = filtered.length+' 篇';
       list.classList.toggle('is-filtered', Boolean(q || state.category!=='全部'));
-      filtered.forEach((it,index)=>{
+      filtered.forEach(it=>{
         const href='./reader.html?file='+encodeURIComponent(it.file);
         const parts=(it.title||'').split(' / ');
         const titleHTML=escapeHTML(parts[0])+(parts.length>1?`<span class="title-en" lang="en">${escapeHTML(parts.slice(1).join(' / '))}</span>`:'');
@@ -56,24 +58,18 @@
         const coverClass=((it.category||'').includes('OpenClaw')?'cat-openclaw':((it.category||'').includes('工具')?'cat-tools':((it.category||'').includes('工作流')?'cat-workflow':'cat-default')));
         el.innerHTML=`
           <a class="cover ${coverClass}" href="${href}">
-            <div class="metaTop">
-              <span class="chip">${escapeHTML(it.category||'未分类')}</span>
-              <span class="chip mono">${String(index+1).padStart(2,'0')}</span>
-            </div>
           </a>
           <div class="body">
             <a class="tt" href="${href}" title="${escapeHTML(it.title)}">${titleHTML}</a>
             <p class="sm">${escapeHTML(it.summary||'')}</p>
-            <div class="m2"><span class="mono">${escapeHTML(it.date||'')}</span><span>·</span><a href="${safeSource(it.source)}" target="_blank" rel="noopener">↗ 原始链接</a></div>
-            <div class="tags">${(() => { const tags=(it.tags||[]); const head=tags.slice(0,2).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join(''); const more=tags.length>2?`<span class="tag">+${tags.length-2}</span>`:''; return head+more; })()}</div>
+            <div class="m2"><span>${escapeHTML(it.category||'未分类')}</span><span>·</span><span>${escapeHTML(it.date||'')}</span><span>·</span><a href="${safeSource(it.source)}" target="_blank" rel="noopener">原文</a></div>
           </div>`;
         const cover = el.querySelector('.cover');
         cover.setAttribute('aria-label', it.title || '阅读文章');
         const fallback = document.createElement('div');
         fallback.className = 'cover-fallback';
-        const mark = document.createElement('span'); mark.className = 'cover-mark mono'; mark.textContent = 'FIELD NOTES / '+String(index+1).padStart(2,'0');
         const title = document.createElement('span'); title.className = 'cover-title'; title.textContent = (it.title || '').split(' / ')[0];
-        fallback.append(mark, title); cover.prepend(fallback);
+        fallback.append(title); cover.prepend(fallback);
         if (it.cover) {
           try {
             const url = new URL(it.cover, location.href);

@@ -8,12 +8,25 @@ const assert=require('node:assert/strict');
  await page.goto(base+'/');await page.evaluate(()=>localStorage.removeItem('halo_theme'));await page.reload();await page.waitForSelector('.card');
  assert.equal(await page.locator('html').getAttribute('data-theme'),'light');
  const total=await page.locator('.card').count();assert(total>0);
+ await page.locator('.category-menu summary').click();
+ const category=await page.locator('#filters button').nth(1).textContent();
+ await page.locator('#filters button').nth(1).click();
+ assert.equal(await page.locator('#categoryLabel').textContent(),category);
+ assert.equal(await page.locator('.category-menu').evaluate(n=>n.open),false);
+ assert(await page.locator('.card').count()<total);
+ await page.locator('.category-menu summary').click();
+ await page.locator('#filters').getByRole('button',{name:'全部',exact:true}).click();
+ assert.equal(await page.locator('.card').count(),total);
  await page.locator('#q').fill('Cowork');assert(await page.locator('.card').count()<total);assert(await page.locator('.card').count()>0);
  assert(await page.locator('#list').evaluate(n=>n.classList.contains('is-filtered')));
  await page.locator('#q').fill('no-result-19378265');await page.locator('#clearBtn').click();assert.equal(await page.locator('.card').count(),total);
  await page.locator('#themeToggle').click();
  await page.goto(base+'/reader.html?file='+encodeURIComponent('articles/computer-use-skills-files-api-双语.md'));await page.waitForSelector('.bilingual-section');
  assert.equal(await page.locator('html').getAttribute('data-theme'),'dark');
+ assert.equal(await page.locator('.source-details').evaluate(n=>n.open),false);
+ await page.locator('.source-details summary').click();
+ assert(await page.locator('.source-details ul').isVisible());
+ assert((await page.locator('.source-details ul').textContent()).includes('https://claude.com/blog/computer-use-skills-api-files-api'));
  for(const width of [390,850,1440])for(const entry of ['/', '/reader.html?file='+encodeURIComponent('articles/computer-use-skills-files-api-双语.md')]){
   await page.setViewportSize({width,height:1000});await page.goto(base+entry);await page.waitForSelector(entry==='/'?'.card':'.bilingual-section');
   for(const theme of ['light','dark']){

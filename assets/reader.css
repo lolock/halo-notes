@@ -1,0 +1,45 @@
+/* Reader structure. Colors, type and controls come from editorial.css. */
+html,body{width:100%;max-width:100%}
+.journal-reader{margin:0}
+.wrap{width:min(1200px,100%);margin:0 auto;padding:18px 12px 46px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}
+.reader-actions{display:flex;align-items:center}
+.top a{text-decoration:none}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 218px;gap:28px;align-items:start}
+.layout.no-toc{grid-template-columns:minmax(0,1fr)}
+.paper{width:100%;overflow:hidden}
+.side{position:sticky;top:14px;align-self:start;min-width:0}
+.tocTitle{display:block;margin-bottom:8px;font-weight:500}
+.tocList{max-height:calc(100vh - 170px);overflow:auto;padding-right:4px}
+.toc-link{display:block;padding:7px 0 7px 8px;border-left:2px solid transparent;text-decoration:none}
+.progressWrap{margin-top:10px;overflow:hidden}
+.progressBar{height:100%;width:0%}
+.content{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+.content *{max-width:100%}
+.content h1,.content h2,.content h3{line-height:1.4;margin-top:1.2em;scroll-margin-top:84px}
+.content p,.content li{line-height:1.9}
+.content img{height:auto}
+.content pre{overflow:auto;padding:16px}
+.content code{font-family:"JetBrains Mono",ui-monospace,monospace}
+.content blockquote{padding-left:18px;margin-left:0}
+.content a{overflow-wrap:anywhere;text-underline-offset:3px}
+.content ul,.content ol{padding-left:1.2em}
+.content hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
+@media(min-width:769px){
+ html:has(.journal-reader),body.journal-reader{height:100%;overflow:hidden}
+ .paper{height:100%;overflow-y:auto}
+ .side{height:100%}
+ .tocList{height:calc(100vh - 170px)}
+}
+@media(max-width:768px){
+ .layout{grid-template-columns:1fr}
+ .side{position:sticky;top:0;grid-row:1;z-index:5;background:var(--bg)}
+ .tocList{max-height:45vh}
+ .tocTitle{cursor:pointer}
+ .paper{grid-row:2}
+}
+@media print{
+ html:has(.journal-reader),body.journal-reader{height:auto;overflow:visible}
+ .journal-reader .wrap,.journal-reader .layout,.journal-reader .paper{height:auto;overflow:visible;display:block}
+ .journal-reader .top,.journal-reader .side{display:none}
+}

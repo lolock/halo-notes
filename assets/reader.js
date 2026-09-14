@@ -9,7 +9,8 @@
   const toggle = document.getElementById('themeToggle');
   let headings = [], links = [], ticking = false;
   function themeLabel() {
-    toggle.textContent = document.documentElement.dataset.theme === 'light' ? '☀️ 日间' : '🌙 夜间';
+    toggle.textContent = '深色模式';
+    toggle.setAttribute('aria-pressed',String(document.documentElement.dataset.theme === 'dark'));
   }
   toggle.onclick = () => {
     const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
@@ -71,7 +72,6 @@
       const path = file.startsWith('articles/') ? file : 'articles/' + file;
       if (!/^articles\/[^/\\]+\.md$/.test(path) || path.includes('..')) throw new Error('文章地址无效');
       const url = './' + path.split('/').map(encodeURIComponent).join('/');
-      document.getElementById('raw').href = url;
       const response = await fetch(url);
       if (!response.ok) throw new Error('读取失败（' + response.status + '）');
       const md = await response.text();
@@ -101,6 +101,13 @@
           separator.className = 'heading-separator'; separator.textContent = ' / ';
           heading.replaceChildren(zh, separator, en);
         });
+      }
+      const metadata = el.querySelector(':scope > h1 + ul');
+      if (metadata && /^原始链接[：:]/.test(metadata.firstElementChild?.textContent.trim() || '')) {
+        const details = document.createElement('details'); details.className = 'source-details';
+        const summary = document.createElement('summary'); summary.textContent = '来源信息';
+        metadata.before(details); details.append(summary, metadata);
+        details.addEventListener('toggle', schedule);
       }
       buildToc();
     } catch (error) {
