@@ -77,7 +77,41 @@ class ArticleParser(HTMLParser):
     @property
     def blocks(self):
         roots=[n for n in self.nodes() if 'u-rich-text-blog' in n.attrs.get('class','').split() and 'w-richtext' in n.attrs.get('class','').split()]
-        return [block for root in roots for block in self.render(root)]
+        body = [block for root in roots for block in self.render(root)]
+
+        # Webflow renders the hero description and partner testimonials outside
+        # the article richtext. Keep them in document reading order while
+        # avoiding the duplicate richtext blocks used by some page variants.
+        hero = next((n for n in self.nodes()
+                     if 'hero_blog_description_wrap' in n.attrs.get('class','').split()), None)
+        extras = []
+        if hero:
+            for block in self.render(hero):
+                if block not in body:
+                    extras.append(block)
+        testimonials = []
+        for card in self.nodes():
+            classes = card.attrs.get('class','').split()
+            if 'card_testimonial_col_wrap' not in classes:
+                continue
+            quote = next((n for n in self.nodes(card)
+                          if 'card_testimonial_col_text' in n.attrs.get('class','').split()), None)
+            caption = next((n for n in self.nodes(card)
+                            if 'card_testimonial_col_caption' in n.attrs.get('class','').split()), None)
+            if quote:
+                text = self.inline(quote).strip()
+                caption_text = self.inline(caption).strip() if caption else ''
+                if caption_text:
+                    text += '\n\n- ' + caption_text
+                block = ['blockquote', text]
+                if block not in body and block not in testimonials:
+                    testimonials.append(block)
+        # Testimonials belong to the tools/connectors section, before the
+        # following Getting started section in the page's reading order.
+        marker = next((i for i, block in enumerate(body)
+                       if block[0] == 'h2' and block[1].strip().lower() == 'getting started'), len(body))
+        body[marker:marker] = testimonials
+        return extras + body
 
 def main():
     url=sys.argv[1]

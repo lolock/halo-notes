@@ -27,6 +27,15 @@ assert.equal(result.sections.length,1);
 assert.equal(result.sections[0].kind,'magazine-v1');
 assert(result.sections[0].en.includes('<blockquote>'));
 assert.deepEqual(check(header+section,{bilingual_format:'magazine-v1'},true),[]);
+const badLabels = '<!-- bilingual:section -->\n<!-- lang:zh -->\n\n<strong>EN:</strong> 中文段落。\n\n- **ZH:** 中文列表项\n\n## 不应在栏内\n\n<!-- lang:en -->\n\nEN: English paragraph.\n\n### Heading in language column\n\n```md\nEN: example label\n```\n\n<!-- /bilingual:section -->';
+const badLabelErrors = check(header + badLabels, {bilingual_format:'magazine-v1'}, true);
+assert(badLabelErrors.some(error => error.includes('中文语言栏内不得残留 EN:/ZH: 标签')));
+assert(badLabelErrors.some(error => error.includes('英文语言栏内不得残留 EN:/ZH: 标签')));
+assert.equal(badLabelErrors.filter(error => error.includes('语言栏内不得包含标题')).length, 2);
+const directQuote = '<!-- bilingual:section -->\n<!-- lang:zh -->\n\n这是普通中文。\n\n<!-- lang:en -->\n\n“EN: is part of this quoted sentence.”\n\n<!-- /bilingual:section -->';
+assert.deepEqual(check(header + directQuote, {bilingual_format:'magazine-v1'}, true), []);
+const codeExample = section.replace('Complete English prose.', 'Complete English prose mentioning EN: without a prefix.\n\n```md\nEN: example label\n# Example heading\n```');
+assert.deepEqual(check(header + codeExample, {bilingual_format:'magazine-v1'}, true), []);
 assert(check(header+section.replace('<!-- lang:en -->',''),{bilingual_format:'magazine-v1'}).length);
 assert(check(header+body,{tags:['双语翻译']},true).length);
 assert.deepEqual(check(header+body,{tags:['双语翻译']},false),[]); // Grandfather existing prose.

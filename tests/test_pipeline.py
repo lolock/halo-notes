@@ -35,6 +35,27 @@ class PipelineTests(unittest.TestCase):
         self.assertIn('  - Child',text)
         self.assertIn('2. Two',text)
         self.assertEqual(p.blocks[-1],['img','','https://example.org/a.png'])
+
+    def test_extraction_includes_outer_hero_and_testimonials_once(self):
+        html = '''<h1>Title</h1>
+        <div class="hero_blog_description_wrap"><div class="w-richtext"><p>Hero summary</p></div></div>
+        <div class="u-rich-text-blog w-richtext"><p>Hero summary</p><p>Body paragraph</p><blockquote>A partner quote.\n\n- Partner, Co-founder</blockquote><h2>Getting started</h2><p>Finish here</p></div>
+        <div class="card_testimonial_col_wrap"><p class="card_testimonial_col_text">A partner quote.</p><div class="card_testimonial_col_caption">Partner, Co-founder</div></div>
+        <div class="card_testimonial_col_wrap"><p class="card_testimonial_col_text">A partner quote.</p><div class="card_testimonial_col_caption">Partner, Co-founder</div></div>'''
+        p = ArticleParser('https://example.org/blog/a')
+        p.feed(html)
+        self.assertEqual([b[1] for b in p.blocks], [
+            'Hero summary', 'Body paragraph', 'A partner quote.\n\n- Partner, Co-founder', 'Getting started', 'Finish here'
+        ])
+        self.assertEqual(sum('Hero summary' in b[1] for b in p.blocks), 1)
+        self.assertEqual(sum('A partner quote.' in b[1] for b in p.blocks), 1)
+
+    def test_extraction_keeps_testimonial_links(self):
+        p = ArticleParser('https://example.org/blog/a')
+        p.feed('''<div class="u-rich-text-blog w-richtext"><p>Body</p></div>
+        <div class="card_testimonial_col_wrap"><p class="card_testimonial_col_text">Build in <a href="/app">the app</a>.</p><div class="card_testimonial_col_caption"><a href="/partner">Partner</a></div></div>''')
+        self.assertIn('[the app](https://example.org/app)', p.blocks[-1][1])
+        self.assertIn('- [Partner](https://example.org/partner)', p.blocks[-1][1])
     def test_claim_and_retry(self):
         with tempfile.TemporaryDirectory() as td, patch.object(queue,'STATE',Path(td)):
             queue.init();item={'id':'one','source':'https://x.com/a/status/123','status':'pending','attempts':0}

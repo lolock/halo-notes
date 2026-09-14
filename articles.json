@@ -153,7 +153,9 @@
     "quality": "A",
     "summary": "T. Rowe Price 扩大 Claude 在投资组织中的应用，覆盖研究、流程编排和工具研发，并将 AI 纳入由投资与全球分销共同推动的人在中心治理框架。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "一千位小企业主教会我们的 AI 课题 / What 1,000 small business owners taught us about AI",
@@ -174,7 +176,9 @@
     "quality": "A",
     "summary": "来自 1000 位小企业主的巡访反馈集中在两点：第一，AI 能替代高频后台与执行负担；第二，企业主最关注的是准确性、数据安全与治理框架，最终共识是通过实操工作流与同伴学习推进规模化采用。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "降低成本并提升 Claude Platform 性能 / Reducing cost and improving performance with Claude Platform",
@@ -193,7 +197,9 @@
     "quality": "A",
     "summary": "本文给出在 Claude Platform 中三类核心降本方法：提示词缓存管理、反模式指令清理与 effort 标定，并给出可复用的 claude-api 流程。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a9f8d87cec69dcbb7d97cb2_image3.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Codex No.1教程:喝茶聊天谈合同，最速项目一天交付，代码称斤时代已经到来",
@@ -230,7 +236,9 @@
     "category": "思维与创作",
     "quality": "S",
     "summary": "Dan Koe 讲述写作如何同时训练思考、学习与传播能力，并分享从捕捉灵感、搭建观点到跨平台分发的个人写作系统。中英双语全文。",
-    "cover": "articles/assets/x-2077513202527773093/cover.jpg"
+    "cover": "articles/assets/x-2077513202527773093/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "AI 工程技能图谱：使用编程智能体 / AI Engineering Skills Map: Using coding agents",
@@ -249,7 +257,9 @@
     "category": "AI工程",
     "quality": "S",
     "summary": "Andrew Ng 总结使用编程智能体的 AI 工程技能图谱：从规划、执行到部署监控，并深入阐述引导工作流、启用智能体自主性、审查成果、定制环境和理解智能体基础五项核心能力。中英双语全文。",
-    "cover": "articles/assets/x-2095890279865721217/cover.jpg"
+    "cover": "articles/assets/x-2095890279865721217/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "重新思考 GPT-6 Astra 的 Skills 与提示词 / Rethinking skills and prompts for GPT-6 Astra",
@@ -268,7 +278,9 @@
     "category": "AI工程",
     "quality": "S",
     "summary": "Eric Provencher 讨论 GPT-6 Astra 时代应如何重新审视技能文件、AGENTS.md、决策边界与持续执行规则：减少臃肿指令，采用渐进式披露，为不同模型保留合适自由度，并在任务开始前明确完成标准。中英双语全文。",
-    "cover": "articles/assets/x-2095991462416490862/cover.jpg"
+    "cover": "articles/assets/x-2095991462416490862/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Vibe Coding 零基础入门：六步工作流拆解",
@@ -305,10 +317,12 @@
     "quality": "A",
     "summary": "本文梳理了高效商务代理的构成与实施路径：从任务路由、上下文管理到监控与治理，强调以可复用架构和高效工具协同提升执行质量。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a97121e31e08caa3a0e6679_02653800.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
-    "title": "与 Claude 一起建立商务代理 / Building commerce agents with Claude",
+    "title": "使用 Claude 构建商业智能体 / Building commerce agents with Claude",
     "file": "articles/claude-for-commerce-agents-双语.md",
     "date": "2026-09-02",
     "source": "https://claude.com/blog/claude-for-commerce-agents",
@@ -323,7 +337,9 @@
     "quality": "A",
     "summary": "本文给出基于 Claude 的商务代理落地框架，包括商家/购物两类代理蓝图、能力边界、提示词工程、工具与发布治理，适合面向电商场景快速起步。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a95f44f1757be75a0616bd0_demo-retail.webp",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Anthropic 如何教授与学习 AI / Anthropic’s approach to teaching and learning AI",
@@ -341,7 +357,9 @@
     "quality": "A",
     "summary": "Anthropic 展示了如何用 Claude Academy 建立 AI 素养框架：把 AI 安全、判断和协同放在核心，通过持续学习与技能治理推动全民上手。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a869c873ac9215b510583a4_5917bf5c.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "monday.com 如何从传统平台演进为人机共生的智能体优先产品 / How monday.com transformed its platform into an agent-first product where humans and agents collaborate",
@@ -359,10 +377,12 @@
     "quality": "A",
     "summary": "本文展示 monday.com 的三阶段重构经验：从“AI 点缀”转向原生智能体协作，明确角色化智能体，并建立可扩展治理与治理中的重建机制。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
-    "title": "启动式指南：Claude Code 对初创公司意味着什么 / The Claude Code guide for startups",
+    "title": "面向初创公司的 Claude Code 指南 / The Claude Code guide for startups",
     "file": "articles/claude-code-startups-guide-双语.md",
     "date": "2026-08-20",
     "source": "https://claude.com/blog/claude-code-guide-for-startups",
@@ -377,7 +397,9 @@
     "quality": "A",
     "summary": "文章梳理了初创企业在 Claude Code 下的五条执行原则与实践清单，强调人人可参与、闭环验证、重建为常态以及内部产品先行再外部化。",
     "cover": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a860f726d9f0514aae99ebd_Artemis%20Security.jpg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "使用 Computer use、Skills API 与 Files API 打造生产级智能体 / Build production agents with computer use, the Skills API, and the Files API",
@@ -415,7 +437,9 @@
     "quality": "A",
     "summary": "本文复盘 Slack 的实践：公开优先的对话治理、智能体与人类的任务交接、可复制的角色化、以及用结果而非活跃量评估 AI 协作效果。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Anthropic 员工如何使用 Claude Tag / How Anthropic employees use Claude Tag",
@@ -433,7 +457,9 @@
     "quality": "A",
     "summary": "本文展示了 Anthropic 团队在销售、法务与协作场景中使用 Claude Tag 的 3 个实际案例，说明 AI 入口与审核机制如何把周会前信息整理、客户支持和合规审核提速到分钟级。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a91db2a994de3cf1ac088c6_c0ede71e.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude 的记忆无处不在，你可以决定里面有什么 / Claude's memory works everywhere, and you decide what's in it",
@@ -451,7 +477,9 @@
     "quality": "A",
     "summary": "文章说明 Claude 的内存与 Cowork/聊天共享，支持按主题查看、编辑和删除记忆，并新增敏感主题开关与默认保护策略。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8cc19ec0d328f3250d2a32_3bc1dbe9.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Anthropic 现场营销人员如何使用 Claude Code 向每位销售代表发送每周个性化更新 / How an Anthropic field marketer uses Claude Code to send weekly personalized updates to every sales rep",
@@ -469,7 +497,9 @@
     "quality": "A",
     "summary": "用 Claude Code 将每周销售周报从手工流程升级为可持续迭代的自动化流程，覆盖多数据源聚合、规则化提示与反馈驱动优化。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a88b9f50a3e987d4b342927_LATEST%20slack-weekly-update.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "将 Claude Mythos 5 的网络安全功能带给更多防御者 / Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
@@ -487,7 +517,9 @@
     "quality": "A",
     "summary": "本文发布 Mythos 5 的扩展路线：在防守工具、Claude Security 与合作伙伴生态中提供更多防御级接入，并同步推进基金与验证计划。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "AI-Native SDLC 手册 / The AI-Native SDLC playbook",
@@ -505,7 +537,9 @@
     "quality": "A",
     "summary": "提出 AI-Native SDLC 的六阶段重构方法：在 plan/design/build/test/deploy/maintain 中通过 intent/spec/plan 等可追溯工件、hooks、审核与回路实现从人工主导到可控自动化。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8739a1b934ffe55bfc9715_44592f18.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude for Teachers, now available for schools and districts / Claude for Teachers, now available for schools and districts",
@@ -524,7 +558,9 @@
     "quality": "A",
     "summary": "Anthropic 将 Claude for Teachers 扩展到学校和学区企业版，支持统一组织管理、SSO、域名接管和多项教学能力，帮助教育组织快速组织部署。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude 在 Chrome 正式全面上线 / Claude in Chrome is generally available",
@@ -543,7 +579,9 @@
     "quality": "A",
     "summary": "Claude 正式在付费计划上线浏览器自动化能力，新增更强提示注入防护、动作校验与评估数据，并提供企业级安装与治理配置。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8e8c30f077b615a7429ea1_a9d1d161.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Cowork 新增内置浏览器：无需安装 / Claude Cowork gets a built-in browser: nothing to install",
@@ -561,7 +599,9 @@
     "quality": "A",
     "summary": "Claude Cowork 增加了内置浏览器，支持在桌面端直接处理网页任务，减少对用户当前浏览器会话和复杂登录转移的依赖，同时保留安全与可控开关。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Warp 如何在 Claude 上构建可自我改进的智能体 / How Warp builds self-improving agents on Claude",
@@ -579,7 +619,9 @@
     "quality": "A",
     "summary": "Warp 以双技能闭环（基础技能+改进技能）实现“反馈可持续沉淀”，让代码评审、Issue 分流等智能体通过人类反馈不断迭代优化。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8f1a9a1b33f40618a9d59a_selfimprove-loop.jpg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "贝恩公司加入 Claude 合作伙伴网络，成为全球前沿伙伴 / Bain & Company joins the Claude Partner Network as a Global Premier partner",
@@ -598,7 +640,9 @@
     "quality": "A",
     "summary": "Bain 与 Anthropic 成为全球前沿合作伙伴，结合 Claude 技术与咨询交付能力，推动企业从 AI 试验迈向可交付的业务化落地。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "都 Agent 时代了，我还是想分享给你这 12 个我最常用的 Prompt",
@@ -654,7 +698,9 @@
     "quality": "A",
     "summary": "Anthropic CI 工程师讲述如何用 Claude Tag 构建值班智能体：检测告警、15 分钟内发布首份故障分析、动态工作流分诊、自动化修复与交接，并附开源搭建套件 oncall-kit。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a84a163e2030bce8127dd8b_b6ba2d45.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Science 产品指南 / The Claude Science product guide",
@@ -672,7 +718,9 @@
     "quality": "A",
     "summary": "Claude Science（测试版）产品指南：面向生命科学每一步的 AI 工作台，涵盖各产品界面选用时机、本地守护进程架构、五大设计选择与三阶段采用路线图。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "ABC Legal 如何用 Claude Managed Agents 让每位员工都成为构建者 / How ABC Legal turned every employee into a builder with Claude Managed Agents",
@@ -691,7 +739,9 @@
     "quality": "A",
     "summary": "ABC Legal 的 CTO 讲述如何用 Claude Managed Agents 把每个智能体当作代码管理：从 15 人非开发者委员会起步，到 50+ 个生产智能体、310 名员工日常使用 Claude，以及收割者-调优者的自我改进循环。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8313ee791ba5b5e5308366_196c45a5.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "最大化 Claude Code 会话的价值 / Maximizing the value of your Claude Code sessions",
@@ -710,7 +760,9 @@
     "quality": "A",
     "summary": "Claude Code 官方指南：从模型选择、输入/输出 token 与提示缓存的计价原理，到 /clear、/compact、@提及文件和子代理等降低会话成本的实操技巧。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a7f1946bc7cd69c4c8919db_be236b0d.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "守护前沿：JetBrains 如何评估与部署 Claude Fable 5 / Securing the frontier: How JetBrains evaluates and deploys Claude Fable 5",
@@ -730,7 +782,9 @@
     "quality": "A",
     "summary": "JetBrains CTO Vladislav Tankov 分享了团队如何用私有仓库评估前沿模型、何时选用 Claude Fable 5，以及如何看待安全与数据留存。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Slack 中的自助式数据分析：Anthropic 如何部署 Claude Tag 回答即席问题 / Self-service data analytics in Slack: how Anthropic deploys Claude Tag for ad-hoc questions",
@@ -750,7 +804,9 @@
     "quality": "A",
     "summary": "Anthropic 数据团队分享过去一年在 Slack 中部署 Claude Tag 数据分析智能体的五条核心经验：像刷新数据模型一样刷新技能、连接业务上下文、审慎为服务账号授权、为每次回答埋点，以及用讨论串承载协作。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Tag 现在更会察言观色 / Claude Tag now reads even more of the room",
@@ -769,7 +825,9 @@
     "quality": "A",
     "summary": "Claude Tag 现在会利用整个频道的上下文、记忆与长期指令来判断何时主动参与 Slack 对话，判断准确率提升约 30%，且额外上下文不计入用量限额。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude in Chrome 侧边栏现已升级为 Claude Cowork / The Claude in Chrome side panel is now Claude Cowork",
@@ -789,7 +847,9 @@
     "quality": "A",
     "summary": "Claude in Chrome 侧边栏现已升级为 Claude Cowork 会话：对话保存到历史记录，技能与连接器在浏览器中可用，任务可在桌面端、Web 与移动端之间无缝延续，今日起面向 Max 和 Team 套餐开放。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Compliance API 覆盖范围扩展至 Claude Cowork 与 Claude Code / Compliance API coverage extends to Claude Cowork and Claude Code",
@@ -809,7 +869,9 @@
     "quality": "A",
     "summary": "Claude 的 Compliance API 现以 Beta 形式将覆盖范围扩展至 Claude Cowork（桌面端、Web、移动端）与 Claude Code（CLI 和桌面端），合规与安全团队可通过同一接口拉取整合的会话内容与元数据，用于审计和 eDiscovery。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Anthropic 业务拓展团队如何用 Claude 规模化运营入站与出站 / How Anthropic's business development team uses Claude to run inbound and outbound at scale",
@@ -828,7 +890,9 @@
     "quality": "A",
     "summary": "Anthropic 业务拓展团队用 Claude Cowork 规模化运营入站与出站：收件箱技能每小时自动起草回复、夜间定时任务覆盖上百个客户的开拓与调研、探索电话记分卡与用量分析，并分享团队上手 Claude Cowork 的六条建议。",
     "cover": "/halo-notes/articles/assets/bd-skills-panel.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Herdr 软件全面调研与使用教程",
@@ -867,7 +931,9 @@
     "quality": "A",
     "summary": "Claude Code 将自动模式设为 Pro、Max 与 Team 计划的默认设置：分类器替代逐条审批，内部与第三方评估显示其在拦截危险命令、防止提示注入方面均优于人工审查，并附 1,053 人对照实验与生产客户数据。",
     "cover": "/halo-notes/articles/assets/auto-mode-experiment.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "在生产环境中运行自动模式 / Running auto mode in production",
@@ -887,7 +953,9 @@
     "quality": "A",
     "summary": "Nuro、Gusto 与 Garner Health 三家团队分享将 Claude Code 自动模式作为生产环境日常默认的实践：从驱动隔夜研究 agent、消除权限疲劳到构建标准化软件开发生命周期，在速度与安全之间取得平衡。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "自托管环境：在自有基础设施上运行 Claude Code 会话 / Run Claude Code sessions on your own compute",
@@ -907,7 +975,9 @@
     "quality": "A",
     "summary": "Claude Code 自托管环境进入公开测试版：会话在你的自有基础设施上运行，可访问内网服务、预装工具链并满足合规要求，支持固定与按需两种 runner 模式，面向 Claude Team 与 Enterprise 计划开放。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Millennium 与 Anthropic 正在用 Claude 打造数字风险分析师 / Millennium and Anthropic are building a digital risk analyst with Claude",
@@ -927,7 +997,9 @@
     "quality": "A",
     "summary": "Anthropic 与全球最大的另类投资管理公司之一 Millennium 合作，共同开发「数字风险分析师」：一个在人类风险经理监督下工作的 AI 队友，由 Millennium 自有数据与 Claude 前沿智能驱动，帮助发现新的风险洞察、解释每日风险变化，并对跨资产类别的风险敞口形成判断。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "推理钩子：为 Claude Enterprise 提供内联数据丢失防护 / Inference hooks: inline data loss prevention for Claude Enterprise",
@@ -947,7 +1019,9 @@
     "quality": "A",
     "summary": "Claude Enterprise 推出推理钩子（Inference hooks）测试版：在提示词与工具调用结果到达模型之前，由企业自己的 DLP 服务器实时检查并执行放行/拦截策略，统一覆盖 chat、Claude Code、Claude Cowork 等全部企业级入口。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a7362314ccf1158f2bffe5f_Claude-blog-prompt-hooks-DLP%20(1).png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude 成本可见性与管控指南 / A guide to cost visibility and control in Claude",
@@ -966,7 +1040,9 @@
     "quality": "A",
     "summary": "面向 IT 管理员的 Claude Enterprise 成本管控指南：访问控制、模型控制、硬性支出上限，以及 API 侧的提示词缓存、批处理、effort 参数与 advisor 策略。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "将 MCP 2026-07-28 带到 Claude / Bringing MCP 2026-07-28 to Claude",
@@ -985,7 +1061,9 @@
     "quality": "A",
     "summary": "MCP 2026-07-28 规范发布：无状态核心、MCP Apps/Tasks 标准化扩展框架、OAuth 2.0 授权强化，Claude 全线产品逐步支持。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude 模型详解：为你的使用场景选择最佳模型 / Claude models explained: choosing the best model for your use case",
@@ -1007,7 +1085,9 @@
     "quality": "A",
     "summary": "从 Mythos/Fable 到 Opus、Sonnet 和 Haiku，详解各模型系列的特点、选择策略、顾问策略和评估方法。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude 5 代模型上下文工程的新规则 / The new rules of context engineering for Claude 5 generation models",
@@ -1027,7 +1107,9 @@
     "quality": "A",
     "summary": "Anthropic 删除了 80% 的 Claude Code 系统提示词，教你如何为新一代 Claude 5 模型做上下文工程：从给规则到让模型运用判断力。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "设计 Claude Design 的产品设计师如何用 Claude 探索创意 / How the product designer who built Claude Design uses it to explore ideas before building them",
@@ -1047,7 +1129,9 @@
     "quality": "A",
     "summary": "Anthropic 产品设计师 Nate Parrott 分享如何使用 Claude Design 探索视觉创意——从产品原型、幻灯片到动画的最佳实践。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "四种基于角色的 Claude 认证 / Four role-based certifications for the people who put Claude to work for customers",
@@ -1065,7 +1149,9 @@
     "quality": "A",
     "summary": "Anthropic 扩展 Claude 认证计划，新增三种基于角色的认证，覆盖从非技术到架构设计的完整团队，Accenture、PwC 等巨头已承诺数万人规模的认证计划。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "用语音模式攻克难题 / Think through hard problems in voice mode",
@@ -1085,7 +1171,9 @@
     "quality": "A",
     "summary": "Claude 语音模式全面升级：Opus 和 Sonnet 加入，支持 Gmail/Slack 等工具操作，新增 11 种语言，从思考到执行一气呵成。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "在 Claude Code 中使用 Skills 构建验证循环 / Building verification loops in Claude Code with skills",
@@ -1104,7 +1192,9 @@
     "quality": "A",
     "summary": "将手动检查转化为 Claude Code Skills，让 Claude 自行闭环验证反馈，涵盖内置验证、自定义 Skill 编写与嵌入/链式/PR 三种触发模式。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Outtake 如何基于 Claude 构建网络调查 Agent / How Outtake built a cyber investigator on Claude",
@@ -1124,7 +1214,9 @@
     "quality": "A",
     "summary": "Outtake 用 Claude Code 和 Agent SDK 构建长期自主运行的 Recon Agent 网络调查系统，分享四阶段构建方法和 Agent 安全、评估、提示词管理经验。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Anthropic 如何保护其 AI 原生软件开发生命周期 / How Anthropic secures its AI-native software development lifecycle",
@@ -1144,7 +1236,9 @@
     "quality": "A",
     "summary": "Anthropic 副首席信息安全官 Jason Clinton 介绍安全工程团队如何保护一个 AI 编写了 80% 合并代码的 SDLC，涵盖规划、编码、CI、CD、监控和治理各阶段的安全策略与持久原则。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Datadog 如何为 Claude Code 构建“万能机械工具” / How Datadog built a “universal machine tool” for Claude Code",
@@ -1164,7 +1258,9 @@
     "quality": "A",
     "summary": "Datadog 工程副总裁 Sesh Nalla 详解 Temper——一个让 Agent 编写规范而非代码、通过确定性内核验证执行的“万能机械工具”，以及暗工厂和工业化软件开发的未来。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "前沿实战：乐天用 Claude Fable 5 隔夜构建 Agent / How Rakuten builds agents overnight with Claude Fable 5",
@@ -1184,7 +1280,9 @@
     "quality": "A",
     "summary": "乐天 AI 负责人分享 Claude Fable 5 实战体验：自主隔夜运行、自我验证纠正、品味对齐三大能力改变企业 Agent 部署范式。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "选择 Claude 模型与努力等级 / Choosing a Claude model and effort level in Claude Code",
@@ -1203,7 +1301,9 @@
     "quality": "A",
     "summary": "Claude Code 的模型选择与努力等级详解：模型决定能力范围，努力控制工作深度，从默认设置开始按需调整。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Cowork 登陆移动端与网页端 / Claude Cowork is coming to mobile and web",
@@ -1222,7 +1322,9 @@
     "quality": "A",
     "summary": "Claude Cowork 正在向移动端和网页端推出，从 Max 用户开始逐步开放 Beta 访问，让会话和文件跟随你到达任何设备。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "人们如何使用 Claude Cowork / How people are using Claude Cowork",
@@ -1240,7 +1342,9 @@
     "quality": "A",
     "summary": "超过 90% 的 Claude Cowork 使用场景并非软件开发，而是业务运营和内容创作等日常知识工作。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Fable 5 实战指南：发现你的未知 / A field guide to Claude Fable 5: Finding your unknowns",
@@ -1259,7 +1363,9 @@
     "quality": "A",
     "summary": "把 Claude Fable 5 当作未知发现引擎来使用，用 MapReduce 形式构建工作流，让 Fable 探索发现而其他模型实现细节。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "为管理员提供更丰富的 Claude 消费监控与控制 / Giving admins more visibility and control over Claude spend",
@@ -1278,7 +1384,9 @@
     "quality": "A",
     "summary": "Claude Enterprise 引入更丰富的管理员分析、模型级别授权控制和消费预算提醒，帮助组织管理 AI 支出。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "前沿之声：Hebbia 如何在金融尽调中构建不放过任何细节的 AI / Working at the frontier: How Hebbia builds AI for financial diligence that can't miss a detail",
@@ -1299,7 +1407,9 @@
     "quality": "A",
     "summary": "Hebbia 的 Divya Mehta 和 Adithya Ramanathan 分享 Claude Fable 5 如何在金融尽调中实现 20% 的准确率提升，将交易生命周期从数天压缩到几分钟。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "前沿之声：Cognition 如何信任 Claude Fable 5 彻夜工作 / Working at the frontier: How Cognition trusts Claude Fable 5 to work through the night",
@@ -1320,7 +1430,9 @@
     "quality": "A",
     "summary": "Cognition 的 Alberti 分享 Claude Fable 5 如何突破智能体自主工作时长限制，在 Frontier Code 基准上得分从 10% 跃升至 30%，实现连续八小时自主工作。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "前沿之声：Thomson Reuters 如何为高风险专业工作构建 AI / Working at the frontier: How Thomson Reuters builds AI for high-stakes professional work",
@@ -1341,7 +1453,9 @@
     "quality": "A",
     "summary": "Thomson Reuters 首席 AI 官 Joel Hron 分享在 CoCounsel Legal 中部署 Claude Fable 5 的四个信任标准，以及如何将生产问题修复从三小时缩短到四分钟。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Anthropic 营销运营团队如何使用 Claude Cowork 自动化报告和活动构建 / How Anthropic's marketing operations team uses Claude Cowork to automate reporting and campaign builds",
@@ -1362,7 +1476,9 @@
     "quality": "A",
     "summary": "Anthropic 营销运营团队的 Ian Chan 和 Annabel Custer 分享如何用 Claude Cowork 将每周报告从两天缩短到两小时，以及用智能体调度系统自动化活动搭建。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "将 Claude Code 和 Claude Cowork 带给政府部门 / Bringing Claude Code and Claude Cowork to government",
@@ -1384,7 +1500,9 @@
     "quality": "A",
     "summary": "Anthropic 宣布 Claude Code 和 Claude Cowork 面向政府部门开放，支持 FedRAMP High 环境、分层管理、防篡改审计日志和基于拨款的计费方式。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Cursor 如何判断 Claude Fable 5 已准备好应对最难的前 1% 问题 / Working at the frontier: How Cursor knew Claude Fable 5 was ready for the hardest 1% of problems",
@@ -1403,7 +1521,9 @@
     "quality": "A",
     "summary": "Cursor 的 Nate Schmidt 分享他们如何通过 CursorBench 评估发现 Claude Fable 5 在处理最难的前 1% 编程问题上的突破性表现。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "零风险并非职责所在：CISO 的智能体 AI 指南 / Zero risk isn't the job: a CISO's guide to agentic AI",
@@ -1422,7 +1542,9 @@
     "quality": "A",
     "summary": "Anthropic 副 CISO Jason Clinton 分享评估智能体 AI 安全风险的框架、四大关键问题以及 Claude Cowork 的安全控制措施。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Anthropic 如何使用 Claude Code 进行大规模代码迁移 / How Anthropic runs large-scale code migrations with Claude Code",
@@ -1441,7 +1563,9 @@
     "quality": "A",
     "summary": "Anthropic 分享使用 Claude Fable 5 和 Claude Code 将 Bun 从 Zig 迁移到 Rust（百万行代码/两周）以及 Python 到 TypeScript 迁移的六步流程与最佳实践。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "在 Claude Cowork 中使用 Claude Fable 5 / Working with Claude Fable 5 in Claude Cowork",
@@ -1460,7 +1584,9 @@
     "quality": "A",
     "summary": "介绍如何在 Claude Cowork 中充分发挥 Claude Fable 5 的能力，包括任务委托、上下文管理、思考过程审查等最佳实践。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Base44 为何信任 Claude Fable 5 处理最具挑战性的工程工作 / Why Base44 trusts Claude Fable 5 with their most challenging engineering work",
@@ -1479,7 +1605,9 @@
     "quality": "A",
     "summary": "Base44 产品负责人 Yoav Orlev 分享 Claude Fable 5 如何成为首个像资深工程师一样推理的模型，让团队敢于处理之前只有顶级工程师才能触及的核心任务。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "A Field Guide to Fable：找到你的未知项 / A Field Guide to Fable: Finding Your Unknowns",
@@ -1495,7 +1623,9 @@
     "category": "AI工作流",
     "quality": "A",
     "summary": "一篇关于如何在 Agentic Coding 中识别 known knowns、known unknowns、unknown knowns 与 unknown unknowns，并通过盲点扫描、原型、访谈、参考资料和实现笔记提升 Claude/Fable 工作质量的双语文章。",
-    "cover": "https://pbs.twimg.com/media/HMUY_HnbcAAa51I?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HMUY_HnbcAAa51I?format=jpg&name=large",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "刚刚，Hermes 上线 /learn 模式：从任何资料提炼 Skill",
@@ -1548,7 +1678,9 @@
     "quality": "A",
     "summary": "Claude Tag 引入了一个全新的代理身份（agent identity）访问模型，让 Claude 在共享频道中以自己的身份行动，而不是代表单个用户，从而实现安全、自主、跨系统的多人 AI 协作。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Desktop 在 AWS、Google Cloud 和 Microsoft Foundry 上全面可用 / The Full Claude Desktop Experience on AWS, Google Cloud, and Microsoft Foundry",
@@ -1569,7 +1701,9 @@
     "quality": "A",
     "summary": "Claude Desktop 现已在 AWS、Google Cloud 和 Microsoft Foundry 上提供完整的 Chat/Claude Cowork/Claude Code 三件套体验，支持组织级 SSO、MDM 策略部署、离线安装器和 M365 本地连接器。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "从 OpenClaw 到 FastClaw：如何设计优秀的多 Agent 架构",
@@ -1624,7 +1758,9 @@
     "quality": "A",
     "summary": "Claude Code 可以将工作进度生成为实时、可分享的交互式网页（Artifact），包含 PR 审查、系统说明、仪表盘等，默认私有并支持组织内分享。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "驾驭 Claude Code：CLAUDE.md、Skills、Hooks、Rules、Subagents 等七种定制方法 / Steering Claude Code: CLAUDE.md files, skills, hooks, rules, subagents and more",
@@ -1644,7 +1780,9 @@
     "quality": "A",
     "summary": "Claude Code 提供七种指令定制方法：CLAUDE.md、Rules、Skills、Subagents、Hooks、输出风格和系统提示追加，各有不同的加载时机、持久性和上下文成本。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "集中管理 MCP 连接器的企业级授权 / Centrally manage authorization for MCP connectors",
@@ -1664,7 +1802,9 @@
     "quality": "A",
     "summary": "Claude 企业版新增 Enterprise-Managed Authorization 功能，管理员可通过 Okta 等身份提供商集中管理 MCP 连接器授权，员工首次登录即可自动获得连接权限。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Opus 4.8 Build Day 黑客马拉松获奖者揭晓 / Meet the winners of our Claude Opus 4.8 Build Day hackathon",
@@ -1683,7 +1823,9 @@
     "quality": "A",
     "summary": "Claude Opus 4.8 Build Day 黑客马拉松三个获奖项目揭晓：Tekton（唐代建筑3D重建）、Sim Francisco（旧金山人口数字孪生）和 Custom Universe（单张照片变3D场景）。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Design 现已支持日常工作中的品牌一致性 / Claude Design now stays on brand for daily work",
@@ -1702,7 +1844,9 @@
     "quality": "A",
     "summary": "Claude Design 新增设计系统导入、Claude Code 双向同步、直接画布编辑和多项工具集成连接器（Adobe、Canva、Replit 等），提升日常设计工作的品牌一致性。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "使用 Workload Identity Federation 安全访问 Claude Platform / Secure access to the Claude Platform with Workload Identity Federation",
@@ -1722,7 +1866,9 @@
     "quality": "A",
     "summary": "Workload Identity Federation (WIF) 在 Claude Platform 上正式可用，支持 OIDC 身份提供商，用短期凭证替代静态 API 密钥，并引入服务账号和审计日志。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Meet the Winners of Built with Opus 4.7 Claude Code Hackathon / Built with Opus 4.7 Claude Code 黑客马拉松获奖者揭晓",
@@ -1741,7 +1887,9 @@
     "quality": "A",
     "summary": "Claude Built with Opus 4.7 黑客马拉松获奖项目揭晓，涵盖医学培训、电子维修、计算机科学教育、互动游戏、家居维修和工厂维护六大领域。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a306fcfc8a37e6eafa4dce3_og_meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon.jpg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "零成本副业新风口：用AI帮人改简历赚钱",
@@ -1794,7 +1942,9 @@
     "quality": "A",
     "summary": "Anthropic Applied AI 团队详解 Claude 代理架构的演进历程：从简单 API 到 Agent SDK，再到将大脑与双手解耦的 Managed Agents，涵盖凭证安全、延迟优化、会话持久化和企业客户实战案例。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a298c97d4a887f2666a50b6_03%20_%20Claude%20Managed%20Agents.png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "一行命令，让所有Agent共享大脑",
@@ -1829,7 +1979,9 @@
     "quality": "A",
     "summary": "Anthropic 为 Claude Managed Agents 推出定时部署和 Vault 环境变量，帮助 agent 自动执行周期任务并安全调用 CLI 与认证服务。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6903d22a7bb714a55b503cd7_cad034e66b44f7f017c0cb931c403a97d1763758-1000x1000.svg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "用 Claude 为 Apple 平台构建智能应用 / Building intelligent apps for Apple platforms with Claude in the Foundation Models framework",
@@ -1847,7 +1999,9 @@
     "quality": "A",
     "summary": "Anthropic 发布 Swift package，让 Apple 开发者通过 Foundation Models framework 将复杂推理、代码生成和结构化响应交给 Claude。",
     "cover": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "构建 Connector 的开发者可用 Observability / Observability for developers building connectors",
@@ -1865,7 +2019,9 @@
     "quality": "A",
     "summary": "Anthropic 为已发布 connectors 提供观测 dashboard，并支持开发者直接在 Claude 内提交 MCP server 到 directory。",
     "cover": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Cowork 产品指南 / The Claude Cowork product guide",
@@ -1882,7 +2038,9 @@
     "quality": "A",
     "summary": "Anthropic 发布 Claude Cowork 实用产品指南，说明其与对话式 AI、Claude Code 的区别，以及跨应用知识工作的典型场景。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69fa37dbcbe6846b96a3c801_og_deploying-claude-across-financial-services.jpg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "一位 Anthropic 销售如何用 Claude Code 重建团队工作流 / How one Anthropic seller rebuilt his team's workflows with Claude Code",
@@ -1900,7 +2058,9 @@
     "quality": "A",
     "summary": "Anthropic 讲述 Jared Sires 如何从零代码背景出发，用 Claude Code 构建 CLAFTS 和销售插件，重塑 GTM 团队工作流。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a230a62bab9804671086b19_og_how-anthropic-uses-claude-gtm-engineering%20(1).jpg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "运营 AI 原生工程组织 / Running an AI-native engineering org",
@@ -1917,7 +2077,9 @@
     "quality": "A",
     "summary": "Claude Code 团队分享在智能体编码成为默认工作方式后，工程规划、代码审查、团队结构与流程指标如何重塑。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a1f0f1a5a045e955123064a_og_running-an-ai-native-engineering-org.jpg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "为每项任务配备 Harness：Claude Code 中的动态工作流 / A harness for every task: dynamic workflows in Claude Code",
@@ -1934,7 +2096,9 @@
     "quality": "A",
     "summary": "Anthropic 介绍 Claude Code 动态工作流如何按任务即时生成多智能体 harness，并总结适用模式、场景和实践建议。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/691422974acd1cc3d6467e3a_og_skills-explained.jpg",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "构建 Claude Code 的经验：我们如何使用 Skills",
@@ -2024,7 +2188,9 @@
     "category": "Agent实战",
     "quality": "A",
     "summary": "There are 5 workflow types worth your time right now. 译：现在有 5 种工作流程类型值得您花时间。 Everything else is still experime…",
-    "cover": "https://pbs.twimg.com/media/HJ9Day8WkAAOmCQ?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJ9Day8WkAAOmCQ?format=jpg&name=large",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "构建云代理基础设施有何不同以及我们学到了什么 / Building cloud agent infrastructure what's different, and what we learned",
@@ -2040,7 +2206,9 @@
     "category": "Agent实战",
     "quality": "A",
     "summary": "Most agent frameworks today assume a desktop. One user, one machine, one process. The agent runs while the lap…",
-    "cover": "https://pbs.twimg.com/media/HKAs9ukakAAOoou?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HKAs9ukakAAOoou?format=jpg&name=large",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "我每天使用的 7 个克劳德项目改变了我的工作方式 / 7 Claude Projects I Use Every Day That Changed How I Work",
@@ -2056,7 +2224,9 @@
     "category": "Agent实战",
     "quality": "A",
     "summary": "Claude Projects are the most underused feature on claude.ai https://claude.ai/ . Most people don't use them at…",
-    "cover": "https://pbs.twimg.com/media/HJvrNqpW0AAOPu7?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJvrNqpW0AAOPu7?format=jpg&name=large",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Cowork 入门最佳实践 / Best practices for getting started with Claude Cowork",
@@ -2073,7 +2243,9 @@
     "quality": "A",
     "summary": "Anthropic 增长营销负责人 Austin Lau 讲解何时使用 Claude Cowork、如何决定委派哪些工作流，以及具体的入门步骤。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "构建 Claude Code 的教训：我们如何使用技能 / Lessons from building Claude Code: How we use skills",
@@ -2091,7 +2263,9 @@
     "quality": "A",
     "summary": "Anthropic 内部数百个技能的使用经验总结，将技能分为九大类别，分享制作、分发和管理技能的最佳实践。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Anthropic 如何用 Claude 实现自助数据分析 / How Anthropic enables self-service data analytics with Claude",
@@ -2109,7 +2283,9 @@
     "quality": "A",
     "summary": "Anthropic 数据科学团队分享如何用 Claude Code Skills 实现 95% 业务分析查询自动化，并详解三个失败模式和 agent 分析栈。",
     "cover": "",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "A harness for every task dynamic workflows in Claude Code",
@@ -2390,7 +2566,9 @@
     "category": "技术文章",
     "quality": "A",
     "summary": "Dennis Brotzky 对 Linear 高性能体验的技术拆解：浏览器本地数据库、同步引擎、首次加载、代码分割、预加载、Service Worker、键盘优先设计与动画约束；已整理为中英双语对照版本。",
-    "cover": ""
+    "cover": "",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "A股电网设备ETF决策页：AI电力瓶颈的设备侧表达",
@@ -2499,7 +2677,9 @@
     "quality": "A",
     "summary": "Claude Managed Agents 新增自托管沙盒与 MCP tunnels，让企业在自有边界内运行工具执行并连接私有服务。",
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a0c965b35dd4ce814b00c56_Sandboxes_3%20(1).png",
-    "source_name": "Claude Blog"
+    "source_name": "Claude Blog",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "A 股电力 ETF 试运行报告：买到的是电力运营，不是电网设备",
@@ -2698,7 +2878,9 @@
     "category": "AI设计",
     "quality": "S",
     "summary": "Felix Lee 分享如何用 Claude Code 和 Figma MCP 从设计到构建完整产品的工作流，中英双语对照。",
-    "cover": "https://pbs.twimg.com/media/HCc2NRFb0AEUTsL.jpg"
+    "cover": "https://pbs.twimg.com/media/HCc2NRFb0AEUTsL.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "Claude Cowork：终极设置指南（中英双语 / Bilingual）",
@@ -2716,7 +2898,9 @@
     "category": "工具与配置",
     "quality": "S",
     "summary": "Claude Cowork 完整设置指南，中英双语对照。涵盖工作区配置、上下文文件、插件安装、工具连接和安全最佳实践。",
-    "cover": "https://pbs.twimg.com/media/HCPJAI6XoAEzgrK.jpg"
+    "cover": "https://pbs.twimg.com/media/HCPJAI6XoAEzgrK.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
   },
   {
     "title": "如何像量化台一样模拟：完整预测市场模拟指南",

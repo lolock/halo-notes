@@ -17,6 +17,16 @@ function check(md, entry, incoming = false) {
   if (!result.sections.length || result.sections.some(s => s.kind !== 'magazine-v1')) errors.push('使用显式双语小节；不能混入旧式逐句 EN/ZH 配对');
   for (const section of result.sections) {
     if (!/[\u3400-\u9fff]/.test(section.zh.replace(/<[^>]*>/g, '')) || !/[a-zA-Z]{2,}/.test(section.en.replace(/<[^>]*>/g, ''))) errors.push('小节缺少中文或英文正文');
+    // Magazine sections carry the language in their wrapper.  Reject labels
+    // copied into the prose, and headings that escaped the section heading.
+    // Inspect rendered HTML so code examples remain exempt.
+    for (const [language, html] of [['中文', section.zh], ['英文', section.en]]) {
+      const prose = html.replace(/<pre[\s\S]*?<\/pre>/gi, '');
+      if (/<h[1-6]\b/i.test(prose)) errors.push(`${language}语言栏内不得包含标题`);
+      if (/(?:<p\b[^>]*>|<li\b[^>]*>)\s*(?:<strong>\s*)?(?:EN|ZH)\s*:\s*(?:<\/strong>\s*)?/i.test(prose)) {
+        errors.push(`${language}语言栏内不得残留 EN:/ZH: 标签`);
+      }
+    }
   }
   return errors;
 }
