@@ -4,96 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Halo Notes</title>
-  <meta name="description" content="Halo Notes" />
+  <meta name="description" content="Halo Notes · 技术与思想札记。关于人工智能、工具与实践的中英双语长阅读。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script>
     (function(){
       let saved; try { saved=localStorage.getItem('halo_theme'); } catch {}
-      let theme=saved;
-      if(!theme){
-        const h=new Date().getHours();
-        theme=(h>=7 && h<19)?'light':'dark';
-      }
+      const theme=saved==='dark'?'dark':'light';
       document.documentElement.setAttribute('data-theme',theme);
     })();
   </script>
-  <style>
-    :root{--bg:#0b0d10;--panel:#12161c;--panel2:#171c24;--text:#f3f5f8;--muted:#98a2b3;--line:#293241;--a:#7dd3fc;--g:#22c55e;--heroGlow:#1f293733;--inputBg:#0f1318;--inputBorder:#293241;--inputText:#f3f5f8;--inputPlaceholder:#7b8797;--chipBg:#0b0d10cc;--chipText:#cbd5e1;--chipBorder:#ffffff22;--filterBg:#141922;--tagBg:rgba(148,163,184,.06)}
-    [data-theme="light"]{--bg:#f5f7fb;--panel:#ffffff;--panel2:#f8fafc;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--a:#0369a1;--g:#16a34a;--heroGlow:#bae6fd66;--inputBg:#ffffff;--inputBorder:#cfd9e8;--inputText:#0f172a;--inputPlaceholder:#94a3b8;--chipBg:#f8fafc;--chipText:#334155;--chipBorder:#cfd9e8;--filterBg:#ffffff;--tagBg:#f8fafc}
-    *{box-sizing:border-box}
-    html,body{margin:0;background:radial-gradient(1000px 500px at 20% -10%,var(--heroGlow),transparent 55%),var(--bg);color:var(--text);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif}
-    .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
-    .wrap{max-width:1060px;margin:0 auto;padding:26px 14px 58px}
-    .hero{background:linear-gradient(180deg,var(--heroGlow),transparent 60%),var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 16px}
-    .heroTop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-    .k{display:inline-flex;padding:3px 9px;border:1px solid #22c55e66;color:#86efac;border-radius:999px;font-size:12px}
-    .themeBtn{border:1px solid var(--line);background:var(--panel2);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px;cursor:pointer}
-    h1{margin:10px 0 4px;font-size:30px;letter-spacing:-.02em}
-    .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-    .search{flex:1;min-width:220px;padding:11px 12px;border-radius:10px;border:1px solid var(--inputBorder);background:var(--inputBg);color:var(--inputText)}
-    .search::placeholder{color:var(--inputPlaceholder)}
-    .search:focus{outline:none;border-color:#7dd3fc66}
-    .pill{padding:10px 12px;border:1px solid var(--inputBorder);border-radius:10px;color:var(--inputText);font-size:13px;background:var(--inputBg);font-weight:600}
-    .filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-    .filter{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:var(--filterBg);color:var(--muted);font-size:12px;cursor:pointer}
-    .filter.active{border-color:#7dd3fc66;color:#bae6fd}
-    .st{margin:18px 2px 10px;color:var(--muted);font-size:14px}
-    .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.18s ease}
-    .card:hover{transform:translateY(-1px);background:var(--panel2);border-color:#7dd3fc55}
-    .cover{position:relative;display:block;aspect-ratio:2/1;background:linear-gradient(120deg,#0ea5e933,#22c55e33),linear-gradient(180deg,#1f2937,#111827);background-size:cover;background-position:center;transition:transform .25s ease, filter .25s ease}
-    .cover{overflow:hidden;text-decoration:none}
-    .cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .2s}
-    .cover.has-image .cover-image{opacity:1}
-    .cover-fallback{height:100%;padding:48px 22px 18px;display:flex;flex-direction:column;justify-content:center;gap:9px;color:#f1f5f9;background:radial-gradient(circle at 95% 5%,#7dd3fc22 0 23%,transparent 23.5%),repeating-linear-gradient(135deg,transparent 0 23px,#ffffff04 23px 24px)}
-    .cover-fallback[hidden]{display:none}
-    .cover-mark{font-size:10px;letter-spacing:.16em;color:#a5d9ef}
-    .cover-title{font-size:21px;font-weight:600;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-    .card:hover .cover{transform:scale(1.02);filter:saturate(1.08)}
-    .cover.cat-openclaw{background:linear-gradient(120deg,#0ea5e944,#22c55e44),linear-gradient(180deg,#123040,#0f172a)}
-    .cover.cat-tools{background:linear-gradient(120deg,#2563eb44,#06b6d444),linear-gradient(180deg,#1e293b,#111827)}
-    .cover.cat-workflow{background:linear-gradient(120deg,#7c3aed44,#0ea5e944),linear-gradient(180deg,#1f2240,#0f172a)}
-    .cover.cat-default{background:linear-gradient(120deg,#33415555,#0ea5e933),linear-gradient(180deg,#1f2937,#111827)}
-    .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.35));}
-    .metaTop{position:absolute;left:8px;top:8px;display:flex;gap:6px;z-index:2}
-    .chip{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--chipBg);border:1px solid var(--chipBorder);color:var(--chipText)}
-    .q-S{color:#86efac;border-color:#22c55e66}.q-A{color:#bae6fd;border-color:#38bdf866}.q-B{color:#fda4af;border-color:#fb718566}
-    .body{padding:13px 13px 12px}
-    .tt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:19px;line-height:1.34;font-weight:700;color:var(--text);text-decoration:none;min-height:52px}
-    .sm{margin-top:8px;color:#9fb0c4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:66px;font-size:14px;line-height:1.58}
-    .m2{margin-top:11px;color:var(--muted);font-size:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding-top:8px;border-top:1px dashed var(--line)}
-    .m2 a{color:var(--a);text-decoration:none}
-    .tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
-    .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--muted);background:var(--tagBg)}
-    .skeleton{height:252px;border-radius:14px;background:linear-gradient(90deg,#141922 25%,#1a2230 37%,#141922 63%);background-size:400% 100%;animation:sh 1.4s ease infinite;border:1px solid var(--line)}
-    @keyframes sh{0%{background-position:100% 50%}100%{background-position:0 50%}}
-    .empty{padding:24px 0;text-align:center;color:var(--muted)}
-    .emptyBtn{margin-top:8px;border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:8px 12px;border-radius:999px;cursor:pointer;font-size:12px}
-    footer{margin-top:18px;color:#64748b;font-size:12px}
-    @media (max-width:640px){.wrap{padding:12px 10px 34px}h1{font-size:24px}.search{font-size:16px}}
-  </style>
+  <link rel="stylesheet" href="./assets/editorial.css" />
 </head>
-<body>
+<body class="journal-home">
   <main class="wrap">
     <section class="hero">
       <div class="heroTop">
-        <span class="k mono">HALO NOTES / CARD v2</span>
+        <span class="k mono">A JOURNAL OF TECHNOLOGY &amp; IDEAS</span>
         <button id="themeToggle" class="themeBtn mono" type="button">🌙 夜间</button>
       </div>
-      <h1>结构化文章归档</h1>
+      <div class="masthead"><h1>Halo Notes<span>技术与思想札记</span></h1><p class="editorial-note">在技术的变化中，<br>留下一些值得慢读的思考。</p></div>
+      <div class="edition-line"><span>观察 · 实践 · 长阅读</span><span class="mono">READ. REFLECT. BUILD.</span></div>
       <div class="toolbar">
-        <input id="q" class="search" placeholder="搜索标题/摘要/标签（例如：OpenClaw、Agent）" />
+        <label class="search-label" for="q">检索文章 <span class="mono">INDEX</span></label><input id="q" class="search" placeholder="搜索标题/摘要/标签（例如：OpenClaw、Agent）" />
       </div>
       <div id="filters" class="filters"></div>
     </section>
 
 
-    <p class="st mono">ARTICLES · 已按时间倒序排列</p>
+    <div class="section-heading"><h2>文章选读 <span>Latest readings</span></h2><p id="articleCount" class="mono" aria-live="polite">按时间收录</p></div>
     <section id="list" class="grid"></section>
     <div id="empty" class="empty" style="display:none">没有匹配结果，换个关键词试试。<div><button id="clearBtn" class="emptyBtn">清空筛选</button></div></div>
-    <footer class="mono">Powered by GitHub Pages · Managed by Halo</footer>
+    <footer class="mono">HALO NOTES <span>技术有进展，阅读有余地。</span></footer>
   </main>
 
   <script src="./assets/home.js"></script>

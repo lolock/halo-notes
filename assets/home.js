@@ -30,6 +30,7 @@
         const b=document.createElement('button');
         b.className='filter'+(state.category===c?' active':'');
         b.textContent=c;
+        b.setAttribute('aria-pressed',String(state.category===c));
         b.onclick=()=>{state.category=c;render();renderFilters();};
         filters.appendChild(b);
       });
@@ -44,9 +45,12 @@
         return hay.includes(q);
       });
       list.innerHTML='';
-      filtered.forEach(it=>{
+      document.getElementById('articleCount').textContent = filtered.length+' 篇 / ARTICLES';
+      list.classList.toggle('is-filtered', Boolean(q || state.category!=='全部'));
+      filtered.forEach((it,index)=>{
         const href='./reader.html?file='+encodeURIComponent(it.file);
-        const qv=['S','A','B'].includes(it.quality)?it.quality:'A';
+        const parts=(it.title||'').split(' / ');
+        const titleHTML=escapeHTML(parts[0])+(parts.length>1?`<span class="title-en" lang="en">${escapeHTML(parts.slice(1).join(' / '))}</span>`:'');
         const el=document.createElement('article');
         el.className='card';
         const coverClass=((it.category||'').includes('OpenClaw')?'cat-openclaw':((it.category||'').includes('工具')?'cat-tools':((it.category||'').includes('工作流')?'cat-workflow':'cat-default')));
@@ -54,11 +58,11 @@
           <a class="cover ${coverClass}" href="${href}">
             <div class="metaTop">
               <span class="chip">${escapeHTML(it.category||'未分类')}</span>
-              <span class="chip q-${qv}">${qv}</span>
+              <span class="chip mono">${String(index+1).padStart(2,'0')}</span>
             </div>
           </a>
           <div class="body">
-            <a class="tt" href="${href}" title="${escapeHTML(it.title)}">${escapeHTML(it.title)}</a>
+            <a class="tt" href="${href}" title="${escapeHTML(it.title)}">${titleHTML}</a>
             <p class="sm">${escapeHTML(it.summary||'')}</p>
             <div class="m2"><span class="mono">${escapeHTML(it.date||'')}</span><span>·</span><a href="${safeSource(it.source)}" target="_blank" rel="noopener">↗ 原始链接</a></div>
             <div class="tags">${(() => { const tags=(it.tags||[]); const head=tags.slice(0,2).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join(''); const more=tags.length>2?`<span class="tag">+${tags.length-2}</span>`:''; return head+more; })()}</div>
@@ -67,7 +71,7 @@
         cover.setAttribute('aria-label', it.title || '阅读文章');
         const fallback = document.createElement('div');
         fallback.className = 'cover-fallback';
-        const mark = document.createElement('span'); mark.className = 'cover-mark mono'; mark.textContent = 'HALO NOTES';
+        const mark = document.createElement('span'); mark.className = 'cover-mark mono'; mark.textContent = 'FIELD NOTES / '+String(index+1).padStart(2,'0');
         const title = document.createElement('span'); title.className = 'cover-title'; title.textContent = (it.title || '').split(' / ')[0];
         fallback.append(mark, title); cover.prepend(fallback);
         if (it.cover) {

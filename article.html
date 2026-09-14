@@ -10,8 +10,7 @@
   <script>
     (function(){
       let saved; try { saved = localStorage.getItem('halo_theme'); } catch {}
-      let theme = saved;
-      if(!theme){ const h=new Date().getHours(); theme=(h>=7&&h<19)?'light':'dark'; }
+      const theme = saved==='dark'?'dark':'light';
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
@@ -75,11 +74,12 @@
     @media (max-width:640px){.content h1{font-size:24px}.content h2{font-size:20px}.content h3{font-size:18px}.content p,.content li{font-size:16px}}
   </style>
   <link rel="stylesheet" href="./assets/bilingual.css" />
+  <link rel="stylesheet" href="./assets/editorial.css" />
 </head>
-<body>
+<body class="journal-reader">
   <main class="wrap">
     <div class="top">
-      <a href="./index.html">← 返回目录</a>
+      <a href="./index.html">← Halo Notes · 文章目录</a>
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
         <button id="themeToggle" class="themeBtn mono" type="button">🌙 夜间</button>
         <a id="raw" href="#" target="_blank" rel="noopener" class="mono">查看原始 Markdown</a>

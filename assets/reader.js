@@ -25,8 +25,9 @@
     const pos = mobile.matches ? window.scrollY : el.scrollTop;
     document.getElementById('progressBar').style.width = (max > 0 ? Math.min(100, 100 * pos / max) : 0) + '%';
     const top = mobile.matches ? 90 : el.getBoundingClientRect().top + 45;
+    // Scroll offsets round to pixels; headings can retain fractional positions.
     let active = 0;
-    headings.forEach((h, i) => { if (h.getBoundingClientRect().top <= top) active = i; });
+    headings.forEach((h, i) => { if (h.getBoundingClientRect().top <= top + 1) active = i; });
     links.forEach((a, i) => { a.classList.toggle('active', i === active); if (i === active) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); });
     const a = links[active];
     if (a && !mobile.matches) {
