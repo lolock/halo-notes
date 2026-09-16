@@ -1,5 +1,25 @@
 [
   {
+    "title": "Cloudflare 终极指南 / The Ultimate Cloudflare Guide",
+    "file": "articles/Cloudflare 终极指南 — 中英双语.md",
+    "date": "2026-09-16",
+    "source": "https://x.com/eliakuratli/status/2100178927528595912",
+    "tags": [
+      "Cloudflare",
+      "Workers",
+      "Durable Objects",
+      "D1",
+      "R2",
+      "AI Gateway",
+      "云计算",
+      "双语翻译"
+    ],
+    "category": "云计算与开发",
+    "quality": "S",
+    "summary": "一份覆盖 Cloudflare 开发者平台的完整指南，解释 Workers、数据服务、AI、免费基础设施、真实成本、局限、账单风险与上手路径。中英双语全文。",
+    "cover": "articles/assets/x-2100178927528595912/cover.jpg"
+  },
+  {
     "title": "HTML 小白从 0 到 1：学懂网页基础，再用 Agent 做出个人主页",
     "file": "articles/HTML 小白从 0 到 1：学懂网页基础，再用 Agent 做出个人主页.md",
     "date": "2026-08-06",
