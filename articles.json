@@ -1,5 +1,26 @@
 [
   {
+    "title": "用 Jev 构建智能体执行框架 / Building a Harness with Jev",
+    "file": "articles/用 Jev 构建智能体执行框架 — 中英双语.md",
+    "date": "2026-09-18",
+    "source": "https://x.com/sydneyrunkle/status/2100754364545761643",
+    "source_name": "X / Sydney Runkle",
+    "tags": [
+      "Jev",
+      "LangChain",
+      "AI Agent",
+      "模型路由",
+      "智能体安全",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "介绍 TypeSafe AI 的高速低成本决策模型 Jev，解释 System One 模型、LangChain 集成、模型路由与工具风险拦截。中英双语全文。",
+    "cover": "articles/assets/x-2100754364545761643/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "Gmail 全网最全使用指南：从注册到榨干",
     "file": "articles/Gmail 全网最全使用指南：从注册到榨干.md",
     "date": "2026-06-12",
