@@ -70,7 +70,9 @@ node --check assets/reader.js
 node --check assets/home.js
 ```
 
-GitHub Pages 的 deploy 依赖同一提交上的 validate job。公开产物只包括页面、文章、索引、assets 和 visuals，不包括维护脚本、测试、临时目录或报告。
+GitHub Pages 的 deploy 依赖同一提交上的 validate job。通过锁定依赖的构建流程，将 Markdown 生成为 `read/` 下的完整文章 HTML；公开产物只包括页面、文章、索引、静态链接映射、构建哈希清单、assets 和 visuals，不包括维护脚本、测试、依赖目录、临时目录或报告。
+
+本地先运行 `npm ci`，再运行 `npm test` 与 `npm run build`。文章的正文、元数据和目录在构建时生成；旧阅读链接保留兼容。线上 verify 会在临时目录重建并逐字节核对生成 HTML，不能只凭 Markdown 已更新确认发布成功。详见[阅读器布局与静态交付](reader-architecture.md)。
 
 历史未索引文章在 `docs/unlisted-articles.json` 明确记录保留原因及索引替代项，不删除旧地址、不重复上架。新遗漏仍导致严格校验失败。
 

@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.23.1'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Validate content and publication tools
         run: |
           python3 scripts/version_assets.py --check
@@ -19,3 +24,6 @@ jobs:
           node --check assets/bilingual.js
           node --check assets/reader.js
           node --check assets/home.js
+          node --check assets/article-content.js
+          npm run test:static
+          npm run build

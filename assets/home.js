@@ -6,7 +6,11 @@ const meta=a=>'<div class="eyebrow"><span>'+esc(a.category)+'</span><time>'+esc(
 function applyTheme(dark){document.documentElement.dataset.theme=dark?'dark':'light';document.getElementById('theme').setAttribute('aria-pressed',String(dark));try{localStorage.setItem('halo_theme',dark?'dark':'light')}catch{}}
 try{applyTheme(localStorage.getItem('halo_theme')==='dark')}catch{applyTheme(false)}
 let categories=['全部'];
-const articleURL=a=>'./reader.html?file='+encodeURIComponent(a.file);
+const articleURL=a=>{
+ const file=String(a.file||'').replace(/^articles\//,'');
+ const generated='read/'+encodeURIComponent(file.replace(/\.md$/,''))+'.html';
+ return a.url===generated?'./'+esc(generated):'./reader.html?file='+encodeURIComponent(a.file);
+};
 const coverURL=a=>{try{const u=new URL(a.cover,location.href);return ['http:','https:'].includes(u.protocol)?esc(u.href):''}catch{return ''}};
 function setCategory(c){category=c;query='';search.value='';menu.close();if(location.hash!=='#home')location.hash='home';else renderHome();}
 function topics(){for(const id of ['topics','menu-topics']){const target=document.getElementById(id);target.replaceChildren();categories.forEach(c=>{const b=document.createElement('button');b.textContent=c==='全部'?'全部文章':c;b.setAttribute('aria-pressed',String(c===category));b.onclick=()=>setCategory(c);target.append(b)})}}

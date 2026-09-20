@@ -21,12 +21,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.23.1'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
       - uses: actions/configure-pages@v5
-      - name: Stage public site only
-        run: |
-          mkdir -p _site
-          cp index.html reader.html article.html articles.json .nojekyll _site/
-          cp -R articles assets visuals _site/
+      - name: Build complete article documents and stage public files
+        run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

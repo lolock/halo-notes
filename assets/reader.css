@@ -1,45 +1,189 @@
-/* Reader structure. Colors, type and controls come from editorial.css. */
-html,body{width:100%;max-width:100%}
-.journal-reader{margin:0}
-.wrap{width:min(1200px,100%);margin:0 auto;padding:18px 12px 46px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}
-.reader-actions{display:flex;align-items:center}
-.top a{text-decoration:none}
-.layout{display:grid;grid-template-columns:minmax(0,1fr) 218px;gap:28px;align-items:start}
-.layout.no-toc{grid-template-columns:minmax(0,1fr)}
-.paper{width:100%;overflow:hidden}
-.side{position:sticky;top:14px;align-self:start;min-width:0}
-.tocTitle{display:block;margin-bottom:8px;font-weight:500}
-.tocList{max-height:calc(100vh - 170px);overflow:auto;padding-right:4px}
-.toc-link{display:block;padding:7px 0 7px 8px;border-left:2px solid transparent;text-decoration:none}
-.progressWrap{margin-top:10px;overflow:hidden}
-.progressBar{height:100%;width:0%}
-.content{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
-.content *{max-width:100%}
-.content h1,.content h2,.content h3{line-height:1.4;margin-top:1.2em;scroll-margin-top:84px}
-.content p,.content li{line-height:1.9}
-.content img{height:auto}
-.content pre{overflow:auto;padding:16px}
-.content code{font-family:"JetBrains Mono",ui-monospace,monospace}
-.content blockquote{padding-left:18px;margin-left:0}
-.content a{overflow-wrap:anywhere;text-underline-offset:3px}
-.content ul,.content ol{padding-left:1.2em}
-.content hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
-@media(min-width:769px){
- html:has(.journal-reader),body.journal-reader{height:100%;overflow:hidden}
- .paper{height:100%;overflow-y:auto}
- .side{height:100%}
- .tocList{height:calc(100vh - 170px)}
+/* The reader owns its shell, article elements, TOC, progress and print layout.
+   The document is the only main scroll container at every reading width. */
+.journal-reader {
+  --article-width: 51rem;
+  --toc-width: 13.625rem;
+  --reader-gap: 1.75rem;
 }
-@media(max-width:768px){
- .layout{grid-template-columns:1fr}
- .side{position:sticky;top:0;grid-row:1;z-index:5;background:var(--bg)}
- .tocList{max-height:45vh}
- .tocTitle{cursor:pointer}
- .paper{grid-row:2}
+.journal-reader.magazine-reader { --article-width: 68rem; }
+.wrap {
+  container: reader-shell / inline-size;
+  width: 100%;
+  max-width: calc(var(--article-width) + var(--toc-width) + var(--reader-gap) + 3.5rem);
+  margin-inline: auto;
+  padding: 18px clamp(.75rem, 2vw, 1.75rem) 46px;
 }
-@media print{
- html:has(.journal-reader),body.journal-reader{height:auto;overflow:visible}
- .journal-reader .wrap,.journal-reader .layout,.journal-reader .paper{height:auto;overflow:visible;display:block}
- .journal-reader .top,.journal-reader .side{display:none}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+}
+.reader-actions { display: flex; align-items: center; }
+.top a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font: 13px/1.5 var(--sans);
+  color: var(--quiet);
+  text-decoration: none;
+}
+.top a:hover { color: var(--signal); text-decoration: underline; text-underline-offset: 4px; }
+.layout {
+  /* Read by reader.js: CSS alone decides whether the TOC fits beside the article. */
+  --toc-layout: inline;
+  --toc-position: static;
+  --heading-offset: 5rem;
+  --toc-top: 0px;
+  --toc-height: 45vh;
+  display: grid;
+  grid-template-columns: minmax(0, var(--article-width));
+  grid-template-areas: "toc" "article";
+  justify-content: center;
+  gap: .75rem;
+  align-items: start;
+}
+/* Inline TOCs stick only when JS can close them before following an anchor. */
+.layout[data-reader-enhanced] { --toc-position: sticky; }
+.layout.no-toc { grid-template-areas: "article"; --heading-offset: 1.5rem; }
+.paper {
+  grid-area: article;
+  container: article-content / inline-size;
+  min-width: 0;
+  width: 100%;
+  padding: clamp(1.625rem, 3vw, 2.5rem) clamp(1.25rem, 4%, 2.875rem);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+}
+.side {
+  grid-area: toc;
+  position: var(--toc-position);
+  top: var(--toc-top);
+  align-self: start;
+  min-width: 0;
+  z-index: 5;
+  background: var(--paper);
+}
+.tocCard { border-top: 1px solid var(--rule); padding-block: 10px; }
+.tocTitle {
+  min-height: 36px;
+  font: 500 12px/24px var(--sans);
+  color: var(--ink);
+  letter-spacing: .1em;
+  cursor: pointer;
+}
+.tocList { max-height: var(--toc-height); overflow-y: auto; padding-right: 4px; }
+.toc-link {
+  display: block;
+  padding: 7px 0 7px 8px;
+  border-left: 2px solid transparent;
+  font: 12px/1.7 var(--sans);
+  color: var(--quiet);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.toc-link.active { color: var(--signal); border-color: var(--signal); }
+.progressWrap { height: 3px; margin-top: 10px; overflow: hidden; background: var(--rule); }
+.progressBar { height: 100%; width: 0%; background: var(--signal); }
+
+.content {
+  font-family: var(--serif);
+  font-size: 17px;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.content [id] { scroll-margin-top: var(--heading-offset); }
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  line-height: 1.4;
+  font-weight: 500;
+}
+.content h1 {
+  font-size: clamp(28px, 3vw, 42px);
+  margin: 0 0 24px;
+  letter-spacing: -.025em;
+}
+.content h2 {
+  font-size: clamp(23px, 2.1vw, 26px);
+  margin: 2em 0 1em;
+  padding-top: 1em;
+  border-top: 1px solid var(--rule);
+}
+.content h3 { font-size: clamp(20px, 1.7vw, 21px); margin: 1.6em 0 .8em; }
+.content p { margin: 0 0 1em; line-height: 1.95; }
+.content li { line-height: 1.9; }
+.content ul, .content ol { padding-left: 1.2em; }
+.content img { max-width: 100%; height: auto; }
+.content pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 16px;
+  background: var(--wash);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+}
+.content code { font-family: var(--mono); }
+.content blockquote { border-left: 2px solid var(--signal); padding-left: 18px; margin: 1.5em 0; }
+.content a { color: var(--signal); overflow-wrap: anywhere; text-underline-offset: 3px; }
+.content hr { border: 0; border-top: 1px solid var(--rule); margin: 28px 0; }
+.content table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 24px 0;
+}
+.content th, .content td { text-align: start; padding: 10px 14px; border-bottom: 1px solid var(--rule); }
+.content th { font-family: var(--sans); font-weight: 500; background: var(--wash); }
+.source-details { margin: 0 0 20px; color: var(--quiet); }
+.source-details summary { font: 13px/1.5 var(--sans); min-height: 44px; padding: 10px 0; cursor: pointer; width: fit-content; }
+.source-details ul { font: 13px/1.8 var(--sans); padding: 12px 0 0; margin: 0; list-style: none; }
+.source-details li { font: 13px/1.8 var(--sans); }
+.content > h1 + ul { font: 12px/1.9 var(--sans); color: var(--quiet); list-style: none; padding: 0; margin-bottom: 28px; }
+.content > h1 + ul li { font-size: 12px; line-height: 1.8; }
+
+/* A sidebar appears only when the full article width plus TOC and gap fit.
+   51 + 13.625 + 1.75 = 66.375rem; 68 + 13.625 + 1.75 = 83.375rem.
+   Browsers without container queries retain the usable inline TOC layout. */
+@container reader-shell (min-width: 66.375rem) {
+  .journal-reader:not(.magazine-reader) .layout:not(.no-toc) {
+    --toc-layout: side;
+    --toc-position: sticky;
+    --heading-offset: 1.5rem;
+    --toc-top: 1rem;
+    --toc-height: calc(100vh - 8rem);
+    grid-template-columns: minmax(0, var(--article-width)) var(--toc-width);
+    grid-template-areas: "article toc";
+    gap: var(--reader-gap);
+  }
+}
+@container reader-shell (min-width: 83.375rem) {
+  .magazine-reader .layout:not(.no-toc) {
+    --toc-layout: side;
+    --toc-position: sticky;
+    --heading-offset: 1.5rem;
+    --toc-top: 1rem;
+    --toc-height: calc(100vh - 8rem);
+    grid-template-columns: minmax(0, var(--article-width)) var(--toc-width);
+    grid-template-areas: "article toc";
+    gap: var(--reader-gap);
+  }
+}
+
+@media print {
+  .wrap { max-width: none; padding: 0; container-type: normal; }
+  .layout { display: block; }
+  .paper { border: 0; padding: 0; container-type: normal; }
+  .top, .side { display: none; }
+  .content { font-size: 11pt; }
+  .content p, .content li { orphans: 3; widows: 3; }
+  .content h1, .content h2, .content h3 { break-after: avoid; }
+  .content pre, .content table { overflow: visible; }
+  .content pre { white-space: pre-wrap; }
+  .content table { display: table; width: 100%; table-layout: fixed; }
 }

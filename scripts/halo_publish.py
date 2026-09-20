@@ -13,8 +13,9 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+import tempfile
 import urllib.request
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 from halo_common import ROOT, STATE, atomic_json, locked, source_key, article_path, digest, local_targets
 
 SITE = 'https://lolock.github.io/halo-notes/'
@@ -37,13 +38,24 @@ def fetch(url):
             time.sleep(attempt + 1)
 
 def verify(files, site=SITE):
+    site = site.rstrip('/') + '/'
     index = json.loads(fetch(site + 'articles.json'))
+    # Compare the actual static HTML, not just the Markdown that generated it.
+    # A private temporary build leaves the working tree and preview untouched.
+    with tempfile.TemporaryDirectory(prefix='halo-verify-') as temporary:
+        output = Path(temporary) / 'site'
+        run('node', 'scripts/build_site.cjs', '--output', str(output), '--site-url', site)
+        return verify_build(files, site, index, output)
+
+def verify_build(files, site, index, output):
+    expected_index = json.loads((output / 'articles.json').read_text())
+    manifest = json.loads((output / 'article-build.json').read_text())
     checks = {}; articles = []
     for value in files:
         path = article_path(value)
         item = next((i for i in index if article_path(i['file']) == path), None)
         if item is None: raise ValueError('Not in Pages index: ' + path)
-        expected = next(i for i in json.loads((ROOT / 'articles.json').read_text()) if article_path(i['file']) == path)
+        expected = next(i for i in expected_index if article_path(i['file']) == path)
         if item != expected: raise ValueError('Pages metadata differs: ' + path)
         url = site + quote(path)
         md = fetch(url)
@@ -51,7 +63,12 @@ def verify(files, site=SITE):
         for target in local_targets(md.decode()):
             if (ROOT / target).is_file(): checks[target] = site + quote(target)
             else: raise ValueError('Local asset missing: ' + target)
-        articles.append({'file': path, 'source': item.get('source'), 'sha256': digest(ROOT / path), 'url': site + 'reader.html?file=' + quote(path)})
+        generated = manifest['articles'][path]
+        html_path = output / unquote(generated['url'])
+        html = fetch(site + generated['url'])
+        if html != html_path.read_bytes(): raise ValueError('Pages article HTML differs: ' + path)
+        articles.append({'file': path, 'source': item.get('source'), 'sha256': digest(ROOT / path),
+                         'html_sha256': hashlib.sha256(html).hexdigest(), 'url': site + generated['url']})
     def check(pair):
         path, url = pair
         # GET checks exact content, including chunked servers with no Content-Length.
@@ -59,9 +76,12 @@ def verify(files, site=SITE):
         return path
     with ThreadPoolExecutor(max_workers=6) as pool:
         verified = list(pool.map(check, checks.items()))
-    # Reader shell + its local runtime must be deployed as well.
-    for path in ('reader.html', 'assets/reader.js', 'assets/bilingual.js', 'assets/bilingual.css', 'assets/vendor/marked.js', 'assets/vendor/purify.js'):
-        if fetch(site + path) != (ROOT / path).read_bytes(): raise ValueError('Reader deployment differs: ' + path)
+    # Verify both static enhancement assets and the compatibility loader.
+    for path in ('reader.html', 'article.html', 'static-articles.json', 'article-build.json',
+                 'assets/reader.js', 'assets/reader.css', 'assets/editorial.css',
+                 'assets/article-content.js', 'assets/bilingual.js', 'assets/bilingual.css',
+                 'assets/vendor/marked.js', 'assets/vendor/purify.js'):
+        if fetch(site + path) != (output / path).read_bytes(): raise ValueError('Reader deployment differs: ' + path)
     evidence = {'status': 'verified', 'verified_at': datetime.now(timezone.utc).isoformat(), 'commit': run('git', 'rev-parse', 'HEAD'), 'articles': articles, 'assets': verified}
     key = evidence['commit'][:12] + '-' + hashlib.sha256(json.dumps(sorted(files)).encode()).hexdigest()[:12]
     atomic_json(STATE / 'receipts' / (key + '.json'), evidence)
