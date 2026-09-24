@@ -1,5 +1,27 @@
 [
   {
+    "title": "用 Pi 和 Jev 构建自定义智能体执行框架 / Building a Custom Harness with Pi and Jev",
+    "file": "articles/用 Pi 和 Jev 构建自定义智能体执行框架 — 中英双语.md",
+    "date": "2026-09-23",
+    "source": "https://x.com/omarsar0/status/2102762406204076532",
+    "source_name": "X / elvis（@omarsar0）",
+    "tags": [
+      "Pi SDK",
+      "Jev",
+      "Harness Engineering",
+      "AI Agent",
+      "模型路由",
+      "安全门控",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "从零构建基于 Pi SDK 与 Jev 的自定义智能体执行框架，覆盖工具安全门控、按请求选模、故障降级、答案验证、日志与阈值策略。中英双语全文。",
+    "cover": "articles/assets/x-2102762406204076532/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "用 Jev 构建智能体执行框架 / Building a Harness with Jev",
     "file": "articles/用 Jev 构建智能体执行框架 — 中英双语.md",
     "date": "2026-09-18",
