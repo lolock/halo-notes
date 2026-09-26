@@ -1,5 +1,27 @@
 [
   {
+    "title": "使用 Claude Code：如何分配投入强度 / Using Claude Code: Spending your effort",
+    "file": "articles/使用 Claude Code：如何分配投入强度 — 中英双语.md",
+    "date": "2026-09-25",
+    "source": "https://x.com/trq212/status/2103576349499855160",
+    "source_name": "X / Thariq（@trq212）",
+    "tags": [
+      "Claude Code",
+      "Claude Opus 5.5",
+      "Fable 5.1",
+      "Effort",
+      "Terminal-Bench",
+      "软件工程",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "通过评测与实际实验解释 Claude Code 的投入强度设置，分析不同级别对速度、验证、边界测试、自主性和困难任务成功率的影响。中英双语全文。",
+    "cover": "articles/assets/x-2103576349499855160/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "用 Pi 和 Jev 构建自定义智能体执行框架 / Building a Custom Harness with Pi and Jev",
     "file": "articles/用 Pi 和 Jev 构建自定义智能体执行框架 — 中英双语.md",
     "date": "2026-09-23",
