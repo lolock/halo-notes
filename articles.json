@@ -1,5 +1,25 @@
 [
   {
+    "title": "Jev最佳实践：手把手教你改进现有工作流",
+    "file": "articles/Jev最佳实践：手把手教你改进现有工作流.md",
+    "date": "2026-09-27",
+    "source": "https://x.com/chatgptastra/status/2104133852851843080",
+    "source_name": "X / 摸鱼巨匠🔨（@ChatGptAstra）",
+    "tags": [
+      "Jev",
+      "AI Agent",
+      "Agent Loop",
+      "工作流",
+      "模型路由",
+      "工具审查",
+      "自动化"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "一份将 Jev 嵌入现有 Agent 工作流的实践指南，覆盖决策层分工、Choice/Score/Noul、任务路由、人工审核、结果核验与长期运行机制。",
+    "cover": "articles/assets/x-2104133852851843080/cover.jpg"
+  },
+  {
     "title": "使用 Claude Code：如何分配投入强度 / Using Claude Code: Spending your effort",
     "file": "articles/使用 Claude Code：如何分配投入强度 — 中英双语.md",
     "date": "2026-09-25",
