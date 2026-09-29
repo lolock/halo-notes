@@ -1,5 +1,27 @@
 [
   {
+    "title": "用 Claude 自动化评测设计与爬坡优化 / Automating eval design and hillclimbing with Claude",
+    "file": "articles/用 Claude 自动化评测设计与爬坡优化 — 中英双语.md",
+    "date": "2026-09-28",
+    "source": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/",
+    "source_name": "Claude Developer Platform Blog",
+    "tags": [
+      "Claude Code",
+      "claude-api",
+      "评测设计",
+      "Hillclimbing",
+      "Evals",
+      "AI Agent",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "介绍如何设计可信的 AI 评测，并通过 claude-api skill 的 build-eval 与 hillclimb 命令，在防止过拟合的同时自动优化性能和成本。中英双语全文。",
+    "cover": "articles/assets/claude-eval-design-hillclimbing/figure-06.png",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "Jev最佳实践：手把手教你改进现有工作流",
     "file": "articles/Jev最佳实践：手把手教你改进现有工作流.md",
     "date": "2026-09-27",
