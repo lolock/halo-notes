@@ -1,5 +1,27 @@
 [
   {
+    "title": "探索超级智能体设计：迈向更具自主性的智能体系统 / Exploring Super-agent Design: Towards a More Autonomous Agent System",
+    "file": "articles/探索超级智能体设计：迈向更具自主性的智能体系统 — 中英双语.md",
+    "date": "2026-11-01",
+    "source": "https://x.com/deepseekharness/status/2116857257245987236",
+    "source_name": "X / DeepSeek Harness（@DeepSeekHarness）",
+    "tags": [
+      "DeepSeek Harness",
+      "Super-agent",
+      "Agent 架构",
+      "事件驱动",
+      "路由器",
+      "多智能体",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "DeepSeek Harness 团队探讨超级智能体的双层架构、事件路由、上下文管理、异步交互与长期在线机制；基于英文机器译稿制作的中英双语全文。",
+    "cover": "articles/assets/x-2116857257245987236/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "用 Claude 自动化评测设计与爬坡优化 / Automating eval design and hillclimbing with Claude",
     "file": "articles/用 Claude 自动化评测设计与爬坡优化 — 中英双语.md",
     "date": "2026-09-28",
