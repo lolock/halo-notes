@@ -1,5 +1,27 @@
 [
   {
+    "title": "Grok Bot + Obsidian：打造全自动可进化的第二大脑（附提示词与独家 skill） / Grok Bot + Obsidian: Building a Fully Automated, Self-Evolving Second Brain (with Prompts and Exclusive Skills)",
+    "file": "articles/Grok Bot 与 Obsidian 打造全自动可进化的第二大脑 — 中英双语.md",
+    "date": "2026-11-06",
+    "source": "https://x.com/jackywine/status/2118562780383216113",
+    "source_name": "X / Jackywine（@jackywine）",
+    "tags": [
+      "Obsidian",
+      "Grok Bot",
+      "第二大脑",
+      "个人知识库",
+      "AI Agent",
+      "skill",
+      "双语翻译"
+    ],
+    "category": "知识管理",
+    "quality": "S",
+    "summary": "Jackywine 复盘把 Obsidian 库交给 Grok Bot 一个多月的真实过程：9 月只读诊断发现「收集伪装成思考」，10 月主动停掉双链包与串联日报，11 月 6 日完成改名分工、装机流程、Obsidian CLI、二次体检与常青笔记模板 skill，最后留下五条规矩，并说明什么人不必照抄。中英双语全文。",
+    "cover": "articles/assets/x-2118562780383216113/cover.jpg",
+    "source_language": "zh",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "2027 年最赚钱的 AI 生意 / The most lucrative AI business to start in 2027",
     "file": "articles/2027年最赚钱的AI生意 — 中英双语.md",
     "date": "2026-11-03",
