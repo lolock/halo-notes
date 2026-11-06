@@ -1,5 +1,27 @@
 [
   {
+    "title": "Claude Code 团队如何做代码审查 / How the Claude Code team does code review",
+    "file": "articles/Claude Code 团队如何做代码审查 — 中英双语.md",
+    "date": "2026-10-15",
+    "source": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+    "source_name": "Claude Developer Platform Blog",
+    "tags": [
+      "Claude Code",
+      "代码审查",
+      "Code Review",
+      "AI Agent",
+      "CI",
+      "风险分级",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "Claude Code 团队讲述如何在智能体产出代码的量级下重构代码审查：分层检查、按风险分级的人类审批、以事故为评测集持续改进审查者，以及人仍然保留在何处。中英双语全文。",
+    "cover": "articles/assets/claude-code-review/figure-1-life-of-a-change.png",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "我如何管理自己的投资（5）非对称赔率",
     "file": "articles/我如何管理自己的投资（5）非对称赔率.md",
     "date": "2026-10-28",
