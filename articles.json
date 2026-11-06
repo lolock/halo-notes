@@ -1,5 +1,27 @@
 [
   {
+    "title": "2027 年最赚钱的 AI 生意 / The most lucrative AI business to start in 2027",
+    "file": "articles/2027年最赚钱的AI生意 — 中英双语.md",
+    "date": "2026-11-03",
+    "source": "https://x.com/thedankoe/status/2117664712532123680",
+    "source_name": "X / Dan Koe（@thedankoe）",
+    "tags": [
+      "Dan Koe",
+      "个人品牌",
+      "一人公司",
+      "内容策略",
+      "AI 创业",
+      "创作者经济",
+      "双语翻译"
+    ],
+    "category": "AI应用",
+    "quality": "S",
+    "summary": "Dan Koe 认为 2027 年最赚钱的 AI 生意是“一人创意团队”：把品牌策略师、内容策略师、撰稿与社媒运营三种角色集于一身，用 AI 做研究与草稿、由人负责判断与语气，做自己的品牌或替创始人、创作者运营品牌。文章给出从客户入驻访谈、抓取最佳内容、生成有调研支撑的内容地图，到用“无许可学徒”方式拿下第一个客户的完整流程。中英双语全文。",
+    "cover": "articles/assets/x-2117664712532123680/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "Claude Code 团队如何做代码审查 / How the Claude Code team does code review",
     "file": "articles/Claude Code 团队如何做代码审查 — 中英双语.md",
     "date": "2026-10-15",
