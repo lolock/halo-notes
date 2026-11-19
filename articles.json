@@ -1,5 +1,25 @@
 [
   {
+    "title": "监督一个比你聪明的人：拆解土豆姐的 Agent 与 Lint 工程哲学（长文慎点）",
+    "file": "articles/监督一个比你聪明的人 — 土豆姐的 Agent 与 Lint 工程哲学.md",
+    "date": "2026-11-19",
+    "source": "https://x.com/wquguru/status/2123269893588152709",
+    "source_name": "X / WquGuru（@wquguru）",
+    "tags": [
+      "AI Agent",
+      "Cursor",
+      "pstack",
+      "lint",
+      "提示词工程",
+      "架构设计",
+      "中文长文"
+    ],
+    "category": "AI应用",
+    "quality": "A",
+    "summary": "把刘邦“善将将”的老故事接到今天的 AI 编码上：当模型写代码比你强、你又读不完所有代码，怎么管住它。全文拆解土豆姐（@poteto）的六层方法——用间接提示词逼 Agent 复述问题、用 /teach /how /why /recall 建认知、用 README 与原型代替纸面计划、用 /architect 多模型竞技定架构、用 lint 把每次纠正变成铁律、用专用 CLI 与功能地图搭自验证底座。含 7 段可复制提示词、8 张配图与全部参考链接。",
+    "cover": "articles/assets/x-2123269893588152709/cover.jpg"
+  },
+  {
     "title": "用 Grok Bot 自动化任何事 / Automate Anything with Grok Bot",
     "file": "articles/Grok Bot 自动化任何事 — 中英双语.md",
     "date": "2026-11-18",
