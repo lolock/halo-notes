@@ -1,5 +1,27 @@
 [
   {
+    "title": "用 Grok Bot 自动化任何事 / Automate Anything with Grok Bot",
+    "file": "articles/Grok Bot 自动化任何事 — 中英双语.md",
+    "date": "2026-11-18",
+    "source": "https://x.com/poteto/status/2123159537016533493",
+    "source_name": "X / poteto lauren（@poteto）",
+    "tags": [
+      "Grok Bot",
+      "自动化",
+      "AI Agent",
+      "工作流",
+      "例程",
+      "小企业",
+      "双语翻译"
+    ],
+    "category": "AI应用",
+    "quality": "A",
+    "summary": "poteto 把「自动化」拆成目标与流程两件事：先用一句话讲清真正想要的结果，再把平时怎么做的流程口述给 bot，让它重述确认后再动手；接着要教会 bot 你那些不自觉的判断、让它自己去拿反馈数据，最后用例程把触发条件设好，让它不用你催也能干活。中途含可复制的提示词模板。中英双语全文（文末作者自家 bot 推广段落未收录）。",
+    "cover": "articles/assets/x-2123159537016533493/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "Grok Bot + Obsidian：打造全自动可进化的第二大脑（附提示词与独家 skill） / Grok Bot + Obsidian: Building a Fully Automated, Self-Evolving Second Brain (with Prompts and Exclusive Skills)",
     "file": "articles/Grok Bot 与 Obsidian 打造全自动可进化的第二大脑 — 中英双语.md",
     "date": "2026-11-06",
