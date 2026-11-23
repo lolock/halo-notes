@@ -5,7 +5,6 @@
   if (!el) return;
   const topbar = document.getElementById('topbar');
   const bar = document.getElementById('progress');
-  const titleSlot = document.getElementById('topbarTitle');
   const toggle = document.getElementById('themeToggle');
   // Resolving from this shared asset also works under a Pages project prefix.
   const siteRoot = new URL('../', document.currentScript.src);
@@ -30,8 +29,7 @@
   themeLabel();
 
   /* ---------- the bar ---------- */
-  const articleTitle = () => (document.title || '').replace(/\s+-\s+Halo Notes$/, '').trim();
-  let lastY = window.scrollY, ticking = false, hidden = false;
+  let ticking = false, hidden = false;
   let initialAnchor = null;
 
   function hashTarget(hash = location.hash) {
@@ -44,7 +42,6 @@
     if (!initialAnchor?.isConnected) return;
     const offset = parseFloat(getComputedStyle(initialAnchor).scrollMarginTop) || 0;
     window.scrollTo({top: initialAnchor.getBoundingClientRect().top + window.scrollY - offset, behavior: 'instant'});
-    lastY = window.scrollY;
   }
   function setHidden(next) {
     if (next === hidden) return;
@@ -59,14 +56,9 @@
     const y = Math.max(0, window.scrollY);
     bar.style.width = (max > 0 ? Math.min(100, 100 * y / max) : 0) + '%';
 
-    const scrolled = y > 72;
-    topbar.dataset.scrolled = String(scrolled);
-    if (!scrolled) setHidden(false);
-    else if (y > lastY + 6) setHidden(true);
-    else if (y < lastY - 6) setHidden(false);
-    lastY = y;
-
-    if (!titleSlot.textContent) titleSlot.textContent = articleTitle();
+    // Matter-like: the bar belongs to the top of the document. Once you are
+    // reading, it stays gone — no direction tracking, nothing floats over text.
+    setHidden(y > 24);
   }
   function schedule() {
     if (!ticking) { ticking = true; requestAnimationFrame(sync); }
@@ -124,7 +116,6 @@
         marked: window.marked, purify: window.DOMPurify, bilingual: window.HaloBilingual
       });
       document.title = (reading.title || '文章阅读') + ' - Halo Notes';
-      titleSlot.textContent = articleTitle();
       initialAnchor = hashTarget();
       schedule();
     } catch (error) {
@@ -140,7 +131,6 @@
 
   initialAnchor = hashTarget();
   if (el.dataset.rendered === 'true') {
-    titleSlot.textContent = articleTitle();
     schedule();
     // Late images and fonts may move a deep link, but never pull the reader back
     // once they have started interacting with the page.

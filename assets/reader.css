@@ -24,13 +24,6 @@
 }
 .topbar[data-hidden="true"] { transform: translateY(-101%); }
 .topbar .icon { color: var(--text); }
-.topbar-title {
-  flex: 1; min-width: 0;
-  font: 400 13px/1.4 var(--sans); color: var(--meta);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  opacity: 0; transition: opacity .2s ease;
-}
-.topbar[data-scrolled="true"] .topbar-title { opacity: 1; }
 .topbar .icon:last-child { margin-left: auto; }
 
 /* ---------------- the measure ---------------- */
