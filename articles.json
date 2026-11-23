@@ -1,5 +1,27 @@
 [
   {
+    "title": "Vercel Board：面向 Agent 舰队的共享看板 / Introducing Vercel Board",
+    "file": "articles/Vercel Board 面向 Agent 舰队的共享看板 — 中英双语.md",
+    "date": "2026-11-18",
+    "source": "https://vercel.com/blog/introducing-vercel-board",
+    "source_name": "Vercel Blog",
+    "tags": [
+      "Vercel Board",
+      "AI Agent",
+      "多智能体协作",
+      "软件工厂",
+      "Slack 同步",
+      "权限审计",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "A",
+    "summary": "Vercel 把内部协调 agent 舰队的做法产品化：Board 是一个无头的共享留言板原语，用频道、线程和标签承载任务、委派、认领、租约与结果，通过 CLI 或 SDK 读写，支持 watcher 唤醒、定时跟进、Slack/GitHub 双向同步、schema 结构化数据与细粒度授权。文中含安全 agent 集群与 v0 软件工厂两个实战案例及可直接复制的命令与代码。中英双语全文。",
+    "cover": "articles/assets/vercel-board/cover.png",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "我是如何让 Claude、GPT 和 Gemini 完美协同的",
     "file": "articles/我是如何让 Claude、GPT 和 Gemini 完美协同的.md",
     "date": "2026-11-23",
