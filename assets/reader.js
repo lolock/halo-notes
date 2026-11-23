@@ -3,7 +3,6 @@
 (() => {
   const el = document.getElementById('content');
   if (!el) return;
-  const topbar = document.getElementById('topbar');
   const bar = document.getElementById('progress');
   const toggle = document.getElementById('themeToggle');
   // Resolving from this shared asset also works under a Pages project prefix.
@@ -29,7 +28,7 @@
   themeLabel();
 
   /* ---------- the bar ---------- */
-  let ticking = false, hidden = false;
+  let ticking = false;
   let initialAnchor = null;
 
   function hashTarget(hash = location.hash) {
@@ -43,11 +42,6 @@
     const offset = parseFloat(getComputedStyle(initialAnchor).scrollMarginTop) || 0;
     window.scrollTo({top: initialAnchor.getBoundingClientRect().top + window.scrollY - offset, behavior: 'instant'});
   }
-  function setHidden(next) {
-    if (next === hidden) return;
-    hidden = next;
-    topbar.dataset.hidden = String(next);
-  }
   function sync() {
     ticking = false;
     alignInitialAnchor();
@@ -56,9 +50,7 @@
     const y = Math.max(0, window.scrollY);
     bar.style.width = (max > 0 ? Math.min(100, 100 * y / max) : 0) + '%';
 
-    // Matter-like: the bar belongs to the top of the document. Once you are
-    // reading, it stays gone — no direction tracking, nothing floats over text.
-    setHidden(y > 24);
+    // The bar is plain document flow, so scrolling already takes it away.
   }
   function schedule() {
     if (!ticking) { ticking = true; requestAnimationFrame(sync); }

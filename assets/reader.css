@@ -11,18 +11,15 @@
   pointer-events: none;
 }
 
+/* Part of the document, not pinned to it: it scrolls away with the title and
+   nothing can leave a strip hovering over the text. */
 .topbar {
-  position: sticky; top: 0; z-index: 20;
+  position: static;
   display: flex; align-items: center; gap: 4px;
   height: calc(48px + env(safe-area-inset-top, 0px));
   padding-top: env(safe-area-inset-top, 0px);
   padding-inline: 4px;
-  background: color-mix(in srgb, var(--paper) 86%, transparent);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
-  backdrop-filter: saturate(180%) blur(12px);
-  transition: transform .22s cubic-bezier(.2, .7, .3, 1);
 }
-.topbar[data-hidden="true"] { transform: translateY(-101%); }
 .topbar .icon { color: var(--text); }
 .topbar .icon:last-child { margin-left: auto; }
 
