@@ -427,7 +427,7 @@
       "Browser Automation",
       "前端开发"
     ],
-    "category": "AI工程",
+    "category": "AI 工程",
     "quality": "S",
     "summary": "复盘 AI 根据截图自动修改 UI 容易越改越差的原因，并给出目标截图、浏览器渲染、逐像素 Diff、诊断优先、保留历史最佳版本的闭环工作流。",
     "cover": "articles/assets/x-2099133528361628074/cover.jpg"
@@ -530,7 +530,7 @@
       "AI工程",
       "软件交付"
     ],
-    "category": "AI工程",
+    "category": "AI 工程",
     "quality": "S",
     "summary": "一套用于真实软件接管、并发开发、自动测试与客户交付的 Codex 多智能体工程方法，涵盖控制面、AGENTS.md、任务 DAG、模型路由、Tailscale 权限、验收证据和系统自举。",
     "cover": "articles/assets/x-2096157899554693239/cover.png"
@@ -570,7 +570,7 @@
       "AI 编程",
       "双语翻译"
     ],
-    "category": "AI工程",
+    "category": "AI 工程",
     "quality": "S",
     "summary": "Andrew Ng 总结使用编程智能体的 AI 工程技能图谱：从规划、执行到部署监控，并深入阐述引导工作流、启用智能体自主性、审查成果、定制环境和理解智能体基础五项核心能力。中英双语全文。",
     "cover": "articles/assets/x-2095890279865721217/cover.jpg",
@@ -591,7 +591,7 @@
       "Agent",
       "双语翻译"
     ],
-    "category": "AI工程",
+    "category": "AI 工程",
     "quality": "S",
     "summary": "Eric Provencher 讨论 GPT-6 Astra 时代应如何重新审视技能文件、AGENTS.md、决策边界与持续执行规则：减少臃肿指令，采用渐进式披露，为不同模型保留合适自由度，并在任务开始前明确完成标准。中英双语全文。",
     "cover": "articles/assets/x-2095991462416490862/cover.jpg",
@@ -3247,7 +3247,7 @@
       "工具设计",
       "Anthropic"
     ],
-    "category": "AI工程",
+    "category": "AI 工程",
     "quality": "S",
     "summary": "Thariq 分享 Anthropic 团队构建 Claude Code 过程中收获的工具设计教训：如何像 Agent 一样思考，从 elicitation 到渐进式披露的艺术。",
     "cover": "https://pbs.twimg.com/media/HCLxeR3acAAf2R9.jpg"

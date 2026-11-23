@@ -14,7 +14,9 @@
 .topbar {
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; gap: 4px;
-  height: 48px; padding-inline: 4px;
+  height: calc(48px + env(safe-area-inset-top, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-inline: 4px;
   background: color-mix(in srgb, var(--paper) 86%, transparent);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
   backdrop-filter: saturate(180%) blur(12px);
@@ -35,7 +37,7 @@
 .reader {
   max-width: 34rem;
   margin: 0 auto;
-  padding: 4px 22px 104px;
+  padding: 4px 22px calc(56px + env(safe-area-inset-bottom, 0px));
 }
 @media (min-width: 640px) {
   .reader { padding: 12px 0 120px; }
@@ -182,7 +184,7 @@
 
 /* ---------------- end of the article ---------------- */
 .reader-end {
-  margin-top: 3.4em; padding-top: 0;
+  margin-top: 2.4em; padding-top: 0;
   display: flex; align-items: center; justify-content: space-between;
   font: 13px/1.5 var(--sans); color: var(--meta);
 }

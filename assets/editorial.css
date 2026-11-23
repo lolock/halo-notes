@@ -28,6 +28,10 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 
+/* Paint the canvas, not just the body box: iOS shows the area beyond the
+   document when you bounce past either end, and an unpainted canvas is white. */
+html { background: var(--paper); }
+
 body {
   margin: 0;
   background: var(--paper);

@@ -3,7 +3,9 @@
 
 .masthead {
   display: flex; align-items: center; gap: 8px;
-  height: 56px; padding-inline: 8px 4px;
+  height: calc(56px + env(safe-area-inset-top, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-inline: 8px 4px;
 }
 .brand {
   font: 500 25px/1 var(--serif);
@@ -44,7 +46,7 @@
 .topics button:hover { color: var(--ink); }
 .topics button[aria-pressed="true"] { background: var(--wash); color: var(--ink); }
 
-#main { padding: 0 20px 72px; }
+#main { padding: 0 20px calc(40px + env(safe-area-inset-bottom, 0px)); }
 
 /* ---- lead story: the picture runs to the edges, the words stay in the measure ---- */
 .lead { margin-bottom: 30px; }
