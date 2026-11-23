@@ -93,8 +93,40 @@
 .content p:has(> img) { margin: 0; }
 .content em { font-style: normal; color: var(--meta); }
 
+/* A wash behind every capture, so a slow image is never an empty hole. */
+.content img { background: var(--wash); }
+
 @media (min-width: 640px) {
   .content img { width: 100%; margin: 1.9em 0; border-radius: 4px; }
+}
+
+/* Wide captures step out of the measure — the book's plate section. Narrow ones
+   keep their own width and sit centred in the wider box. */
+@media (min-width: 900px) {
+  .content p:has(> img) {
+    width: min(52rem, calc(100vw - 6rem));
+    max-width: none;
+    margin-inline: calc((100% - min(52rem, calc(100vw - 6rem))) / 2);
+    text-align: center;
+  }
+  .content p:has(> img) > img {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    margin: 1.9em 0;
+  }
+}
+
+/* A caption centres while it fits on one line and fills the measure, left
+   aligned, once it wraps. */
+.content p > em:only-child {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 1.4em;
+  font: 13px/1.62 var(--sans);
+  color: var(--meta);
+  text-align: left;
 }
 
 .content blockquote {
