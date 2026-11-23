@@ -1,7 +1,48 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Halo Notes</title><meta name="description" content="Halo Notes · 技术与思想札记。人工智能、工具与实践的中英双语长阅读。"><script>try{document.documentElement.dataset.theme=localStorage.getItem('halo_theme')==='dark'?'dark':'light'}catch{}</script><link rel="stylesheet" href="./assets/home.css?v=b290fce09509"></head><body>
-<div class="shell"><header class="site-header"><a class="brand" href="./index.html" aria-label="Halo Notes 首页">Halo Notes</a><div class="header-actions"><button class="icon-button" id="open-search" aria-label="搜索文章" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4 4"/></svg></button><button class="icon-button" id="open-menu" aria-label="打开菜单"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button></div></header>
-<form class="search-panel" id="search-panel" role="search" hidden><input type="search" id="search" aria-label="搜索文章" placeholder="搜索标题、摘要" autocomplete="off"><button type="button" id="close-search">取消</button></form>
-<nav class="topics" id="topics" tabindex="0" aria-label="文章分类"></nav><main id="main"></main></div>
-<dialog id="menu" aria-labelledby="menu-title"><div class="menu-top"><h2 id="menu-title">浏览</h2><button class="icon-button" id="close-menu" aria-label="关闭菜单"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="menu-section" id="menu-topics"></div><div class="menu-section"><button id="theme" aria-pressed="false">深色模式</button></div></dialog>
-<script src="./assets/home.js?v=678a8fbd419d"></script></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Halo Notes</title>
+  <meta name="description" content="Halo Notes · 技术与思想札记。人工智能、工具与实践的长阅读。" />
+  <meta name="theme-color" content="#faf9f5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#141510" media="(prefers-color-scheme: dark)" />
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('halo_theme')==='dark'?'dark':'light'}catch{}</script>
+  <link rel="stylesheet" href="./assets/editorial.css?v=e530bd3f43be" />
+  <link rel="stylesheet" href="./assets/home.css?v=2e40265c402a" />
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="./index.html" aria-label="Halo Notes 首页">Halo Notes</a>
+    <div class="masthead-actions">
+      <button class="icon" id="open-search" aria-label="搜索文章" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.6" cy="10.6" r="6.4"/><path d="m15.4 15.4 4.1 4.1"/></svg>
+      </button>
+      <button class="icon" id="open-menu" aria-label="打开菜单">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5h16M4 15.5h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <form class="search-panel" id="search-panel" role="search" hidden>
+    <input type="search" id="search" aria-label="搜索文章" placeholder="搜索标题、摘要" autocomplete="off" />
+    <button type="button" id="close-search">取消</button>
+  </form>
+
+  <nav class="topics" id="topics" aria-label="文章分类"></nav>
+  <main id="main"></main>
+
+  <dialog id="menu" aria-labelledby="menu-title">
+    <div class="menu-top">
+      <h2 id="menu-title">浏览</h2>
+      <button class="icon" id="close-menu" aria-label="关闭菜单">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="menu-section" id="menu-topics"></div>
+    <div class="menu-section"><button id="theme" aria-pressed="false">深色模式</button></div>
+  </dialog>
+
+  <script src="./assets/home.js?v=36e90a5c9dba"></script>
+</body>
+</html>

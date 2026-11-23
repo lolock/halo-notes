@@ -73,25 +73,13 @@ function renderArticle({template, markdown, metadata = {}, file, siteUrl = DEFAU
   try {
     const doc = dom.window.document;
     const el = doc.getElementById('content');
-    if (!el || !doc.getElementById('tocLinks')) throw new Error('reader template is missing content or TOC');
+    if (!el) throw new Error('reader template is missing the content element');
     const reading = article.render(el, markdown, {marked, purify: createPurify(dom.window), bilingual});
     el.dataset.rendered = 'true';
-    doc.body.classList.toggle('magazine-reader', reading.bilingual);
     const title = reading.title || metadata.title || path.posix.basename(file, '.md');
     const description = descriptionFor(el, metadata);
     const url = articleUrl(file), canonical = new URL(url, siteUrl).href;
     doc.title = title + ' - Halo Notes';
-
-    const toc = doc.getElementById('tocLinks');
-    toc.replaceChildren();
-    for (const heading of reading.headings) {
-      const link = doc.createElement('a');
-      link.className = 'toc-link'; link.href = '#' + encodeURIComponent(heading.id);
-      link.textContent = (heading.tagName === 'H3' ? '↳ ' : '') + heading.textContent;
-      toc.append(link);
-    }
-    doc.getElementById('sideToc').hidden = reading.headings.length === 0;
-    doc.querySelector('.layout').classList.toggle('no-toc', reading.headings.length === 0);
 
     // Only the shared reader enhancement runs on generated articles.
     for (const script of doc.querySelectorAll('script[src]')) {

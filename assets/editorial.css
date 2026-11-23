@@ -1,83 +1,74 @@
-/* Shared journal materials and controls. Reader geometry belongs to reader.css.
-   The homepage has its own home.css entry point. */
+/* Design tokens and the few shared controls. Reading geometry lives in reader.css,
+   the catalog in home.css. Mobile is the reference width; wider screens only
+   widen the measure, they never add chrome. */
 :root {
-  --paper: #f4f0e7;
-  --surface: #faf7f0;
-  --ink: #262820;
-  --quiet: #69695e;
-  --rule: #d2cebf;
-  --signal: #9c422c;
-  --wash: #e8e2d5;
+  --paper: #faf9f5;
+  --ink: #1b1c17;
+  --text: #4a4c43;
+  --meta: #86887d;
+  --hair: #e7e5db;
+  --wash: #f1efe7;
   --serif: Georgia, "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
-  --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft Yahei", sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+          "Microsoft Yahei", "Noto Sans CJK SC", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
   color-scheme: light;
 }
 
 [data-theme="dark"] {
-  --paper: #20221f;
-  --surface: #262824;
-  --ink: #ebe6d9;
-  --quiet: #b5b3a7;
-  --rule: #484b42;
-  --signal: #e59b7f;
-  --wash: #30342c;
+  --paper: #141510;
+  --ink: #eae8df;
+  --text: #b2b4a8;
+  --meta: #8a8c81;
+  --hair: #2c2e26;
+  --wash: #1d1f19;
   color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
-button, input { font: inherit; -webkit-appearance: none; appearance: none; }
-button, a, input { touch-action: manipulation; }
-a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
-  outline: 2px solid var(--signal);
-  outline-offset: 4px;
-}
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--sans);
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
-.themeBtn, .emptyBtn {
-  font: 400 13px/1.5 var(--sans);
-  color: var(--quiet);
-  background: transparent;
-  border-radius: 0;
-  min-height: 44px;
-  cursor: pointer;
+a { color: inherit; }
+button, input { font: inherit; color: inherit; -webkit-appearance: none; appearance: none; }
+button { border: 0; background: none; cursor: pointer; padding: 0; }
+button, a, input, summary { touch-action: manipulation; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
-.themeBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 44px;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border: 0;
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
 }
-.themeBtn:hover, .themeBtn[aria-pressed="true"] { color: var(--signal); }
-.themeBtn svg { display: block; flex: none; }
-.emptyBtn { border: 1px solid var(--rule); padding: 10px 12px; }
-.emptyBtn:hover { background: var(--wash); color: var(--ink); }
+
+/* One icon button, used for theme and search. No visible box, 44px target. */
+.icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; flex: none;
+  color: var(--meta);
+}
+.icon:hover { color: var(--ink); }
+.icon svg { display: block; width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; }
+}
 
 @media print {
   :root {
-    --paper: white;
-    --surface: white;
-    --ink: black;
-    --quiet: #444;
-    --signal: #333;
-    --rule: #ccc;
-    --wash: #f4f4f4;
+    --paper: #fff; --ink: #000; --text: #111; --meta: #555; --hair: #ccc; --wash: #f4f4f4;
     color-scheme: light;
   }
 }

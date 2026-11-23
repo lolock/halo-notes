@@ -30,7 +30,7 @@ class StaticVerificationTests(unittest.TestCase):
             }
             for filename in ('reader.html', 'article.html', 'assets/reader.js', 'assets/reader.css',
                              'assets/editorial.css', 'assets/article-content.js', 'assets/bilingual.js',
-                             'assets/bilingual.css', 'assets/vendor/marked.js', 'assets/vendor/purify.js'):
+                             'assets/vendor/marked.js', 'assets/vendor/purify.js'):
                 files[filename] = 'expected ' + filename
             for filename, body in files.items():
                 target = fixture / filename

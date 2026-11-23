@@ -2,47 +2,40 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#faf9f5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#141510" media="(prefers-color-scheme: dark)" />
   <title>文章阅读 - Halo Notes</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script>
     (function(){
       let saved; try { saved = localStorage.getItem('halo_theme'); } catch {}
-      const theme = saved==='dark'?'dark':'light';
-      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
     })();
   </script>
-  <script src="./assets/vendor/marked.js?v=b147274a9ce2"></script>
-  <script src="./assets/vendor/purify.js?v=f263b05369e0"></script>
-  <link rel="stylesheet" href="./assets/reader.css?v=8484b3d39564" />
-  <link rel="stylesheet" href="./assets/bilingual.css?v=55cbd40ff29b" />
-  <link rel="stylesheet" href="./assets/editorial.css?v=1ed6b9eff48a" />
+  <link rel="stylesheet" href="./assets/editorial.css?v=e530bd3f43be" />
+  <link rel="stylesheet" href="./assets/reader.css?v=ac45b5ab066f" />
 </head>
-<body class="journal-reader">
-  <main class="wrap">
-    <div class="top">
-      <a href="./index.html">← 文章目录</a>
-      <div class="reader-actions">
-        <button id="themeToggle" class="themeBtn" type="button" aria-pressed="false" aria-label="切换至深色模式" title="切换至深色模式"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg></button>
-      </div>
-    </div>
+<body class="reader-body">
+  <div class="progress" id="progress" role="presentation"></div>
 
-    <section class="layout">
-      <article class="paper content" id="content">加载中…</article>
-      <aside id="sideToc" class="side">
-        <details class="tocCard" id="tocPanel" open>
-          <summary class="tocTitle">目录</summary>
-          <div id="tocLinks" class="tocList"></div>
-          <div class="progressWrap"><div id="progressBar" class="progressBar"></div></div>
-        </details>
-      </aside>
-    </section>
+  <header class="topbar" id="topbar">
+    <a class="icon" href="./index.html" aria-label="返回文章目录">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
+    </a>
+    <span class="topbar-title" id="topbarTitle"></span>
+    <button id="themeToggle" class="icon" type="button" aria-pressed="false" aria-label="切换至深色模式" title="切换至深色模式">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.6"/><path d="M12 4.4a7.6 7.6 0 0 1 0 15.2Z" fill="currentColor" stroke="none"/></svg>
+    </button>
+  </header>
+
+  <main class="reader">
+    <article class="content" id="content">加载中…</article>
+    <nav class="reader-end" id="readerEnd" aria-label="文章结尾">
+      <a href="./index.html">← 全部文章</a>
+    </nav>
   </main>
 
-  <script src="./assets/bilingual.js?v=82af375faa78"></script>
-  <script src="./assets/article-content.js?v=9dac0aaf2a0f"></script>
-  <script src="./assets/reader.js?v=6f1d241bc8f8"></script>
+  <script src="./assets/article-content.js?v=54f351773960"></script>
+  <script src="./assets/reader.js?v=560fc69bb596"></script>
 </body>
 </html>

@@ -1,23 +1,125 @@
-let articles=[];const main=document.getElementById('main'),menu=document.getElementById('menu'),search=document.getElementById('search'),panel=document.getElementById('search-panel');let category='全部',query='';
-const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const homeTitle=a=>esc(a.title.split(' / ')[0]);
-const isBilingual=a=>Boolean(a.bilingual_format);
-const meta=a=>'<div class="eyebrow"><span>'+esc(a.category)+'</span><time>'+esc(a.date)+'</time>'+(isBilingual(a)?'<span class="bilingual-mark" aria-label="中英双语文章">双语</span>':'')+'</div>';
-function applyTheme(dark){document.documentElement.dataset.theme=dark?'dark':'light';document.getElementById('theme').setAttribute('aria-pressed',String(dark));try{localStorage.setItem('halo_theme',dark?'dark':'light')}catch{}}
-try{applyTheme(localStorage.getItem('halo_theme')==='dark')}catch{applyTheme(false)}
-let categories=['全部'];
-const articleURL=a=>{
- const file=String(a.file||'').replace(/^articles\//,'');
- const generated='read/'+encodeURIComponent(file.replace(/\.md$/,''))+'.html';
- return a.url===generated?'./'+esc(generated):'./reader.html?file='+encodeURIComponent(a.file);
-};
-const coverURL=a=>{try{const u=new URL(a.cover,location.href);return ['http:','https:'].includes(u.protocol)?esc(u.href):''}catch{return ''}};
-function setCategory(c){category=c;query='';search.value='';menu.close();if(location.hash!=='#home')location.hash='home';else renderHome();}
-function topics(){for(const id of ['topics','menu-topics']){const target=document.getElementById(id);target.replaceChildren();categories.forEach(c=>{const b=document.createElement('button');b.textContent=c==='全部'?'全部文章':c;b.setAttribute('aria-pressed',String(c===category));b.onclick=()=>setCategory(c);target.append(b)})}}
-function figure(a,lead){if(!a.cover||!coverURL(a))return '';return '<figure class="'+(lead?'lead-media':'thumb')+' '+'diagram'+'"><a href="'+articleURL(a)+'" aria-label="'+homeTitle(a)+'"><img src="'+coverURL(a)+'" alt="'+esc(a.media==='diagram'?'文章配图，完整展示':'文章原图')+'" '+(lead?'':'loading="lazy"')+'></a></figure>'}
-function renderHome(){document.title='Halo Notes';document.getElementById('topics').hidden=false;topics();const rows=articles.filter(a=>(category==='全部'||a.category===category)&&(!query||[a.title,a.summary,a.category,...(a.tags||[])].join(' ').toLowerCase().includes(query.toLowerCase())));if(!rows.length){main.innerHTML='<div class="empty">没有匹配的文章。<button id="reset">清空筛选</button></div>';document.getElementById('reset').onclick=()=>setCategory('全部');return}const first=rows[0];main.innerHTML='<article class="lead"><div class="lead-copy">'+meta(first)+'<h1><a class="story-title" href="'+articleURL(first)+'">'+homeTitle(first)+'</a></h1><p class="deck">'+esc(first.summary)+'</p></div>'+figure(first,true)+'</article><section class="feed" aria-label="更多文章">'+rows.slice(1).map(a=>'<article class="story">'+meta(a)+'<div class="story-main"><div class="story-copy"><h2><a class="story-title" href="'+articleURL(a)+'">'+homeTitle(a)+'</a></h2></div>'+figure(a,false)+'</div><p class="deck">'+esc(a.summary)+'</p></article>').join('')+'</section><p class="end-note">已读到文章列表末尾</p>';main.querySelectorAll('img').forEach(img=>{img.onerror=()=>img.closest('figure').remove()})}
-function route(){renderHome();window.scrollTo(0,0)}
-document.getElementById('open-menu').onclick=()=>{topics();menu.showModal()};document.getElementById('close-menu').onclick=()=>menu.close();document.getElementById('theme').onclick=()=>applyTheme(document.documentElement.dataset.theme!=='dark');document.getElementById('open-search').onclick=()=>{panel.hidden=false;document.getElementById('open-search').setAttribute('aria-expanded','true');search.focus()};document.getElementById('close-search').onclick=()=>{panel.hidden=true;query='';search.value='';document.getElementById('open-search').setAttribute('aria-expanded','false');if(!location.hash.startsWith('#article-'))renderHome();document.getElementById('open-search').focus()};panel.onsubmit=e=>e.preventDefault();search.oninput=()=>{query=search.value;if(location.hash.startsWith('#article-'))location.hash='home';else renderHome()};window.addEventListener('hashchange',route);
+let articles = [];
+const main = document.getElementById('main'), menu = document.getElementById('menu');
+const search = document.getElementById('search'), panel = document.getElementById('search-panel');
+let category = '全部', query = '';
 
-async function loadArticles(){main.textContent='加载中…';try{const r=await fetch('./articles.json');if(!r.ok)throw Error(r.status);const data=await r.json();if(!Array.isArray(data))throw Error('索引格式错误');articles=data.map(a=>({...a,category:a.category||'未分类'})).sort((a,b)=>(b.date||'').localeCompare(a.date||''));categories=['全部',...new Set(articles.map(a=>a.category))];renderHome()}catch{main.innerHTML='<p class="empty">文章列表加载失败，请稍后重试。</p><button id="retry">重试</button>';document.getElementById('retry').onclick=loadArticles}}
+const esc = s => String(s || '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+const homeTitle = a => esc(a.title.split(' / ')[0]);
+const meta = a => '<div class="eyebrow"><span>' + esc(a.category) + '</span><time>' + esc(a.date) + '</time></div>';
+
+function applyTheme(dark) {
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  document.getElementById('theme').setAttribute('aria-pressed', String(dark));
+  try { localStorage.setItem('halo_theme', dark ? 'dark' : 'light'); } catch {}
+  const color = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim();
+  if (color) document.querySelectorAll('meta[name="theme-color"]').forEach(m => m.content = color);
+}
+try { applyTheme(localStorage.getItem('halo_theme') === 'dark'); } catch { applyTheme(false); }
+
+let categories = ['全部'];
+const articleURL = a => {
+  const file = String(a.file || '').replace(/^articles\//, '');
+  const generated = 'read/' + encodeURIComponent(file.replace(/\.md$/, '')) + '.html';
+  return a.url === generated ? './' + esc(generated) : './reader.html?file=' + encodeURIComponent(a.file);
+};
+const coverURL = a => {
+  try {
+    const u = new URL(a.cover, location.href);
+    return ['http:', 'https:'].includes(u.protocol) ? esc(u.href) : '';
+  } catch { return ''; }
+};
+
+function setCategory(c) {
+  category = c; query = ''; search.value = ''; menu.close();
+  if (location.hash !== '#home') location.hash = 'home'; else renderHome();
+}
+function topics() {
+  for (const id of ['topics', 'menu-topics']) {
+    const target = document.getElementById(id);
+    target.replaceChildren();
+    categories.forEach(c => {
+      const b = document.createElement('button');
+      b.textContent = c === '全部' ? '全部' : c;
+      b.setAttribute('aria-pressed', String(c === category));
+      b.onclick = () => setCategory(c);
+      target.append(b);
+    });
+  }
+}
+function figure(a, lead) {
+  if (!a.cover || !coverURL(a)) return '';
+  return '<figure class="' + (lead ? 'lead-media' : 'thumb') + '">'
+    + '<a href="' + articleURL(a) + '" aria-label="' + homeTitle(a) + '" tabindex="-1">'
+    + '<img src="' + coverURL(a) + '" alt="" ' + (lead ? '' : 'loading="lazy"') + '></a></figure>';
+}
+
+function renderHome() {
+  document.title = 'Halo Notes';
+  document.getElementById('topics').hidden = false;
+  topics();
+  const rows = articles.filter(a =>
+    (category === '全部' || a.category === category)
+    && (!query || [a.title, a.summary, a.category, ...(a.tags || [])].join(' ').toLowerCase().includes(query.toLowerCase()))
+  );
+  if (!rows.length) {
+    main.innerHTML = '<div class="empty">没有匹配的文章。<button id="reset">清空筛选</button></div>';
+    document.getElementById('reset').onclick = () => setCategory('全部');
+    return;
+  }
+  const first = rows[0];
+  main.innerHTML = '<article class="lead">'
+    + figure(first, true)
+    + '<div class="lead-copy">' + meta(first)
+    + '<h1><a class="story-title" href="' + articleURL(first) + '">' + homeTitle(first) + '</a></h1>'
+    + '<p class="deck">' + esc(first.summary) + '</p></div></article>'
+    + '<section class="feed" aria-label="更多文章">'
+    + rows.slice(1).map(a => '<article class="story">'
+      + '<div class="story-main"><div class="story-copy">' + meta(a)
+      + '<h2><a class="story-title" href="' + articleURL(a) + '">' + homeTitle(a) + '</a></h2>'
+      + '<p class="deck">' + esc(a.summary) + '</p></div>'
+      + figure(a, false) + '</div></article>').join('')
+    + '</section><p class="end-note">已经到底了</p>';
+  main.querySelectorAll('img').forEach(img => {
+    img.onerror = () => img.closest('figure')?.remove();
+  });
+}
+
+function route() { renderHome(); window.scrollTo(0, 0); }
+document.getElementById('open-menu').onclick = () => { topics(); menu.showModal(); };
+document.getElementById('close-menu').onclick = () => menu.close();
+document.getElementById('theme').onclick = () => applyTheme(document.documentElement.dataset.theme !== 'dark');
+document.getElementById('open-search').onclick = () => {
+  panel.hidden = false;
+  document.getElementById('open-search').setAttribute('aria-expanded', 'true');
+  search.focus();
+};
+document.getElementById('close-search').onclick = () => {
+  panel.hidden = true; query = ''; search.value = '';
+  document.getElementById('open-search').setAttribute('aria-expanded', 'false');
+  if (!location.hash.startsWith('#article-')) renderHome();
+  document.getElementById('open-search').focus();
+};
+panel.onsubmit = e => e.preventDefault();
+search.oninput = () => {
+  query = search.value;
+  if (location.hash.startsWith('#article-')) location.hash = 'home'; else renderHome();
+};
+window.addEventListener('hashchange', route);
+
+async function loadArticles() {
+  main.textContent = '加载中…';
+  try {
+    const r = await fetch('./articles.json');
+    if (!r.ok) throw Error(r.status);
+    const data = await r.json();
+    if (!Array.isArray(data)) throw Error('索引格式错误');
+    articles = data.map(a => ({...a, category: a.category || '未分类'}))
+      .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    categories = ['全部', ...new Set(articles.map(a => a.category))];
+    renderHome();
+  } catch {
+    main.innerHTML = '<p class="empty">文章列表加载失败，请稍后重试。</p><button id="retry">重试</button>';
+    document.getElementById('retry').onclick = loadArticles;
+  }
+}
 loadArticles();

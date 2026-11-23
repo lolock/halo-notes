@@ -1,4 +1,6 @@
-/* One article renderer for the static build and the legacy Markdown fallback. */
+/* One article renderer for the static build and the legacy Markdown fallback.
+   Bilingual sources are rendered in Chinese only: the reading surface has a
+   single column, so the translation is dropped rather than stacked under it. */
 (() => {
   function render(el, md, {marked, purify, bilingual}) {
     if (!marked || !purify) throw new Error('阅读组件加载失败');
@@ -20,19 +22,8 @@
     });
     const title = el.querySelector('h1')?.textContent.trim() || '';
     const isBilingual = reading.sections.length > 0;
-    if (isBilingual) {
-      el.querySelectorAll('h1,h2,h3').forEach(heading => {
-        if (heading.childElementCount) return;
-        const parts = heading.textContent.split(' / ');
-        const hasChinese = text => /[\u3400-\u9fff]/.test(text);
-        if (parts.length !== 2 || hasChinese(parts[0]) === hasChinese(parts[1])) return;
-        const zh = doc.createElement('span'), en = doc.createElement('span'), separator = doc.createElement('span');
-        zh.lang = 'zh-CN'; zh.textContent = parts.find(hasChinese);
-        en.lang = 'en'; en.className = 'heading-translation'; en.textContent = parts.find(text => !hasChinese(text));
-        separator.className = 'heading-separator'; separator.textContent = ' / ';
-        heading.replaceChildren(zh, separator, en);
-      });
-    }
+    if (isBilingual) chineseOnly(el, doc);
+
     const metadata = el.querySelector(':scope > h1 + ul');
     if (metadata && /^原始链接[：:]/.test(metadata.firstElementChild?.textContent.trim() || '')) {
       const details = doc.createElement('details'); details.className = 'source-details';
@@ -49,6 +40,34 @@
     });
     return {title, bilingual: isBilingual, headings};
   }
+
+  /* Keep the Chinese passages, drop the English column and its labels, then
+     flatten the bilingual wrappers so the article reads as plain prose. */
+  function chineseOnly(el, doc) {
+    el.querySelectorAll('.bilingual-column[lang="en"], .language-label, .heading-translation, .heading-separator')
+      .forEach(node => node.remove());
+    // "一节 / First section" keeps only the Chinese half.
+    const hasChinese = text => /[\u3400-\u9fff]/.test(text);
+    el.querySelectorAll('h1,h2,h3').forEach(heading => {
+      if (heading.childElementCount) return;
+      const parts = heading.textContent.split(' / ');
+      if (parts.length !== 2 || hasChinese(parts[0]) === hasChinese(parts[1])) return;
+      heading.textContent = parts.find(hasChinese);
+    });
+    for (const group of [...el.querySelectorAll('.bilingual-group')]) {
+      for (const section of [...group.querySelectorAll(':scope > .bilingual-section')]) {
+        const fragment = doc.createDocumentFragment();
+        for (const column of section.querySelectorAll(':scope > .bilingual-column')) {
+          fragment.append(...column.childNodes);
+        }
+        section.replaceWith(fragment);
+      }
+      const fragment = doc.createDocumentFragment();
+      fragment.append(...group.childNodes);
+      group.replaceWith(fragment);
+    }
+  }
+
   const api = {render};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else window.HaloArticle = api;

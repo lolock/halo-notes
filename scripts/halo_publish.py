@@ -79,7 +79,7 @@ def verify_build(files, site, index, output):
     # Verify both static enhancement assets and the compatibility loader.
     for path in ('reader.html', 'article.html', 'static-articles.json', 'article-build.json',
                  'assets/reader.js', 'assets/reader.css', 'assets/editorial.css',
-                 'assets/article-content.js', 'assets/bilingual.js', 'assets/bilingual.css',
+                 'assets/article-content.js', 'assets/bilingual.js',
                  'assets/vendor/marked.js', 'assets/vendor/purify.js'):
         if fetch(site + path) != (output / path).read_bytes(): raise ValueError('Reader deployment differs: ' + path)
     evidence = {'status': 'verified', 'verified_at': datetime.now(timezone.utc).isoformat(), 'commit': run('git', 'rev-parse', 'HEAD'), 'articles': articles, 'assets': verified}
