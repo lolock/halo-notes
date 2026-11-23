@@ -6,8 +6,10 @@
   --ink: #1b1c17;
   --text: #4a4c43;
   --meta: #86887d;
-  --hair: #e7e5db;
-  --wash: #f1efe7;
+  /* Separators and washes are alpha, not fixed hex: they composite over
+     whatever paper is set, so changing the paper never means recomputing them. */
+  --hair: rgba(27, 28, 23, .10);
+  --wash: rgba(27, 28, 23, .042);
   --serif: Georgia, "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
           "Microsoft Yahei", "Noto Sans CJK SC", sans-serif;
@@ -20,8 +22,8 @@
   --ink: #eae8df;
   --text: #b2b4a8;
   --meta: #8a8c81;
-  --hair: #2c2e26;
-  --wash: #1d1f19;
+  --hair: rgba(234, 232, 223, .13);
+  --wash: rgba(234, 232, 223, .055);
   color-scheme: dark;
 }
 
@@ -42,6 +44,8 @@ body {
 }
 
 a { color: inherit; }
+::selection { background: rgba(27, 28, 23, .16); }
+[data-theme="dark"] ::selection { background: rgba(234, 232, 223, .2); }
 button, input { font: inherit; color: inherit; -webkit-appearance: none; appearance: none; }
 button { border: 0; background: none; cursor: pointer; padding: 0; }
 button, a, input, summary { touch-action: manipulation; }
