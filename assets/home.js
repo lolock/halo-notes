@@ -85,7 +85,11 @@ function renderHome() {
 }
 
 function route() { renderHome(); window.scrollTo(0, 0); }
-document.getElementById('open-menu').onclick = () => { topics(); menu.showModal(); };
+document.getElementById('open-menu').onclick = () => {
+  topics();
+  menu.showModal();
+  menu.focus({preventScroll: true});
+};
 document.getElementById('close-menu').onclick = () => menu.close();
 document.getElementById('theme').onclick = () => applyTheme(document.documentElement.dataset.theme !== 'dark');
 document.getElementById('open-search').onclick = () => {

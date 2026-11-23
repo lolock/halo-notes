@@ -102,16 +102,30 @@
 
 /* ---- menu ---- */
 dialog {
-  padding: 20px 20px 24px;
+  padding: 20px 20px calc(16px + env(safe-area-inset-bottom, 0px));
   width: min(360px, calc(100% - 32px));
+  /* 19 categories would otherwise run past the bottom of the phone. */
+  max-height: min(84dvh, 660px);
   border: 0; border-radius: 14px;
   background: var(--paper); color: var(--ink);
   box-shadow: 0 0 0 1px var(--hair), 0 24px 60px -20px rgba(0, 0, 0, .35);
+  overflow: hidden;
 }
+/* Focus lands on the dialog itself, not on the close button, so opening the
+   sheet never paints a ring around the ×. */
+dialog:focus { outline: none; }
 dialog::backdrop { background: rgba(20, 21, 16, .32); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
 .menu-top { display: flex; align-items: center; justify-content: space-between; }
 dialog h2 { font: 500 20px var(--serif); margin: 0; }
 .menu-section { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--hair); }
+#menu-topics {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  max-height: min(56dvh, 460px);
+  margin-right: -6px;
+  padding-right: 6px;
+}
 .menu-section button {
   display: block; width: 100%; text-align: left;
   font-size: 15px; padding: 10px 0; color: var(--meta);
