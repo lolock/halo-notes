@@ -1,13 +1,11 @@
-/* Reading surface: progress, a bar that gets out of the way, theme, and the
-   legacy Markdown fallback. No directory — headings are not navigable chrome. */
+/* Reading surface: theme, deep-link alignment and the legacy Markdown fallback.
+   No directory, no progress line, no pinned bar — nothing follows the reader. */
 (() => {
   const el = document.getElementById('content');
   if (!el) return;
-  const bar = document.getElementById('progress');
   const toggle = document.getElementById('themeToggle');
   // Resolving from this shared asset also works under a Pages project prefix.
   const siteRoot = new URL('../', document.currentScript.src);
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
   /* ---------- theme ---------- */
   function themeLabel() {
@@ -27,8 +25,7 @@
   });
   themeLabel();
 
-  /* ---------- the bar ---------- */
-  let ticking = false;
+  /* ---------- deep links ---------- */
   let initialAnchor = null;
 
   function hashTarget(hash = location.hash) {
@@ -42,30 +39,20 @@
     const offset = parseFloat(getComputedStyle(initialAnchor).scrollMarginTop) || 0;
     window.scrollTo({top: initialAnchor.getBoundingClientRect().top + window.scrollY - offset, behavior: 'instant'});
   }
-  function sync() {
-    ticking = false;
-    alignInitialAnchor();
-    const doc = document.scrollingElement || document.documentElement;
-    const max = Math.max(0, doc.scrollHeight - document.documentElement.clientHeight);
-    const y = Math.max(0, window.scrollY);
-    bar.style.width = (max > 0 ? Math.min(100, 100 * y / max) : 0) + '%';
-
-    // The bar is plain document flow, so scrolling already takes it away.
-  }
-  function schedule() {
-    if (!ticking) { ticking = true; requestAnimationFrame(sync); }
-  }
   const stopInitialAlignment = () => { initialAnchor = null; };
 
-  window.addEventListener('scroll', schedule, {passive: true});
-  window.addEventListener('resize', schedule);
-  window.addEventListener('pageshow', schedule);
-  window.addEventListener('hashchange', () => { stopInitialAlignment(); schedule(); });
+  window.addEventListener('hashchange', () => {
+    stopInitialAlignment();
+    initialAnchor = hashTarget();
+    alignInitialAnchor();
+  });
+  // Late images, fonts and an opened source panel can move a deep link, but the
+  // page must never pull a reader back once they have started scrolling.
   for (const type of ['wheel', 'touchstart', 'pointerdown']) {
     window.addEventListener(type, stopInitialAlignment, {passive: true});
   }
   window.addEventListener('keydown', stopInitialAlignment);
-  el.addEventListener('toggle', schedule, true);
+  el.addEventListener('toggle', () => { if (initialAnchor) alignInitialAnchor(); }, true);
 
   /* ---------- legacy Markdown fallback ---------- */
   function articlePath(file) {
@@ -109,7 +96,7 @@
       });
       document.title = (reading.title || '文章阅读') + ' - Halo Notes';
       initialAnchor = hashTarget();
-      schedule();
+      alignInitialAnchor();
     } catch (error) {
       stopInitialAlignment();
       el.replaceChildren(document.createTextNode('加载失败：' + error.message + ' '));
@@ -117,13 +104,12 @@
       retry.textContent = '重试'; retry.className = 'retry';
       retry.addEventListener('click', load, {once: true});
       el.append(retry);
-      schedule();
     }
   }
 
   initialAnchor = hashTarget();
   if (el.dataset.rendered === 'true') {
-    schedule();
+    alignInitialAnchor();
     // Late images and fonts may move a deep link, but never pull the reader back
     // once they have started interacting with the page.
     const images = [...el.querySelectorAll('img')].filter(img => !img.complete);
@@ -133,7 +119,9 @@
         img.addEventListener('error', resolve, {once: true});
       })),
       document.fonts?.ready
-    ]).then(() => { if (initialAnchor) requestAnimationFrame(() => { sync(); initialAnchor = null; }); });
+    ]).then(() => {
+      if (initialAnchor) requestAnimationFrame(() => { alignInitialAnchor(); initialAnchor = null; });
+    });
   } else {
     load();
   }

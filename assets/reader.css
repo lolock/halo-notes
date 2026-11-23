@@ -1,15 +1,7 @@
-/* The reading surface. One column, one measure, no card, no rules, no directory.
-   Chrome is a 48px bar that hides itself as soon as you start reading. */
+/* The reading surface. One column, one measure, no card, no rules, no directory,
+   and nothing pinned to the viewport: the bar scrolls away with the title. */
 
 .reader-body { background: var(--paper); }
-
-/* 2px of ink at the very top of the viewport: the only persistent chrome. */
-.progress {
-  position: fixed; inset: 0 auto auto 0;
-  width: 0; height: 2px; z-index: 30;
-  background: var(--ink); opacity: .55;
-  pointer-events: none;
-}
 
 /* Part of the document, not pinned to it: it scrolls away with the title and
    nothing can leave a strip hovering over the text. */

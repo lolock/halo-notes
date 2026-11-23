@@ -76,7 +76,7 @@ const message = "<script> & 中文";
   check(content.querySelector('#user-content-content'), 'article IDs cannot clobber reader controls');
   check([...doc.querySelectorAll('script[src]')].every(s => /\/reader\.js\?/.test(s.src)), 'static runtime needs only reader enhancement');
   check(!doc.getElementById('tocLinks') && !doc.getElementById('sideToc'), 'no directory is shipped');
-  check(doc.querySelectorAll('.progress').length === 1 && doc.getElementById('topbar'), 'reader chrome is the progress line and the bar');
+  check(!doc.querySelector('.progress') && doc.getElementById('topbar'), 'reader ships no pinned progress line');
   check(content.querySelector('h2').id === 'sec-0' && content.querySelector('h3').id === 'sec-1', 'legacy section anchors remain stable');
   dom.window.close();
 
