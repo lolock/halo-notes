@@ -5,14 +5,6 @@
 - X Article：无
 
 ---
-# 工程化的本质：从 Prompt 到 Loop 的个人 AI Lab 演进
-
-- 原始链接：https://chatgpt.com/g/g-p-69ef420d98548191aba106931f0a88a3/c/6a23c58f-8a44-832f-88cf-237c08f13e51
-- 作者：ChatGPT Deep Research
-- 发布时间：2026-06-06
-- X Article：无
-
----
 
 有个词语叫工程化。当你在网上发现好的 Skill、Prompt、Harness，想要快速试用——这件事本身可以工程化。
 
