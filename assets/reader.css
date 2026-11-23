@@ -67,6 +67,12 @@
 }
 .content h4 { font-size: 16px; font-weight: 600; margin: 1.6em 0 .4em; }
 
+/* Matter's signature: the paragraph is broken as a whole, so the right edge
+   lines up. inter-ideograph keeps CJK punctuation from stretching. */
+.content p, .content li, .content blockquote p {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
 .content p { margin: 0 0 .72em; }
 .content li { margin-bottom: .3em; }
 .content ul, .content ol { margin: 0 0 .9em; padding-left: 1.3em; }
@@ -92,6 +98,9 @@
 }
 .content p:has(> img) { margin: 0; }
 .content em { font-style: normal; color: var(--meta); }
+
+/* A white screenshot on a dark page is a lamp in the face. */
+[data-theme="dark"] .content img { filter: brightness(.86) contrast(.98); }
 
 /* A wash behind every capture, so a slow image is never an empty hole. */
 .content img { background: var(--wash); }
