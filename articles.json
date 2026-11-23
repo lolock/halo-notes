@@ -1,5 +1,26 @@
 [
   {
+    "title": "我是如何让 Claude、GPT 和 Gemini 完美协同的",
+    "file": "articles/我是如何让 Claude、GPT 和 Gemini 完美协同的.md",
+    "date": "2026-11-23",
+    "source": "https://x.com/khazix0918/status/2124680457623425334",
+    "source_name": "X / 数字生命卡兹克（@Khazix0918）",
+    "tags": [
+      "AI Agent",
+      "多模型协同",
+      "Claude",
+      "GPT",
+      "Gemini",
+      "CLAUDE.md",
+      "提示词工程",
+      "中文长文"
+    ],
+    "category": "AI应用",
+    "quality": "S",
+    "summary": "卡兹克把自己调度 Claude、GPT、Gemini 的方法拆成一套管理学：先讲模型的可沟通性，再给三家模型定性格（Gemini 好聊但粗心、Claude 审美与 Harness 最强、GPT 严谨但难沟通），然后给出以 Claude 为总指挥、Gemini 当军师、Codex 干硬活的完整链路——双份独立方案、文案交互顾问、接口定死后派后端、CI 前必须过 GPT 审查，并附上他自己的 CLAUDE.md 全文与 8 张实拍截图。",
+    "cover": "articles/assets/x-2124680457623425334/cover.jpg"
+  },
+  {
     "title": "监督一个比你聪明的人：拆解土豆姐的 Agent 与 Lint 工程哲学（长文慎点）",
     "file": "articles/监督一个比你聪明的人 — 土豆姐的 Agent 与 Lint 工程哲学.md",
     "date": "2026-11-19",
