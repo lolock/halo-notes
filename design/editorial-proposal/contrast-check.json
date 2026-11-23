@@ -1,0 +1,44 @@
+[
+  {
+    "theme": "light",
+    "role": "text",
+    "foreground": "#272a24",
+    "background": "#f6f3eb",
+    "ratio": 13.13
+  },
+  {
+    "theme": "light",
+    "role": "secondary",
+    "foreground": "#65685e",
+    "background": "#f6f3eb",
+    "ratio": 5.13
+  },
+  {
+    "theme": "light",
+    "role": "accent",
+    "foreground": "#94482f",
+    "background": "#f6f3eb",
+    "ratio": 5.87
+  },
+  {
+    "theme": "dark",
+    "role": "text",
+    "foreground": "#eeeade",
+    "background": "#22251f",
+    "ratio": 12.91
+  },
+  {
+    "theme": "dark",
+    "role": "secondary",
+    "foreground": "#b9bbae",
+    "background": "#22251f",
+    "ratio": 7.97
+  },
+  {
+    "theme": "dark",
+    "role": "accent",
+    "foreground": "#e6aa8f",
+    "background": "#22251f",
+    "ratio": 7.77
+  }
+]

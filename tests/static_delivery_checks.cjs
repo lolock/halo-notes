@@ -123,7 +123,7 @@ const message = "<script> & 中文";
 
   // A tiny fixture verifies deterministic replacement and protects arbitrary output.
   const fixture = path.join(temp, 'fixture'); fs.mkdirSync(fixture);
-  for (const relative of ['index.html', 'reader.html', 'article.html', '.nojekyll', 'package-lock.json', 'scripts/build_site.cjs',
+  for (const relative of ['index.html', 'reader.html', 'article.html', 'manifest.webmanifest', '.nojekyll', 'package-lock.json', 'scripts/build_site.cjs',
     'assets/article-content.js', 'assets/bilingual.js', 'assets/vendor/marked.js', 'assets/vendor/purify.js']) {
     fs.mkdirSync(path.dirname(path.join(fixture, relative)), {recursive: true});
     fs.copyFileSync(path.join(ROOT, relative), path.join(fixture, relative));

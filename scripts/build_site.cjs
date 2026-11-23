@@ -14,7 +14,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DEFAULT_SITE_URL = 'https://lolock.github.io/halo-notes/';
 const OUTPUT_MARKER = '.halo-static-output';
 const MARKER_CONTENT = 'Halo Notes generated site v1\n';
-const PUBLIC_FILES = ['index.html', 'reader.html', 'article.html', '.nojekyll'];
+const PUBLIC_FILES = ['index.html', 'reader.html', 'article.html', 'manifest.webmanifest', '.nojekyll'];
 const PUBLIC_DIRS = ['articles', 'assets', 'visuals'];
 const RENDER_INPUTS = ['scripts/build_site.cjs', 'package-lock.json', 'reader.html', 'assets/article-content.js',
   'assets/bilingual.js', 'assets/vendor/marked.js', 'assets/vendor/purify.js'];

@@ -1,0 +1,61 @@
+{
+  "viewports": [
+    {
+      "width": 390,
+      "header": {
+        "top": 0,
+        "bottom": 56,
+        "height": 56
+      },
+      "leadTitle": {
+        "top": 153,
+        "bottom": 223,
+        "height": 70
+      },
+      "leadImage": {
+        "top": 330,
+        "bottom": 470,
+        "height": 140
+      },
+      "firstFollowingTitle": {
+        "top": 547,
+        "bottom": 607,
+        "height": 60
+      },
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "header": {
+        "top": 0,
+        "bottom": 64,
+        "height": 64
+      },
+      "leadTitle": {
+        "top": 182,
+        "bottom": 281,
+        "height": 99
+      },
+      "leadImage": {
+        "top": 144,
+        "bottom": 359,
+        "height": 215
+      },
+      "firstFollowingTitle": {
+        "top": 444,
+        "bottom": 511,
+        "height": 67
+      },
+      "overflow": false
+    }
+  ],
+  "checks": {
+    "search": true,
+    "menu": true,
+    "theme": true,
+    "toc": true,
+    "offlineImages": true,
+    "enlargedText": true,
+    "consoleErrors": []
+  }
+}

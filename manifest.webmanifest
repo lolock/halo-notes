@@ -1,0 +1,16 @@
+{
+  "name": "Halo Notes",
+  "short_name": "Halo Notes",
+  "description": "技术与思想札记。人工智能、工具与实践的长阅读。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fcfcfc",
+  "theme_color": "#fcfcfc",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
