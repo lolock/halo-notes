@@ -101,6 +101,11 @@
   padding: 40px 0 0; text-align: center;
 }
 
+/* Desktop-only chrome never paints below 1024px: the two-pane layout is a
+   pure addition for wide screens, and neither the phone catalog nor the
+   tablet single column can be affected by it. */
+.queue-bar, #topic-popover, .desktop-stage { display: none; }
+
 /* ---- menu ---- */
 dialog {
   padding: 20px 20px calc(16px + env(safe-area-inset-bottom, 0px));
@@ -200,83 +205,269 @@ dialog h2 { font: 500 20px var(--serif); margin: 0; }
   .end-note { padding-top: 52px; }
 }
 
+/* ==========================================================================
+   Desktop (>=1024px): a Matter-style two-pane reader.
+   The left column is an independently scrolling article queue, the right an
+   independently scrolling reading surface. The document itself is locked to
+   the viewport — everything scrolls inside its own pane. Scoped through
+   :has(.home-shell) so the standalone reader pages can never inherit this.
+   ========================================================================== */
 @media (min-width: 1024px) {
-  .masthead {
-    max-width: 64rem;
-    height: 68px;
-    padding-inline: 32px;
+  html:has(.home-shell), body:has(.home-shell) {
+    height: 100dvh;
+    overflow: hidden;
   }
-  .search-panel {
-    max-width: 64rem;
-    padding: 0 32px 20px;
-  }
+
+  /* The queue bar and its popover take over masthead, search and topics. */
+  .masthead, .search-panel, .topics { display: none; }
 
   .home-shell {
+    --queue-w: clamp(320px, 28vw, 360px);
+    --bar-h: 56px;
     display: grid;
-    grid-template-columns: 176px minmax(0, 1fr);
-    gap: 48px;
-    align-items: start;
-    max-width: 64rem;
-    margin: 10px auto 0;
-    padding: 0 32px 88px;
-  }
-
-  .topics {
-    position: sticky;
-    top: 28px;
-    max-height: calc(100vh - 56px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    gap: 2px;
-    max-width: none;
-    margin: 0 0 0 -12px;
-    width: calc(100% + 12px);
-    padding: 0 8px 16px 0;
-  }
-  .topics button {
-    width: 100%;
-    text-align: left;
-    padding: 7px 12px;
-    border-radius: 6px;
-    font-size: 13.5px;
-    line-height: 1.45;
+    grid-template-columns: var(--queue-w) minmax(0, 1fr);
+    height: 100dvh;
     overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .topics button[aria-pressed="true"] {
-    background: var(--wash);
-    color: var(--ink);
-    font-weight: 500;
-  }
-
-  #main {
     max-width: none;
     margin: 0;
     padding: 0;
+    gap: 0;
+    transition: grid-template-columns .26s cubic-bezier(.2, .7, .2, 1);
+  }
+  .home-shell[data-focus="on"] { grid-template-columns: 0 minmax(0, 1fr); }
+
+  .queue-pane {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    min-width: 0;
+    border-right: 1px solid var(--hair);
+    background: var(--paper);
+    overflow: hidden;
+    transition: border-right-color .26s cubic-bezier(.2, .7, .2, 1);
+  }
+  /* The column keeps its laid-out width while the grid track collapses to 0,
+     so queue text never reflows mid-animation; it only turns invisible at
+     the end. Removing data-focus restores visibility immediately. */
+  .queue-pane > * { width: var(--queue-w); }
+  .home-shell[data-focus="on"] .queue-pane {
+    border-right-color: transparent;
+    visibility: hidden;
+    transition: visibility 0s .26s, border-right-color .26s cubic-bezier(.2, .7, .2, 1);
   }
 
-  .lead { margin-bottom: 44px; }
-  .lead:has(.lead-media) {
-    display: grid;
-    grid-template-columns: 1.08fr 1fr;
-    gap: 32px;
+  /* ---- queue bar ---- */
+  .queue-bar {
+    display: flex;
     align-items: center;
+    gap: 4px;
+    height: var(--bar-h);
+    padding: 0 10px 0 18px;
+    flex: none;
+    position: relative;
+    z-index: 4;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color .2s ease;
   }
-  .lead:has(.lead-media) .lead-media { margin: 0; }
-  .lead:has(.lead-media) .lead-media img { width: 100%; max-height: 280px; object-fit: contain; background: transparent; }
-  .lead h1 { font-size: 31px; line-height: 1.34; }
-  .lead:has(.lead-media) h1 { font-size: 26px; line-height: 1.38; }
-  .lead .deck { margin-top: 12px; }
+  .queue-bar.is-scrolled { border-bottom-color: var(--hair); }
 
-  .story-main { gap: 28px; }
-  .story h2 { font-size: 21px; line-height: 1.42; }
-  .thumb { flex-basis: 164px; }
+  #queue-topic-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    min-width: 0; min-height: 36px;
+    padding: 0 10px;
+    border-radius: 7px;
+    font: 500 15px/1 var(--serif);
+    letter-spacing: -.01em;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  #queue-topic-btn:hover { background: var(--wash); }
+  #queue-topic-label { overflow: hidden; text-overflow: ellipsis; }
+  #queue-topic-btn .chevron {
+    width: 13px; height: 13px; flex: none;
+    fill: none; stroke: var(--meta);
+    stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+    transition: transform .18s ease;
+  }
+  #queue-topic-btn[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+
+  #queue-search {
+    flex: 1; min-width: 0;
+    border: 0; border-bottom: 1px solid var(--hair);
+    background: none;
+    padding: 8px 4px;
+    font-size: 14.5px; color: var(--ink);
+  }
+  #queue-search::placeholder { color: var(--meta); }
+
+  .queue-bar .icon, .stage-bar .icon {
+    width: 36px; height: 36px;
+    border-radius: 7px;
+  }
+  .queue-bar .icon:hover, .stage-bar .icon:hover { background: var(--wash); }
+  .queue-bar .icon svg, .stage-bar .icon svg { width: 17px; height: 17px; }
+  .stage-bar .icon[disabled] { opacity: .32; pointer-events: none; }
+
+  /* ---- topic popover ---- */
+  #topic-popover {
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 12px;
+    z-index: 5;
+    display: block;
+    width: 232px;
+    border-radius: 10px;
+    background: var(--paper);
+    box-shadow: 0 0 0 1px var(--hair), 0 16px 40px -16px rgba(0, 0, 0, .28);
+    max-height: min(60dvh, 480px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 6px;
+  }
+  #topic-popover button {
+    display: flex; align-items: center; gap: 8px;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 7px;
+    font-size: 13.5px; line-height: 1.4;
+    color: var(--text);
+    text-align: left;
+  }
+  #topic-popover button:hover { background: var(--wash); color: var(--ink); }
+  #topic-popover button[aria-pressed="true"] { color: var(--ink); font-weight: 500; }
+  #topic-popover .count { margin-left: auto; flex: none; font-size: 12px; color: var(--meta); }
+
+  /* ---- queue list ---- */
+  #main {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 0 40px;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  #main:hover { scrollbar-color: var(--hair) transparent; }
+
+  .qi {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 10px;
+    align-items: start;
+    margin: 0 10px;
+    padding: 11px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .qi:hover { background: var(--wash); }
+  .qi[aria-current="page"] { background: color-mix(in oklab, var(--ink) 6%, transparent); }
+  .qi-meta {
+    grid-column: 1 / -1;
+    display: flex; gap: 8px;
+    font-size: 12px; line-height: 1.5; color: var(--meta);
+    margin-bottom: 3px;
+  }
+  .qi-title {
+    font: 500 14.5px/1.48 var(--serif);
+    color: var(--ink);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+  }
+  .qi[data-read="true"] .qi-title { color: var(--text); }
+  .qi[aria-current="page"] .qi-title { color: var(--ink); }
+  .qi-thumb {
+    display: block;
+    width: 40px; height: 40px;
+    border-radius: 5px;
+    object-fit: cover;
+    background: var(--wash);
+  }
+  [data-theme="dark"] .qi-thumb { filter: brightness(.88); }
+
+  /* ---- reading stage ---- */
+  .desktop-stage {
+    display: block;
+    height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    container-type: inline-size;
+    background: var(--paper);
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  .desktop-stage:hover { scrollbar-color: var(--hair) transparent; }
+
+  .stage-bar {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    height: var(--bar-h);
+    background: linear-gradient(var(--paper) 65%, transparent);
+    transition: opacity .2s ease, transform .2s ease;
+  }
+  .stage-bar[data-hidden="true"] {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+  }
+  .stage-bar[data-hidden="true"]:hover,
+  .stage-bar[data-hidden="true"]:focus-within {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+  .stage-bar-inner {
+    width: min(44rem, 100cqw - 64px);
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  #open-standalone { margin-left: auto; }
+
+  .stage-reader {
+    width: min(44rem, 100cqw - 64px);
+    margin: 0 auto;
+    padding: 20px 0 160px;
+  }
+  /* Wide captures step out of the 44rem measure but stay inside the stage:
+     cqw resolves against .desktop-stage (container-type: inline-size), so a
+     narrow right pane never overflows while focus mode stretches to 48rem. */
+  .stage-reader .content p:has(> img) {
+    width: min(48rem, 100cqw - 64px);
+    max-width: none;
+    margin-inline: calc((100% - min(48rem, 100cqw - 64px)) / 2);
+    text-align: center;
+  }
+  .stage-reader .content p:has(> img) > img {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    max-height: min(80vh, 720px);
+    margin: 2.1em 0;
+    border-radius: 4px;
+  }
+  .stage-empty { padding: 80px 0; color: var(--meta); font-size: 14px; text-align: center; }
+  .stage-empty a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 }
 
 @media print {
-  .masthead, .topics, .search-panel, dialog, .end-note { display: none !important; }
+  .masthead, .topics, .search-panel, dialog, .end-note,
+  .queue-bar, #topic-popover, .stage-bar { display: none !important; }
   #main { padding: 0; }
+  html:has(.home-shell), body:has(.home-shell) { height: auto; overflow: visible; }
+  .home-shell { display: block; height: auto; overflow: visible; }
+  /* If desktop loaded an article into the stage, print that article; otherwise
+     keep printing the mobile/tablet directory normally. */
+  .home-shell[data-has-article="true"] .queue-pane { display: none !important; }
+  .home-shell[data-has-article="true"] .desktop-stage { display: block; height: auto; overflow: visible; }
+  .home-shell:not([data-has-article="true"]) .desktop-stage { display: none !important; }
+  .stage-reader { width: auto; padding: 0; }
 }

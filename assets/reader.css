@@ -205,6 +205,27 @@
   }
 }
 
+/* The homepage desktop stage embeds .content inside a container whose width
+   is not the viewport (a right pane of a two-column grid). The 1024px rules
+   above measure against 100vw and would spill out of that pane; these rules,
+   scoped to .stage-reader, re-express the same plate overhang in container
+   units (cqw resolves against .desktop-stage, which is container-type:
+   inline-size). The standalone reader keeps the viewport-based geometry. */
+.stage-reader .content p:has(> img) {
+  width: min(48rem, 100cqw - 64px);
+  max-width: none;
+  margin-inline: calc((100% - min(48rem, 100cqw - 64px)) / 2);
+  text-align: center;
+}
+.stage-reader .content p:has(> img) > img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  max-height: min(80vh, 720px);
+  margin: 2.1em 0;
+  border-radius: 4px;
+}
+
 /* A caption centres while it fits on one line and fills the measure, left
    aligned, once it wraps. */
 .content p > em:only-child {

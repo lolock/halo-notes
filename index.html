@@ -17,7 +17,11 @@
   <meta name="theme-color" content="#0f0f0f" media="(prefers-color-scheme: dark)" />
   <script>try{document.documentElement.dataset.theme=localStorage.getItem('halo_theme')==='dark'?'dark':'light'}catch{}</script>
   <link rel="stylesheet" href="./assets/editorial.css?v=8babcdc57ab2" />
-  <link rel="stylesheet" href="./assets/home.css?v=931fec7eaeae" />
+  <link rel="stylesheet" href="./assets/home.css?v=51c56b1dba1d" />
+  <!-- reader.css supplies the .content typography for the desktop stage.
+       Every selector in it is scoped to reader chrome or .content, so it
+       cannot repaint the mobile catalog. -->
+  <link rel="stylesheet" href="./assets/reader.css?v=b7ca91ab956b" />
 </head>
 <body>
   <header class="masthead">
@@ -40,9 +44,46 @@
     <button type="button" id="close-search">取消</button>
   </form>
 
-  <div class="home-shell">
-    <nav class="topics" id="topics" aria-label="文章分类"></nav>
-    <main id="main"></main>
+  <div class="home-shell" data-focus="off">
+    <div class="queue-pane" id="queue-pane">
+      <div class="queue-bar">
+        <button id="queue-topic-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <span id="queue-topic-label">全部</span>
+          <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg>
+        </button>
+        <div id="topic-popover" role="listbox" aria-label="文章分类" hidden></div>
+        <input type="search" id="queue-search" aria-label="搜索文章" placeholder="搜索" autocomplete="off" hidden />
+        <button class="icon" id="queue-search-btn" type="button" aria-label="搜索文章" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.6" cy="10.6" r="6.4"/><path d="m15.4 15.4 4.1 4.1"/></svg>
+        </button>
+        <button class="icon" id="queue-theme-btn" type="button" aria-pressed="false" aria-label="切换至深色模式" title="切换至深色模式">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.6"/><path d="M12 4.4a7.6 7.6 0 0 1 0 15.2Z" fill="currentColor" stroke="none"/></svg>
+        </button>
+      </div>
+      <nav class="topics" id="topics" aria-label="文章分类"></nav>
+      <main id="main"></main>
+    </div>
+    <section class="desktop-stage" id="desktop-stage" aria-label="文章阅读">
+      <div class="stage-bar" id="stage-bar">
+        <div class="stage-bar-inner">
+          <button class="icon" id="focus-toggle" type="button" aria-pressed="false" aria-label="进入专注模式" title="专注模式 (f)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V6.5A2.5 2.5 0 0 1 6.5 4H9M15 4h2.5A2.5 2.5 0 0 1 20 6.5V9M20 15v2.5a2.5 2.5 0 0 1-2.5 2.5H15M9 20H6.5A2.5 2.5 0 0 1 4 17.5V15"/></svg>
+          </button>
+          <button class="icon" id="prev-article" type="button" aria-label="上一篇" title="上一篇 (k)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg>
+          </button>
+          <button class="icon" id="next-article" type="button" aria-label="下一篇" title="下一篇 (j)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 10 6 6 6-6"/></svg>
+          </button>
+          <a class="icon" id="open-standalone" aria-label="在新页面中打开" title="在新页面中打开">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8M19 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 4 18.5v-12A1.5 1.5 0 0 1 5.5 5H10"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="stage-reader">
+        <article class="content" id="stage-content"></article>
+      </div>
+    </section>
   </div>
 
   <dialog id="menu" tabindex="-1" aria-labelledby="menu-title">
@@ -56,6 +97,6 @@
     <div class="menu-section"><button id="theme" aria-pressed="false">深色模式</button></div>
   </dialog>
 
-  <script src="./assets/home.js?v=81630bac5f92"></script>
+  <script src="./assets/home.js?v=07371ff7670d"></script>
 </body>
 </html>
