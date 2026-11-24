@@ -1,5 +1,24 @@
 [
   {
+    "title": "让网页在手机上更好用：PWA、点击反馈、底部标签栏与 Safari 配色",
+    "file": "articles/让网页在手机上更好用.md",
+    "date": "2026-11-24",
+    "date_kind": "collected",
+    "source": "https://vibedesign.tips/023-mobile-web/",
+    "source_name": "Vibe Design Tips",
+    "summary": "把网页做成手机上像 App 的样子：PWA 图标与离线打开、点击高亮和 hover 的修正、随滚动折叠的底部标签栏，以及 iOS 26 Safari 状态栏与工具栏的取色规则，并附可直接粘贴给 AI 的改造提示词。",
+    "category": "创作与设计",
+    "quality": "S",
+    "tags": [
+      "移动端",
+      "PWA",
+      "交互设计",
+      "iOS Safari",
+      "Vibe Design"
+    ],
+    "cover": "/halo-notes/articles/assets/vibedesign-023/cover.jpg"
+  },
+  {
     "title": "人生是一场心智游戏，如何获胜",
     "file": "articles/人生是一场心智游戏，如何获胜.md",
     "date": "2026-04-26",
