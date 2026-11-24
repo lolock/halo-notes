@@ -14,6 +14,7 @@
 }
 .topbar .icon { color: var(--text); }
 .topbar .icon:last-child { margin-left: auto; }
+.back-label { display: none; }
 
 /* ---------------- the measure ---------------- */
 .reader {
@@ -109,20 +110,98 @@
   .content img { width: 100%; margin: 1.9em 0; border-radius: 4px; }
 }
 
-/* Wide captures step out of the measure — the book's plate section. Narrow ones
-   keep their own width and sit centred in the wider box. */
-@media (min-width: 900px) {
+/* Desktop reading scale: comfortable measure, restrained plate overhang,
+   and a topbar aligned cleanly to the measure axis. Mobile (<720px) stays untouched. */
+@media (min-width: 720px) {
+  .reader-body { overflow-x: clip; }
+  .topbar {
+    width: min(42rem, calc(100% - 48px));
+    max-width: 42rem;
+    margin: 0 auto;
+    height: 60px;
+    padding-inline: 0;
+  }
+  .topbar-back {
+    width: auto;
+    gap: 5px;
+    margin-left: -10px;
+    padding-inline: 6px 10px;
+    text-decoration: none;
+  }
+  .topbar .icon:last-child { margin-right: -12px; }
+  .back-label {
+    display: inline;
+    font: 500 15px/1 var(--serif);
+    letter-spacing: -.015em;
+    color: var(--meta);
+  }
+  .topbar-back:hover .back-label { color: var(--ink); }
+
+  .reader {
+    width: min(42rem, calc(100% - 48px));
+    max-width: 42rem;
+    padding: 20px 0 120px;
+  }
+  .content {
+    font-size: 18px;
+    line-height: 1.82;
+  }
+  .content h1 {
+    font-size: 32px;
+    line-height: 1.32;
+    margin: 12px 0 .55em;
+  }
+  .content h2 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 2.3em 0 .7em;
+  }
+  .content h3 { font-size: 18px; }
+  .content p { margin-bottom: .85em; }
+  .content li { text-align: left; }
+  .content img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: min(80vh, 720px);
+    margin: 2em auto;
+    border-radius: 4px;
+  }
+  [data-theme="dark"] .content img { filter: brightness(.88) contrast(.98); }
+  .reader-end { margin-top: 3em; }
+}
+
+/* Wide captures step gently out of the measure on desktop — restrained plate
+   overhang rather than dwarfing the text column. */
+@media (min-width: 1024px) {
+  .topbar {
+    width: 44rem;
+    max-width: 44rem;
+    height: 68px;
+  }
+  .reader {
+    width: 44rem;
+    max-width: 44rem;
+    padding: 24px 0 140px;
+  }
+  .content {
+    font-size: 18.5px;
+    line-height: 1.84;
+  }
+  .content h1 { font-size: 34px; line-height: 1.3; }
+  .content h2 { font-size: 25px; }
   .content p:has(> img) {
-    width: min(52rem, calc(100vw - 6rem));
+    width: min(48rem, calc(100vw - 6rem));
     max-width: none;
-    margin-inline: calc((100% - min(52rem, calc(100vw - 6rem))) / 2);
+    margin-inline: calc((100% - min(48rem, calc(100vw - 6rem))) / 2);
     text-align: center;
   }
   .content p:has(> img) > img {
     display: inline-block;
     width: auto;
     max-width: 100%;
-    margin: 1.9em 0;
+    max-height: min(80vh, 720px);
+    margin: 2.1em 0;
   }
 }
 

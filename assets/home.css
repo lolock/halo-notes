@@ -16,6 +16,7 @@
   white-space: nowrap;
 }
 .masthead-actions { display: flex; gap: 0; margin-left: auto; }
+#theme-toggle { display: none; }
 
 .search-panel {
   display: flex; align-items: center; gap: 8px;
@@ -133,15 +134,146 @@ dialog h2 { font: 500 20px var(--serif); margin: 0; }
 .menu-section button[aria-pressed="true"] { color: var(--ink); }
 
 @media (min-width: 720px) {
-  .masthead { max-width: 46rem; margin: 0 auto; padding-inline: 4px; }
-  .topics, .search-panel { max-width: 46rem; margin: 0 auto; padding-inline: 24px; }
-  #main { max-width: 46rem; margin: 0 auto; padding-inline: 24px; }
-  .lead-media { margin-inline: -24px; }
-  .lead h1 { font-size: 30px; }
-  .deck { font-size: 15px; }
-  .story h2 { font-size: 21px; }
-  .thumb { flex-basis: 128px; }
-  .topics { flex-wrap: wrap; overflow-x: visible; padding-bottom: 26px; }
+  #open-menu { display: none; }
+  #theme-toggle { display: inline-flex; }
+
+  .masthead {
+    max-width: 44rem;
+    margin: 0 auto;
+    height: 60px;
+    padding-inline: 24px;
+  }
+  .brand { padding-inline: 0; }
+  .masthead-actions { margin-right: -12px; gap: 2px; }
+
+  .search-panel {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 0 24px 16px;
+  }
+
+  .topics {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 0 24px 24px;
+    gap: 6px;
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  #main {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 0 24px 64px;
+  }
+
+  .lead { margin-bottom: 40px; }
+  .lead-media { margin: 0 0 20px; }
+  .lead-media img {
+    width: auto;
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    border-radius: 4px;
+    background: var(--wash);
+  }
+  .lead h1 { font-size: 29px; line-height: 1.36; }
+  .deck { font-size: 14.5px; line-height: 1.72; }
+
+  .story { padding: 28px 0 0; border-top: 1px solid var(--hair); }
+  .story + .story { margin-top: 28px; }
+  .story-main { gap: 24px; }
+  .story h2 { font-size: 20.5px; line-height: 1.44; }
+  .thumb { flex-basis: 156px; margin-top: 4px; }
+  .thumb img {
+    width: 100%;
+    height: auto;
+    max-height: 112px;
+    object-fit: contain;
+    object-position: top right;
+    border-radius: 4px;
+  }
+  [data-theme="dark"] .lead-media img,
+  [data-theme="dark"] .thumb img {
+    filter: brightness(.88) contrast(.98);
+  }
+  .end-note { padding-top: 52px; }
+}
+
+@media (min-width: 1024px) {
+  .masthead {
+    max-width: 64rem;
+    height: 68px;
+    padding-inline: 32px;
+  }
+  .search-panel {
+    max-width: 64rem;
+    padding: 0 32px 20px;
+  }
+
+  .home-shell {
+    display: grid;
+    grid-template-columns: 176px minmax(0, 1fr);
+    gap: 48px;
+    align-items: start;
+    max-width: 64rem;
+    margin: 10px auto 0;
+    padding: 0 32px 88px;
+  }
+
+  .topics {
+    position: sticky;
+    top: 28px;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 2px;
+    max-width: none;
+    margin: 0 0 0 -12px;
+    width: calc(100% + 12px);
+    padding: 0 8px 16px 0;
+  }
+  .topics button {
+    width: 100%;
+    text-align: left;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    line-height: 1.45;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .topics button[aria-pressed="true"] {
+    background: var(--wash);
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  #main {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lead { margin-bottom: 44px; }
+  .lead:has(.lead-media) {
+    display: grid;
+    grid-template-columns: 1.08fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .lead:has(.lead-media) .lead-media { margin: 0; }
+  .lead:has(.lead-media) .lead-media img { width: 100%; max-height: 280px; object-fit: contain; background: transparent; }
+  .lead h1 { font-size: 31px; line-height: 1.34; }
+  .lead:has(.lead-media) h1 { font-size: 26px; line-height: 1.38; }
+  .lead .deck { margin-top: 12px; }
+
+  .story-main { gap: 28px; }
+  .story h2 { font-size: 21px; line-height: 1.42; }
+  .thumb { flex-basis: 164px; }
 }
 
 @media print {

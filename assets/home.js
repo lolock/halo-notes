@@ -9,7 +9,15 @@ const meta = a => '<div class="eyebrow"><span>' + esc(a.category) + '</span><tim
 
 function applyTheme(dark) {
   document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-  document.getElementById('theme').setAttribute('aria-pressed', String(dark));
+  const menuTheme = document.getElementById('theme');
+  if (menuTheme) menuTheme.setAttribute('aria-pressed', String(dark));
+  const topTheme = document.getElementById('theme-toggle');
+  if (topTheme) {
+    const label = dark ? '切换至浅色模式' : '切换至深色模式';
+    topTheme.setAttribute('aria-pressed', String(dark));
+    topTheme.setAttribute('aria-label', label);
+    topTheme.title = label;
+  }
   try { localStorage.setItem('halo_theme', dark ? 'dark' : 'light'); } catch {}
   const color = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim();
   if (color) document.querySelectorAll('meta[name="theme-color"]').forEach(m => m.content = color);
@@ -36,9 +44,15 @@ function setCategory(c) {
 function topics() {
   for (const id of ['topics', 'menu-topics']) {
     const target = document.getElementById(id);
+    const existing = [...target.querySelectorAll('button')];
+    if (existing.length === categories.length && existing.every((b, i) => b.dataset.cat === categories[i])) {
+      existing.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.cat === category)));
+      continue;
+    }
     target.replaceChildren();
     categories.forEach(c => {
       const b = document.createElement('button');
+      b.dataset.cat = c;
       b.textContent = c === '全部' ? '全部' : c;
       b.setAttribute('aria-pressed', String(c === category));
       b.onclick = () => setCategory(c);
@@ -92,6 +106,8 @@ document.getElementById('open-menu').onclick = () => {
 };
 document.getElementById('close-menu').onclick = () => menu.close();
 document.getElementById('theme').onclick = () => applyTheme(document.documentElement.dataset.theme !== 'dark');
+const topThemeBtn = document.getElementById('theme-toggle');
+if (topThemeBtn) topThemeBtn.onclick = () => applyTheme(document.documentElement.dataset.theme !== 'dark');
 document.getElementById('open-search').onclick = () => {
   panel.hidden = false;
   document.getElementById('open-search').setAttribute('aria-expanded', 'true');
