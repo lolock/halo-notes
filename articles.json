@@ -1,5 +1,24 @@
 [
   {
+    "title": "我的全自动 AI 编程工作流：配置步骤与完整 Prompt（Cindy / T3 Code）",
+    "file": "articles/我的全自动 AI 编程工作流（Cindy 与 T3 Code）.md",
+    "date": "2026-11-24",
+    "source": "https://x.com/ZacharyZhang/status/2125064752262955388",
+    "source_name": "X / ZacharyZhang",
+    "tags": [
+      "AI 编程",
+      "Agent 工作流",
+      "Prompt",
+      "PRD",
+      "Cindy",
+      "T3 Code"
+    ],
+    "category": "Agent 实战",
+    "quality": "S",
+    "summary": "把全自动 AI 编程拆成可复制的三步：先定稿 PRD 与技术文档，再备好工具链与密钥，最后用主 Agent、Reviewer、Advisor 三个角色分工；给出四条核心规则（单线串行、不猜不吞错不多写、Reviewer 五轮上限、Advisor 只在四个节点介入），并附 Cindy 与 T3 Code 两个版本的完整 Prompt 原文。",
+    "cover": "/halo-notes/articles/assets/x-2125064752262955388/cover.jpg"
+  },
+  {
     "title": "让网页在手机上更好用：PWA、点击反馈、底部标签栏与 Safari 配色",
     "file": "articles/让网页在手机上更好用.md",
     "date": "2026-11-24",
