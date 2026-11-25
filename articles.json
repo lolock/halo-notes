@@ -1,5 +1,27 @@
 [
   {
+    "title": "Harness 工程：不换模型也能修好你的 Agent / Harness Engineering: How to Fix Your Agent Without Changing the Model",
+    "file": "articles/Harness 工程：不换模型也能修好你的 Agent — 中英双语.md",
+    "date": "2026-11-21",
+    "source": "https://x.com/0xTrackmind/status/2124105677748527453",
+    "source_name": "X / Trackmind（@0xTrackmind）",
+    "tags": [
+      "Harness Engineering",
+      "Agent 工程",
+      "上下文管理",
+      "契约",
+      "传感器与出口",
+      "权限边界",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "同一组权重、同一段提示词，放进聊天窗口里通宵跑，40 个接口只迁完 11 个还报告「全部成功」；放进一套 Harness 里，39 个跑绿、1 个带理由升级给人类。作者把「Agent 不可靠」拆成七个具体缺失：契约、地图、工具接口、上下文外的状态、传感器、出口、权限墙，并给出每一项的可复制代码块、换模型前的三个提问、H0–H6 的搭建顺序和十项检查清单。中英双语全文。",
+    "cover": "/halo-notes/articles/assets/x-2124105677748527453/cover.png",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "超级智能正在到来 / Superintelligence is Arriving",
     "file": "articles/超级智能正在到来 — 中英双语.md",
     "date": "2026-11-22",
