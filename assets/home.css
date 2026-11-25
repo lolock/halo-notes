@@ -458,6 +458,29 @@ dialog h2 { font: 500 20px var(--serif); margin: 0; }
   .stage-empty a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 }
 
+/* Pull-to-refresh. iOS never offers one inside the installed app, so the
+   indicator is the only thing telling the reader the gesture is being taken. */
+#ptr {
+  position: fixed; left: 50%; top: calc(env(safe-area-inset-top, 0px) + 6px);
+  width: 30px; height: 30px; margin-left: -15px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--paper); border: 1px solid var(--hair);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .10);
+  opacity: 0; pointer-events: none; z-index: 60;
+  transition: opacity .18s ease, transform .18s ease;
+}
+#ptr[data-on="true"] { opacity: 1; }
+#ptr svg {
+  width: 15px; height: 15px;
+  fill: none; stroke: var(--meta); stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  transition: transform .12s ease;
+}
+#ptr[data-ready="true"] svg { stroke: var(--ink); }
+#ptr[data-state="busy"] svg { animation: ptr-spin .8s linear infinite; }
+@keyframes ptr-spin { to { transform: rotate(360deg); } }
+
 @media print {
   .masthead, .topics, .search-panel, dialog, .end-note,
   .queue-bar, #topic-popover, .stage-bar { display: none !important; }

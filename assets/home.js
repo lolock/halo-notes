@@ -461,21 +461,167 @@ search.oninput = () => {
 };
 window.addEventListener('hashchange', route);
 
+/* ---------- index freshness ----------
+   Launched from the home screen (display: standalone) the app gets no native
+   pull-to-refresh and no reload button from iOS, so until now the catalog only
+   changed when the app was killed and reopened. Two ways back to the index:
+   silently when the app returns to the foreground, and by pulling the list
+   down. Both bypass the edge cache (?t=), which can otherwise serve a ten
+   minute old copy of articles.json. */
+const INDEX_URL = './articles.json';
+const indexSignature = data => data
+  .map(a => [a.file, a.published_at || a.date, a.date, a.title].join('\u0001'))
+  .join('\u0002');
+let indexKey = '';
+let lastRefresh = 0;
+
+function readIndex(fresh) {
+  return fetch(fresh ? INDEX_URL + '?t=' + Date.now() : INDEX_URL,
+    fresh ? {cache: 'no-store'} : undefined);
+}
+
+function applyIndex(data) {
+  const keep = selected && selected.file;
+  articles = data.map(a => ({...a, category: a.category || '未分类'}))
+    .sort((a, b) => shownDate(b).localeCompare(shownDate(a)));
+  categories = ['全部', ...new Set(articles.map(a => a.category))];
+  // Selection is held by object identity; re-point it at the reloaded row so a
+  // refresh never looks like the article was closed.
+  if (keep) selected = articles.find(a => a.file === keep) || null;
+}
+
+function repaintHome() {
+  const paneTop = queuePane ? queuePane.scrollTop : 0;
+  const pageTop = window.scrollY || 0;
+  renderHome();
+  if (queuePane) queuePane.scrollTop = paneTop;
+  if (!isDesktop()) window.scrollTo(0, pageTop);
+}
+
 async function loadArticles() {
   main.textContent = '加载中…';
   try {
-    const r = await fetch('./articles.json');
+    const r = await readIndex(false);
     if (!r.ok) throw Error(r.status);
     const data = await r.json();
     if (!Array.isArray(data)) throw Error('索引格式错误');
-    articles = data.map(a => ({...a, category: a.category || '未分类'}))
-      .sort((a, b) => shownDate(b).localeCompare(shownDate(a)));
-    categories = ['全部', ...new Set(articles.map(a => a.category))];
+    indexKey = indexSignature(data);
+    applyIndex(data);
     renderHome();
     onBreakpoint();
   } catch {
     main.innerHTML = '<p class="empty">文章列表加载失败，请稍后重试。</p><button id="retry">重试</button>';
-    document.getElementById('retry').onclick = loadArticles;
+    document.getElementById('retry').onclick = () => loadArticles();
   }
 }
+
+// True only when the catalog actually changed, so a foreground return that finds
+// nothing new never repaints under the reader.
+async function refreshIndex({fresh = true} = {}) {
+  try {
+    const r = await readIndex(fresh);
+    if (!r.ok) return false;
+    const data = await r.json();
+    if (!Array.isArray(data)) return false;
+    const key = indexSignature(data);
+    if (key === indexKey) return false;
+    indexKey = key;
+    applyIndex(data);
+    repaintHome();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState !== 'visible') return;
+  if (Date.now() - lastRefresh < 30000) return;
+  lastRefresh = Date.now();
+  refreshIndex();
+});
+// Back/forward cache restore: the page comes back exactly as it was left.
+window.addEventListener('pageshow', e => { if (e.persisted) refreshIndex(); });
+
+/* ---------- pull to refresh (touch only) ---------- */
+const ptr = (() => {
+  const el = document.createElement('div');
+  el.id = 'ptr';
+  el.setAttribute('aria-hidden', 'true');
+  el.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v11"/><path d="m7 11.5 5 5 5-5"/></svg>';
+  document.body.append(el);
+  return el;
+})();
+const PULL_TRIGGER = 56;
+let pullStart = null, pulling = false, pullDist = 0, pullBusy = false;
+
+function setPull(dist) {
+  const ready = dist >= PULL_TRIGGER;
+  pullDist = dist;
+  ptr.dataset.on = 'true';
+  ptr.dataset.state = 'pull';
+  ptr.dataset.ready = String(ready);
+  ptr.style.transition = 'none';   // follow the finger, no easing while dragging
+  main.style.transition = 'none';
+  ptr.style.transform = 'translateY(' + Math.min(dist, 80).toFixed(1) + 'px)';
+  // The list follows the finger too; an indicator moving over a frozen page
+  // reads as a glitch rather than a gesture.
+  main.style.transform = 'translateY(' + dist.toFixed(1) + 'px)';
+  ptr.firstElementChild.style.transform = 'rotate(' + (ready ? 180 : Math.round(dist * 3)) + 'deg)';
+}
+
+function releasePull() {
+  pulling = false;
+  pullStart = null;
+  pullDist = 0;
+  ptr.dataset.on = 'false';
+  ptr.dataset.ready = 'false';
+  ptr.style.transition = '';
+  ptr.style.transform = '';
+  ptr.firstElementChild.style.transform = '';
+  main.style.transition = 'transform .22s ease';
+  main.style.transform = '';
+  setTimeout(() => { main.style.transition = ''; }, 240);
+}
+
+window.addEventListener('touchstart', e => {
+  if (isDesktop() || pullBusy || e.touches.length !== 1) { pullStart = null; return; }
+  if ((window.scrollY || 0) > 0 || menu.open || !panel.hidden) { pullStart = null; return; }
+  pullStart = e.touches[0].clientY;
+  pulling = false;
+  pullDist = 0;
+}, {passive: true});
+
+window.addEventListener('touchmove', e => {
+  if (pullStart === null) return;
+  if (e.touches.length !== 1) { releasePull(); return; }
+  const dy = e.touches[0].clientY - pullStart;
+  if (dy <= 0 || (window.scrollY || 0) > 0) { if (!pulling) pullStart = null; return; }
+  if (!pulling) {
+    if (dy < 12) return;             // let taps and small drags through untouched
+    pulling = true;
+  }
+  // Once the pull is ours, stop iOS' rubber band so the list tracks the finger.
+  if (e.cancelable) e.preventDefault();
+  setPull(Math.min(dy * 0.5, 88));
+}, {passive: false});
+
+window.addEventListener('touchend', () => {
+  if (pullStart === null) return;
+  const fire = pulling && pullDist >= PULL_TRIGGER;
+  const wasPulling = pulling;
+  releasePull();
+  if (!fire) return;
+  pullBusy = true;
+  ptr.dataset.state = 'busy';
+  ptr.dataset.on = 'true';
+  lastRefresh = Date.now();
+  refreshIndex({fresh: true}).finally(() => {
+    pullBusy = false;
+    releasePull();
+  });
+}, {passive: true});
+
+window.addEventListener('touchcancel', () => { if (!pullBusy) releasePull(); }, {passive: true});
+
 loadArticles();
