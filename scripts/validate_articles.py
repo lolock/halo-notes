@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ARTICLES_DIR = ROOT / "articles"
 DEFAULT_JSON = ROOT / "articles.json"
 
-REQUIRED_JSON_KEYS = {"title", "file", "date", "source", "summary", "quality", "cover", "category"}
+REQUIRED_JSON_KEYS = {"title", "file", "date", "published_at", "source", "summary", "quality", "cover", "category"}
 REQUIRED_HEADER_MARKERS = ["- 原始链接：", "- 作者：", "- 发布时间："]
 MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)")
 
@@ -98,6 +98,11 @@ def check_json_items(items: List[Dict]) -> Tuple[List[str], List[str]]:
 
         if not is_valid_date(str(item.get("date", ""))):
             errors.append(f"{prefix}: invalid date '{item.get('date')}', expected YYYY-MM-DD")
+
+        # The catalog orders by published_at (the day the piece landed here), so a
+        # missing one silently files a new article under its original date.
+        if not is_valid_date(str(item.get("published_at", ""))):
+            errors.append(f"{prefix}: invalid published_at '{item.get('published_at')}', expected YYYY-MM-DD")
 
         quality = str(item.get("quality", "")).strip()
         if quality not in valid_qualities:

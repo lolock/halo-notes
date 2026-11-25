@@ -6,7 +6,7 @@ import http.client
 import time
 import urllib.error
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import json
 import os
 from pathlib import Path
@@ -94,6 +94,9 @@ def verify_build(files, site, index, output):
 
 def publish(bundle):
     bundle = Path(bundle).resolve(); item = json.loads((bundle / 'entry.json').read_text())
+    # Stamp the day the piece lands on the site: the catalog orders by this, so a
+    # source written weeks ago still shows up on top the day it is published.
+    item['published_at'] = datetime.now(timezone(timedelta(hours=8))).date().isoformat()
     path = article_path(item['file']); item['file'] = path
     # All article and asset output is prepared OUTSIDE the shared repo.
     allowed = []

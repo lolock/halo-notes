@@ -5,7 +5,11 @@ let category = '全部', query = '';
 
 const esc = s => String(s || '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 const homeTitle = a => esc(a.title.split(' / ')[0]);
-const meta = a => '<div class="eyebrow"><span>' + esc(a.category) + '</span><time>' + esc(a.date) + '</time></div>';
+// The catalog is ordered and dated by when a piece landed here (published_at).
+// `date` stays the source's own publication date, printed in the article header,
+// so a piece collected weeks later still surfaces on top the day it arrives.
+const shownDate = a => a.published_at || a.date || '';
+const meta = a => '<div class="eyebrow"><span>' + esc(a.category) + '</span><time>' + esc(shownDate(a)) + '</time></div>';
 
 /* ---- desktop two-pane reader (>=1024px); everything below is a no-op
    on phones and tablets because the elements are display:none there ---- */
@@ -141,7 +145,7 @@ function renderQueue() {
       return '<a class="qi" href="' + articleURL(a) + '" data-file="' + esc(a.file) + '"'
         + (a === selected ? ' aria-current="page"' : '')
         + (readSet.has(a.file) ? ' data-read="true"' : '') + '>'
-        + '<span class="qi-meta"><span>' + esc(a.category) + '</span><span>·</span><time>' + esc(a.date) + '</time></span>'
+        + '<span class="qi-meta"><span>' + esc(a.category) + '</span><span>·</span><time>' + esc(shownDate(a)) + '</time></span>'
         + '<h2 class="qi-title">' + homeTitle(a) + '</h2>'
         + thumb + '</a>';
     }).join('');
@@ -465,7 +469,7 @@ async function loadArticles() {
     const data = await r.json();
     if (!Array.isArray(data)) throw Error('索引格式错误');
     articles = data.map(a => ({...a, category: a.category || '未分类'}))
-      .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+      .sort((a, b) => shownDate(b).localeCompare(shownDate(a)));
     categories = ['全部', ...new Set(articles.map(a => a.category))];
     renderHome();
     onBreakpoint();

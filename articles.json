@@ -19,7 +19,8 @@
     "summary": "同一组权重、同一段提示词，放进聊天窗口里通宵跑，40 个接口只迁完 11 个还报告「全部成功」；放进一套 Harness 里，39 个跑绿、1 个带理由升级给人类。作者把「Agent 不可靠」拆成七个具体缺失：契约、地图、工具接口、上下文外的状态、传感器、出口、权限墙，并给出每一项的可复制代码块、换模型前的三个提问、H0–H6 的搭建顺序和十项检查清单。中英双语全文。",
     "cover": "/halo-notes/articles/assets/x-2124105677748527453/cover.png",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-25"
   },
   {
     "title": "超级智能正在到来 / Superintelligence is Arriving",
@@ -41,7 +42,8 @@
     "summary": "Alexandr Wang 以黎曼猜想被证明为标志，论证超级智能正在到来：真正的瓶颈已不是智力，而是领域经验、基础设施与实验能力；他反对把社会「交接」给 AI 的惰性思维，主张主动建设让人拥有更多自主性的技术。中英双语全文。",
     "cover": "",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-25"
   },
   {
     "title": "我的全自动 AI 编程工作流：配置步骤与完整 Prompt（Cindy / T3 Code）",
@@ -60,7 +62,8 @@
     "category": "Agent 实战",
     "quality": "S",
     "summary": "把全自动 AI 编程拆成可复制的三步：先定稿 PRD 与技术文档，再备好工具链与密钥，最后用主 Agent、Reviewer、Advisor 三个角色分工；给出四条核心规则（单线串行、不猜不吞错不多写、Reviewer 五轮上限、Advisor 只在四个节点介入），并附 Cindy 与 T3 Code 两个版本的完整 Prompt 原文。",
-    "cover": "/halo-notes/articles/assets/x-2125064752262955388/cover.jpg"
+    "cover": "/halo-notes/articles/assets/x-2125064752262955388/cover.jpg",
+    "published_at": "2026-11-24"
   },
   {
     "title": "让网页在手机上更好用：PWA、点击反馈、底部标签栏与 Safari 配色",
@@ -79,7 +82,8 @@
       "iOS Safari",
       "Vibe Design"
     ],
-    "cover": "/halo-notes/articles/assets/vibedesign-023/cover.jpg"
+    "cover": "/halo-notes/articles/assets/vibedesign-023/cover.jpg",
+    "published_at": "2026-11-24"
   },
   {
     "title": "人生是一场心智游戏，如何获胜",
@@ -93,7 +97,8 @@
     "tags": [
       "X Likes",
       "自动导入"
-    ]
+    ],
+    "published_at": "2026-11-24"
   },
   {
     "title": "Vercel Board：面向 Agent 舰队的共享看板 / Introducing Vercel Board",
@@ -115,7 +120,8 @@
     "summary": "Vercel 把内部协调 agent 舰队的做法产品化：Board 是一个无头的共享留言板原语，用频道、线程和标签承载任务、委派、认领、租约与结果，通过 CLI 或 SDK 读写，支持 watcher 唤醒、定时跟进、Slack/GitHub 双向同步、schema 结构化数据与细粒度授权。文中含安全 agent 集群与 v0 软件工厂两个实战案例及可直接复制的命令与代码。中英双语全文。",
     "cover": "articles/assets/vercel-board/cover.png",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-23"
   },
   {
     "title": "我是如何让 Claude、GPT 和 Gemini 完美协同的",
@@ -136,7 +142,8 @@
     "category": "AI 工程",
     "quality": "S",
     "summary": "卡兹克把自己调度 Claude、GPT、Gemini 的方法拆成一套管理学：先讲模型的可沟通性，再给三家模型定性格（Gemini 好聊但粗心、Claude 审美与 Harness 最强、GPT 严谨但难沟通），然后给出以 Claude 为总指挥、Gemini 当军师、Codex 干硬活的完整链路——双份独立方案、文案交互顾问、接口定死后派后端、CI 前必须过 GPT 审查，并附上他自己的 CLAUDE.md 全文与 8 张实拍截图。",
-    "cover": "articles/assets/x-2124680457623425334/cover.jpg"
+    "cover": "articles/assets/x-2124680457623425334/cover.jpg",
+    "published_at": "2026-11-23"
   },
   {
     "title": "监督一个比你聪明的人：拆解土豆姐的 Agent 与 Lint 工程哲学（长文慎点）",
@@ -156,7 +163,8 @@
     "category": "AI 工程",
     "quality": "A",
     "summary": "把刘邦“善将将”的老故事接到今天的 AI 编码上：当模型写代码比你强、你又读不完所有代码，怎么管住它。全文拆解土豆姐（@poteto）的六层方法——用间接提示词逼 Agent 复述问题、用 /teach /how /why /recall 建认知、用 README 与原型代替纸面计划、用 /architect 多模型竞技定架构、用 lint 把每次纠正变成铁律、用专用 CLI 与功能地图搭自验证底座。含 7 段可复制提示词、8 张配图与全部参考链接。",
-    "cover": "articles/assets/x-2123269893588152709/cover.jpg"
+    "cover": "articles/assets/x-2123269893588152709/cover.jpg",
+    "published_at": "2026-11-19"
   },
   {
     "title": "用 Grok Bot 自动化任何事 / Automate Anything with Grok Bot",
@@ -178,7 +186,8 @@
     "summary": "poteto 把「自动化」拆成目标与流程两件事：先用一句话讲清真正想要的结果，再把平时怎么做的流程口述给 bot，让它重述确认后再动手；接着要教会 bot 你那些不自觉的判断、让它自己去拿反馈数据，最后用例程把触发条件设好，让它不用你催也能干活。中途含可复制的提示词模板。中英双语全文（文末作者自家 bot 推广段落未收录）。",
     "cover": "articles/assets/x-2123159537016533493/cover.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-19"
   },
   {
     "title": "Grok Bot + Obsidian：打造全自动可进化的第二大脑（附提示词与独家 skill） / Grok Bot + Obsidian: Building a Fully Automated, Self-Evolving Second Brain (with Prompts and Exclusive Skills)",
@@ -200,7 +209,8 @@
     "summary": "Jackywine 复盘把 Obsidian 库交给 Grok Bot 一个多月的真实过程：9 月只读诊断发现「收集伪装成思考」，10 月主动停掉双链包与串联日报，11 月 6 日完成改名分工、装机流程、Obsidian CLI、二次体检与常青笔记模板 skill，最后留下五条规矩，并说明什么人不必照抄。中英双语全文。",
     "cover": "articles/assets/x-2118562780383216113/cover.jpg",
     "source_language": "zh",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-06"
   },
   {
     "title": "2027 年最赚钱的 AI 生意 / The most lucrative AI business to start in 2027",
@@ -222,7 +232,8 @@
     "summary": "Dan Koe 认为 2027 年最赚钱的 AI 生意是“一人创意团队”：把品牌策略师、内容策略师、撰稿与社媒运营三种角色集于一身，用 AI 做研究与草稿、由人负责判断与语气，做自己的品牌或替创始人、创作者运营品牌。文章给出从客户入驻访谈、抓取最佳内容、生成有调研支撑的内容地图，到用“无许可学徒”方式拿下第一个客户的完整流程。中英双语全文。",
     "cover": "articles/assets/x-2117664712532123680/cover.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-06"
   },
   {
     "title": "Claude Code 团队如何做代码审查 / How the Claude Code team does code review",
@@ -244,7 +255,8 @@
     "summary": "Claude Code 团队讲述如何在智能体产出代码的量级下重构代码审查：分层检查、按风险分级的人类审批、以事故为评测集持续改进审查者，以及人仍然保留在何处。中英双语全文。",
     "cover": "articles/assets/claude-code-review/figure-1-life-of-a-change.png",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-06"
   },
   {
     "title": "我如何管理自己的投资（5）非对称赔率",
@@ -264,7 +276,8 @@
       "资本周期"
     ],
     "quality": "S",
-    "cover": "/halo-notes/articles/assets/asymmetric-odds/01.jpg"
+    "cover": "/halo-notes/articles/assets/asymmetric-odds/01.jpg",
+    "published_at": "2026-11-05"
   },
   {
     "title": "探索超级智能体设计：迈向更具自主性的智能体系统 / Exploring Super-agent Design: Towards a More Autonomous Agent System",
@@ -286,7 +299,8 @@
     "summary": "DeepSeek Harness 团队探讨超级智能体的双层架构、事件路由、上下文管理、异步交互与长期在线机制；基于英文机器译稿制作的中英双语全文。",
     "cover": "articles/assets/x-2116857257245987236/cover.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-01"
   },
   {
     "title": "用 Claude 自动化评测设计与爬坡优化 / Automating eval design and hillclimbing with Claude",
@@ -308,7 +322,8 @@
     "summary": "介绍如何设计可信的 AI 评测，并通过 claude-api skill 的 build-eval 与 hillclimb 命令，在防止过拟合的同时自动优化性能和成本。中英双语全文。",
     "cover": "articles/assets/claude-eval-design-hillclimbing/figure-06.png",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-29"
   },
   {
     "title": "Jev最佳实践：手把手教你改进现有工作流",
@@ -328,7 +343,8 @@
     "category": "AI 工程",
     "quality": "S",
     "summary": "一份将 Jev 嵌入现有 Agent 工作流的实践指南，覆盖决策层分工、Choice/Score/Noul、任务路由、人工审核、结果核验与长期运行机制。",
-    "cover": "articles/assets/x-2104133852851843080/cover.jpg"
+    "cover": "articles/assets/x-2104133852851843080/cover.jpg",
+    "published_at": "2026-09-27"
   },
   {
     "title": "使用 Claude Code：如何分配投入强度 / Using Claude Code: Spending your effort",
@@ -350,7 +366,8 @@
     "summary": "通过评测与实际实验解释 Claude Code 的投入强度设置，分析不同级别对速度、验证、边界测试、自主性和困难任务成功率的影响。中英双语全文。",
     "cover": "articles/assets/x-2103576349499855160/cover.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-26"
   },
   {
     "title": "用 Pi 和 Jev 构建自定义智能体执行框架 / Building a Custom Harness with Pi and Jev",
@@ -372,7 +389,8 @@
     "summary": "从零构建基于 Pi SDK 与 Jev 的自定义智能体执行框架，覆盖工具安全门控、按请求选模、故障降级、答案验证、日志与阈值策略。中英双语全文。",
     "cover": "articles/assets/x-2102762406204076532/cover.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-24"
   },
   {
     "title": "用 Jev 构建智能体执行框架 / Building a Harness with Jev",
@@ -393,7 +411,8 @@
     "summary": "介绍 TypeSafe AI 的高速低成本决策模型 Jev，解释 System One 模型、LangChain 集成、模型路由与工具风险拦截。中英双语全文。",
     "cover": "articles/assets/x-2100754364545761643/cover.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-19"
   },
   {
     "title": "Gmail 全网最全使用指南：从注册到榨干",
@@ -411,7 +430,8 @@
     "category": "工具与配置",
     "quality": "S",
     "summary": "一份从 Gmail 注册、安全设置和别名技巧，到收件箱自动整理、多账号分层、AI 功能、隐私、封号申诉与账号找回的完整使用指南。",
-    "cover": "articles/assets/x-2065224312039330181/cover.jpg"
+    "cover": "articles/assets/x-2065224312039330181/cover.jpg",
+    "published_at": "2026-09-18"
   },
   {
     "title": "Cloudflare 终极指南 / The Ultimate Cloudflare Guide",
@@ -431,7 +451,8 @@
     "category": "工具与配置",
     "quality": "S",
     "summary": "一份覆盖 Cloudflare 开发者平台的完整指南，解释 Workers、数据服务、AI、免费基础设施、真实成本、局限、账单风险与上手路径。中英双语全文。",
-    "cover": "articles/assets/x-2100178927528595912/cover.jpg"
+    "cover": "articles/assets/x-2100178927528595912/cover.jpg",
+    "published_at": "2026-09-16"
   },
   {
     "title": "HTML 小白从 0 到 1：学懂网页基础，再用 Agent 做出个人主页",
@@ -447,7 +468,8 @@
       "教程"
     ],
     "quality": "A",
-    "cover": "/halo-notes/articles/assets/inbox-2083832138462605504/00.jpg"
+    "cover": "/halo-notes/articles/assets/inbox-2083832138462605504/00.jpg",
+    "published_at": "2026-09-13"
   },
   {
     "title": "Vibe Coding 视觉词典（上篇）：布局、页面结构、导航与常用组件",
@@ -463,7 +485,8 @@
       "教程"
     ],
     "quality": "A",
-    "cover": "/halo-notes/articles/assets/inbox-2084538166577602899/00.jpg"
+    "cover": "/halo-notes/articles/assets/inbox-2084538166577602899/00.jpg",
+    "published_at": "2026-09-13"
   },
   {
     "title": "最近大火的 AI 岗位，FDE 到底是干嘛的？普通人怎么上车？",
@@ -480,7 +503,8 @@
       "职业发展"
     ],
     "quality": "A",
-    "cover": "/halo-notes/articles/assets/inbox-2083090241683128626/00.jpg"
+    "cover": "/halo-notes/articles/assets/inbox-2083090241683128626/00.jpg",
+    "published_at": "2026-09-13"
   },
   {
     "title": "Vibe Coding 零基础：讲清楚版本管理及工具对比 Git、GitHub 与 UGit",
@@ -496,7 +520,8 @@
       "教程"
     ],
     "quality": "A",
-    "cover": "/halo-notes/articles/assets/inbox-2074410118503145521/00.jpg"
+    "cover": "/halo-notes/articles/assets/inbox-2074410118503145521/00.jpg",
+    "published_at": "2026-09-13"
   },
   {
     "title": "Vibe Coding 视觉词典（下篇）：滚动动作、提示加载、视觉风格与高级效果",
@@ -512,7 +537,8 @@
       "教程"
     ],
     "quality": "A",
-    "cover": "/halo-notes/articles/assets/inbox-2084932520953753985/00.jpg"
+    "cover": "/halo-notes/articles/assets/inbox-2084932520953753985/00.jpg",
+    "published_at": "2026-09-13"
   },
   {
     "title": "万字长文：好图不是抽出来的，一文讲透如何把大神的作图工具，改成你自己的",
@@ -530,7 +556,8 @@
     "category": "创作与设计",
     "quality": "S",
     "summary": "拆解并改造大神作图 Skill 的完整方法：从触发词、工程骨架和经验规则，到负面提示框架、比喻成败目录、字体约束、反馈处理及按症状排错。",
-    "cover": "articles/assets/x-2098840772804268248/cover.jpg"
+    "cover": "articles/assets/x-2098840772804268248/cover.jpg",
+    "published_at": "2026-09-13"
   },
   {
     "title": "😤越改越烂！为什么 AI 自动修改 UI 总是翻车？「附终极解法」",
@@ -548,7 +575,8 @@
     "category": "AI 工程",
     "quality": "S",
     "summary": "复盘 AI 根据截图自动修改 UI 容易越改越差的原因，并给出目标截图、浏览器渲染、逐像素 Diff、诊断优先、保留历史最佳版本的闭环工作流。",
-    "cover": "articles/assets/x-2099133528361628074/cover.jpg"
+    "cover": "articles/assets/x-2099133528361628074/cover.jpg",
+    "published_at": "2026-09-13"
   },
   {
     "title": "2026 我的 Obsidian 完整分享",
@@ -566,7 +594,8 @@
     "category": "知识管理",
     "quality": "S",
     "summary": "Jackywine 回顾六年 Obsidian 使用经验，系统讨论插件、链接优先、常青笔记、File over App、LLM-Wiki 与 AI 时代的人机协作知识库方法。",
-    "cover": "articles/assets/x-2095750518941659567/cover.jpg"
+    "cover": "articles/assets/x-2095750518941659567/cover.jpg",
+    "published_at": "2026-09-12"
   },
   {
     "title": "降低成本并提升 Claude Platform 性能 / Reducing cost and improving performance with Claude Platform",
@@ -587,7 +616,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a9f8d87cec69dcbb7d97cb2_image3.png",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-08"
   },
   {
     "title": "Codex No.1教程:喝茶聊天谈合同，最速项目一天交付，代码称斤时代已经到来",
@@ -605,7 +635,8 @@
     "category": "AI 工程",
     "quality": "S",
     "summary": "一套用于真实软件接管、并发开发、自动测试与客户交付的 Codex 多智能体工程方法，涵盖控制面、AGENTS.md、任务 DAG、模型路由、Tailscale 权限、验收证据和系统自举。",
-    "cover": "articles/assets/x-2096157899554693239/cover.png"
+    "cover": "articles/assets/x-2096157899554693239/cover.png",
+    "published_at": "2026-09-06"
   },
   {
     "title": "拯救了我的大脑（以及未来）的写作习惯 / The writing habit that saved my brain (and my future)",
@@ -626,7 +657,8 @@
     "summary": "Dan Koe 讲述写作如何同时训练思考、学习与传播能力，并分享从捕捉灵感、搭建观点到跨平台分发的个人写作系统。中英双语全文。",
     "cover": "articles/assets/x-2077513202527773093/cover.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-05"
   },
   {
     "title": "AI 工程技能图谱：使用编程智能体 / AI Engineering Skills Map: Using coding agents",
@@ -647,7 +679,8 @@
     "summary": "Andrew Ng 总结使用编程智能体的 AI 工程技能图谱：从规划、执行到部署监控，并深入阐述引导工作流、启用智能体自主性、审查成果、定制环境和理解智能体基础五项核心能力。中英双语全文。",
     "cover": "articles/assets/x-2095890279865721217/cover.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-05"
   },
   {
     "title": "重新思考 GPT-6 Astra 的 Skills 与提示词 / Rethinking skills and prompts for GPT-6 Astra",
@@ -668,7 +701,8 @@
     "summary": "Eric Provencher 讨论 GPT-6 Astra 时代应如何重新审视技能文件、AGENTS.md、决策边界与持续执行规则：减少臃肿指令，采用渐进式披露，为不同模型保留合适自由度，并在任务开始前明确完成标准。中英双语全文。",
     "cover": "articles/assets/x-2095991462416490862/cover.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-05"
   },
   {
     "title": "Vibe Coding 零基础入门：六步工作流拆解",
@@ -687,7 +721,8 @@
     "category": "AI 工程",
     "quality": "S",
     "summary": "RicoUI 以截图美化工具 RicoScreenshot 为案例，完整拆解从读懂项目、建立视觉规范、规划功能、开发实现、视觉与交互走查到测试上线的六步 Vibe Coding 工作流，并给出 AGENTS.md、DESIGN.md、TODO.md 和 DOCS 的落地方法。",
-    "cover": "articles/assets/x-2095695306633683048/cover.jpg"
+    "cover": "articles/assets/x-2095695306633683048/cover.jpg",
+    "published_at": "2026-09-04"
   },
   {
     "title": "有效商务代理剖析指南 / A guide to the anatomy of effective commerce agents",
@@ -707,7 +742,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a97121e31e08caa3a0e6679_02653800.png",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-02"
   },
   {
     "title": "使用 Claude 构建商业智能体 / Building commerce agents with Claude",
@@ -727,7 +763,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a95f44f1757be75a0616bd0_demo-retail.webp",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-09-02"
   },
   {
     "title": "Anthropic 如何教授与学习 AI / Anthropic’s approach to teaching and learning AI",
@@ -747,7 +784,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a869c873ac9215b510583a4_5917bf5c.png",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-08-29"
   },
   {
     "title": "面向初创公司的 Claude Code 指南 / The Claude Code guide for startups",
@@ -767,7 +805,8 @@
     "cover": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a860f726d9f0514aae99ebd_Artemis%20Security.jpg",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-08-29"
   },
   {
     "title": "使用 Computer use、Skills API 与 Files API 打造生产级智能体 / Build production agents with computer use, the Skills API, and the Files API",
@@ -787,7 +826,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-08-29"
   },
   {
     "title": "AI-Native SDLC 手册 / The AI-Native SDLC playbook",
@@ -807,7 +847,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8739a1b934ffe55bfc9715_44592f18.png",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-08-29"
   },
   {
     "title": "都 Agent 时代了，我还是想分享给你这 12 个我最常用的 Prompt",
@@ -826,7 +867,8 @@
     "category": "AI 工程",
     "quality": "S",
     "summary": "数字生命卡兹克重新整理的 12 个常用 Prompt，覆盖问清问题、学习、解决问题、决策和认识自己五类场景，包括苏格拉底式提问、双层解释、横纵分析、事实核查、第一性原理、双向钢人论证、天赋挖掘与人生设计等完整模板。",
-    "cover": "articles/assets/x-2090726395035156964/image-1.jpg"
+    "cover": "articles/assets/x-2090726395035156964/image-1.jpg",
+    "published_at": "2026-08-28"
   },
   {
     "title": "如何超过大多数人",
@@ -844,7 +886,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "陈皓（左耳朵耗子）的经典文章：先以反讽手法列出大众是如何被信息茧房、碎片学习、加班文化困在底层的，再从认知（信息渠道/质量/密度）、知识（知识树/缘由/方法套路）、技能（精益求精/犯错/切磋）、领导力（天赋/兴趣/习惯/勤奋）四个维度给出超过大多数人的正道。",
-    "cover": "articles/assets/coolshell-competition.png"
+    "cover": "articles/assets/coolshell-competition.png",
+    "published_at": "2026-08-19"
   },
   {
     "title": "最大化 Claude Code 会话的价值 / Maximizing the value of your Claude Code sessions",
@@ -865,7 +908,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a7f1946bc7cd69c4c8919db_be236b0d.png",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-08-14"
   },
   {
     "title": "Herdr 软件全面调研与使用教程",
@@ -884,7 +928,8 @@
     "category": "工具与配置",
     "quality": "A",
     "summary": "Herdr 全面调研与 15 分钟上手教程：作为 AI 编程代理终端复用器，它把多个 Claude Code、Codex 等命令行代理变成可扫描的注意力队列，支持终端关闭后进程继续运行、SSH 远程与手机查看、代理互调与 Git Worktree 隔离；附安装、快捷键、推荐布局、隐私安全与最终评分。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-08-10"
   },
   {
     "title": "在生产环境中运行自动模式 / Running auto mode in production",
@@ -906,7 +951,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-08-07"
   },
   {
     "title": "Claude 成本可见性与管控指南 / A guide to cost visibility and control in Claude",
@@ -927,7 +973,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-08-05"
   },
   {
     "title": "Claude 模型详解：为你的使用场景选择最佳模型 / Claude models explained: choosing the best model for your use case",
@@ -951,7 +998,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-07-25"
   },
   {
     "title": "Claude 5 代模型上下文工程的新规则 / The new rules of context engineering for Claude 5 generation models",
@@ -973,7 +1021,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-07-25"
   },
   {
     "title": "在 Claude Code 中使用 Skills 构建验证循环 / Building verification loops in Claude Code with skills",
@@ -994,7 +1043,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-07-22"
   },
   {
     "title": "Anthropic 如何保护其 AI 原生软件开发生命周期 / How Anthropic secures its AI-native software development lifecycle",
@@ -1016,7 +1066,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-07-22"
   },
   {
     "title": "选择 Claude 模型与努力等级 / Choosing a Claude model and effort level in Claude Code",
@@ -1037,7 +1088,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-07-20"
   },
   {
     "title": "Claude Fable 5 实战指南：发现你的未知 / A field guide to Claude Fable 5: Finding your unknowns",
@@ -1058,7 +1110,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-07-20"
   },
   {
     "title": "零风险并非职责所在：CISO 的智能体 AI 指南 / Zero risk isn't the job: a CISO's guide to agentic AI",
@@ -1079,7 +1132,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-07-19"
   },
   {
     "title": "A Field Guide to Fable：找到你的未知项 / A Field Guide to Fable: Finding Your Unknowns",
@@ -1097,7 +1151,8 @@
     "summary": "一篇关于如何在 Agentic Coding 中识别 known knowns、known unknowns、unknown knowns 与 unknown unknowns，并通过盲点扫描、原型、访谈、参考资料和实现笔记提升 Claude/Fable 工作质量的双语文章。",
     "cover": "https://pbs.twimg.com/media/HMUY_HnbcAAa51I?format=jpg&name=large",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-07-07"
   },
   {
     "title": "刚刚，Hermes 上线 /learn 模式：从任何资料提炼 Skill",
@@ -1113,7 +1168,8 @@
     "category": "AI 工程",
     "quality": "A",
     "summary": "Hermes /learn 模式示例：从 GitHub 仓库学习并提炼 Skill，再结合 OpenCli 抓取微信公众号专辑文章。",
-    "cover": "https://pbs.twimg.com/media/HLi9JtQW0AAGQUK?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HLi9JtQW0AAGQUK?format=jpg&name=large",
+    "published_at": "2026-07-07"
   },
   {
     "title": "AI 能力试验台工程化：把 Skill、Prompt、Harness 变成可复用流程",
@@ -1130,7 +1186,8 @@
     "category": "AI 工程",
     "quality": "A",
     "summary": "关于如何把网上发现的 Skill、Prompt、Harness 纳入固定试验台，以统一输入、统一运行、统一观察、统一沉淀的方式工程化试用 AI 能力。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-07-07"
   },
   {
     "title": "Agent identity（代理身份）：Claude Tag 中自主、团队级 AI 的新访问模型 / Agent Identity in Claude Tag: A New Access Model for Autonomous, Team-Wide AI",
@@ -1152,7 +1209,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-23"
   },
   {
     "title": "从 OpenClaw 到 FastClaw：如何设计优秀的多 Agent 架构",
@@ -1170,7 +1228,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "从 OpenClaw 的单体架构到 FastClaw 的云原生设计，深度拆解多 Agent 框架的核心挑战：多租户隔离、存算分离、插件隔离、Fallback 容错和 Token 管理，总结五条 Agent 基础设施设计经验。",
-    "cover": "https://pbs.twimg.com/media/HLaPLHnaUAAwvqC?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HLaPLHnaUAAwvqC?format=jpg&name=large",
+    "published_at": "2026-06-22"
   },
   {
     "title": "Goal + Loop + Workflows 三大利器",
@@ -1189,7 +1248,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "深度解析 Claude Code 中 /goal、/loop、/workflows 三个命令的本质区别：一个管终点、一个管节奏、一个管规模，并列出五种高频错误用法和正确选择框架。",
-    "cover": "https://pbs.twimg.com/media/HKrkPAZawAAoCCi?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HKrkPAZawAAoCCi?format=jpg&name=large",
+    "published_at": "2026-06-20"
   },
   {
     "title": "驾驭 Claude Code：CLAUDE.md、Skills、Hooks、Rules、Subagents 等七种定制方法 / Steering Claude Code: CLAUDE.md files, skills, hooks, rules, subagents and more",
@@ -1211,7 +1271,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-18"
   },
   {
     "title": "零成本副业新风口：用AI帮人改简历赚钱",
@@ -1228,7 +1289,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "2026年5月一个小红书账号靠发简历对比图文月入2.5万+，本文拆解了Claude+DeepSeek-R1双链路、24小时交付SOP、三档定价策略和完整引流流程。",
-    "cover": "https://pbs.twimg.com/media/HKbCHFoaMAAXyrg?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HKbCHFoaMAAXyrg?format=jpg&name=large",
+    "published_at": "2026-06-11"
   },
   {
     "title": "段永平说，买股票就是买公司：从投资原理到实践框架",
@@ -1245,7 +1307,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "深入解读段永平“买股票就是买公司”的投资理念，结合巴菲特指数基金推荐，提供普通投资者可执行的个股+ETF双框架，含A股行业ETF低谷布局策略。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-06-11"
   },
   {
     "title": "代理式交互界面的演进：基于 Claude Managed Agents 构建 / The evolution of agentic surfaces: building with Claude Managed Agents",
@@ -1266,7 +1329,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a298c97d4a887f2666a50b6_03%20_%20Claude%20Managed%20Agents.png",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-10"
   },
   {
     "title": "一行命令，让所有Agent共享大脑",
@@ -1283,7 +1347,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "作者分享如何通过 MemOS CLI 打通多个 AI 工具（Claude Code、Cursor、Codex 等）的记忆，实现一行命令让所有 Agent 共享同一个大脑。",
-    "cover": "https://pbs.twimg.com/media/HKcH3dbXIAA9Te1?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HKcH3dbXIAA9Te1?format=jpg&name=large",
+    "published_at": "2026-06-11"
   },
   {
     "title": "用 Claude 为 Apple 平台构建智能应用 / Building intelligent apps for Apple platforms with Claude in the Foundation Models framework",
@@ -1303,7 +1368,8 @@
     "cover": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-09"
   },
   {
     "title": "运营 AI 原生工程组织 / Running an AI-native engineering org",
@@ -1322,7 +1388,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a1f0f1a5a045e955123064a_og_running-an-ai-native-engineering-org.jpg",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-05"
   },
   {
     "title": "为每项任务配备 Harness：Claude Code 中的动态工作流 / A harness for every task: dynamic workflows in Claude Code",
@@ -1341,7 +1408,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/691422974acd1cc3d6467e3a_og_skills-explained.jpg",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-05"
   },
   {
     "title": "构建 Claude Code 的经验：我们如何使用 Skills",
@@ -1356,7 +1424,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "原文链接： Lessons from building Claude Code: How we use skills https://claude.com/blog/lessons-from-building-claud…",
-    "cover": "https://pbs.twimg.com/media/HJ91jQ8asAAPGlB?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJ91jQ8asAAPGlB?format=jpg&name=large",
+    "published_at": "2026-06-05"
   },
   {
     "title": "打造0-1爆款文章工作流：我用这套方法10篇爆了8篇 !一次性教会你！",
@@ -1371,7 +1440,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "兄弟们都知道，我做 AI 博主已经一年多时间了。日常其实最头疼的并不是“写”本身， 更多的是从选题、查资料到写文章、配图、排版这一整个流程。 一个人干完这些，写好一篇文章起码要半天到一天的时间打底。 现在随着 AI 时代…",
-    "cover": "https://pbs.twimg.com/media/HKBTNRragAAsy_z?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HKBTNRragAAsy_z?format=jpg&name=large",
+    "published_at": "2026-06-05"
   },
   {
     "title": "十分钟构建个人工作流，仅仅需要一个 Claude Code（CodeX）！",
@@ -1386,7 +1456,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "你每天在重复做的事——写文章、审查代码、分析数据、生成报告，其实都可以变成一句话搞定。 不是夸张。是因为我把整个流程固化成了一个 Skill。 Claude Code 不只是写代码的工具。它是一个可以通过 Skill 无…",
-    "cover": "https://pbs.twimg.com/media/HKAwpA7b0AEHj6k?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HKAwpA7b0AEHj6k?format=jpg&name=large",
+    "published_at": "2026-06-05"
   },
   {
     "title": "Vibe Coding 零基础指南：rico-md 实战案例教程",
@@ -1400,7 +1471,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "一、从简单的项目开始 上一篇（一）我们理清了基础概念——前端/后端/数据库的分工、框架和组件库、AI 工具选择，还简单提了一下 PRD 和 Vibe Coding 的核心技巧。 4月29日 但概念终究是概念。 \"道理我都…",
-    "cover": "https://pbs.twimg.com/media/HKBEabebMAAPRJg?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HKBEabebMAAPRJg?format=jpg&name=large",
+    "published_at": "2026-06-05"
   },
   {
     "title": "Hermes Agent 入门指南：如何用辅助模型提升 Agent 效率「结尾附配置」",
@@ -1415,7 +1487,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "这篇是 Hermes Agent 入门系列的续篇，主要聊聊 Auxiliary Models（辅助模型） 的配置与使用。 很多刚接触 Agent 的朋友，容易默认“什么任务都丢给主模型”。但实际上，很多杂活、重复任务，完…",
-    "cover": "https://pbs.twimg.com/media/HJf5VMFbgAAPF5N?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJf5VMFbgAAPF5N?format=jpg&name=large",
+    "published_at": "2026-06-05"
   },
   {
     "title": "如何构建在您睡觉时运行的人工智能工作流程 / HOW TO BUILD AI WORKFLOWS THAT RUN WHILE YOU SLEEP",
@@ -1433,7 +1506,8 @@
     "summary": "There are 5 workflow types worth your time right now. 译：现在有 5 种工作流程类型值得您花时间。 Everything else is still experime…",
     "cover": "https://pbs.twimg.com/media/HJ9Day8WkAAOmCQ?format=jpg&name=large",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-05"
   },
   {
     "title": "构建云代理基础设施有何不同以及我们学到了什么 / Building cloud agent infrastructure what's different, and what we learned",
@@ -1451,7 +1525,8 @@
     "summary": "Most agent frameworks today assume a desktop. One user, one machine, one process. The agent runs while the lap…",
     "cover": "https://pbs.twimg.com/media/HKAs9ukakAAOoou?format=jpg&name=large",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-05"
   },
   {
     "title": "我每天使用的 7 个克劳德项目改变了我的工作方式 / 7 Claude Projects I Use Every Day That Changed How I Work",
@@ -1469,7 +1544,8 @@
     "summary": "Claude Projects are the most underused feature on claude.ai https://claude.ai/ . Most people don't use them at…",
     "cover": "https://pbs.twimg.com/media/HJvrNqpW0AAOPu7?format=jpg&name=large",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-05"
   },
   {
     "title": "构建 Claude Code 的教训：我们如何使用技能 / Lessons from building Claude Code: How we use skills",
@@ -1489,7 +1565,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-03"
   },
   {
     "title": "Anthropic 如何用 Claude 实现自助数据分析 / How Anthropic enables self-service data analytics with Claude",
@@ -1509,7 +1586,8 @@
     "cover": "",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-06-03"
   },
   {
     "title": "A harness for every task dynamic workflows in Claude Code",
@@ -1523,7 +1601,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "Last week, we released dynamic workflows in Claude Code. Claude can now write its own…",
-    "cover": "https://pbs.twimg.com/media/HJ0q6o6aYAEM_ej?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJ0q6o6aYAEM_ej?format=jpg&name=large",
+    "published_at": "2026-06-03"
   },
   {
     "title": "How to master Dynamic Workflows in Claude Code 6 patterns and 14 steps Anthropic engineers actually",
@@ -1536,7 +1615,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "Most Claude Code users still write their workflows by hand. They chain prompts, copy …",
-    "cover": "https://pbs.twimg.com/media/HJ4l2SjXsAALyp3?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJ4l2SjXsAALyp3?format=jpg&name=large",
+    "published_at": "2026-06-03"
   },
   {
     "title": "Pi Coding Agent 最全面指南（完美支持goal）",
@@ -1551,7 +1631,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "如果你已经习惯 Claude Code，Pi 第一眼不会显得更省心。Claude Code 的优势是把 subagents、Plan Mode、MCP、权限、上下文压缩、…",
-    "cover": "https://pbs.twimg.com/media/HIiJFOWboAAQVbZ?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HIiJFOWboAAQVbZ?format=jpg&name=large",
+    "published_at": "2026-06-03"
   },
   {
     "title": "个人 Agent 搭建完整合集：从 Vibe Coding 到每天都在用的个人工作系统",
@@ -1565,7 +1646,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "写在前面：这是一篇个人 Agent 搭建 和 Vibe Coding 方法的合集。",
-    "cover": "https://pbs.twimg.com/media/HJ0OF0MXEAAdBb9?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJ0OF0MXEAAdBb9?format=jpg&name=large",
+    "published_at": "2026-06-03"
   },
   {
     "title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
@@ -1579,7 +1661,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "Paul Graham, the Founder of Y Combinator, speaks live from Stockholm Waterfront Congr…",
-    "cover": "https://www.youtube.com/watch?v=QHJkUw31YX8"
+    "cover": "https://www.youtube.com/watch?v=QHJkUw31YX8",
+    "published_at": "2026-05-31"
   },
   {
     "title": "趨勢交易全攻略",
@@ -1593,7 +1676,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "關於趨勢交易，你需要了解的一切。不論你是初學者還是老司機，看完這期視節目，我相信你一定會對趨勢有全新的認知。以後應對某一類的趨勢，就可以按圖索驥，做到心中有譜。 ————…",
-    "cover": "https://www.youtube.com/watch?v=MTmz6OLCykc"
+    "cover": "https://www.youtube.com/watch?v=MTmz6OLCykc",
+    "published_at": "2026-05-31"
   },
   {
     "title": "如何写一个真正能用的 Claude Skill",
@@ -1607,7 +1691,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "很多人第一次看到 SKILL.md 都会觉得\"不就是把提示词写成文件吗\"。写完一两个之后才发现：写得潦草的 skill 要么根本不被触发，要么触发了反而帮倒忙——把上下文…",
-    "cover": "https://pbs.twimg.com/media/HJdgqhVaoAAPmAQ?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJdgqhVaoAAPmAQ?format=jpg&name=large",
+    "published_at": "2026-05-30"
   },
   {
     "title": "Anthropic 刚发了创始人手册。读完我把自己的产品 pivot 了",
@@ -1620,7 +1705,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "20260525，读完了 Anthropic 刚发的《The Founder's Playbook: Building an AINative Startup》。35 页…",
-    "cover": "https://pbs.twimg.com/media/HJK3EuqaIAAxaQQ?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJK3EuqaIAAxaQQ?format=jpg&name=large",
+    "published_at": "2026-05-26"
   },
   {
     "title": "GBRAIN 深度解读：YC 掌门人打造的 AI 知识引擎",
@@ -1633,7 +1719,8 @@
     "category": "知识管理",
     "quality": "A",
     "summary": "GBrain 是 Y Combinator 现任 CEO Garry Tan 开源的个人知识管理系统。项目地址：github.com/garrytan/gbrain。它的…",
-    "cover": "https://pbs.twimg.com/media/HJIrLeJaUAAlGGv?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJIrLeJaUAAlGGv?format=jpg&name=large",
+    "published_at": "2026-05-26"
   },
   {
     "title": "Skill 工程设计指南（3天口播内容skill系统完整搭建复盘），新手友好，后附口播获客github网址，开源分享",
@@ -1649,7 +1736,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "Skill 不是一段提示词。Skill 是一个有状态、有流程、有知识库、有自检机制的内容生产系统。",
-    "cover": "https://pbs.twimg.com/media/HJOuBwfWgAA1Rov?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJOuBwfWgAA1Rov?format=jpg&name=large",
+    "published_at": "2026-05-26"
   },
   {
     "title": "从 Prompt 到 Harness：Agent 工程真正的分水岭（小白友好版）",
@@ -1665,7 +1753,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "我们经常花很长时间调 Prompt，只为让 Agent 在项目中的表现更稳定。",
-    "cover": "https://pbs.twimg.com/media/HJPvoV5bYAAm3dc?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJPvoV5bYAAm3dc?format=jpg&name=large",
+    "published_at": "2026-05-26"
   },
   {
     "title": "从 Prompt 到 Harness：如何理解 LLM Engineering",
@@ -1679,7 +1768,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "虽然 LLM 应用的历史始于 2022 年 ChatGPT 问世，但工程实践已经从 Prompt Engineering，经历 Context Engineering，发…",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-05-26"
   },
   {
     "title": "怎么使用 Codex 和 Claude Code 重构前端 UI",
@@ -1692,7 +1782,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "Lody 由于底层技术栈和人力的原因，完全使用 Web 来统一构建的网页端、桌面端和移动端。最开始只做了网页端，后续慢慢添加了桌面端和移动端，同时又是几乎在 vibe c…",
-    "cover": "https://pbs.twimg.com/media/HJOnY3MbQAAT0D2?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJOnY3MbQAAT0D2?format=jpg&name=large",
+    "published_at": "2026-05-26"
   },
   {
     "title": "改源代码",
@@ -1705,7 +1796,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "今天下午，我在一个叫 SKILL.md 的文件里改了一行字。",
-    "cover": "https://pbs.twimg.com/media/HJO82-QaQAArbpd?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJO82-QaQAArbpd?format=jpg&name=large",
+    "published_at": "2026-05-26"
   },
   {
     "title": "Agentic Design Patterns：一本让我重新理解\"Agent 到底是什么\"的书",
@@ -1718,7 +1810,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "Antonio Gullí 是 Google 的工程总监。他写了本 453 页的书，把 AI Agent 开发拆成了 21 种设计模式。",
-    "cover": "https://pbs.twimg.com/media/HJFsJNLbkAAuNuw?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJFsJNLbkAAuNuw?format=jpg&name=large",
+    "published_at": "2026-05-24"
   },
   {
     "title": "Markdown正在变成AI的语言，而HTML正在变成你的",
@@ -1731,7 +1824,8 @@
     "category": "工具与配置",
     "quality": "A",
     "summary": "Markdown正从“人类友好的写作语法”演变为“AI最优的序列化协议”，而HTML则重新成为人类消费复杂信息的默认UI层。",
-    "cover": "https://pbs.twimg.com/media/HI-DnOGaIAAmyrV?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HI-DnOGaIAAmyrV?format=jpg&name=large",
+    "published_at": "2026-05-24"
   },
   {
     "title": "为什么你的agent项目总是难以落地",
@@ -1745,7 +1839,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "绝大部分agent项目在拿到业务正反馈之前，就被耗死在了手搓agent harness这些基础设施上",
-    "cover": "https://pbs.twimg.com/media/HJF0VK4WIAAAJgE?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HJF0VK4WIAAAJgE?format=jpg&name=large",
+    "published_at": "2026-05-24"
   },
   {
     "title": "油价砸到多少，中海油才会喊疼？！",
@@ -1759,7 +1854,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "真正看财报、搭模型、做DCF，预测上市公司业绩最准的价投博主",
-    "cover": "https://xqimg.imedao.com/19e4e89ee444af6a3fd766d8.jpg!800.jpg"
+    "cover": "https://xqimg.imedao.com/19e4e89ee444af6a3fd766d8.jpg!800.jpg",
+    "published_at": "2026-05-23"
   },
   {
     "title": "计算中海油估值，100%的人都错了！",
@@ -1773,7 +1869,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "真正看财报、搭模型、做DCF，预测上市公司业绩最准的价投博主",
-    "cover": "https://xqimg.imedao.com/19e543ec5cc4c67c3fe35458.jpg!800.jpg"
+    "cover": "https://xqimg.imedao.com/19e543ec5cc4c67c3fe35458.jpg!800.jpg",
+    "published_at": "2026-05-23"
   },
   {
     "title": "Linear 为什么这么快？技术拆解（中英双语）",
@@ -1792,7 +1889,8 @@
     "summary": "Dennis Brotzky 对 Linear 高性能体验的技术拆解：浏览器本地数据库、同步引擎、首次加载、代码分割、预加载、Service Worker、键盘优先设计与动画约束；已整理为中英双语对照版本。",
     "cover": "",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-05-21"
   },
   {
     "title": "A股电网设备ETF决策页：AI电力瓶颈的设备侧表达",
@@ -1809,7 +1907,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "预渲染静态HTML决策页，包含结论、假设匹配、雪球行情、ETF对比、持仓暴露、估值质量、反证雷达和后续监控。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-05-21"
   },
   {
     "title": "A股电网设备ETF纠偏报告：AI电力瓶颈的设备侧表达",
@@ -1827,7 +1926,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "纠偏后主观察切换到159326电网设备ETF华夏；561380和159320作为恒生A股电网设备指数对照，159611/561560回到发电运营假设。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-05-21"
   },
   {
     "title": "“超级鹿鼎公”的炒股模式",
@@ -1841,7 +1941,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "雪球“超级鹿鼎公”是我这两年潜心学习的对象，对煤电等行业及公司的研究很深入，他研究的有些公司也是我最近一两年抄作业的对象。比如“陕西能源”的公司分析，鹿鼎公更青睐同类的“…",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-05-21"
   },
   {
     "title": "万华的模式",
@@ -1855,7 +1956,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "万华化学，在化工这个公认最反人性的周期赛道里，却活成了所有对手最不想看到的样子。 行业龙头在盈亏线上挣扎，它前三季度仍有91.57亿归母净利润。针对万华MDI的倾销指控幅…",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-05-21"
   },
   {
     "title": "如何估算10年后的收益",
@@ -1869,7 +1971,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "【散户乙】老窖的主营业务利润率高达50%，净资产收益率去年是45%，高居白酒股第一位。如果稍微有点财务知识的人，就会知道这两个数据的巨大差异意味着什么？",
-    "cover": "https://xqimg.imedao.com/19c6f771c44581f03f9c5564.jpeg!800.jpg"
+    "cover": "https://xqimg.imedao.com/19c6f771c44581f03f9c5564.jpeg!800.jpg",
+    "published_at": "2026-05-21"
   },
   {
     "title": "我所理解的价值",
@@ -1883,7 +1986,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "从事投资也有十多年了，经历了很多起起落落，有些“价值”回归了，有些始终没有，或者只是一个周期起伏罢了。这让我思考什么是价值。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-05-21"
   },
   {
     "title": "Claude Managed Agents 新功能：自托管沙盒与 MCP 隧道（双语）",
@@ -1903,7 +2007,8 @@
     "cover": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a0c965b35dd4ce814b00c56_Sandboxes_3%20(1).png",
     "source_name": "Claude Blog",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-05-20"
   },
   {
     "title": "A 股电力 ETF 试运行报告：买到的是电力运营，不是电网设备",
@@ -1921,7 +2026,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "电力 ETF 更准确表达电力运营商和公用事业现金流，不是电网设备订单弹性；159611 进入主观察池，561560 作为对照。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-05-20"
   },
   {
     "title": "CPO 投资阅读版：AI 数据中心光互连瓶颈",
@@ -1938,7 +2044,8 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "把 CPO 研究文本重构为投资阅读路径：一句话结论、瓶颈利润池、公司分层、情景推演、验证清单与完整原文核对。",
-    "cover": "visuals/cpo-investment-map/assets/cpo-hero.png"
+    "cover": "visuals/cpo-investment-map/assets/cpo-hero.png",
+    "published_at": "2026-05-20"
   },
   {
     "title": "GPT2 又一套轻盈安静的提示词 x 适配各种用途",
@@ -1951,7 +2058,8 @@
     "category": "AI 工程",
     "quality": "A",
     "summary": "其实这个提示词还是适用，比如说海报、信息图，或者自媒体封面，甚至是朋友圈或者邀请函，还有各式各样的场景都可适合。",
-    "cover": "https://pbs.twimg.com/media/HIqPPIra0AEA3LK?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HIqPPIra0AEA3LK?format=jpg&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "企业级 Agent 构建指南",
@@ -1965,7 +2073,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "上个月给一个客户定制了一套 Deep Research 系统，本质就是多 Agent，客户的报价 12W。",
-    "cover": "https://pbs.twimg.com/media/HIqgTikbYAAvxvs?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HIqgTikbYAAvxvs?format=jpg&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "你不知道的 AI Coding：非技术人的上手、场景与实战",
@@ -1980,7 +2089,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "上个月在公司里给产品和业务的小伙伴分享了下如何上手 AI Coding，加上最近又发了条推特，聊到不少同学因为订阅门槛没机会用上一线 AI Coding 工具，方法和习惯…",
-    "cover": "https://pbs.twimg.com/media/HGzHLDWbgAAq2n_?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HGzHLDWbgAAq2n_?format=jpg&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "创建真正可用的 Skill 完整教程 - 拆解公众号排版",
@@ -1994,7 +2104,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "我每次要把 MD 草稿排版到公众号，手动调样式 30 ～120分钟一篇。这种中频场景，非常适合做一个 Skill 。",
-    "cover": "https://pbs.twimg.com/media/HIfdulbbsAA3t2o?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HIfdulbbsAA3t2o?format=jpg&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "教程：手把手教你玩转Tom老板开源的html-anything项目",
@@ -2010,7 +2121,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "Claude Code 团队的工程师 Thariq 最近发了一篇《The Unreasonable Effectiveness of HTML》，核心观点一句话：我们内部…",
-    "cover": "https://pbs.twimg.com/media/HIkI3YRbIAAy7me?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HIkI3YRbIAAy7me?format=jpg&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "我用 Cloudflare 免费搭了一套 AI 内容流水线，真的能跑起来",
@@ -2023,7 +2135,8 @@
     "category": "工具与配置",
     "quality": "A",
     "summary": "每天刷那么多信息，有用的记不住、存不下、找不到。",
-    "cover": "https://pbs.twimg.com/media/HHOT0grbkAA-dHu?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HHOT0grbkAA-dHu?format=jpg&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "两天时间，我把巴菲特70年的股东信变成了知识图谱",
@@ -2037,7 +2150,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "有一天晚上，我在读巴菲特2024年的股东信，读到他说可口可乐从1994年给伯克希尔分红7500万美元，到2022年涨到了7.04亿美元——同一笔投资，分红翻了将近10倍。",
-    "cover": "https://pbs.twimg.com/media/HFH8MVlbAAAQQmG?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HFH8MVlbAAAQQmG?format=jpg&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "开源「洁癖.Skill」，让你的Agent越用越聪明。",
@@ -2053,7 +2167,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "今天没选题了，所以想开源一个我自己做的，已经用了快1个多月，迭代了好多版的一个我觉得很有用的Skill。",
-    "cover": "https://pbs.twimg.com/media/HHC72Cca8AAe7PT?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HHC72Cca8AAe7PT?format=jpg&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "你不知道的 Claude Code：架构、治理与工程实践",
@@ -2068,7 +2183,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "今天这篇文章源于最近半年深度使用 Claude Code、两个账号每月 40 刀氪金换来的一些踩坑经验，希望能给大伙一些输入。",
-    "cover": "https://pbs.twimg.com/media/HDNmq2FbkAAPRmY?format=jpg&name=large"
+    "cover": "https://pbs.twimg.com/media/HDNmq2FbkAAPRmY?format=jpg&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "如何让OpenClaw指挥三位大哥协作写代码？ 1",
@@ -2083,7 +2199,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "原创 刘小排 刘小排r 2026年3月2日 18:54",
-    "cover": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/q6aOmBZKAbNBTI8C8hr4xddwTcur2oNbfQ8ib8rrJzP2LDiaetqO6KIqHfDDbY1Hayhm1mNg0lg6o7gnzEMTgNLHd4xV60CXAE5PiaeQAMNkog/0?wx_fmt=jpeg"
+    "cover": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/q6aOmBZKAbNBTI8C8hr4xddwTcur2oNbfQ8ib8rrJzP2LDiaetqO6KIqHfDDbY1Hayhm1mNg0lg6o7gnzEMTgNLHd4xV60CXAE5PiaeQAMNkog/0?wx_fmt=jpeg",
+    "published_at": "2026-05-19"
   },
   {
     "title": "Claude Native Designer: From Design to Ship (中英双语 / Bilingual)",
@@ -2104,7 +2221,8 @@
     "summary": "Felix Lee 分享如何用 Claude Code 和 Figma MCP 从设计到构建完整产品的工作流，中英双语对照。",
     "cover": "https://pbs.twimg.com/media/HCc2NRFb0AEUTsL.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-03-05"
   },
   {
     "title": "Claude Cowork：终极设置指南（中英双语 / Bilingual）",
@@ -2124,7 +2242,8 @@
     "summary": "Claude Cowork 完整设置指南，中英双语对照。涵盖工作区配置、上下文文件、插件安装、工具连接和安全最佳实践。",
     "cover": "https://pbs.twimg.com/media/HCPJAI6XoAEzgrK.jpg",
     "source_language": "en",
-    "bilingual_format": "magazine-v1"
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-03-02"
   },
   {
     "title": "如何像量化台一样模拟：完整预测市场模拟指南",
@@ -2141,7 +2260,8 @@
     "category": "投资研究",
     "quality": "S",
     "summary": "从蒙特卡洛基础到重要性抽样、粒子滤波、Copula 建模和基于代理的模拟，完整预测市场量化建模指南（含可运行代码）。",
-    "cover": "https://pbs.twimg.com/media/HCP-EHtbYAACOLP.jpg"
+    "cover": "https://pbs.twimg.com/media/HCP-EHtbYAACOLP.jpg",
+    "published_at": "2026-03-02"
   },
   {
     "title": "构建 Claude Code 的教训：像 Agent 一样思考",
@@ -2158,7 +2278,8 @@
     "category": "AI 工程",
     "quality": "S",
     "summary": "Thariq 分享 Anthropic 团队构建 Claude Code 过程中收获的工具设计教训：如何像 Agent 一样思考，从 elicitation 到渐进式披露的艺术。",
-    "cover": "https://pbs.twimg.com/media/HCLxeR3acAAf2R9.jpg"
+    "cover": "https://pbs.twimg.com/media/HCLxeR3acAAf2R9.jpg",
+    "published_at": "2026-03-02"
   },
   {
     "title": "Claude 原生律所：2026 年 AI 法律实践指南",
@@ -2175,7 +2296,8 @@
     "category": "AI 工程",
     "quality": "S",
     "summary": "Zack Shapiro 完整分享他如何用 Claude 经营一家两人律所，涵盖合同评审、修订标注、法律检索、客户沟通等实战工作流。",
-    "cover": "https://pbs.twimg.com/media/HCK8-0cWkAErWGw.jpg"
+    "cover": "https://pbs.twimg.com/media/HCK8-0cWkAErWGw.jpg",
+    "published_at": "2026-03-01"
   },
   {
     "title": "1个个人+1个Agent，27天交付一个商用系统",
@@ -2189,7 +2311,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "1月初，研究火遍全网的开源项目OpenClaw时，我发现创始人Peter在66天内一个人提交了7178次代码，日均127次，其中最多的一天349次——平均每4分钟一次。这…",
-    "cover": "https://pbs.twimg.com/media/HCPiQVpbEAQ7gAS?format=png&name=large"
+    "cover": "https://pbs.twimg.com/media/HCPiQVpbEAQ7gAS?format=png&name=large",
+    "published_at": "2026-05-19"
   },
   {
     "title": "我只是想试试 OpenClaw 管 VPS，结果顺手抓到一场挖矿入侵",
@@ -2206,7 +2329,8 @@
     "category": "工具与配置",
     "quality": "A",
     "summary": "以新手第一视角复盘：一次无意试用 OpenClaw 管理 VPS，如何从异常负载发现挖矿入侵并完成止血、清理与加固。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-02-28"
   },
   {
     "title": "我的 VPS 被入侵挖矿的完整复盘：从 10 负载到清零",
@@ -2223,7 +2347,8 @@
     "category": "工具与配置",
     "quality": "A",
     "summary": "从VPS挖矿入侵事件发现、取证到完全清理的完整实录，包含入侵溯源、恶意样本分析和加固方案。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-02-28"
   },
   {
     "title": "OpenClaw 从中级到高级完整教程",
@@ -2238,7 +2363,8 @@
     "category": "Agent 实战",
     "quality": "S",
     "summary": "从 AGENTS.md 工作规范到记忆优化、子 Agent、Cron 定时任务、Skill 开发、多渠道部署与性能调优的完整进阶指南。",
-    "cover": "https://pbs.twimg.com/media/HCED2lXaMAMuax7.jpg"
+    "cover": "https://pbs.twimg.com/media/HCED2lXaMAMuax7.jpg",
+    "published_at": "2026-02-26"
   },
   {
     "title": "从想法到实现：OpenClaw 远程调度 Mac 运行 OpenCode 全流程复盘",
@@ -2253,7 +2379,8 @@
     "category": "Agent 实战",
     "quality": "A",
     "summary": "复盘从自然语言指令到远程执行闭环的落地过程，重点讨论过程可观测与人机协作规划。",
-    "cover": ""
+    "cover": "",
+    "published_at": "2026-02-24"
   },
   {
     "title": "OpenClaw Memory终极指南",
@@ -2268,7 +2395,8 @@
     "category": "Agent 实战",
     "quality": "S",
     "summary": "系统拆解 OpenClaw 记忆架构现状、官方路线、社区方案与学术进展，并给出工程化方向。",
-    "cover": "https://pbs.twimg.com/media/HByZYd7bgAALaBi.jpg"
+    "cover": "https://pbs.twimg.com/media/HByZYd7bgAALaBi.jpg",
+    "published_at": "2026-02-23"
   },
   {
     "title": "为什么你的 OpenClaw 一定要安装 NotebookLM Skill",
@@ -2283,7 +2411,8 @@
     "category": "Agent 实战",
     "quality": "S",
     "summary": "通过 OpenClaw + NotebookLM 组合，实现 source 导入、清洗、审计与知识生产自动化。",
-    "cover": "https://pbs.twimg.com/media/HBmaCcvaUAAykAg.jpg"
+    "cover": "https://pbs.twimg.com/media/HBmaCcvaUAAykAg.jpg",
+    "published_at": "2026-02-23"
   },
   {
     "title": "如何从0-1在全新Mac mini上的安装OpenClawde？｜文科生学AI系列教程1",
@@ -2298,7 +2427,8 @@
     "category": "工具与配置",
     "quality": "S",
     "summary": "从零开始在 Mac mini 安装 OpenClaw 的完整步骤与关键注意事项。",
-    "cover": "https://pbs.twimg.com/media/HBmGMFLbgAAlKez.jpg"
+    "cover": "https://pbs.twimg.com/media/HBmGMFLbgAAlKez.jpg",
+    "published_at": "2026-02-22"
   },
   {
     "title": "年薪150万的工作，我用500美金的AI完成：个人业务Agent升级指南",
@@ -2313,7 +2443,8 @@
     "category": "AI 工程",
     "quality": "A",
     "summary": "从时间杠杆转向算法杠杆：知识库、技能框架和自动化执行的个人业务升级路径。",
-    "cover": "https://pbs.twimg.com/media/HBsFX7hbgAAK85M.jpg"
+    "cover": "https://pbs.twimg.com/media/HBsFX7hbgAAK85M.jpg",
+    "published_at": "2026-02-22"
   },
   {
     "title": "CPO 投资阅读版：AI 数据中心光互连瓶颈（交互专题入口）",
@@ -2331,6 +2462,7 @@
     "category": "投资研究",
     "quality": "A",
     "summary": "AI 数据中心光互连瓶颈专题入口页，承接 CPO 长文研究内容并引导到可交互可展开的专题页。",
-    "cover": "visuals/cpo-investment-map/assets/cpo-hero.png"
+    "cover": "visuals/cpo-investment-map/assets/cpo-hero.png",
+    "published_at": "2026-05-20"
   }
 ]
