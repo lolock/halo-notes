@@ -1,5 +1,27 @@
 [
   {
+    "title": "超级智能正在到来 / Superintelligence is Arriving",
+    "file": "articles/超级智能正在到来 — 中英双语.md",
+    "date": "2026-11-22",
+    "source": "https://x.com/alexandr_wang/status/2124636606959345776",
+    "source_name": "X / Alexandr Wang",
+    "tags": [
+      "超级智能",
+      "ASI",
+      "黎曼猜想",
+      "AI 进展",
+      "AI 安全",
+      "递归自我改进",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "Alexandr Wang 以黎曼猜想被证明为标志，论证超级智能正在到来：真正的瓶颈已不是智力，而是领域经验、基础设施与实验能力；他反对把社会「交接」给 AI 的惰性思维，主张主动建设让人拥有更多自主性的技术。中英双语全文。",
+    "cover": "",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1"
+  },
+  {
     "title": "我的全自动 AI 编程工作流：配置步骤与完整 Prompt（Cindy / T3 Code）",
     "file": "articles/我的全自动 AI 编程工作流（Cindy 与 T3 Code）.md",
     "date": "2026-11-24",
