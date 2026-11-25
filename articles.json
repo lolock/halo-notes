@@ -1,5 +1,27 @@
 [
   {
+    "title": "用 Claude Code 交付的实战指南：PR 打开之后的工作 / A practical guide to shipping with Claude Code",
+    "file": "articles/打开 PR 之后的工作：用 Claude Ship 接住后续 — 中英双语.md",
+    "date": "2026-11-24",
+    "source": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+    "source_name": "Claude Blog / claude.dev",
+    "tags": [
+      "Claude Code",
+      "Claude Ship",
+      "代码评审",
+      "Pull Request",
+      "Agent 工作流",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "打开 PR 之后的收尾工作被拆成三步：发现问题、处理问题、决定能否合并。作者给出可落地的配置路径——先用 /code-review 在推送前自查，再用 /ship 让 Agent 以你的身份评审并照看 PR 最多七天，用 /steward 接手已有 PR；随后把重复出现的评审意见、启动步骤和 PR 维护规则沉淀进 CLAUDE.md、REVIEW.md 与技能文件，最后用 observe 模式的审批策略在团队层面灰度，观察一两周再切换为强制执行。",
+    "cover": "",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-25"
+  },
+  {
     "title": "Harness 工程：不换模型也能修好你的 Agent / Harness Engineering: How to Fix Your Agent Without Changing the Model",
     "file": "articles/Harness 工程：不换模型也能修好你的 Agent — 中英双语.md",
     "date": "2026-11-21",
