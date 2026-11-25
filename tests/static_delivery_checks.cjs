@@ -111,6 +111,11 @@ const message = "<script> & 中文";
       check(generated.cover === source.cover.slice('/halo-notes/'.length), 'legacy homepage cover is relative to the site root');
     } else if (/^(?:https?:)?\/\//.test(source.cover)) {
       check(generated.cover === source.cover, 'external homepage cover remains unchanged');
+    } else {
+      // A repo-relative cover must survive as-is AND resolve to a shipped file:
+      // the catalog renders it directly, so a wrong path is a blank card.
+      check(generated.cover === source.cover, 'repo-relative homepage cover is kept');
+      check(fs.existsSync(path.join(output, source.cover)), 'repo-relative homepage cover is published');
     }
   }
   check(!['scripts', 'tests', 'docs', 'node_modules', '.git', 'package-lock.json', 'design'].some(name => fs.existsSync(path.join(output, name))), 'private and build inputs are not published');

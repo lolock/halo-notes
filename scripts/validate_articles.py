@@ -108,6 +108,19 @@ def check_json_items(items: List[Dict]) -> Tuple[List[str], List[str]]:
         if quality not in valid_qualities:
             errors.append(f"{prefix}: invalid quality '{quality}'")
 
+        # The catalog renders `cover` directly. A repo-relative path must exist,
+        # otherwise the home page shows a blank card that the article page (whose
+        # body images are already local) hides. Off-site covers are rejected
+        # outright: those hosts go unreachable and expire, and the fix is to
+        # download the image, not to depend on it.
+        cover = str(item.get("cover", "")).strip()
+        if cover:
+            if cover.startswith(("http://", "https://")):
+                errors.append(
+                    f"{prefix}: cover must be a repo path, not a remote URL: {cover}")
+            elif not (ROOT / cover.lstrip("/")).is_file():
+                errors.append(f"{prefix}: cover file not found: {cover}")
+
         normalized = normalize_file_path(item.get("file", ""))
         seen_files[normalized] = seen_files.get(normalized, 0) + 1
         seen_titles[str(item.get("title", "")).strip()] = seen_titles.get(str(item.get("title", "")).strip(), 0) + 1
