@@ -1,5 +1,24 @@
 [
   {
+    "title": "在做精细化UI前，最基础的让AI写出干净界面的前端规范",
+    "file": "articles/让AI写出干净界面的最基础前端规范（DESIGN.md 五条规则）.md",
+    "date": "2026-11-25",
+    "source": "https://x.com/ZacharyZhang/status/2125643199158817074",
+    "source_name": "X / ZacharyZhang",
+    "tags": [
+      "前端规范",
+      "AI 编程",
+      "UI 设计",
+      "DESIGN.md",
+      "Prompt"
+    ],
+    "category": "创作与设计",
+    "quality": "S",
+    "summary": "AI 生成的前端页面常有外框套内框、满屏解释文字、高饱和渐变、多级菜单乱跳四个通病。作者把「简洁一点」换成可执行的数字与禁令，拆成布局、视觉、参数、交互、验收五个模块，给出一份可直接放进项目根目录的 DESIGN.md 全文，并附按平台裁剪、先装依赖、浏览器截图验收三步用法。",
+    "cover": "articles/assets/x-2125643199158817074/cover.jpg",
+    "published_at": "2026-11-26"
+  },
+  {
     "title": "用 Claude Code 交付的实战指南：PR 打开之后的工作 / A practical guide to shipping with Claude Code",
     "file": "articles/打开 PR 之后的工作：用 Claude Ship 接住后续 — 中英双语.md",
     "date": "2026-11-24",
