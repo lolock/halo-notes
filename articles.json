@@ -1,5 +1,29 @@
 [
   {
+    "title": "5 个用上 Gemini 4 Neon 后我改掉的习惯 / 5 Habits I Changed When Working with Gemini 4 Neon",
+    "file": "articles/5 个用上 Gemini 4 Neon 后改掉的习惯 — 中英双语.md",
+    "date": "2026-11-25",
+    "source": "https://x.com/_philschmid/status/2125579472594223340",
+    "source_name": "X / Philipp Schmid（@_philschmid）",
+    "tags": [
+      "Gemini 4 Neon",
+      "编码 Agent",
+      "上下文工程",
+      "系统指令",
+      "工具 Schema",
+      "技能加载",
+      "会话交接",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "作者用了几周 Gemini 4 Neon 后，把为老模型写的大量规则往回删：用户级 GEMINI.md 压到一屏，硬性风格禁令换成判断提示；工具的调用规则只写一次，直接放进带类型参数与枚举的 JSON schema，删掉 few-shot 示例和重复的系统规则；项目级 AGENTS.md 只留代码里推不出的坑，领域工作流搬进带一行的技能索引、按需加载；UI 与动效改用参考截图和录屏，并要求 Agent 渲染后自己看图验收；最后用交接文件或分叉会话代替任务中途压缩，把压缩点推到约 50 万 token。文末给出五层逐层简化的清单。中英双语全文，含三段配置示例与三张示意图。",
+    "cover": "articles/assets/x-2125579472594223340/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-26"
+  },
+  {
     "title": "你的 Grok Bot 正在烧钱：用 Harness 把它修好 / Your Grok Bot Is Burning Money — Harness Fixes It",
     "file": "articles/你的 Grok Bot 正在烧钱：用 Harness 把它修好 — 中英双语.md",
     "date": "2026-11-17",
