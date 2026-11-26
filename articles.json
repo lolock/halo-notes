@@ -1,5 +1,30 @@
 [
   {
+    "title": "2026 年人人都该搭的 AI 私人助理栈（搭建者指南） / AI Personal Assistant Stack Everyone Must Use in 2026 (Builder's Guide)",
+    "file": "articles/2026 年 AI 私人助理栈搭建指南 — 中英双语.md",
+    "date": "2026-11-24",
+    "source": "https://x.com/av1dlive/status/2125281837673226340",
+    "source_name": "X / Avid（@av1dlive）",
+    "tags": [
+      "AI 私人助理",
+      "常驻 Agent",
+      "Serein",
+      "上下文压缩",
+      "交接笔记",
+      "权限与审批",
+      "密钥管理",
+      "定时任务",
+      "中英双语"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "作者用 27 分钟带人把 Grok Bot 从零搭成私人助理，而不是一个需要盯着看的聊天机器人。核心是把 Anthropic《Building always-on agents》的五个部件落到文件上：托盘（事件收件箱）、闹钟（定时器）、笔记本（记忆）、旋钮（权限）、桌面（发件箱），再加铭牌、交接笔记、30 分钟巡检与沉默规则（NOTHING / UPDATE / NEEDS INPUT:）、通行证和夜间清扫。全文给出 AGENTS.md、SOUL.md、USER.md、AUTONOMY.md、RECAP 模板、四段生成提示词，以及 rollup、recap、heartbeat、lease、dream 五个脚本在 Mac 上的实测输出和排错清单。中英双语全文，含六张架构图与一段原文视频。",
+    "cover": "articles/assets/x-2125281837673226340/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-26"
+  },
+  {
     "title": "5 个用上 Gemini 4 Neon 后我改掉的习惯 / 5 Habits I Changed When Working with Gemini 4 Neon",
     "file": "articles/5 个用上 Gemini 4 Neon 后改掉的习惯 — 中英双语.md",
     "date": "2026-11-25",
