@@ -1,5 +1,28 @@
 [
   {
+    "title": "你的 Grok Bot 正在烧钱：用 Harness 把它修好 / Your Grok Bot Is Burning Money — Harness Fixes It",
+    "file": "articles/你的 Grok Bot 正在烧钱：用 Harness 把它修好 — 中英双语.md",
+    "date": "2026-11-17",
+    "source": "https://x.com/irongiantXBT/status/2122662343306059780",
+    "source_name": "X / Iron Giant（@irongiantXBT）",
+    "tags": [
+      "Grok Bot",
+      "Harness Engineering",
+      "Agent 架构",
+      "Jev",
+      "决策层",
+      "多 Agent 集群",
+      "双语翻译"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "单个 Grok Bot 用同一个昂贵模型做完写、路由、判断、审批和自检，所以又慢又贵。作者把可用结构拆成四层——Grok 写、Jev 决定、Harness 强制执行、集群扩量——并给出六个部分：一个只路由不执行的总参谋长、每个 bot 五字段契约、用 /workspace 文件代替聊天、来源/证据/动作三道闸门、HANDOFF.md 与 ACTION_LOG.md；决策层换成 TypeSafe 的 Jev，每次决策约便宜 58 倍，一天一万次决策从 49 美元降到 0.84 美元。后附 10 段可直接粘贴的提示词、收件箱分流／内容引擎／代码集群三个实战案例和加第二个 bot 前的检查清单。中英双语全文。",
+    "cover": "articles/assets/x-2122662343306059780/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-26"
+  },
+  {
     "title": "在做精细化UI前，最基础的让AI写出干净界面的前端规范",
     "file": "articles/让AI写出干净界面的最基础前端规范（DESIGN.md 五条规则）.md",
     "date": "2026-11-25",
