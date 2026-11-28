@@ -1,5 +1,28 @@
 [
   {
+    "title": "后 AI 时代最重要的问题",
+    "file": "articles/后 AI 时代最重要的问题.md",
+    "date": "2026-11-27",
+    "published_at": "2026-11-29",
+    "source": "https://mp.weixin.qq.com/s/Cx4glqRTxpIbUv6MiAA-9w",
+    "source_name": "微信公众号 / 冯骥Yocar",
+    "tags": [
+      "后AI时代",
+      "AI与就业",
+      "全民基本收入",
+      "全民分红",
+      "内容产业",
+      "算力资本",
+      "优绩主义",
+      "人本主义"
+    ],
+    "category": "AI 与社会",
+    "quality": "S",
+    "summary": "冯骥从《GTA6》刷新娱乐收入纪录与 Fable 5.2 把 3A 门槛踩进地板这两件同期发生的事出发，推演后 AI 时代的核心问题：智力首次脱离肉身、从劳动要素变成资本要素，脑力劳动不再稀缺后普通人失去议价筹码；内容产业走向超级 IP 与私人定制的两极，腰部从业者沦为免费语料；由此主张 AI 的长期红利应作为人类文明遗产的全民分红回流社会，人只能是生产的目的，而非手段。",
+    "cover": "articles/assets/mp-cx4glqrtxpibu/cover.jpg",
+    "source_language": "zh"
+  },
+  {
     "title": "批判性思考：当 Agent 替你干活 / Critical thinking when agents do the work",
     "file": "articles/Agent 干活时如何保持批判性思考 — 中英双语.md",
     "date": "2026-11-03",
