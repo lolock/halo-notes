@@ -1,5 +1,29 @@
 [
   {
+    "title": "批判性思考：当 Agent 替你干活 / Critical thinking when agents do the work",
+    "file": "articles/Agent 干活时如何保持批判性思考 — 中英双语.md",
+    "date": "2026-11-03",
+    "source": "https://x.com/addyosmani/status/2117512471930167377",
+    "source_name": "X / Addy Osmani（@addyosmani）",
+    "tags": [
+      "批判性思考",
+      "AI Agent",
+      "Agentic 工作流",
+      "代码评审",
+      "验证",
+      "意图债",
+      "认知投降",
+      "中英双语"
+    ],
+    "category": "AI 工程",
+    "quality": "S",
+    "summary": "Addy Osmani 谈 agent 干活时代如何守住批判性思考：把「认知卸载、延后、认知投降」看成一条谱系，警惕理解债、认知债与意图债；给出提问前先立假设、盲区巡检、绿勾只证明一个属性、先读命令与输出再读摘要、越过 diff 看 agent 替你做的小决定、用编排税衡量产出与背书能力等可执行做法，并回答「模型以后比我更强，为什么还要练」——因为上线的东西必须有人负责。中英双语全文，含原文 Pangram 检测配图。",
+    "cover": "articles/assets/x-2117512471930167377/cover.jpg",
+    "source_language": "en",
+    "bilingual_format": "magazine-v1",
+    "published_at": "2026-11-28"
+  },
+  {
     "title": "复制一段话，AI 画面调出大师色：15 位大师 5 种配色思路 / Copy One Paragraph, Color Grade Like a Master: 15 Masters, 5 Color Strategies",
     "file": "articles/复制一段话AI画面调出大师色_中英双语.md",
     "date": "2026-11-26",
